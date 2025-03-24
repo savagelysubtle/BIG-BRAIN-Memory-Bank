@@ -1,0 +1,85 @@
+%% BIG BRAIN Memory Bank 2.0 - High-Level System Architecture
+%% This diagram illustrates the primary architectural layers and their relationships
+%% Version 1.0.0 (March 24, 2025)
+
+flowchart TB
+    %% Define the main architectural layers
+    FL[Foundation Layer] --> VF[Verification Framework]
+    VF --> CP[Command Protocol]
+    CP --> CPF[Creative Phase Framework]
+    CPF --> CHS[Checkpoint System]
+    CHS --> TES[Task Escalation System]
+    TES --> IL[Integration Layer]
+
+    %% Connect Integration Layer back to other systems (circular relationship)
+    IL -.-> FL
+    IL -.-> VF
+    IL -.-> CP
+    IL -.-> CPF
+    IL -.-> CHS
+    IL -.-> TES
+
+    %% Define Memory Bank
+    subgraph MB[Memory Bank]
+        direction TB
+        core[Core Memory Files]
+        shortTerm[Short-Term Memory]
+        longTerm[Long-Term Memory]
+
+        core --- shortTerm
+        core --- longTerm
+    end
+
+    %% Define Rule System
+    subgraph RS[Rule System]
+        direction TB
+        foundation[Foundation Rules]
+        verification[Verification Rules]
+        command[Command Rules]
+        creative[Creative Rules]
+        checkpoint[Checkpoint Rules]
+        escalation[Escalation Rules]
+    end
+
+    %% Connection between layers and supporting systems
+    FL <--> MB
+    VF <--> MB
+    CP <--> MB
+    CPF <--> MB
+    CHS <--> MB
+    TES <--> MB
+    IL <--> MB
+
+    FL <--> RS
+    VF <--> RS
+    CP <--> RS
+    CPF <--> RS
+    CHS <--> RS
+    TES <--> RS
+    IL <--> RS
+
+    %% Data Flow
+    flowInit([Memory Initialization Flow]) -.-> FL
+    flowInit -.-> VF
+
+    flowCmd([Command Execution Flow]) -.-> CP
+    flowCmd -.-> VF
+    flowCmd -.-> CPF
+
+    flowMem([Memory Update Flow]) -.-> MB
+    flowMem -.-> VF
+
+    flowTerm([Session Termination Flow]) -.-> IL
+    flowTerm -.-> MB
+
+    %% Define styles
+    classDef layer fill:#dae8fc,stroke:#6c8ebf,stroke-width:1px,border-radius:8px
+    classDef system fill:#d5e8d4,stroke:#82b366,stroke-width:1px,border-radius:8px
+    classDef flow fill:#ffe6cc,stroke:#d79b00,stroke-width:1px,border-radius:8px,dashed
+    classDef memoryFile fill:#fff2cc,stroke:#d6b656,stroke-width:1px,border-radius:4px
+
+    %% Apply styles
+    class FL,VF,CP,CPF,CHS,TES,IL layer
+    class MB,RS system
+    class core,shortTerm,longTerm,foundation,verification,command,creative,checkpoint,escalation memoryFile
+    class flowInit,flowCmd,flowMem,flowTerm flow

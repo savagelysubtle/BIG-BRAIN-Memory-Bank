@@ -1,0 +1,17 @@
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# @savagelysubtle will be requested for review when someone
+# opens a pull request.
+*       @savagelysubtle
+
+# Ownership for specific directories
+/memory-bank/                @savagelysubtle
+/.cursor/rules/Core/         @savagelysubtle
+/.cursor/rules/Utility/      @savagelysubtle
+/.cursor/rules/Languages/    @savagelysubtle
+/.cursor/rules/Frameworks/   @savagelysubtle
+/docs/                       @savagelysubtle
+
+# Ownership for specific files
+*.ps1                        @savagelysubtle
+*.mdc                        @savagelysubtle

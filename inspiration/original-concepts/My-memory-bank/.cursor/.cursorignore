@@ -1,0 +1,137 @@
+# Dependency directories
+node_modules/
+vendor/
+bower_components/
+
+# Build and distribution directories
+build/
+dist/
+target/
+out/
+bin/
+
+# Generated and minified files
+*.min.js
+*.bundle.js
+*.css.map
+*.js.map
+
+# Compiled and binary files
+*.exe
+*.dll
+*.o
+*.obj
+*.class
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.env/
+.venv/
+ENV/
+.Python
+.python-version
+pythonenv*
+
+# Cache and temporary files
+__pycache__/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.dmypy.json
+dmypy.json
+.pytest_cache/
+*.tmp
+
+# Backup related files
+*.bak
+*.backup
+*.old
+*.orig
+*.swp
+*.swo
+*~
+
+# Log files
+*.log
+
+# System files (OS-specific)
+.DS_Store
+Thumbs.db
+
+# IDE and editor configuration files/directories
+.idea/
+.vscode/
+.project
+.classpath
+.factorypath
+.settings/
+.spyderproject
+.ropeproject
+.history/
+.ionide/
+.vs/
+*.suo
+*.user
+
+# Data files and databases
+*.db
+*.sqlite
+*.sqlite3
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.json
+data/
+
+# Documentation
+docs/_build/
+site/
+_site/
+sphinx-docs/
+javadoc/
+
+# Test and coverage reports
+.coverage
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+coverage/
+nosetests.xml
+coverage.xml
+
+# Package management
+*.egg-info/
+.installed.cfg
+*.egg
+.eggs/
+pip-log.txt
+pip-delete-this-directory.txt
+poetry.lock
+package-lock.json
+yarn.lock
+Pipfile.lock
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Large binary assets and generated model files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.mp4
+*.mp3
+*.avi
+*.pkl
+*.model
+*.pb
+*.onnx
+*.h5
+*.joblib

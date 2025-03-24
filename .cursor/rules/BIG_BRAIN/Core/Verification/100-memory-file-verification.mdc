@@ -1,0 +1,397 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN accessing memory files ENSURE integrity, existence, and format validation
+globs: ["**/*.md", "**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** The Memory File Verification system ensures all memory files exist, have the correct structure, and maintain content integrity for reliable memory access.
+
+<version>1.0.0</version>
+
+<context>
+  This rule establishes the Memory File Verification system that provides comprehensive validation of all Memory Bank files. Since BIG BRAIN's memory resets completely between sessions, ensuring memory file integrity is critical for maintaining context. The system verifies that files exist in the expected locations, have the correct structure, and maintain content integrity.
+</context>
+
+<requirements>
+  <requirement>Verify existence of all required memory files</requirement>
+  <requirement>Validate structure and format compliance</requirement>
+  <requirement>Ensure content integrity with expected sections</requirement>
+  <requirement>Provide detailed diagnostics for verification failures</requirement>
+  <requirement>Support recovery options for integrity issues</requirement>
+</requirements>
+
+<details>
+  <section-name>VERIFICATION LEVELS</section-name>
+  <content>
+    Memory file verification occurs at four levels:
+
+    1. **Existence Verification**
+       - Confirms that required files exist in the expected locations
+       - Verifies directory structure integrity
+       - Checks for missing critical files
+
+    2. **Structure Verification**
+       - Validates file format (Markdown)
+       - Confirms header/section structure
+       - Verifies required metadata presence
+
+    3. **Content Verification**
+       - Checks for required sections based on file type
+       - Validates section content against expected patterns
+       - Verifies internal references
+
+    4. **Consistency Verification**
+       - Cross-checks information across related files
+       - Validates that dates and versions align
+       - Ensures no contradictory information exists
+
+    Each level builds upon the previous, with failure at any level preventing progression to the next.
+  </content>
+</details>
+
+<details>
+  <section-name>REQUIRED FILE VERIFICATION</section-name>
+  <content>
+    The system verifies these required files:
+
+    **Core Memory Files**
+    - `memory-bank/core/active/projectbrief.md`
+    - `memory-bank/core/active/productContext.md`
+    - `memory-bank/core/active/activeContext.md`
+    - `memory-bank/core/active/systemPatterns.md`
+    - `memory-bank/core/active/techContext.md`
+    - `memory-bank/core/active/progress.md`
+
+    **System Files**
+    - `memory-bank/Bedtime Protocol/README.md`
+    - `.cursor/rules/main.mdc`
+    - `.cursor/rules/000-big-brain-identity.mdc`
+
+    **Optional But Validated If Present**
+    - `memory-bank/core/reference/*.md`
+    - `memory-bank/long-term/*/*.md`
+    - `memory-bank/Bedtime Protocol/*.md` (beyond README)
+
+    Missing required files trigger a critical verification failure with recovery options.
+  </content>
+</details>
+
+<details>
+  <section-name>STRUCTURE VALIDATION</section-name>
+  <content>
+    File structure validation checks for:
+
+    **Global Requirements**
+    - Valid Markdown format
+    - Proper heading hierarchy
+    - No broken Markdown syntax
+
+    **File-Specific Structure**
+    - `projectbrief.md`: Project overview, requirements, constraints
+    - `productContext.md`: Problem space, solution approach, user experience goals
+    - `activeContext.md`: Current focus, recent changes, next steps
+    - `systemPatterns.md`: Architecture, component relationships, patterns
+    - `techContext.md`: Technology stack, tools, environment
+    - `progress.md`: Feature status, open issues, milestones
+
+    Structure validation failure indicates a potentially corrupted or improperly formatted file.
+  </content>
+</details>
+
+<details>
+  <section-name>CONTENT VALIDATION</section-name>
+  <content>
+    Content validation checks vary by file type:
+
+    **projectbrief.md**
+    - Must contain project objectives
+    - Must define core requirements
+    - Should list constraints and assumptions
+
+    **activeContext.md**
+    - Must have current focus section
+    - Must include recent changes
+    - Must contain next steps
+    - Must be recently updated (warning if >7 days)
+
+    **progress.md**
+    - Must contain feature status tracking
+    - Should include milestone information
+    - Should identify known issues
+
+    **systemPatterns.md**
+    - Must document architecture
+    - Should include component relationships
+    - Should document key patterns
+
+    Content validation failure indicates that a file is missing critical information.
+  </content>
+</details>
+
+<details>
+  <section-name>VERIFICATION PROCESS</section-name>
+  <content>
+    Execute this verification process at the start of each session:
+
+    1. **Initialization**
+       - Identify required files based on project context
+       - Determine optional files that should be verified
+       - Set up verification tracking
+
+    2. **Sequential Verification**
+       - Perform existence verification first
+       - If passed, conduct structure verification
+       - If passed, execute content verification
+       - If passed, perform consistency verification
+
+    3. **Results Compilation**
+       - Generate detailed verification report
+       - Categorize issues by severity
+       - Link issues to specific files and locations
+
+    4. **Recovery Path Generation**
+       - For each issue, determine potential recovery options
+       - Prioritize recovery actions
+       - Provide guidance for manual intervention if needed
+
+    The verification process runs automatically during BIG command initialization and can be triggered manually.
+  </content>
+</details>
+
+<details>
+  <section-name>VERIFICATION REPORT FORMAT</section-name>
+  <content>
+    Verification results use this format:
+
+    ```
+    ## 📋 Memory File Verification Report
+
+    ### Summary
+    - Required files: [count]/[total] verified
+    - Structure validation: [pass/fail/partial]
+    - Content validation: [pass/fail/partial]
+    - Consistency validation: [pass/fail/partial]
+    - Overall status: [✓/⚠️/❌]
+
+    ### Critical Issues
+    - [File:Section] - [Issue description] - [Recovery option]
+    - ...
+
+    ### Warnings
+    - [File:Section] - [Warning description] - [Recommendation]
+    - ...
+
+    ### Information
+    - [Observation 1]
+    - [Observation 2]
+    - ...
+    ```
+
+    This standardized format ensures clear communication of verification results.
+  </content>
+</details>
+
+<details>
+  <section-name>RECOVERY OPTIONS</section-name>
+  <content>
+    When verification fails, these recovery options are available:
+
+    1. **For Missing Files**
+       - Create from template with minimal required structure
+       - Prompt for manual creation with guidance
+       - Restore from backup if available
+
+    2. **For Structure Issues**
+       - Auto-correct simple formatting problems
+       - Suggest restructuring approach for major issues
+       - Provide markdown formatting guidance
+
+    3. **For Content Issues**
+       - Suggest required content additions
+       - Flag inconsistent content for review
+       - Provide templates for missing sections
+
+    4. **For Consistency Issues**
+       - Identify contradicting information
+       - Suggest reconciliation approach
+       - Flag for manual review with specific guidance
+
+    Recovery options are prioritized by impact and feasibility of automated correction.
+  </content>
+</details>
+
+<details>
+  <section-name>FILE TEMPLATES</section-name>
+  <content>
+    For missing required files, these templates are available:
+
+    **projectbrief.md Template**
+    ```markdown
+    # Project Brief
+
+    ## Project Overview
+    [Brief description of the project]
+
+    ## Core Requirements
+    - [Requirement 1]
+    - [Requirement 2]
+    - [Requirement 3]
+
+    ## Constraints & Assumptions
+    - [Constraint/Assumption 1]
+    - [Constraint/Assumption 2]
+
+    ## Success Criteria
+    - [Criterion 1]
+    - [Criterion 2]
+    ```
+
+    **activeContext.md Template**
+    ```markdown
+    # Active Context
+
+    ## Current Focus
+    [Description of current implementation focus]
+
+    ## Recent Changes
+    - [Change 1]
+    - [Change 2]
+
+    ## Next Steps
+    1. [Next step 1]
+    2. [Next step 2]
+    3. [Next step 3]
+
+    ## Open Issues/Questions
+    - [Issue/Question 1]
+    - [Issue/Question 2]
+    ```
+
+    Similar templates exist for all required files to facilitate recovery.
+  </content>
+</details>
+
+<details>
+  <section-name>VERIFICATION TRIGGERS</section-name>
+  <content>
+    Verification is triggered by these events:
+
+    1. **Automatic Triggers**
+       - BIG command initialization
+       - Session start (first interaction)
+       - Before Bedtime Protocol execution
+       - After significant Memory Bank updates
+
+    2. **Manual Triggers**
+       - "verify memory files" command
+       - "memory health check" command
+       - "verify [specific file]" command
+
+    3. **Contextual Triggers**
+       - Reference to a file failing initial quick verification
+       - Detection of potential consistency issues
+       - When escalating task complexity
+
+    Each trigger type can specify verification depth and scope.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH OTHER COMPONENTS</section-name>
+  <content>
+    The Memory File Verification system integrates with:
+
+    1. **Reference Verification System**
+       - Provides file existence verification for references
+       - Validates structure for referenced sections
+       - Checks content integrity for quoted material
+
+    2. **BIG Command Protocol**
+       - Executes verification during initialization
+       - Incorporates verification results in initialization report
+       - Triggers recovery options when needed
+
+    3. **Task Escalation Protocol**
+       - Verifies memory files before complexity escalation
+       - Ensures documentation is appropriate for new complexity level
+       - Identifies gaps requiring attention during escalation
+
+    4. **Bedtime Protocol**
+       - Performs final verification before session end
+       - Ensures all updates are properly documented
+       - Generates recovery plan for next session if issues remain
+
+    These integrations ensure verification occurs at critical points in the workflow.
+  </content>
+</details>
+
+<details>
+  <section-name>EXAMPLE APPLICATION</section-name>
+  <content>
+    ```
+    ## 📋 Memory File Verification Report
+
+    ### Summary
+    - Required files: 8/9 verified
+    - Structure validation: ⚠️ Partial
+    - Content validation: ⚠️ Partial
+    - Consistency validation: ❌ Failed
+    - Overall status: ⚠️ Needs attention
+
+    ### Critical Issues
+    - projectbrief.md - File missing - Create from template or restore
+
+    ### Warnings
+    - activeContext.md:Current Focus - Section outdated (14 days) - Update with current focus
+    - systemPatterns.md:Component Relationships - Section incomplete - Add missing relationships
+    - progress.md - Missing milestone tracking - Add milestone section using template
+
+    ### Information
+    - 3 optional long-term memory files present but not referenced
+    - Bedtime Protocol contains detailed notes for next session
+    - techContext.md has comprehensive environment setup instructions
+    ```
+
+    This example shows a verification report with mixed results requiring attention.
+  </content>
+</details>
+
+<details>
+  <section-name>ADAPTATION TO COMPLEXITY</section-name>
+  <content>
+    Verification depth adapts to task complexity:
+
+    **Level 1 (Simple)**
+    - Basic existence check of core files
+    - Minimal structure validation
+    - Focus on activeContext.md accuracy
+
+    **Level 2 (Moderate)**
+    - Full existence verification
+    - Basic structure and content validation
+    - Focus on task-relevant files
+
+    **Level 3 (Complex)**
+    - Comprehensive verification of all required files
+    - Detailed structure and content validation
+    - Basic consistency checking
+
+    **Level 4 (Critical)**
+    - Exhaustive verification of all files
+    - Rigorous structure, content, and consistency validation
+    - Cross-reference checking across memory bank
+
+    Verification depth increases with task complexity to ensure appropriate rigor.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial implementation of memory file verification |

@@ -1,0 +1,298 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN tracking a multi-step task ENSURE progress tracking and verification at section boundaries
+globs: ["**/*.md", "**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** The Section Checkpoint System ensures reliable progress tracking and verification at task section boundaries, improving task management and recovery from interruptions.
+
+<version>1.0.0</version>
+
+<context>
+  This rule establishes the framework for tracking progress through complex multi-step tasks. Section checkpoints provide clear boundaries between logical segments of work, allowing for verification, progress tracking, and easy resumption of work after interruptions. The system ensures thorough documentation of completed work and sets up clear context for upcoming work.
+</context>
+
+<requirements>
+  <requirement>Establish clear section boundaries for complex tasks</requirement>
+  <requirement>Track progress through section completion</requirement>
+  <requirement>Verify completion of each section</requirement>
+  <requirement>Document section outcomes and insights</requirement>
+  <requirement>Adapt section granularity to task complexity</requirement>
+</requirements>
+
+<details>
+  <section-name>SECTION DEFINITION</section-name>
+  <content>
+    A "section" represents a logical unit of work within a task that:
+
+    - Has a clear starting state and completion criteria
+    - Addresses a specific aspect of the overall task
+    - Can be verified for correctness upon completion
+    - Provides meaningful progress towards the goal
+    - Has dependencies on previous sections but not future ones
+
+    Sections should be sized appropriately for the task's complexity level.
+  </content>
+</details>
+
+<details>
+  <section-name>CHECKPOINT STRUCTURE</section-name>
+  <content>
+    Each section checkpoint follows this structure:
+
+    ```
+    ## 📊 SECTION CHECKPOINT: [Section Name]
+
+    **Status**: [COMPLETE/IN PROGRESS]
+    **Verification**: [VERIFIED/PENDING]
+
+    ### 📌 Section Summary
+    [Brief description of what this section accomplished]
+
+    ### 🔍 Key Implementation Details
+    - [Important detail 1]
+    - [Important detail 2]
+    - [Important detail 3]
+
+    ### 📋 Verification Steps
+    - [✓] [Verification step 1]
+    - [✓] [Verification step 2]
+    - [✓] [Verification step 3]
+
+    ### 🧠 Insights & Learnings
+    - [Insight or learning 1]
+    - [Insight or learning 2]
+
+    ### ⏭️ Next Section: [Name of next section]
+    [Brief description of what comes next]
+    ```
+
+    This structure ensures consistent tracking and verification across all tasks.
+  </content>
+</details>
+
+<details>
+  <section-name>SECTION GRANULARITY</section-name>
+  <content>
+    Section granularity scales with task complexity:
+
+    - **Level 1 (Low Complexity)**
+      - 2-3 sections total
+      - Each section represents a major step
+      - Simplified verification (2-3 points)
+
+    - **Level 2 (Medium Complexity)**
+      - 3-5 sections total
+      - Standard verification (3-5 points)
+      - Basic insights documentation
+
+    - **Level 3 (High Complexity)**
+      - 5-8 sections total
+      - Comprehensive verification (5+ points)
+      - Detailed insights and learnings
+
+    - **Level 4 (Critical Complexity)**
+      - 8+ sections with potential sub-sections
+      - Rigorous verification process
+      - In-depth insights with implications
+      - May include stakeholder verification points
+
+    Sections should be balanced in size and scope within a given task.
+  </content>
+</details>
+
+<details>
+  <section-name>VERIFICATION PROCESS</section-name>
+  <content>
+    The verification process at each checkpoint includes:
+
+    1. **Completion Check**
+       - All planned work for the section is complete
+       - No open items remain within section scope
+       - All deliverables created and accessible
+
+    2. **Correctness Verification**
+       - Implementation meets requirements
+       - Code/content passes quality checks
+       - No regressions introduced
+       - Edge cases handled appropriately
+
+    3. **Documentation Check**
+       - Key decisions documented
+       - Implementation details captured
+       - Any deviations from plan explained
+       - Learnings and insights recorded
+
+    4. **Next Steps Clarity**
+       - Clear definition of next section
+       - Dependencies and prerequisites identified
+       - Any carryover items clearly noted
+
+    The verification process should identify and address any issues before proceeding.
+  </content>
+</details>
+
+<details>
+  <section-name>SECTION TRACKING</section-name>
+  <content>
+    Track sections throughout the task using this format:
+
+    ```
+    # 📊 SECTION TRACKING
+
+    ## Overall Progress: [X/Y] sections complete
+
+    - [✓] Section 1: [Name]
+    - [✓] Section 2: [Name]
+    - [⏳] Section 3: [Name] (Current)
+    - [ ] Section 4: [Name]
+    - [ ] Section 5: [Name]
+    ```
+
+    This tracking should be updated at the start and end of each section.
+  </content>
+</details>
+
+<details>
+  <section-name>RECOVERY FROM INTERRUPTION</section-name>
+  <content>
+    When resuming work after interruption, use this recovery sequence:
+
+    1. **Review Section Tracking**
+       - Identify last completed section
+       - Note current section in progress
+       - Review overall progress
+
+    2. **Review Last Checkpoint**
+       - Read summary of last completed section
+       - Review verification status
+       - Note key implementation details
+
+    3. **Resume Current Section**
+       - Review current section objectives
+       - Assess what has been done and what remains
+       - Re-establish context for continuing work
+
+    4. **Update Progress Tracking**
+       - Mark resumption point in activeContext.md
+       - Note any changes to plan since interruption
+
+    This process ensures smooth continuation without loss of context.
+  </content>
+</details>
+
+<details>
+  <section-name>EXAMPLE APPLICATION</section-name>
+  <content>
+    ```
+    # 📊 SECTION TRACKING
+
+    ## Overall Progress: 2/5 sections complete
+
+    - [✓] Section 1: Database Schema Design
+    - [✓] Section 2: API Endpoint Implementation
+    - [⏳] Section 3: Authentication Integration (Current)
+    - [ ] Section 4: Frontend Implementation
+    - [ ] Section 5: Testing & Documentation
+
+    ---
+
+    ## 📊 SECTION CHECKPOINT: API Endpoint Implementation
+
+    **Status**: COMPLETE
+    **Verification**: VERIFIED
+
+    ### 📌 Section Summary
+    Implemented all required REST API endpoints for user management, including create, read, update, and delete operations. Added validation, error handling, and response formatting.
+
+    ### 🔍 Key Implementation Details
+    - Used Express Router for endpoint organization
+    - Implemented JSON validation with Joi schema
+    - Added rate limiting for security
+    - Created consistent error response format
+
+    ### 📋 Verification Steps
+    - [✓] All endpoints return correct status codes
+    - [✓] Validation rejects malformed requests
+    - [✓] Error handling captures and formats all errors
+    - [✓] Performance testing shows acceptable response times
+    - [✓] Security review completed
+
+    ### 🧠 Insights & Learnings
+    - Joi validation middleware pattern worked well, should use in future projects
+    - Rate limiting needs additional configuration for production
+
+    ### ⏭️ Next Section: Authentication Integration
+    Integrate JWT authentication with the API endpoints, including token issuance, validation, and refresh mechanisms.
+    ```
+
+    This example demonstrates a Level 3 task with appropriate section tracking and checkpoint documentation.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH ACTIVECONTEXT.MD</section-name>
+  <content>
+    Section checkpoints should be reflected in activeContext.md:
+
+    ```markdown
+    ## Current Focus
+
+    Implementing Authentication Integration (Section 3/5)
+
+    ## Recent Changes
+
+    Completed API Endpoint Implementation (Section 2/5):
+    - Implemented all CRUD endpoints for user management
+    - Added validation and error handling
+    - Set up rate limiting
+
+    ## Next Steps
+
+    1. Implement JWT token issuance
+    2. Create token validation middleware
+    3. Set up token refresh mechanism
+    4. Integrate with user endpoints
+    ```
+
+    This ensures the active context accurately reflects section progress.
+  </content>
+</details>
+
+<details>
+  <section-name>ADAPTATION FOR PARALLEL WORK</section-name>
+  <content>
+    For tasks with parallel workstreams, modify the tracking:
+
+    ```
+    # 📊 SECTION TRACKING
+
+    ## Backend Track: 2/4 sections complete
+
+    - [✓] Section B1: Database Schema
+    - [✓] Section B2: API Design
+    - [⏳] Section B3: Authentication
+    - [ ] Section B4: Testing
+
+    ## Frontend Track: 1/4 sections complete
+
+    - [✓] Section F1: Component Design
+    - [⏳] Section F2: State Management
+    - [ ] Section F3: UI Implementation
+    - [ ] Section F4: Integration Testing
+    ```
+
+    Each track should have its own checkpoints while maintaining dependencies between tracks.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial implementation of section checkpoint system |

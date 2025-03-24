@@ -1,0 +1,14 @@
+{
+  "operations": [
+    {
+      "source": "memory-bank/example_file.md",
+      "destination_folder": "memory-bank/Long term memory/example_topic",
+      "summary_file": "memory-bank/example_file_v1.1.md"
+    }
+  ],
+  "global_options": {
+    "create_folders": true,
+    "organize_by_topic": true,
+    "generate_log": true
+  }
+}

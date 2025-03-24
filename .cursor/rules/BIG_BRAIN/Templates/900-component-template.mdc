@@ -1,0 +1,494 @@
+---
+description: WHEN creating new BIG BRAIN components USE this template structure for consistent implementation
+globs: ["**/*.mdc"]
+alwaysApply: false
+---
+
+> **TL;DR:** This template provides the standard structure for BIG BRAIN component rule files, ensuring consistent formatting, comprehensive documentation, and proper integration with the memory bank system.
+
+<version>1.0.0</version>
+
+<context>
+  Consistent component structure is essential for maintaining the integrity and usability of the BIG BRAIN Memory Bank system. This template establishes the standard format for component rule files, ensuring proper documentation, clear organization, and effective knowledge preservation across memory resets.
+</context>
+
+<requirements>
+  <requirement>Provide a standardized structure for all BIG BRAIN component rule files</requirement>
+  <requirement>Ensure comprehensive documentation of component purpose and functionality</requirement>
+  <requirement>Establish consistent section organization and formatting</requirement>
+  <requirement>Enable proper integration with other system components</requirement>
+  <requirement>Support adaptation to different complexity levels</requirement>
+  <requirement>Facilitate knowledge persistence across memory resets</requirement>
+</requirements>
+
+<details>
+  <section-name>COMPONENT TEMPLATE STRUCTURE</section-name>
+  <content>
+    Use this template when creating new BIG BRAIN component rule files:
+
+    ```
+    ---
+    description: WHEN [activation context] APPLY/ENSURE/FOLLOW [action or requirement]
+    globs: ["**/*.mdc", "**/*.md"]
+    alwaysApply: true/false
+    ---
+
+    > **TL;DR:** Brief 1-3 sentence summary of the component's purpose and function.
+
+    <version>1.0.0</version>
+
+    <context>
+      Detailed explanation of why this component exists, what problem it solves,
+      and its importance within the BIG BRAIN system. Provide sufficient background
+      for understanding the component's purpose without requiring extensive
+      cross-referencing.
+    </context>
+
+    <requirements>
+      <requirement>First specific requirement this component must fulfill</requirement>
+      <requirement>Second specific requirement this component must fulfill</requirement>
+      <requirement>Additional requirements as needed</requirement>
+      <requirement>Be specific, actionable, and verification-friendly</requirement>
+      <requirement>Focus on WHAT must be achieved, not HOW</requirement>
+    </requirements>
+
+    <details>
+      <section-name>SECTION NAME IN UPPERCASE</section-name>
+      <content>
+        Detailed content for this section, organized in a structured manner.
+        Use consistent formatting throughout:
+
+        1. **Primary Items**
+           - Sub-item details
+           - Additional details
+           - More information
+
+        2. **Secondary Items**
+           - Supporting information
+           - Implementation guidance
+           - Best practices
+
+        Add as many structured sections as needed to fully document the component.
+        Use numbered lists for sequential processes and bulleted lists for collections.
+      </content>
+    </details>
+
+    <details>
+      <section-name>ANOTHER SECTION NAME</section-name>
+      <content>
+        Additional section content organized similarly.
+
+        Include relevant:
+        - Implementation details
+        - Usage guidelines
+        - Integration information
+        - Examples
+        - Edge cases
+
+        Ensure comprehensive coverage of the component's functionality.
+      </content>
+    </details>
+
+    <details>
+      <section-name>COMPLEXITY ADAPTATION</section-name>
+      <content>
+        Explain how the component adapts to different complexity levels:
+
+        **Level 1 (Simple)**
+        - Simplified behavior for basic tasks
+        - Minimal requirements
+        - Streamlined processing
+
+        **Level 2 (Moderate)**
+        - Standard behavior for routine tasks
+        - Complete but focused requirements
+        - Regular processing depth
+
+        **Level 3 (Complex)**
+        - Enhanced behavior for complex tasks
+        - Comprehensive requirements
+        - Thorough processing
+
+        **Level 4 (Critical)**
+        - Maximum behavior for mission-critical tasks
+        - Exhaustive requirements
+        - Rigorous processing with additional validation
+
+        Specific details should explain how the component's behavior changes
+        based on task complexity level.
+      </content>
+    </details>
+
+    <details>
+      <section-name>INTEGRATION WITH MEMORY BANK</section-name>
+      <content>
+        Explain how this component integrates with the memory bank:
+
+        1. **Documentation Updates**
+           - What updates are made to activeContext.md
+           - What is recorded in progress.md
+           - What patterns are documented in systemPatterns.md
+           - What technical details are updated in techContext.md
+
+        2. **Knowledge Preservation**
+           - How critical information is preserved
+           - How decisions are documented
+           - How component state is maintained
+           - How reference integrity is preserved
+
+        3. **Cross-Component Integration**
+           - How this component interacts with others
+           - Key integration points
+           - Dependency relationships
+           - Interface contracts
+
+        This section is crucial for ensuring the component works within the
+        overall memory bank system.
+      </content>
+    </details>
+
+    <details>
+      <section-name>EXAMPLES</section-name>
+      <content>
+        Provide concrete examples of the component in action:
+
+        **Example 1: [Brief Description]**
+        ```
+        [Detailed example implementation or usage]
+        ```
+
+        **Example 2: [Brief Description]**
+        ```
+        [Another example showing different aspect]
+        ```
+
+        Examples should be practical, illustrative, and cover both typical
+        usage and important edge cases.
+      </content>
+    </details>
+
+    ## 📝 Version History
+
+    | Version | Date       | Author    | Changes                           |
+    | ------- | ---------- | --------- | --------------------------------- |
+    | 1.0.0   | YYYY-MM-DD | BIG BRAIN | Initial component implementation  |
+    ```
+
+    Replace placeholder text with actual component-specific content while maintaining the overall structure.
+  </content>
+</details>
+
+<details>
+  <section-name>USAGE GUIDELINES</section-name>
+  <content>
+    Follow these guidelines when creating new component files:
+
+    1. **Frontmatter**
+       - Use a clear, specific description that follows the WHEN/APPLY pattern
+       - Set appropriate globs to target relevant files
+       - Set alwaysApply based on component criticality:
+         - true for core system components
+         - false for specialized or context-specific components
+
+    2. **TL;DR Summary**
+       - Provide a concise 1-3 sentence summary
+       - Focus on what the component does and why it matters
+       - Place immediately after frontmatter
+       - Format as a blockquote for visual emphasis
+
+    3. **Version and Context**
+       - Start with version 1.0.0 for new components
+       - Provide thorough context that explains the component's purpose
+       - Ensure context is self-contained and doesn't require extensive outside knowledge
+       - Explain why the component exists, not just what it does
+
+    4. **Requirements**
+       - List specific, verifiable requirements
+       - Focus on what must be achieved, not implementation details
+       - Make requirements actionable and testable
+       - Ensure comprehensive coverage of component functionality
+
+    5. **Section Organization**
+       - Use uppercase section names for clarity
+       - Organize content in logical groupings
+       - Present information in order of importance
+       - Use consistent formatting within sections
+
+    6. **Examples**
+       - Provide concrete, practical examples
+       - Include both typical cases and important edge cases
+       - Format examples for clarity and readability
+       - Ensure examples accurately represent component functionality
+
+    7. **Version History**
+       - Maintain accurate version history
+       - Document all changes in each version
+       - Include date, author, and description for each version
+       - Follow semantic versioning (MAJOR.MINOR.PATCH)
+
+    These guidelines ensure consistent, high-quality component documentation.
+  </content>
+</details>
+
+<details>
+  <section-name>COMPONENT NAMING</section-name>
+  <content>
+    Follow these naming conventions for component files:
+
+    1. **File Naming Pattern**
+       - Use the format: `XXX-descriptive-name.mdc`
+       - XXX is a three-digit number indicating category and sequence
+       - descriptive-name uses kebab-case
+       - Always use .mdc extension
+
+    2. **Number Ranges by Category**
+       - 000-039: Identity and Core Concepts
+       - 040-090: Foundation Layer
+       - 100-130: Verification Framework
+       - 140-170: Command Protocol
+       - 180-210: Creative Phase
+       - 220-250: Checkpoint System
+       - 260-290: Task Escalation
+       - 300-399: Protocols
+       - 500-599: Utilities
+       - 900-999: Templates
+
+    3. **Descriptive Name Guidelines**
+       - Use clear, specific names that indicate purpose
+       - Prefer shorter, focused names over long, compound names
+       - Ensure uniqueness within the component category
+       - Follow kebab-case convention (lowercase with hyphens)
+
+    4. **Placement**
+       - Store in the appropriate category directory:
+         - `.cursor/rules/BIG_BRAIN/Core/[Category]/`
+         - `.cursor/rules/BIG_BRAIN/[Category]/`
+       - Ensure placement matches the number range
+       - Follow the directory structure in the organization rule
+
+    Proper naming ensures discoverability and organizational consistency.
+  </content>
+</details>
+
+<details>
+  <section-name>SECTION ORGANIZATION</section-name>
+  <content>
+    Organize component sections following these guidelines:
+
+    1. **Essential Sections**
+       - Every component must include:
+         - TL;DR Summary
+         - Version information
+         - Context explanation
+         - Requirements list
+         - At least one implementation details section
+         - Complexity adaptation
+         - Memory bank integration
+         - Version history
+
+    2. **Recommended Additional Sections**
+       - Examples
+       - Integration with other components
+       - Error handling
+       - Performance considerations
+       - Special cases
+       - Troubleshooting
+
+    3. **Section Ordering**
+       - Begin with core functionality sections
+       - Follow with implementation details
+       - Then integration information
+       - Then examples and special cases
+       - End with memory bank integration
+
+    4. **Section Depth**
+       - Scale detail with component complexity
+       - Simple components may have fewer, simpler sections
+       - Complex components should have comprehensive sections
+       - Critical components require exhaustive detail in all sections
+
+    Consistent section organization improves readability and completeness.
+  </content>
+</details>
+
+<details>
+  <section-name>FORMATTING STANDARDS</section-name>
+  <content>
+    Apply these formatting standards in all component files:
+
+    1. **Text Formatting**
+       - Use Markdown formatting throughout
+       - Follow the formatting shown in the template
+       - Maintain consistent indentation (2 spaces)
+       - Use sentence case for section content
+       - Use ALL CAPS for section names
+
+    2. **Lists and Structure**
+       - Use numbered lists for sequential processes
+       - Use bulleted lists for collections without sequence
+       - Use nested lists for hierarchical information
+       - Limit nesting to 3 levels for readability
+       - Use bold for emphasis and section headers
+
+    3. **Code Blocks**
+       - Use fenced code blocks with language indicators
+       - Indent code properly within blocks
+       - Include comments for clarity
+       - Use consistent naming conventions
+       - Follow language-specific formatting standards
+
+    4. **Tables**
+       - Use tables for structured information
+       - Include clear headers
+       - Align columns for readability
+       - Use consistent formatting within cells
+       - Keep tables narrow enough to avoid scrolling
+
+    Consistent formatting improves readability and knowledge transfer.
+  </content>
+</details>
+
+<details>
+  <section-name>TEMPLATE EXAMPLES</section-name>
+  <content>
+    **Example 1: Foundation Layer Component**
+    ```
+    ---
+    description: WHEN processing complex tasks APPLY enhanced complexity framework for appropriate handling
+    globs: ["**/*.mdc", "**/*.md"]
+    alwaysApply: true
+    ---
+
+    > **TL;DR:** The Enhanced Complexity Framework categorizes tasks into four levels of complexity, ensuring appropriate rigor in processing, documentation, and verification based on task significance.
+
+    <version>1.0.0</version>
+
+    <context>
+      Tasks vary significantly in complexity and importance, requiring different levels of rigor in their handling. The Enhanced Complexity Framework provides a standardized approach to categorizing task complexity and adapting processing depth accordingly, ensuring appropriate attention and resources for each task while maintaining efficiency.
+    </context>
+
+    <requirements>
+      <requirement>Establish clear criteria for categorizing task complexity</requirement>
+      <requirement>Define four distinct complexity levels with specific characteristics</requirement>
+      <requirement>Provide guidance for adapting processes based on complexity</requirement>
+      <requirement>Ensure consistent application across all system components</requirement>
+      <requirement>Support dynamic complexity reassessment during task execution</requirement>
+    </requirements>
+
+    <details>
+      <section-name>COMPLEXITY LEVELS</section-name>
+      <content>
+        The framework defines these complexity levels:
+
+        1. **Level 1: Simple**
+           - Routine, straightforward tasks
+           - Minimal variables and dependencies
+           - Low impact if errors occur
+           - Well-established patterns available
+           - Limited scope and clear boundaries
+
+        2. **Level 2: Moderate**
+           - Standard complexity tasks
+           - Multiple variables but defined relationships
+           - Moderate impact if errors occur
+           - Known approaches with some adaptation
+           - Broader scope but defined boundaries
+
+        [Additional content would continue...]
+      </content>
+    </details>
+    ```
+
+    **Example 2: Verification Framework Component**
+    ```
+    ---
+    description: WHEN validating memory files ENSURE integrity, existence, and format are verified
+    globs: ["**/*.md", "**/*.mdc"]
+    alwaysApply: true
+    ---
+
+    > **TL;DR:** The Memory File Verification system validates the existence, structure, content integrity, and format of all Memory Bank files to ensure system reliability and data quality.
+
+    <version>1.0.0</version>
+
+    <context>
+      The BIG BRAIN Memory Bank system relies on properly structured and maintained memory files for effective operation. This component ensures the integrity of these files by systematically verifying their existence, content structure, and format compliance, providing early detection of potential issues and supporting system reliability.
+    </context>
+
+    <requirements>
+      <requirement>Verify the existence of all required memory files</requirement>
+      <requirement>Validate the structure and format compliance of memory files</requirement>
+      <requirement>Ensure content integrity and consistency across files</requirement>
+      <requirement>Provide diagnostic information for verification failures</requirement>
+      <requirement>Support recovery options for integrity issues</requirement>
+    </requirements>
+
+    <details>
+      <section-name>VERIFICATION PROCESS</section-name>
+      <content>
+        Memory file verification occurs at these levels:
+
+        1. **Existence Verification**
+           - Checks that all required files exist
+           - Verifies core memory files:
+             - projectbrief.md
+             - productContext.md
+             - activeContext.md
+             - systemPatterns.md
+             - techContext.md
+             - progress.md
+           - Confirms accessibility of all files
+           - Reports any missing files
+           - Provides recovery guidance for missing files
+
+        [Additional content would continue...]
+      </content>
+    </details>
+    ```
+
+    These examples illustrate the template application for different component types.
+  </content>
+</details>
+
+<details>
+  <section-name>COMPONENT LIFECYCLE</section-name>
+  <content>
+    Component lifecycle follows these stages:
+
+    1. **Creation**
+       - Use this template to create new component
+       - Assign appropriate number and category
+       - Complete all required sections
+       - Verify against template requirements
+       - Document initial version (1.0.0)
+
+    2. **Implementation**
+       - Place in correct directory
+       - Update memory bank files with component information
+       - Document integration with other components
+       - Verify correct operation
+       - Document in progress.md
+
+    3. **Maintenance**
+       - Update content as requirements change
+       - Increment version number appropriately
+       - Document changes in version history
+       - Maintain backward compatibility when possible
+       - Update cross-references as needed
+
+    4. **Deprecation (if needed)**
+       - Mark as deprecated in description
+       - Document replacement component
+       - Provide migration guidance
+       - Maintain for transition period
+       - Eventually archive or remove
+
+    Proper lifecycle management ensures component integrity over time.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                 |
+| ------- | ---------- | --------- | --------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial component template implementation |

@@ -1,0 +1,759 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN evaluating design solutions APPLY standardized metrics for objective assessment
+globs: ["**/*.md", "**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** The Evaluation Metrics System provides standardized criteria and measurement approaches for objectively assessing design solutions across different dimensions and design types.
+
+<version>1.0.0</version>
+
+<context>
+  This rule establishes the Evaluation Metrics System for design solution assessment. Since objective evaluation is essential for selecting optimal solutions, standardized metrics are necessary for consistent and comprehensive assessment. The system provides quality attribute metrics, implementation metrics, specialized design-type metrics, and measurement approaches to enable systematic evaluation.
+</context>
+
+<requirements>
+  <requirement>Define standardized evaluation criteria for design solutions</requirement>
+  <requirement>Provide specific metrics for different quality attributes</requirement>
+  <requirement>Support specialized metrics for different design types</requirement>
+  <requirement>Enable consistent scoring and weighting mechanisms</requirement>
+  <requirement>Facilitate comparative evaluation of alternatives</requirement>
+  <requirement>Adapt evaluation rigor to task complexity and criticality</requirement>
+</requirements>
+
+<details>
+  <section-name>QUALITY ATTRIBUTE METRICS</section-name>
+  <content>
+    The system provides metrics for these quality attributes:
+    
+    1. **Performance Metrics**
+       - Response time (average, percentile, worst-case)
+       - Throughput (operations per unit time)
+       - Resource utilization (CPU, memory, network, storage)
+       - Scalability factors (linear, sub-linear, super-linear)
+       - Latency profiles (by operation type)
+    
+    2. **Reliability Metrics**
+       - Availability (percentage uptime)
+       - Mean time between failures (MTBF)
+       - Mean time to recovery (MTTR)
+       - Failure rate (by component, by operation)
+       - Fault tolerance (degradation characteristics)
+    
+    3. **Security Metrics**
+       - Attack surface measurement
+       - Vulnerability density
+       - Security control coverage
+       - Authentication strength
+       - Authorization granularity
+       - Data protection level
+    
+    4. **Maintainability Metrics**
+       - Structural complexity
+       - Coupling measure
+       - Cohesion measure
+       - Documentation completeness
+       - Testing coverage
+       - Modification impact scope
+    
+    5. **Usability Metrics**
+       - Task completion rate
+       - Time on task
+       - Error rate
+       - Satisfaction score
+       - Learnability measure
+       - Accessibility compliance
+    
+    6. **Scalability Metrics**
+       - Resource scaling ratio
+       - Cost scaling factor
+       - Performance degradation curve
+       - Bottleneck identification
+       - Capacity limits
+    
+    These attribute metrics provide multi-dimensional quality assessment.
+  </content>
+</details>
+
+<details>
+  <section-name>IMPLEMENTATION METRICS</section-name>
+  <content>
+    The system provides metrics for implementation factors:
+    
+    1. **Cost Metrics**
+       - Development effort estimation
+       - Time-to-completion projection
+       - Resource requirements
+       - Licensing and third-party costs
+       - Operational cost model
+    
+    2. **Complexity Metrics**
+       - Implementation complexity score
+       - Technology diversity measure
+       - Component interaction complexity
+       - Learning curve steepness
+       - Special expertise requirements
+    
+    3. **Risk Metrics**
+       - Technical risk assessment
+       - Schedule risk factors
+       - Resource risk evaluation
+       - Dependency risk analysis
+       - Unknown factors estimation
+    
+    4. **Integration Metrics**
+       - System integration effort
+       - Interface complexity
+       - Backward compatibility measure
+       - Forward compatibility provision
+       - Deployment complexity
+    
+    5. **Maintenance Metrics**
+       - Maintenance effort projection
+       - Change impact scope
+       - Debugging complexity
+       - Support requirement level
+       - Knowledge transfer difficulty
+    
+    These implementation metrics assess practical delivery factors.
+  </content>
+</details>
+
+<details>
+  <section-name>ARCHITECTURE DESIGN METRICS</section-name>
+  <content>
+    Architecture designs are evaluated using:
+    
+    1. **Structural Metrics**
+       - Component count appropriateness
+       - Connection density measure
+       - Hierarchy depth
+       - Module isolation factor
+       - Interface stability projection
+    
+    2. **Decomposition Quality**
+       - Single responsibility adherence
+       - Information hiding effectiveness
+       - Module cohesion measure
+       - Interface clarity
+       - Dependency structure
+    
+    3. **Pattern Appropriateness**
+       - Pattern application fitness
+       - Pattern combination coherence
+       - Anti-pattern avoidance
+       - Style consistency
+       - Architectural integrity
+    
+    4. **Flexibility Assessment**
+       - Change scenario coverage
+       - Extension point effectiveness
+       - Configuration flexibility
+       - Component replaceability
+       - Evolution capability
+    
+    5. **Cross-Cutting Concern Handling**
+       - Security integration
+       - Performance consideration
+       - Monitoring capability
+       - Deployment flexibility
+       - Operational support
+    
+    These metrics assess architecture quality comprehensively.
+  </content>
+</details>
+
+<details>
+  <section-name>COMPONENT DESIGN METRICS</section-name>
+  <content>
+    Component designs are evaluated using:
+    
+    1. **Interface Quality**
+       - Interface completeness
+       - Parameter appropriateness
+       - Error handling coverage
+       - Documentation clarity
+       - Contract strength
+    
+    2. **Implementation Complexity**
+       - Cyclomatic complexity
+       - Dependency count
+       - State complexity
+       - Algorithm efficiency
+       - Resource usage
+    
+    3. **Testability**
+       - Test isolation capability
+       - State visibility
+       - Injection points
+       - Mock/stub compatibility
+       - Edge case testability
+    
+    4. **Reusability**
+       - Context independence
+       - Configuration flexibility
+       - Dependency isolation
+       - Interface stability
+       - Documentation completeness
+    
+    5. **Design Pattern Application**
+       - Pattern appropriateness
+       - Implementation correctness
+       - Pattern composition
+       - Extension support
+       - Maintainability impact
+    
+    These metrics evaluate individual component quality.
+  </content>
+</details>
+
+<details>
+  <section-name>ALGORITHM DESIGN METRICS</section-name>
+  <content>
+    Algorithm designs are evaluated using:
+    
+    1. **Complexity Metrics**
+       - Time complexity (big-O)
+       - Space complexity
+       - Average case performance
+       - Worst case guarantees
+       - Amortized analysis
+    
+    2. **Correctness Factors**
+       - Edge case handling
+       - Input validation
+       - Invariant maintenance
+       - Termination guarantees
+       - Output validation
+    
+    3. **Resource Efficiency**
+       - Memory usage profile
+       - CPU utilization
+       - I/O efficiency
+       - Energy efficiency
+       - Resource scaling
+    
+    4. **Implementation Characteristics**
+       - Code complexity
+       - Optimization potential
+       - Library dependencies
+       - Platform requirements
+       - Parallelization capability
+    
+    5. **Robustness Measures**
+       - Error handling
+       - Failure recovery
+       - Degraded operation
+       - Stability under load
+       - Resource exhaustion handling
+    
+    These metrics assess algorithm design comprehensively.
+  </content>
+</details>
+
+<details>
+  <section-name>DATA MODEL METRICS</section-name>
+  <content>
+    Data models are evaluated using:
+    
+    1. **Normalization Quality**
+       - Normalization level
+       - Denormalization justification
+       - Redundancy control
+       - Update anomaly resistance
+       - Referential integrity
+    
+    2. **Access Efficiency**
+       - Query performance projection
+       - Index effectiveness
+       - Join complexity
+       - Read/write ratio optimization
+       - Cache friendliness
+    
+    3. **Flexibility Measures**
+       - Schema evolution support
+       - Extension mechanisms
+       - Versioning capability
+       - Backward compatibility
+       - Migration complexity
+    
+    4. **Integrity Controls**
+       - Constraint completeness
+       - Validation mechanisms
+       - Transaction boundary appropriateness
+       - Data quality provisions
+       - Corruption resistance
+    
+    5. **Representation Appropriateness**
+       - Data type selection
+       - Cardinality accuracy
+       - Relationship clarity
+       - Entity completeness
+       - Domain alignment
+    
+    These metrics assess data organization effectiveness.
+  </content>
+</details>
+
+<details>
+  <section-name>UI/UX DESIGN METRICS</section-name>
+  <content>
+    UI/UX designs are evaluated using:
+    
+    1. **Usability Metrics**
+       - Task success rate
+       - Time on task
+       - Error frequency
+       - User satisfaction
+       - Learning curve
+    
+    2. **Accessibility Measures**
+       - WCAG compliance level
+       - Assistive technology compatibility
+       - Keyboard navigability
+       - Color contrast ratios
+       - Content structure
+    
+    3. **Information Architecture**
+       - Navigation efficiency
+       - Information findability
+       - Menu structure clarity
+       - Content organization
+       - Search effectiveness
+    
+    4. **Visual Design Quality**
+       - Brand alignment
+       - Visual hierarchy
+       - Consistency
+       - Layout effectiveness
+       - Responsive behavior
+    
+    5. **Interaction Design**
+       - Feedback clarity
+       - Error prevention
+       - Error recovery
+       - Input efficiency
+       - Progressive disclosure
+    
+    These metrics assess user experience quality comprehensively.
+  </content>
+</details>
+
+<details>
+  <section-name>SCORING SYSTEMS</section-name>
+  <content>
+    Evaluation uses these scoring approaches:
+    
+    1. **Numeric Scales**
+       - 1-5 Likert scale (common for subjective measures)
+       - 1-10 decimal scale (finer granularity)
+       - Percentage scores (0-100%)
+       - Normalized scores (0.0-1.0)
+       - Logarithmic scales (for wide-ranging metrics)
+    
+    2. **Qualitative Assessments**
+       - Excellent/Good/Adequate/Poor/Unacceptable
+       - Exceeds/Meets/Partially Meets/Does Not Meet requirements
+       - High/Medium/Low risk or complexity
+       - Strong/Moderate/Weak alignment
+       - Critical/Important/Useful/Optional classification
+    
+    3. **Comparative Rankings**
+       - Rank ordering among alternatives (1st, 2nd, 3rd...)
+       - Pairwise comparisons with preference indication
+       - Relative scoring (baseline=100%, alternatives as percentages)
+       - Gap analysis (distance from ideal solution)
+       - Pareto ranking (non-dominated solutions)
+    
+    4. **Multi-criteria Aggregation**
+       - Weighted sum model
+       - Weighted product model
+       - Analytic hierarchy process (AHP)
+       - TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)
+       - Outranking methods
+    
+    These scoring systems provide flexible evaluation approaches.
+  </content>
+</details>
+
+<details>
+  <section-name>WEIGHTING MECHANISMS</section-name>
+  <content>
+    Evaluation criteria are weighted through:
+    
+    1. **Priority-Based Weighting**
+       - High priority: 5x weight
+       - Medium priority: 3x weight
+       - Low priority: 1x weight
+       - Critical factors: 10x weight
+       - Non-critical factors: baseline weight
+    
+    2. **Percentage Distribution**
+       - Distribute 100% among criteria
+       - Major factors: 15-30%
+       - Important factors: 10-15%
+       - Standard factors: 5-10%
+       - Minor factors: 1-5%
+    
+    3. **Stakeholder-Driven Weighting**
+       - Weights based on stakeholder priorities
+       - Role-based weighting profiles
+       - Business impact alignment
+       - Strategic objective correlation
+       - User need prioritization
+    
+    4. **Context-Sensitive Weighting**
+       - Project type adjustments
+       - Domain-specific importance factors
+       - Risk-based weight adjustment
+       - Constraint-driven weighting
+       - Phase-appropriate emphasis
+    
+    5. **Adaptive Weighting**
+       - Sensitivity analysis adjustment
+       - Progressive refinement
+       - Learning-based adaptation
+       - Feedback-driven reweighting
+       - Context evolution response
+    
+    These mechanisms ensure appropriate criteria emphasis.
+  </content>
+</details>
+
+<details>
+  <section-name>MEASUREMENT APPROACHES</section-name>
+  <content>
+    Metrics are measured through these approaches:
+    
+    1. **Direct Measurement**
+       - Quantitative metrics with precise measurement
+       - Counting and enumeration
+       - Performance testing results
+       - Static analysis metrics
+       - Direct observation
+    
+    2. **Expert Assessment**
+       - Structured expert evaluation
+       - Multi-expert consensus
+       - Calibrated assessment scales
+       - Blind comparative assessment
+       - Delphi method for convergence
+    
+    3. **Comparative Evaluation**
+       - Benchmark-based scoring
+       - Reference implementation comparison
+       - Industry standard deviation
+       - Best practice alignment percentage
+       - Competitive assessment
+    
+    4. **Predictive Measurement**
+       - Projection models
+       - Simulation results
+       - Trend analysis
+       - Statistical modeling
+       - Extrapolation from prototypes
+    
+    5. **Composite Measurement**
+       - Derived metrics from multiple inputs
+       - Balanced scorecards
+       - Quality indices
+       - Risk-adjusted metrics
+       - Normalized composite scores
+    
+    These approaches enable appropriate measurement for different metrics.
+  </content>
+</details>
+
+<details>
+  <section-name>VISUALIZATION TECHNIQUES</section-name>
+  <content>
+    Evaluation results are visualized through:
+    
+    1. **Comparison Tables**
+       - Side-by-side metric comparison
+       - Color-coded performance indicators
+       - Delta highlighting
+       - Threshold markers
+       - Sorting by different criteria
+    
+    2. **Radar/Spider Charts**
+       - Multi-dimensional visualization
+       - Alternative comparison on same chart
+       - Area coverage as overall score
+       - Strength/weakness pattern identification
+       - Balanced profile visualization
+    
+    3. **Heat Maps**
+       - Color intensity for metric values
+       - Two-dimensional factor mapping
+       - Clustering visualization
+       - Pattern identification
+       - Focus area highlighting
+    
+    4. **Bar/Column Charts**
+       - Direct metric comparison
+       - Grouped by category
+       - Stacked for composite metrics
+       - Threshold lines
+       - Error bars for uncertainty
+    
+    5. **Decision Matrices**
+       - Criteria vs. alternatives grid
+       - Weighted score calculation
+       - Visual weighting indication
+       - Cumulative score display
+       - Sensitivity visualization
+    
+    These visualizations enable clear evaluation communication.
+  </content>
+</details>
+
+<details>
+  <section-name>ADAPTATION TO COMPLEXITY</section-name>
+  <content>
+    Evaluation rigor adapts to task complexity:
+    
+    **Level 1 (Simple)**
+    - Limited metrics set
+    - Basic scoring system
+    - Simplified weighting
+    - Essential visualizations
+    - Focused on key attributes
+    
+    **Level 2 (Moderate)**
+    - Standard metrics set
+    - Regular scoring approach
+    - Balanced weighting
+    - Standard visualizations
+    - Coverage of main attributes
+    
+    **Level 3 (Complex)**
+    - Comprehensive metrics
+    - Detailed scoring system
+    - Multi-factor weighting
+    - Enhanced visualizations
+    - Broad attribute coverage
+    
+    **Level 4 (Critical)**
+    - Exhaustive metrics suite
+    - Advanced scoring methodology
+    - Sophisticated weighting model
+    - Multiple visualization techniques
+    - Complete attribute coverage
+    - Formal evaluation documentation
+    
+    Adaptation ensures appropriate evaluation rigor for each task level.
+  </content>
+</details>
+
+<details>
+  <section-name>EVALUATION MATRIX TEMPLATE</section-name>
+  <content>
+    Standard evaluation matrix format:
+    
+    ```
+    ## Evaluation Matrix: [Design Type] - [Design Name]
+    
+    ### Evaluation Context
+    - Design purpose: [Purpose description]
+    - Alternatives evaluated: [List of alternatives]
+    - Evaluation date: [Date]
+    - Evaluator(s): [Names/roles]
+    
+    ### Primary Evaluation Criteria
+    | Criterion | Weight | Alt 1 | Alt 2 | Alt 3 | Notes |
+    |-----------|--------|-------|-------|-------|-------|
+    | [Criterion 1] | [Weight] | [Score] | [Score] | [Score] | [Notes] |
+    | [Criterion 2] | [Weight] | [Score] | [Score] | [Score] | [Notes] |
+    | [Criterion 3] | [Weight] | [Score] | [Score] | [Score] | [Notes] |
+    | [Criterion 4] | [Weight] | [Score] | [Score] | [Score] | [Notes] |
+    | [Criterion 5] | [Weight] | [Score] | [Score] | [Score] | [Notes] |
+    
+    ### Secondary Evaluation Criteria
+    | Criterion | Weight | Alt 1 | Alt 2 | Alt 3 | Notes |
+    |-----------|--------|-------|-------|-------|-------|
+    | [Criterion 6] | [Weight] | [Score] | [Score] | [Score] | [Notes] |
+    | [Criterion 7] | [Weight] | [Score] | [Score] | [Score] | [Notes] |
+    | [Criterion 8] | [Weight] | [Score] | [Score] | [Score] | [Notes] |
+    
+    ### Weighted Results
+    | Alternative | Total Score | Primary Score | Secondary Score | Rank |
+    |-------------|-------------|---------------|----------------|------|
+    | [Alt 1 Name] | [Total] | [Primary] | [Secondary] | [Rank] |
+    | [Alt 2 Name] | [Total] | [Primary] | [Secondary] | [Rank] |
+    | [Alt 3 Name] | [Total] | [Primary] | [Secondary] | [Rank] |
+    
+    ### Decision
+    - Selected alternative: [Selected alternative]
+    - Key deciding factors: [List of primary factors]
+    - Acknowledged trade-offs: [List of trade-offs]
+    - Mitigating strategies: [List of mitigations]
+    ```
+    
+    This template provides a standardized format for evaluation documentation.
+  </content>
+</details>
+
+<details>
+  <section-name>EVALUATION EXAMPLES</section-name>
+  <content>
+    **Architecture Evaluation Example**
+    ```
+    ## Evaluation Matrix: Architecture - Authentication System
+    
+    ### Evaluation Context
+    - Design purpose: Modern authentication system supporting SSO and MFA
+    - Alternatives evaluated: Centralized, Distributed, Hybrid approaches
+    - Evaluation date: 2025-03-25
+    - Evaluator(s): BIG BRAIN
+    
+    ### Primary Evaluation Criteria
+    | Criterion | Weight | Centralized | Distributed | Hybrid | Notes |
+    |-----------|--------|-------------|-------------|--------|-------|
+    | Security | 30% | 85 | 70 | 90 | Hybrid offers best security isolation |
+    | Scalability | 25% | 70 | 90 | 85 | Distributed scales well but with security trade-offs |
+    | Maintainability | 20% | 90 | 75 | 80 | Centralized easiest to maintain |
+    | Performance | 15% | 75 | 90 | 85 | Distributed has lowest latency |
+    | Flexibility | 10% | 70 | 85 | 90 | Hybrid offers best adaptation paths |
+    
+    ### Secondary Evaluation Criteria
+    | Criterion | Weight | Centralized | Distributed | Hybrid | Notes |
+    |-----------|--------|-------------|-------------|--------|-------|
+    | Integration Complexity | 40% | 90 | 70 | 75 | Centralized simplest to integrate |
+    | Deployment Complexity | 30% | 85 | 70 | 75 | Centralized easiest to deploy |
+    | Technology Diversity | 30% | 90 | 70 | 80 | Centralized uses fewer technologies |
+    
+    ### Weighted Results
+    | Alternative | Total Score | Primary Score | Secondary Score | Rank |
+    |-------------|-------------|---------------|----------------|------|
+    | Centralized | 82.25 | 78.5 | 88.5 | 2 |
+    | Distributed | 78.75 | 80.75 | 70 | 3 |
+    | Hybrid | 84.00 | 86.5 | 76.5 | 1 |
+    
+    ### Decision
+    - Selected alternative: Hybrid Architecture
+    - Key deciding factors: Security, Scalability, Flexibility
+    - Acknowledged trade-offs: Higher integration and deployment complexity
+    - Mitigating strategies: Phased deployment, comprehensive documentation
+    ```
+    
+    **Algorithm Evaluation Example**
+    ```
+    ## Evaluation Matrix: Algorithm - Search Implementation
+    
+    ### Evaluation Context
+    - Design purpose: High-performance text search algorithm
+    - Alternatives evaluated: Binary Search, B-Tree, Suffix Array
+    - Evaluation date: 2025-03-25
+    - Evaluator(s): BIG BRAIN
+    
+    ### Primary Evaluation Criteria
+    | Criterion | Weight | Binary Search | B-Tree | Suffix Array | Notes |
+    |-----------|--------|---------------|--------|--------------|-------|
+    | Search Speed | 35% | 80 | 85 | 95 | Suffix Array fastest for text |
+    | Memory Usage | 25% | 95 | 80 | 70 | Binary Search most memory efficient |
+    | Scalability | 20% | 75 | 90 | 85 | B-Tree scales best to disk |
+    | Implementation Complexity | 10% | 95 | 80 | 65 | Binary Search simplest to implement |
+    | Update Efficiency | 10% | 70 | 90 | 60 | B-Tree handles updates best |
+    
+    ### Secondary Evaluation Criteria
+    | Criterion | Weight | Binary Search | B-Tree | Suffix Array | Notes |
+    |-----------|--------|---------------|--------|--------------|-------|
+    | Edge Case Handling | 50% | 75 | 85 | 90 | Suffix Array best for edge cases |
+    | Parallelization | 30% | 60 | 75 | 90 | Suffix Array easiest to parallelize |
+    | Cache Efficiency | 20% | 90 | 85 | 75 | Binary Search most cache friendly |
+    
+    ### Weighted Results
+    | Alternative | Total Score | Primary Score | Secondary Score | Rank |
+    |-------------|-------------|---------------|----------------|------|
+    | Binary Search | 81.75 | 83.5 | 75.0 | 3 |
+    | B-Tree | 84.25 | 85.0 | 82.0 | 2 |
+    | Suffix Array | 85.00 | 83.5 | 87.0 | 1 |
+    
+    ### Decision
+    - Selected alternative: Suffix Array
+    - Key deciding factors: Search speed, Edge case handling, Parallelization
+    - Acknowledged trade-offs: Higher memory usage, Implementation complexity
+    - Mitigating strategies: Memory optimization, Comprehensive documentation
+    ```
+    
+    These examples demonstrate evaluation matrix application.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH MEMORY BANK</section-name>
+  <content>
+    Evaluation metrics integrate with memory bank:
+    
+    1. **Design Decisions**
+       - Evaluation results documented in systemPatterns.md
+       - Metric-based rationale in design documentation
+       - Alternative comparison preservation
+       - Decision criteria documentation
+    
+    2. **Knowledge Building**
+       - Metric application patterns recorded
+       - Common evaluation criteria captured
+       - Priority patterns by project type
+       - Evaluation sensitivity insights
+    
+    3. **Quality Standards**
+       - Metric thresholds established
+       - Minimum quality standards defined
+       - Metric targets for different contexts
+       - Benchmark references maintained
+    
+    4. **Process Integration**
+       - Standard evaluation points in workflows
+       - Metric application guidelines
+       - Consistent documentation formats
+       - Evaluation templates
+    
+    This integration ensures evaluation knowledge persists despite memory reset.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH CREATIVE PROCESS</section-name>
+  <content>
+    Evaluation metrics integrate with creative process:
+    
+    1. **Early Evaluation**
+       - Preliminary metrics for initial concepts
+       - Concept filtering criteria
+       - Design direction metrics
+       - Exploration guideposts
+    
+    2. **Progressive Evaluation**
+       - Metric application throughout process
+       - Incremental quality assessment
+       - Design evolution tracking
+       - Improvement verification
+    
+    3. **Comparative Evaluation**
+       - Alternative comparison frameworks
+       - Trade-off analysis mechanisms
+       - Decision support metrics
+       - Selection criteria formalization
+    
+    4. **Final Verification**
+       - Comprehensive metric application
+       - Quality verification framework
+       - Requirements alignment confirmation
+       - Final acceptance criteria
+    
+    This integration ensures metrics support the entire creative process.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-03-25 | BIG BRAIN | Initial implementation of evaluation metrics system |

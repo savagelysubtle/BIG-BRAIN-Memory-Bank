@@ -1,0 +1,545 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN processing commands APPLY unified interface patterns for consistent memory bank operations
+globs: ["**/*.md", "**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** The Unified Command Interface provides a standardized command structure for all Memory Bank operations, ensuring consistent interaction patterns and predictable behavior across different contexts.
+
+<version>1.0.0</version>
+
+<context>
+  This rule establishes the Unified Command Interface that standardizes all interactions with the Memory Bank system. Since BIG BRAIN relies on consistent command patterns for effective operation across different contexts, a unified command interface is essential for reliable memory management. The interface provides standardized command structures, predictable behavior patterns, and consistent feedback mechanisms for all memory operations.
+</context>
+
+<requirements>
+  <requirement>Provide standardized command structure for all memory operations</requirement>
+  <requirement>Ensure consistent parameters and syntax across command contexts</requirement>
+  <requirement>Implement clear feedback mechanisms for command execution</requirement>
+  <requirement>Support command categories for organized functionality</requirement>
+  <requirement>Enable command discovery and self-documentation</requirement>
+  <requirement>Enforce command validation and error handling</requirement>
+</requirements>
+
+<details>
+  <section-name>COMMAND STRUCTURE</section-name>
+  <content>
+    All Memory Bank commands follow this structure:
+
+    ```
+    BIG [category] [command] [parameters] [--options]
+    ```
+
+    Where:
+    - **BIG**: Universal command prefix indicating Memory Bank operation
+    - **category**: Functional area (memory, workflow, verification, etc.)
+    - **command**: Specific operation within the category
+    - **parameters**: Required command inputs in fixed order
+    - **options**: Optional flags modifying command behavior
+
+    Examples:
+    ```
+    BIG memory read projectbrief.md --section requirements
+    BIG workflow plan "Database schema design" --complexity 3
+    BIG verify consistency --focus architecture
+    ```
+
+    This structure ensures consistent command patterns across all interactions.
+  </content>
+</details>
+
+<details>
+  <section-name>COMMAND CATEGORIES</section-name>
+  <content>
+    Commands are organized into these functional categories:
+
+    1. **memory**
+       - Core memory file operations
+       - Example: `BIG memory update activeContext.md`
+
+    2. **workflow**
+       - Task process management
+       - Example: `BIG workflow start act-mode`
+
+    3. **verify**
+       - Verification and validation
+       - Example: `BIG verify consistency`
+
+    4. **system**
+       - System configuration and management
+       - Example: `BIG system status`
+
+    5. **bedtime**
+       - Bedtime protocol operations
+       - Example: `BIG bedtime prepare`
+
+    6. **help**
+       - Documentation and assistance
+       - Example: `BIG help commands`
+
+    7. **creative**
+       - Creative phase operations
+       - Example: `BIG creative evaluate design1.md`
+
+    Each category has standardized commands and parameter patterns.
+  </content>
+</details>
+
+<details>
+  <section-name>CORE COMMANDS</section-name>
+  <content>
+    The system provides these essential commands:
+
+    **Memory Operations**
+    - `BIG memory read [file] [--section] [--format]`
+    - `BIG memory write [file] [content] [--append]`
+    - `BIG memory update [file] [--section] [content]`
+    - `BIG memory search [query] [--files] [--context]`
+    - `BIG memory list [--type] [--status]`
+
+    **Workflow Operations**
+    - `BIG workflow start [mode] [--complexity]`
+    - `BIG workflow switch [mode]`
+    - `BIG workflow status`
+    - `BIG workflow track [section] [--status]`
+    - `BIG workflow checkpoint [description]`
+
+    **Verification Operations**
+    - `BIG verify files [--focus]`
+    - `BIG verify consistency [--scope]`
+    - `BIG verify references [--file]`
+    - `BIG verify structure [--files]`
+    - `BIG verify health [--detail]`
+
+    **System Operations**
+    - `BIG system status`
+    - `BIG system config [setting] [value]`
+    - `BIG system reset [--scope]`
+    - `BIG system rules [--active]`
+    - `BIG system version`
+
+    **Help Operations**
+    - `BIG help [topic]`
+    - `BIG help commands [category]`
+    - `BIG help workflow [mode]`
+    - `BIG help examples [context]`
+
+    **Bedtime Operations**
+    - `BIG bedtime prepare`
+    - `BIG bedtime verify`
+    - `BIG bedtime summary [--format]`
+    - `BIG bedtime complete [--notes]`
+
+    **Creative Operations**
+    - `BIG creative start [design-type]`
+    - `BIG creative evaluate [artifact] [--criteria]`
+    - `BIG creative verify [artifact] [--standards]`
+    - `BIG creative finalize [artifact] [--store]`
+
+    Commands are implemented consistently across all contexts.
+  </content>
+</details>
+
+<details>
+  <section-name>PARAMETER CONVENTIONS</section-name>
+  <content>
+    Parameters follow these conventions:
+
+    1. **Positional Parameters**
+       - Required parameters appear in fixed order
+       - File parameters come first when present
+       - Action parameters follow file parameters
+       - Content parameters come last
+
+    2. **Named Options**
+       - All options use double-dash prefix (--option)
+       - Boolean options need no value (--verbose)
+       - Value options use equals or space (--format=json or --format json)
+       - Shorthand forms use single dash (-v for --verbose)
+
+    3. **Parameter Types**
+       - Files: Valid relative or absolute paths
+       - Identifiers: Alphanumeric strings with hyphens/underscores
+       - Content: Quoted text strings or file references
+       - Lists: Comma-separated values without spaces
+
+    4. **Default Values**
+       - Unspecified options use documented defaults
+       - Context-sensitive defaults change based on mode
+       - Explicit parameters override defaults
+       - Configuration settings can change defaults
+
+    These conventions ensure consistent parameter usage across all commands.
+  </content>
+</details>
+
+<details>
+  <section-name>FEEDBACK FORMATS</section-name>
+  <content>
+    Commands provide feedback in these standard formats:
+
+    1. **Success Format**
+       ```
+       ✅ [Operation] completed successfully
+       └─ [Details about the operation]
+          [Additional context]
+          [Next steps if applicable]
+       ```
+
+    2. **Warning Format**
+       ```
+       ⚠️ [Operation] completed with warnings
+       ├─ Warning: [Warning description]
+       │  └─ [Suggestion to address warning]
+       └─ [Operation details]
+       ```
+
+    3. **Error Format**
+       ```
+       ❌ [Operation] failed
+       ├─ Error: [Error description]
+       ├─ Location: [Where the error occurred]
+       └─ Resolution: [How to fix the issue]
+       ```
+
+    4. **Information Format**
+       ```
+       ℹ️ [Information title]
+       ├─ [Key point 1]
+       ├─ [Key point 2]
+       └─ [Key point 3]
+       ```
+
+    5. **List Format**
+       ```
+       📋 [List title]
+       ├─ [Item 1]
+       │  └─ [Item 1 details]
+       ├─ [Item 2]
+       │  └─ [Item 2 details]
+       └─ [Item 3]
+          └─ [Item 3 details]
+       ```
+
+    These formats provide consistent visual structure for command output.
+  </content>
+</details>
+
+<details>
+  <section-name>COMMAND VALIDATION</section-name>
+  <content>
+    Commands are validated through this process:
+
+    1. **Syntax Validation**
+       - Command structure correctness
+       - Required parameter presence
+       - Option format validation
+       - Type checking for parameters
+
+    2. **Semantic Validation**
+       - Parameter value ranges
+       - Resource existence (files, references)
+       - State prerequisites (mode requirements)
+       - Permission verification
+
+    3. **Consistency Validation**
+       - Option compatibility
+       - Parameter interactions
+       - Context appropriateness
+       - Workflow stage alignment
+
+    4. **Execution Validation**
+       - Resource availability
+       - Operation feasibility
+       - Expected outcome verification
+       - Side effect assessment
+
+    Validation ensures commands are correct before execution.
+  </content>
+</details>
+
+<details>
+  <section-name>ERROR HANDLING</section-name>
+  <content>
+    The command system handles errors through this approach:
+
+    1. **Error Categories**
+       - Syntax errors (malformed commands)
+       - Semantic errors (invalid values)
+       - Resource errors (missing files)
+       - Permission errors (unauthorized operations)
+       - Execution errors (runtime failures)
+
+    2. **Error Response**
+       - Clear error identification
+       - Specific error location
+       - Cause explanation
+       - Resolution guidance
+
+    3. **Recovery Options**
+       - Suggested corrections
+       - Alternative approaches
+       - Fallback operations
+       - Self-healing when possible
+
+    4. **Error Context**
+       - Command history context
+       - System state information
+       - Related resources
+       - Documentation references
+
+    Effective error handling guides users to successful command usage.
+  </content>
+</details>
+
+<details>
+  <section-name>COMMAND DISCOVERABILITY</section-name>
+  <content>
+    Commands are discoverable through these mechanisms:
+
+    1. **Help System**
+       - Command listing by category
+       - Detailed command documentation
+       - Parameter explanation
+       - Example usage
+
+    2. **Interactive Assistance**
+       - Command completion suggestions
+       - Parameter hints
+       - Context-sensitive recommendations
+       - Error correction guidance
+
+    3. **Command Relations**
+       - Related command suggestions
+       - Workflow sequence guidance
+       - Command chain recommendations
+       - Alternative approach suggestions
+
+    4. **Documentation Integration**
+       - Command references in documentation
+       - Task-oriented command guides
+       - Command pattern examples
+       - Best practice recommendations
+
+    Discoverability ensures users can find and use appropriate commands.
+  </content>
+</details>
+
+<details>
+  <section-name>CONTEXT ADAPTATION</section-name>
+  <content>
+    Commands adapt to context through these mechanisms:
+
+    1. **Task Complexity Adaptation**
+       - Command detail level adjusts to complexity
+       - Validation rigor scales with complexity
+       - Feedback depth matches complexity
+       - Option defaults adapt to complexity
+
+    2. **Workflow Stage Adaptation**
+       - Available commands change by workflow stage
+       - Parameter requirements adjust by stage
+       - Validation rules adapt to stage
+       - Default values change by stage
+
+    3. **Memory State Adaptation**
+       - Commands adjust to memory health
+       - Operation limitations based on state
+       - Recovery options in degraded states
+       - Enhanced validation in uncertain states
+
+    4. **User Familiarity Adaptation**
+       - Command guidance level adjusts
+       - Error detail adapts to familiarity
+       - Shortcuts available at higher familiarity
+       - Help detail adapts to experience level
+
+    Context adaptation ensures commands remain useful across different situations.
+  </content>
+</details>
+
+<details>
+  <section-name>COMMAND COMPOSITION</section-name>
+  <content>
+    Complex operations use command composition:
+
+    1. **Sequential Composition**
+       - Multiple commands executed in sequence
+       - Example: `BIG memory read file1.md && BIG memory update file2.md`
+       - Later commands depend on earlier success
+       - Sequence aborts on failure
+
+    2. **Conditional Composition**
+       - Commands executed based on conditions
+       - Example: `BIG verify files && BIG bedtime prepare`
+       - Branching based on command results
+       - Error handling paths
+
+    3. **Parameterized Composition**
+       - Results of commands feed into others
+       - Example: `BIG memory search "architecture" --files | BIG verify consistency --focus`
+       - Data piping between commands
+       - Result transformation between steps
+
+    4. **Command Grouping**
+       - Related commands grouped for execution
+       - Example: `BIG workflow start {verify files; update context; track progress}`
+       - Atomic execution of grouped commands
+       - Shared context within groups
+
+    Composition enables complex operations through simple command combinations.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH MEMORY LAYER</section-name>
+  <content>
+    Commands integrate with the memory layer:
+
+    1. **Memory State Access**
+       - Commands can query memory status
+       - Operation permissions based on memory state
+       - Command availability adapts to memory status
+       - Memory health impacts command behavior
+
+    2. **Memory Operations**
+       - Direct access to memory files
+       - Structured memory updates
+       - Memory content validation
+       - Memory maintenance automation
+
+    3. **Context Awareness**
+       - Commands access active context
+       - Operations adapt to current focus
+       - Task tracking integration
+       - Progress awareness
+
+    4. **Memory Updates**
+       - Automatic memory updates for relevant operations
+       - Consistency maintenance
+       - Change tracking
+       - Version management
+
+    This integration ensures commands operate effectively within the memory model.
+  </content>
+</details>
+
+<details>
+  <section-name>COMMAND EXAMPLES</section-name>
+  <content>
+    **Memory Operations Examples**
+    ```
+    BIG memory read activeContext.md --section "Current Focus"
+    BIG memory update progress.md --section "Next Steps" "Implement verification system"
+    BIG memory search "verification framework" --files systemPatterns.md,techContext.md
+    ```
+
+    **Workflow Operations Examples**
+    ```
+    BIG workflow start plan-mode --complexity 3
+    BIG workflow checkpoint "Completed database schema design"
+    BIG workflow track "Architecture Review" --status complete
+    ```
+
+    **Verification Examples**
+    ```
+    BIG verify consistency --focus "architecture components"
+    BIG verify health --detailed
+    BIG verify references --file systemPatterns.md
+    ```
+
+    **Creative Process Examples**
+    ```
+    BIG creative start architecture-design --project "API Framework"
+    BIG creative evaluate design-proposal.md --criteria "scalability,maintainability"
+    BIG creative finalize final-architecture.md --store architectures/approved
+    ```
+
+    **Bedtime Protocol Examples**
+    ```
+    BIG bedtime prepare
+    BIG bedtime verify --comprehensive
+    BIG bedtime complete --notes "Completed verification system implementation"
+    ```
+
+    These examples demonstrate the consistent command patterns across different operations.
+  </content>
+</details>
+
+<details>
+  <section-name>IMPLEMENTATION APPROACH</section-name>
+  <content>
+    The command interface is implemented through:
+
+    1. **Command Parser**
+       - Tokenizes command input
+       - Validates syntax structure
+       - Extracts parameters and options
+       - Normalizes command format
+
+    2. **Command Router**
+       - Maps commands to handlers
+       - Validates command context
+       - Manages command execution
+       - Coordinates composition
+
+    3. **Execution Engine**
+       - Performs command operations
+       - Manages resource access
+       - Handles errors and exceptions
+       - Generates result format
+
+    4. **Feedback Formatter**
+       - Structures command output
+       - Applies consistent formatting
+       - Handles success/error presentation
+       - Provides context-appropriate detail
+
+    This implementation approach ensures consistent behavior across all commands.
+  </content>
+</details>
+
+<details>
+  <section-name>ADAPTATION TO COMPLEXITY</section-name>
+  <content>
+    Command interface adapts to task complexity:
+
+    **Level 1 (Simple)**
+    - Basic commands only
+    - Limited options
+    - Simplified feedback
+    - Focused validation
+
+    **Level 2 (Moderate)**
+    - Standard command set
+    - Common options available
+    - Normal feedback detail
+    - Standard validation
+
+    **Level 3 (Complex)**
+    - Extended command set
+    - Advanced options
+    - Detailed feedback
+    - Thorough validation
+
+    **Level 4 (Critical)**
+    - Complete command vocabulary
+    - All options available
+    - Comprehensive feedback
+    - Exhaustive validation
+
+    This adaptation ensures appropriate command capabilities for each task level.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial implementation of unified command interface |
+</rewritten_file>

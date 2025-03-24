@@ -1,0 +1,343 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN entering a creative phase ENSURE comprehensive exploration and validation
+globs: ["**/*.md", "**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** The Creative Phase Metrics system ensures all creative work meets quality standards through structured exploration, validation, and verification processes.
+
+<version>1.0.0</version>
+
+<context>
+  This rule establishes the metrics and processes for creative phases in our Memory Bank system. Creative phases represent periods of exploratory design, architectural planning, or solution development that require divergent thinking followed by convergent validation. This framework ensures all creative work is thoroughly explored and rigorously validated.
+</context>
+
+<requirements>
+  <requirement>Clearly identify creative phase entry and exit conditions</requirement>
+  <requirement>Apply structured exploration framework</requirement>
+  <requirement>Validate creative output with metrics</requirement>
+  <requirement>Document decision rationale</requirement>
+  <requirement>Verify implementation alignment</requirement>
+</requirements>
+
+<details>
+  <section-name>CREATIVE PHASE STRUCTURE</section-name>
+  <content>
+    Each creative phase follows this structure:
+
+    1. **Problem Analysis**
+       - Define current state
+       - Identify limitations
+       - Clarify requirements
+       - Establish constraints
+
+    2. **Solution Exploration**
+       - Generate multiple viable approaches (minimum 3)
+       - Document pros/cons of each approach
+       - Consider extreme alternatives
+       - Explore non-obvious solutions
+
+    3. **Solution Evaluation**
+       - Create evaluation matrix with weighted criteria
+       - Score each solution objectively
+       - Calculate weighted scores
+       - Identify preferred approach
+
+    4. **Implementation Planning**
+       - Detail implementation steps
+       - Define interfaces and boundaries
+       - Address edge cases
+       - Identify verification checks
+
+    5. **Validation**
+       - Verify against requirements
+       - Check alignment with constraints
+       - Confirm backward compatibility
+       - Document verification process
+  </content>
+</details>
+
+<details>
+  <section-name>QUALITY VERIFICATION CRITERIA</section-name>
+  <content>
+    All creative phases must satisfy these quality criteria:
+
+    **Exploration Quality**
+    - [ ] Multiple approaches explored (minimum 3)
+    - [ ] Each approach has detailed pros/cons analysis
+    - [ ] Exploration includes non-obvious alternatives
+    - [ ] Edge cases and constraints considered for each approach
+
+    **Solution Quality**
+    - [ ] Selection criteria are objective and weighted appropriately
+    - [ ] Evaluation matrix includes all relevant dimensions
+    - [ ] Selected solution clearly meets requirements
+    - [ ] Implementation considerations documented
+
+    **Documentation Quality**
+    - [ ] Decision rationale clearly explained
+    - [ ] Alternative approaches properly documented
+    - [ ] Selection criteria explicitly stated
+    - [ ] Future maintainability addressed
+
+    **Implementation Readiness**
+    - [ ] Clear action steps defined
+    - [ ] Interfaces and boundaries specified
+    - [ ] Validation approach documented
+    - [ ] Backward compatibility addressed
+  </content>
+</details>
+
+<details>
+  <section-name>VERIFICATION CHECKLIST</section-name>
+  <content>
+    Complete this checklist before exiting any creative phase:
+
+    ```
+    ## Creative Phase Verification
+
+    ### Exploration Verification
+    - [ ] Multiple solutions explored (List: ...)
+    - [ ] Pros/cons documented for each
+    - [ ] Non-obvious alternatives considered
+    - [ ] Edge cases addressed
+
+    ### Selection Verification
+    - [ ] Objective criteria established
+    - [ ] Evaluation matrix completed
+    - [ ] Selected approach justified
+    - [ ] Implementation plan outlined
+
+    ### Documentation Verification
+    - [ ] Decision rationale documented
+    - [ ] Alternatives properly archived
+    - [ ] Future considerations addressed
+    - [ ] Knowledge transfer ensured
+
+    ### Technical Verification
+    - [ ] Backward compatibility confirmed
+    - [ ] Error handling addressed
+    - [ ] Performance implications considered
+    - [ ] Security implications evaluated
+    ```
+
+    All items must be checked before proceeding to implementation.
+  </content>
+</details>
+
+<details>
+  <section-name>EVALUATION MATRIX TEMPLATE</section-name>
+  <content>
+    Use this template for solution evaluation:
+
+    ```
+    ## Solution Evaluation Matrix
+
+    | Criteria | Weight | Option 1 | Option 2 | Option 3 |
+    |----------|--------|----------|----------|----------|
+    | [Criteria 1] | [Weight] | [Score] | [Score] | [Score] |
+    | [Criteria 2] | [Weight] | [Score] | [Score] | [Score] |
+    | [Criteria 3] | [Weight] | [Score] | [Score] | [Score] |
+    | [Criteria 4] | [Weight] | [Score] | [Score] | [Score] |
+    | **TOTAL** | **100%** | **[Total]** | **[Total]** | **[Total]** |
+
+    ### Scoring Legend
+    - 1: Poor - Does not meet criteria
+    - 2: Fair - Partially meets criteria
+    - 3: Good - Adequately meets criteria
+    - 4: Excellent - Exceeds criteria
+
+    ### Selected Approach: [Option X]
+
+    Rationale for selection:
+    - [Key reason 1]
+    - [Key reason 2]
+    - [Key reason 3]
+    ```
+
+    Weights should total 100%, and all options must be scored on the same scale.
+  </content>
+</details>
+
+<details>
+  <section-name>COMPLEXITY ADAPTATION</section-name>
+  <content>
+    Creative phase depth adapts based on complexity level:
+
+    - **Level 1 (Low Complexity)**
+      - Abbreviated problem analysis
+      - Minimum 2 solution approaches
+      - Simplified evaluation matrix
+      - Basic implementation outline
+
+    - **Level 2 (Medium Complexity)**
+      - Standard problem analysis
+      - Minimum 3 solution approaches
+      - Complete evaluation matrix
+      - Detailed implementation steps
+
+    - **Level 3 (High Complexity)**
+      - Comprehensive problem analysis
+      - Minimum 3 solution approaches with variants
+      - Weighted evaluation matrix with 5+ criteria
+      - Detailed implementation plan with validation
+
+    - **Level 4 (Critical Complexity)**
+      - Exhaustive problem analysis with stakeholder perspectives
+      - Minimum 4 solution approaches with variants
+      - Multi-dimensional evaluation with risk analysis
+      - Phased implementation plan with validation gates
+
+    The creative phase depth should match the complexity level of the task.
+  </content>
+</details>
+
+<details>
+  <section-name>DOCUMENTATION REQUIREMENTS</section-name>
+  <content>
+    Creative phase documentation must include:
+
+    1. **Problem Statement**
+       - Current state description
+       - Limitations to address
+       - Requirements list
+       - Constraints to respect
+
+    2. **Solution Approaches**
+       - Detailed description of each approach
+       - Architecture diagrams where applicable
+       - Pros/cons analysis
+       - Implementation considerations
+
+    3. **Selection Process**
+       - Evaluation criteria with weights
+       - Scoring matrix
+       - Selection rationale
+       - Discarded alternatives with reasons
+
+    4. **Implementation Plan**
+       - Detailed implementation steps
+       - Interfaces and boundaries
+       - Validation approach
+       - Risk mitigation strategies
+
+    This documentation ensures knowledge transfer and future maintainability.
+  </content>
+</details>
+
+<details>
+  <section-name>EXAMPLE APPLICATION</section-name>
+  <content>
+    ```
+    # Creative Phase: Authentication System Redesign
+
+    ## Problem Analysis
+
+    Current State:
+    - Basic password-based authentication
+    - No MFA support
+    - Limited session management
+    - Manual user provisioning
+
+    Limitations:
+    - Security vulnerabilities in password-only approach
+    - Poor user experience with manual provisioning
+    - Limited scalability of session management
+
+    Requirements:
+    - Add MFA support
+    - Integrate SSO capabilities
+    - Improve session security
+    - Support automated user provisioning
+
+    Constraints:
+    - Must maintain backward compatibility
+    - Deployment deadline in 3 months
+    - Limited budget for third-party services
+
+    ## Solution Exploration
+
+    ### Approach 1: Extend Current System
+    Description: Incrementally add features to existing system...
+    Pros:
+    - Minimal disruption to users
+    - Lower implementation risk
+    Cons:
+    - Limited architectural improvement
+    - Technical debt remains
+
+    ### Approach 2: Third-party Auth Provider
+    Description: Replace with OAuth implementation using Auth0...
+    Pros:
+    - Comprehensive feature set
+    - Reduced implementation time
+    Cons:
+    - Recurring service costs
+    - Vendor lock-in concerns
+
+    ### Approach 3: Microservice Architecture
+    Description: Rebuild as independent microservices...
+    Pros:
+    - Modern scalable architecture
+    - Independent service scaling
+    Cons:
+    - Higher implementation complexity
+    - More extensive testing required
+
+    ## Solution Evaluation
+
+    | Criteria | Weight | Extend | Third-party | Microservice |
+    |----------|--------|--------|------------|--------------|
+    | Security | 30% | 2 (0.6) | 4 (1.2) | 3 (0.9) |
+    | Cost | 25% | 4 (1.0) | 2 (0.5) | 3 (0.75) |
+    | Time | 20% | 3 (0.6) | 4 (0.8) | 1 (0.2) |
+    | Scalability | 15% | 1 (0.15) | 3 (0.45) | 4 (0.6) |
+    | Maintainability | 10% | 2 (0.2) | 3 (0.3) | 4 (0.4) |
+    | **TOTAL** | **100%** | **2.55** | **3.25** | **2.85** |
+
+    ### Selected Approach: Third-party Auth Provider
+
+    Rationale:
+    - Highest weighted score
+    - Best balance of security and implementation time
+    - Addresses all requirements within constraints
+
+    ## Implementation Plan
+    ...
+    ```
+
+    This example demonstrates a complete creative phase for a Level 3 complexity task.
+  </content>
+</details>
+
+<details>
+  <section-name>PHASE TRANSITION</section-name>
+  <content>
+    Clear indicators mark entry and exit of creative phases:
+
+    **Entry Indicators**:
+    - Complex design decision needed
+    - Multiple viable approaches exist
+    - Risk of premature convergence
+    - Level 3-4 complexity task initialization
+
+    **Exit Indicators**:
+    - All verification criteria satisfied
+    - Implementation plan established
+    - Documentation complete
+    - Stakeholder alignment (where applicable)
+
+    Transitions must be explicitly marked in task tracking.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial implementation of creative phase metrics |

@@ -1,0 +1,487 @@
+---
+description: WHEN performing memory bank operations FOLLOW standardized workflows for consistency and reliability
+globs: ["**/*.md", "**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** This rule establishes standardized workflows for memory bank operations, ensuring consistent processes for initialization, updates, verification, and session transitions despite memory resets.
+
+<version>1.0.0</version>
+
+<context>
+  Consistent operational workflows are essential for maintaining the integrity and reliability of the BIG BRAIN Memory Bank system across memory resets. This rule defines standardized processes for common memory operations, ensuring that critical tasks are performed consistently and completely, preserving knowledge and operational continuity.
+</context>
+
+<requirements>
+  <requirement>Establish standardized workflows for common memory operations</requirement>
+  <requirement>Define clear initialization procedures for new sessions</requirement>
+  <requirement>Specify memory update processes for maintaining current state</requirement>
+  <requirement>Provide verification workflows for ensuring system integrity</requirement>
+  <requirement>Document session transition processes for bedtime and waking</requirement>
+  <requirement>Ensure workflows adapt to different task complexity levels</requirement>
+</requirements>
+
+<details>
+  <section-name>WORKFLOW TYPES</section-name>
+  <content>
+    The system supports these workflow types:
+
+    1. **Initialization Workflows**
+       - Session startup procedures
+       - Memory bank loading
+       - Context restoration
+       - System verification
+       - Task preparation
+
+    2. **Operational Workflows**
+       - Memory bank updates
+       - State tracking
+       - Information retrieval
+       - Progressive knowledge building
+       - Context switching
+
+    3. **Verification Workflows**
+       - Integrity checking
+       - Consistency validation
+       - Reference verification
+       - Performance monitoring
+       - Error detection and recovery
+
+    4. **Transition Workflows**
+       - Session summarization
+       - State preservation
+       - Bedtime procedures
+       - Wakeup sequence
+       - Continuity maintenance
+
+    Each workflow type has specific processes, checks, and documentation requirements.
+  </content>
+</details>
+
+<details>
+  <section-name>INITIALIZATION WORKFLOW</section-name>
+  <content>
+    Session initialization follows this workflow:
+
+    1. **Memory Bank Loading**
+       - Retrieve core memory files:
+         - projectbrief.md
+         - productContext.md
+         - activeContext.md
+         - systemPatterns.md
+         - techContext.md
+         - progress.md
+       - Verify file existence and accessibility
+       - Load content into working memory
+       - Note any missing or inaccessible files
+
+    2. **Context Assessment**
+       - Review activeContext.md for current focus
+       - Identify recent changes and current status
+       - Note open issues and questions
+       - Understand overall progress
+       - Recognize next planned steps
+
+    3. **System Verification**
+       - Check version compatibility
+       - Verify cross-references
+       - Validate memory bank structure
+       - Confirm rule availability
+       - Identify any integrity issues
+
+    4. **Task Contextualization**
+       - Relate current task to project context
+       - Position within implementation plan
+       - Identify relevant components
+       - Determine complexity level
+       - Prepare appropriate resources
+
+    5. **Readiness Confirmation**
+       - Verify all required information is available
+       - Confirm understanding of current state
+       - Identify any missing context
+       - Request additional information if needed
+       - Signal initialization completion
+
+    This workflow ensures proper system readiness before task execution.
+  </content>
+</details>
+
+<details>
+  <section-name>MEMORY UPDATE WORKFLOW</section-name>
+  <content>
+    Memory updates follow this workflow:
+
+    1. **Change Assessment**
+       - Identify what information has changed
+       - Determine impacted memory files
+       - Assess change significance
+       - Categorize change type
+       - Identify related components
+
+    2. **Update Preparation**
+       - Review current file content
+       - Identify sections requiring updates
+       - Determine appropriate update format
+       - Ensure version consistency
+       - Prepare change documentation
+
+    3. **Content Modification**
+       - Make targeted updates to memory files
+       - Maintain consistent formatting
+       - Preserve existing structure
+       - Update version information
+       - Document change rationale
+
+    4. **Cross-Reference Updates**
+       - Identify related files requiring updates
+       - Update cross-references as needed
+       - Ensure terminology consistency
+       - Maintain version alignment
+       - Verify reference integrity
+
+    5. **Verification**
+       - Review changes for accuracy
+       - Validate format and structure
+       - Check for unintended impacts
+       - Verify cross-reference correctness
+       - Confirm information consistency
+
+    The memory update workflow ensures systematic, consistent modifications to the memory bank.
+  </content>
+</details>
+
+<details>
+  <section-name>VERIFICATION WORKFLOW</section-name>
+  <content>
+    System verification follows this workflow:
+
+    1. **Scope Definition**
+       - Determine verification targets
+       - Identify verification criteria
+       - Select verification approach
+       - Determine depth of verification
+       - Establish success criteria
+
+    2. **Structure Verification**
+       - Check file organization
+       - Verify required sections exist
+       - Validate formatting consistency
+       - Check naming conventions
+       - Confirm version information
+
+    3. **Content Verification**
+       - Validate information accuracy
+       - Check for completeness
+       - Verify logical consistency
+       - Confirm terminology alignment
+       - Check for outdated information
+
+    4. **Cross-Reference Validation**
+       - Verify reference correctness
+       - Check for broken references
+       - Validate bidirectional references
+       - Confirm version compatibility
+       - Check dependency correctness
+
+    5. **Issue Reporting**
+       - Document identified issues
+       - Categorize by severity
+       - Provide correction guidance
+       - Recommend remediation steps
+       - Track resolution status
+
+    The verification workflow ensures ongoing system integrity and reliability.
+  </content>
+</details>
+
+<details>
+  <section-name>BEDTIME PROTOCOL WORKFLOW</section-name>
+  <content>
+    Session termination follows this workflow:
+
+    1. **Session Assessment**
+       - Review accomplishments
+       - Identify completed tasks
+       - Document current state
+       - Note any unresolved issues
+       - Capture key insights
+
+    2. **Memory Bank Updates**
+       - Update activeContext.md with current status
+       - Record progress in progress.md
+       - Document system changes in systemPatterns.md
+       - Update technical details in techContext.md
+       - Ensure all relevant files are current
+
+    3. **State Preservation**
+       - Document current task status
+       - Capture decision rationale
+       - Preserve contextual knowledge
+       - Record next planned steps
+       - Note important references
+
+    4. **Continuity Preparation**
+       - Create clear resumption points
+       - Document outstanding questions
+       - Provide continuation guidance
+       - Identify potential challenges
+       - Prepare transitional context
+
+    5. **Verification**
+       - Check for missing updates
+       - Verify information completeness
+       - Confirm cross-reference integrity
+       - Validate session summary accuracy
+       - Ensure sufficient continuation context
+
+    The Bedtime Protocol ensures knowledge preservation across memory resets.
+  </content>
+</details>
+
+<details>
+  <section-name>COMPLEXITY ADAPTATION</section-name>
+  <content>
+    Workflow rigor adapts to task complexity:
+
+    **Level 1 (Simple)**
+    - Streamlined initialization
+    - Basic memory updates
+    - Limited verification
+    - Simplified Bedtime Protocol
+    - Essential documentation only
+
+    **Level 2 (Moderate)**
+    - Standard initialization
+    - Regular memory updates
+    - Standard verification
+    - Complete Bedtime Protocol
+    - Thorough documentation
+
+    **Level 3 (Complex)**
+    - Comprehensive initialization
+    - Detailed memory updates
+    - Enhanced verification
+    - Extended Bedtime Protocol
+    - Comprehensive documentation
+
+    **Level 4 (Critical)**
+    - Exhaustive initialization
+    - Meticulous memory updates
+    - Rigorous verification
+    - Maximum Bedtime Protocol
+    - Complete documentation with cross-references
+
+    Complexity adaptation ensures appropriate attention without unnecessary overhead.
+  </content>
+</details>
+
+<details>
+  <section-name>ERROR RECOVERY WORKFLOWS</section-name>
+  <content>
+    When errors are detected, follow these recovery workflows:
+
+    1. **Missing File Recovery**
+       - Identify missing files
+       - Locate latest available version
+       - Restore from reference sources if possible
+       - Create minimal viable replacement if necessary
+       - Document recovery actions
+       - Schedule comprehensive update
+
+    2. **Inconsistency Resolution**
+       - Identify inconsistent information
+       - Determine authoritative source
+       - Update non-authoritative sources
+       - Document resolution rationale
+       - Verify consistency after updates
+       - Implement preventive measures
+
+    3. **Reference Repair**
+       - Identify broken references
+       - Locate correct reference targets
+       - Update reference sources
+       - Validate reference integrity
+       - Document reference corrections
+       - Check for similar issues
+
+    4. **Version Alignment**
+       - Identify version discrepancies
+       - Determine correct versions
+       - Update version information
+       - Ensure compatibility
+       - Document version changes
+       - Verify system-wide alignment
+
+    Error recovery workflows ensure system resilience despite issues.
+  </content>
+</details>
+
+<details>
+  <section-name>WORKFLOW DOCUMENTATION</section-name>
+  <content>
+    Each workflow execution must be documented:
+
+    1. **Workflow Identification**
+       - Specify workflow type
+       - Note execution date/time
+       - Identify workflow trigger
+       - Specify complexity level
+       - Reference related tasks
+
+    2. **Execution Record**
+       - Document each step performed
+       - Note any deviations from standard workflow
+       - Record significant observations
+       - Document decision points
+       - Capture relevant outputs
+
+    3. **Issue Documentation**
+       - Record encountered problems
+       - Document workarounds applied
+       - Note unresolved issues
+       - Specify follow-up requirements
+       - Provide troubleshooting hints
+
+    4. **Outcome Summary**
+       - Summarize workflow results
+       - Document system state changes
+       - Note any pending actions
+       - Provide recommendations
+       - Record insights for future reference
+
+    Comprehensive workflow documentation ensures knowledge persistence and process improvement.
+  </content>
+</details>
+
+<details>
+  <section-name>WORKFLOW INTEGRATION</section-name>
+  <content>
+    Workflows integrate with these system components:
+
+    1. **Command Protocol**
+       - Workflows triggered by specific commands
+       - Command parameters customize workflow execution
+       - Workflows validate command conditions
+       - Commands provide workflow feedback
+       - Protocol enforces workflow completion
+
+    2. **Verification Framework**
+       - Workflows include verification checkpoints
+       - Verification results trigger conditional paths
+       - Critical errors pause workflows
+       - Recoverable issues trigger recovery sub-workflows
+       - Verification results documented in workflow records
+
+    3. **Memory Bank Structure**
+       - Workflows respect memory bank organization
+       - File updates follow structural standards
+       - Cross-references maintained according to schema
+       - Version tracking integrated with updates
+       - Structure validation incorporated in verification
+
+    4. **Creative Process**
+       - Design workflows incorporate creative phases
+       - Evaluation metrics applied during review
+       - Quality verification performed before completion
+       - Artifacts managed according to standards
+       - Creative decisions documented in memory bank
+
+    Workflow integration ensures cohesive system operation.
+  </content>
+</details>
+
+<details>
+  <section-name>WORKFLOW EXAMPLES</section-name>
+  <content>
+    **Example 1: Level 4 Initialization Workflow**
+    ```
+    ## 🚀 INITIALIZATION WORKFLOW: Level 4 Session Start
+
+    ### Memory Bank Loading
+    - Loaded core files:
+      - ✓ projectbrief.md
+      - ✓ productContext.md
+      - ✓ activeContext.md
+      - ✓ systemPatterns.md
+      - ✓ techContext.md
+      - ✓ progress.md
+    - All required files present and accessible
+
+    ### Context Assessment
+    - Current Focus: Implementing Section Checkpoint System (Phase 5)
+    - Recent Changes: Completed Creative Phase Enhancements
+    - Current Status: 4/8 phases complete, preparing for Phase 5
+    - Open Issues: Testing needed for memory-file-verification.mdc
+
+    ### System Verification
+    - All core files verified
+    - Cross-references validated
+    - Memory bank structure confirmed
+    - BIG BRAIN version 2.0 (Phases 1-4 complete)
+    - No integrity issues detected
+
+    ### Task Contextualization
+    - Current Task: Implement Section Checkpoint System
+    - Position: Phase 5 of 8-phase plan
+    - Complexity Level: 4 (Critical)
+    - Related Components: Verification Framework, Command Protocol
+    - Dependencies: Foundation Layer, Command Protocol
+
+    ### Readiness Confirmation
+    - ✓ All required information available
+    - ✓ Current state understood
+    - ✓ Task objectives clear
+    - ✓ Implementation approach defined
+    - ✓ SUCCESS: Initialization complete, ready for task execution
+    ```
+
+    **Example 2: Level 3 Bedtime Protocol Workflow**
+    ```
+    ## 😴 BEDTIME PROTOCOL WORKFLOW: Level 3 Session End
+
+    ### Session Assessment
+    - Completed Phase 4: Creative Phase Enhancements
+    - Implemented all 4 component files
+    - Updated progress.md with Phase 4 checkpoint
+    - Resolved cross-component integration issues
+    - Gained insights on artifact management approach
+
+    ### Memory Bank Updates
+    - ✓ Updated activeContext.md with Phase 4 completion
+    - ✓ Added Section Checkpoint to progress.md
+    - ✓ Updated current focus to Phase 5 implementation
+    - ✓ Documented Creative Phase structure in systemPatterns.md
+    - ✓ Updated section tracking to 4/8 complete
+
+    ### State Preservation
+    - Current Task: Preparing for Section Checkpoint System
+    - Decision Rationale: Completed all Creative Phase components first
+    - Next Steps: Implement Section Checkpoint Definition component
+    - Outstanding Issues: Need to test Creative Process with complex design task
+    - Key References: See progress.md for implementation details
+
+    ### Continuity Preparation
+    - Resumption Point: Begin Phase 5 implementation
+    - First Actions: Create 220-checkpoint-definition.mdc
+    - Reference Documentation: See Foundation Layer section-checkpoint-system.mdc
+    - Potential Challenges: Integration with existing progress tracking
+    - Recommended Approach: Review Checkpoint standards in documentation
+
+    ### Verification
+    - ✓ All memory updates completed
+    - ✓ Cross-references confirmed
+    - ✓ Session summary complete
+    - ✓ Continuation guidance provided
+    - ✓ SUCCESS: Bedtime Protocol complete, session ended properly
+    ```
+
+    These examples illustrate comprehensive workflow execution.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                     |
+| ------- | ---------- | --------- | ------------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial memory operations workflow implementation |

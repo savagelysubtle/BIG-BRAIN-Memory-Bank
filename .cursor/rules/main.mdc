@@ -1,0 +1,144 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: BIG BRAIN Memory Bank System Core Rules
+globs: ["**/*"]
+alwaysApply: true
+---
+
+# BIG BRAIN Memory Bank System
+
+> The Memory Bank is the core of BIG BRAIN's capability for maintaining context between sessions despite complete memory resets.
+
+<version>2.0.0</version>
+
+## System Overview
+
+The BIG BRAIN Memory Bank system provides a hierarchical, modular architecture for maintaining perfect memory between sessions. The system is designed around a cognitive memory model with specialized components for different types of knowledge and processing requirements.
+
+### Core Architecture
+
+The Memory Bank implements a layered architecture:
+
+1. **Foundation Layer** - Core system infrastructure and protocols
+   - Enhanced Complexity Framework (Level 1-4)
+   - Reference Verification System
+   - Task Escalation Protocol
+   - Section Checkpoint System
+   - Creative Phase Metrics
+   - BIG Command Protocol
+
+2. **Memory Layer** - Specialized memory structures
+   - Core memory files (projectbrief.md, activeContext.md, etc.)
+   - Long-term memory repositories
+   - Session-based working memory
+   - Procedural memory patterns
+
+3. **Workflow Layer** - Process patterns for effective operation
+   - Plan mode workflows
+   - Act mode workflows
+   - Hybrid workflows
+   - Bedtime protocol
+
+4. **Interface Layer** - Interaction patterns and commands
+   - Command protocols
+   - Status indicators
+   - Memory update triggers
+   - Context switches
+
+### Integrated Components
+
+The system provides these integrated capabilities:
+
+- **Adaptive Complexity** - Task-appropriate rigor scaling
+- **Reference Verification** - Memory integrity validation
+- **Section Checkpoints** - Progress tracking and verification
+- **Task Escalation** - Dynamic complexity adaptation
+- **Creative Phases** - Structured exploration framework
+- **Command Protocols** - Unified interaction model
+- **Verification Framework** - Multi-level quality assurance
+
+## Memory Bank Structure
+
+The physical organization of Memory Bank follows this structure:
+
+```
+memory-bank/
+├── core/                   # Core memory files
+│   ├── active/            # Active context files
+│   └── reference/         # Reference files
+├── long-term/              # Long-term memory storage
+│   ├── architecture/      # System architecture docs
+│   ├── decisions/         # Decision records
+│   └── patterns/          # Reusable patterns
+└── bedtime-protocol/       # Session transition procedures
+```
+
+Each component has a specific role in maintaining memory continuity.
+
+## Operational Framework
+
+The system operates through these primary modes:
+
+1. **Memory Initialization** - First task of every session
+2. **Context Establishment** - Understanding current state and needs
+3. **Task Execution** - Performing requested tasks with appropriate rigor
+4. **Memory Maintenance** - Updating memory files as work proceeds
+5. **Session Finalization** - Bedtime protocol execution
+
+Each mode has specific procedures and verification requirements.
+
+## Memory Update Protocols
+
+Memory updates follow these guidelines:
+
+1. **Update Triggers**
+   - New project patterns discovered
+   - Significant implementation changes
+   - User requests ("update memory bank")
+   - Context clarification needed
+
+2. **Update Mechanisms**
+   - Inline updates during task execution
+   - Structured updates during bedtime protocol
+   - Emergency updates for critical information
+   - Reference updates for cross-linking
+
+3. **Verification Requirements**
+   - Update correctness verification
+   - Reference integrity checks
+   - Conflict resolution procedures
+   - Continuity validation
+
+All updates must maintain backward compatibility with existing memory structures.
+
+## Command System
+
+The command system provides these capabilities:
+
+1. **Core Commands**
+   - memory-read: Read contents of Memory Bank files
+   - memory-update: Update Memory Bank files
+   - memory-search: Find relevant information
+   - memory-status: Check Memory Bank state
+
+2. **Mode Commands**
+   - plan-mode: Enter planning workflow
+   - act-mode: Enter implementation workflow
+   - review-mode: Enter verification workflow
+
+3. **Protocol Commands**
+   - bedtime-protocol: Execute session finalization
+   - BIG command: Comprehensive initialization
+
+Commands provide a consistent interface to Memory Bank capabilities.
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-01-15 | BIG BRAIN | Initial Memory Bank System                   |
+| 2.0.0   | 2025-03-24 | BIG BRAIN | Enhanced architecture with Adaptive Framework|

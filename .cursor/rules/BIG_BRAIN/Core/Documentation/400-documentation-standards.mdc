@@ -1,0 +1,293 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN creating or updating BIG BRAIN components ENSURE proper documentation standards are followed
+globs: ["**/*.mdc", "**/*.md"]
+alwaysApply: true
+---
+
+> **TL;DR:** This rule defines documentation standards for BIG BRAIN components, ensuring consistent, complete, and high-quality documentation that persists across memory resets.
+
+<version>1.0.0</version>
+
+<context>
+  Comprehensive documentation is essential for the BIG BRAIN Memory Bank system to function effectively across memory resets. This rule establishes standards for documenting components, features, and processes to ensure knowledge persistence, consistency, and clarity.
+</context>
+
+<requirements>
+  <requirement>Include standardized documentation sections in all BIG BRAIN components</requirement>
+  <requirement>Follow consistent formatting and structure conventions</requirement>
+  <requirement>Provide appropriate level of detail based on component complexity</requirement>
+  <requirement>Ensure documentation is accessible and discoverable</requirement>
+  <requirement>Maintain documentation currency with system changes</requirement>
+  <requirement>Preserve essential knowledge despite memory resets</requirement>
+</requirements>
+
+<details>
+  <section-name>DOCUMENTATION STRUCTURE</section-name>
+  <content>
+    All BIG BRAIN components must include these documentation elements:
+
+    1. **TL;DR Summary**
+       - Concise overview (1-3 sentences)
+       - Placed at the beginning after description
+       - Formatted with blockquote for visual emphasis
+       - Example: `> **TL;DR:** This component provides verification mechanisms for memory file integrity.`
+
+    2. **Version Information**
+       - Clear version number
+       - Located near the top
+       - Follows semantic versioning (MAJOR.MINOR.PATCH)
+       - Format: `<version>1.0.0</version>`
+
+    3. **Context Description**
+       - Explains the purpose and importance
+       - Provides essential background
+       - Clarifies when/why the component is needed
+       - Format: `<context>Description here...</context>`
+
+    4. **Requirements List**
+       - Explicit enumeration of what the component must accomplish
+       - Individual requirements clearly tagged
+       - Concise, action-oriented statements
+       - Format:
+         ```
+         <requirements>
+           <requirement>First requirement</requirement>
+           <requirement>Second requirement</requirement>
+         </requirements>
+         ```
+
+    5. **Implementation Details**
+       - Organized in separate named sections
+       - Progressive disclosure (most important first)
+       - Visual hierarchy with headers, lists, tables
+       - Format:
+         ```
+         <details>
+           <section-name>SECTION NAME</section-name>
+           <content>
+             Section content here...
+           </content>
+         </details>
+         ```
+
+    6. **Version History**
+       - Table of changes by version
+       - Author of each change
+       - Date of modification
+       - Brief description of changes
+       - Format:
+         ```
+         ## 📝 Version History
+
+         | Version | Date       | Author    | Changes                 |
+         | ------- | ---------- | --------- | ----------------------- |
+         | 1.0.0   | 2025-03-24 | BIG BRAIN | Initial implementation  |
+         ```
+  </content>
+</details>
+
+<details>
+  <section-name>FORMATTING STANDARDS</section-name>
+  <content>
+    All BIG BRAIN documentation must follow these formatting conventions:
+
+    1. **Markdown Structure**
+       - Use ATX-style headers (`#`, `##`, etc.)
+       - Use fenced code blocks with language identifiers
+       - Use unordered lists for collections without sequence
+       - Use ordered lists for sequential steps
+       - Use tables for structured data
+
+    2. **Visual Hierarchy**
+       - Consistent emoji markers for section types:
+         - 📌 for key points
+         - 🔍 for implementation details
+         - 📋 for checklists
+         - 🧠 for insights
+         - ⏭️ for next steps
+         - 📝 for version history
+       - Use horizontal rules (`---`) to separate major sections
+       - Use indentation for hierarchical information
+       - Use bold and italics for emphasis
+
+    3. **Code Examples**
+       - Provide clear example code with language markers
+       - Include comments explaining key aspects
+       - Use consistent indentation (2 spaces)
+       - Follow naming conventions of the language
+       - Example:
+         ```javascript
+         // Calculate user score based on activity
+         function calculateScore(activities) {
+           let score = 0;
+
+           // Iterate through each activity
+           activities.forEach(activity => {
+             // Add points based on activity type
+             score += getPointsForActivity(activity);
+           });
+
+           return score;
+         }
+         ```
+
+    4. **Tables**
+       - Include clear headers
+       - Align columns for readability
+       - Keep tables narrow enough to avoid horizontal scrolling
+       - Use consistent formatting within cells
+       - Example:
+         ```
+         | Feature       | Status      | Version |
+         | ------------- | ----------- | ------- |
+         | Verification  | Complete    | 1.0.0   |
+         | Commands      | In Progress | 0.9.0   |
+         | Creative      | Planned     | -       |
+         ```
+  </content>
+</details>
+
+<details>
+  <section-name>COMPLEXITY ADAPTATION</section-name>
+  <content>
+    Documentation detail should scale with component complexity:
+
+    **Level 1 (Simple)**
+    - Brief TL;DR summary
+    - Basic context and requirements
+    - Limited implementation details
+    - Focused examples
+
+    **Level 2 (Moderate)**
+    - Standard documentation structure
+    - Complete context and requirements
+    - Key implementation details
+    - Representative examples
+
+    **Level 3 (Complex)**
+    - Comprehensive documentation
+    - Detailed context with rationale
+    - Extensive implementation details
+    - Multiple examples covering various cases
+    - Edge case handling
+
+    **Level 4 (Critical)**
+    - Exhaustive documentation
+    - Complete theoretical and practical context
+    - Comprehensive implementation details
+    - Full example suite
+    - Cross-references to related components
+    - Testing and validation information
+    - Maintenance guidelines
+
+    Documentation should be appropriately thorough for component complexity, ensuring all necessary information is preserved without overwhelming with unnecessary detail.
+  </content>
+</details>
+
+<details>
+  <section-name>DOCUMENTATION UPDATES</section-name>
+  <content>
+    Documentation must be updated when:
+
+    1. **Feature Implementation**
+       - New components are created
+       - Existing components are modified
+       - Requirements change
+       - Implementation details change
+
+    2. **Bug Fixes**
+       - Document the issue encountered
+       - Explain the root cause
+       - Detail the solution implemented
+       - Provide prevention strategies
+
+    3. **Refactoring**
+       - Document architectural changes
+       - Explain migration strategies
+       - Provide backward compatibility information
+       - Update affected component documentation
+
+    4. **Version Updates**
+       - Increment version numbers appropriately
+       - Update version history table
+       - Highlight breaking changes
+       - Document migration path
+
+    All documentation updates should:
+    - Be completed in the same task as the implementation
+    - Be verified for accuracy and completeness
+    - Include updated examples if necessary
+    - Cross-reference related components
+  </content>
+</details>
+
+<details>
+  <section-name>MEMORY BANK INTEGRATION</section-name>
+  <content>
+    Documentation must integrate with the memory bank system:
+
+    1. **Core Files Updates**
+       - Update summary information in activeContext.md
+       - Record conceptual models in systemPatterns.md
+       - Track progress in progress.md
+       - Update technical details in techContext.md
+
+    2. **Cross-References**
+       - Link related components explicitly
+       - Identify dependencies between components
+       - Document integration points
+       - Specify version compatibility
+
+    3. **Knowledge Preservation**
+       - Ensure critical concepts are documented
+       - Capture design decisions and rationale
+       - Preserve examples and use cases
+       - Document troubleshooting information
+
+    Memory bank integration ensures that documentation contributes to memory persistence across sessions.
+  </content>
+</details>
+
+<details>
+  <section-name>DOCUMENTATION REVIEW</section-name>
+  <content>
+    Documentation should be periodically reviewed for:
+
+    1. **Completeness**
+       - All required sections present
+       - All functionality documented
+       - Edge cases covered
+       - Examples provided
+
+    2. **Accuracy**
+       - Reflects current implementation
+       - No outdated information
+       - Examples work correctly
+       - Matches actual behavior
+
+    3. **Clarity**
+       - Concise, precise language
+       - Appropriate detail level
+       - Logical organization
+       - Clear explanations
+
+    4. **Consistency**
+       - Follows formatting standards
+       - Uses consistent terminology
+       - Maintains voice and style
+       - Adheres to structure guidelines
+
+    Regular documentation reviews ensure ongoing quality and effectiveness.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial documentation standards implementation |

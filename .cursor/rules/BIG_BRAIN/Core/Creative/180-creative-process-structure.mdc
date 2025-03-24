@@ -1,0 +1,780 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN approaching design-intensive tasks APPLY structured creative processes
+globs: ["**/*.md", "**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** The Creative Process Structure provides systematic approaches for design-intensive tasks, ensuring thorough problem analysis, exploration, evaluation, and verification for optimal solutions.
+
+<version>1.0.0</version>
+
+<context>
+  This rule establishes the Creative Process Structure for design-intensive tasks. Since complex design tasks require systematic approaches to ensure optimal solutions, structured creative processes are essential for reliable design outcomes. The structure provides specialized design approaches, problem analysis frameworks, exploration techniques, and evaluation methods to guide creative problem-solving.
+</context>
+
+<requirements>
+  <requirement>Provide structured processes for different design types</requirement>
+  <requirement>Ensure thorough problem analysis before solution exploration</requirement>
+  <requirement>Support comprehensive exploration of design alternatives</requirement>
+  <requirement>Enable systematic evaluation of solution candidates</requirement>
+  <requirement>Integrate with verification mechanisms for quality assurance</requirement>
+  <requirement>Adapt process rigor to task complexity and criticality</requirement>
+</requirements>
+
+<details>
+  <section-name>DESIGN TYPES</section-name>
+  <content>
+    The system supports these specialized design types:
+    
+    1. **Architecture Design**
+       - Purpose: System-wide structure and component relationships
+       - Focus: Subsystem organization, interaction patterns, data flow
+       - Primary concerns: Scalability, maintainability, flexibility
+       - Artifacts: Architecture diagrams, component specifications, integration models
+    
+    2. **Component Design**
+       - Purpose: Individual module implementation approach
+       - Focus: Internal structure, algorithms, data organization
+       - Primary concerns: Performance, reliability, testability
+       - Artifacts: Component specifications, interface definitions, behavior models
+    
+    3. **Algorithm Design**
+       - Purpose: Specialized processing logic
+       - Focus: Computational efficiency, correctness, edge cases
+       - Primary concerns: Complexity, accuracy, optimization
+       - Artifacts: Algorithm specifications, flowcharts, pseudocode, complexity analysis
+    
+    4. **Data Model Design**
+       - Purpose: Information organization and relationships
+       - Focus: Entity relationships, schema structure, access patterns
+       - Primary concerns: Integrity, flexibility, efficiency
+       - Artifacts: Entity-relationship diagrams, schema definitions, access pattern documentation
+    
+    5. **UI/UX Design**
+       - Purpose: User interaction and experience
+       - Focus: User flows, interface elements, information presentation
+       - Primary concerns: Usability, clarity, accessibility
+       - Artifacts: Wireframes, user flows, interaction specifications
+    
+    Each design type has specialized process adaptations.
+  </content>
+</details>
+
+<details>
+  <section-name>CREATIVE PROCESS PHASES</section-name>
+  <content>
+    All creative processes follow these core phases:
+    
+    1. **Problem Analysis**
+       - Understand requirements and constraints
+       - Analyze context and stakeholder needs
+       - Identify success criteria
+       - Recognize quality factors
+    
+    2. **Exploration**
+       - Generate multiple solution approaches
+       - Research relevant patterns and precedents
+       - Consider alternative strategies
+       - Leverage different perspectives
+    
+    3. **Evaluation**
+       - Assess alternatives against criteria
+       - Consider tradeoffs and implications
+       - Analyze risks and challenges
+       - Project implementation complexity
+    
+    4. **Selection**
+       - Choose optimal approach
+       - Document decision rationale
+       - Address risks and concerns
+       - Define implementation strategy
+    
+    5. **Verification**
+       - Validate against requirements
+       - Check for consistency and completeness
+       - Identify potential issues
+       - Ensure quality standards
+    
+    These phases ensure systematic progression from problem to validated solution.
+  </content>
+</details>
+
+<details>
+  <section-name>PROBLEM ANALYSIS FRAMEWORK</section-name>
+  <content>
+    Problem analysis includes these components:
+    
+    1. **Current State Assessment**
+       - Existing system analysis
+       - Problem identification
+       - Pain points and limitations
+       - Opportunity areas
+    
+    2. **Requirements Analysis**
+       - Functional requirements
+       - Non-functional requirements
+       - Constraints and limitations
+       - Quality attributes
+    
+    3. **Stakeholder Analysis**
+       - Stakeholder identification
+       - Needs and expectations
+       - Priority conflicts
+       - Success criteria by stakeholder
+    
+    4. **Context Mapping**
+       - System environment
+       - Integration points
+       - External dependencies
+       - Operational context
+    
+    5. **Success Criteria Definition**
+       - Measurable outcomes
+       - Acceptance criteria
+       - Quality thresholds
+       - Verification methods
+    
+    Thorough problem analysis establishes a solid foundation for the creative process.
+  </content>
+</details>
+
+<details>
+  <section-name>EXPLORATION TECHNIQUES</section-name>
+  <content>
+    Solution exploration employs these techniques:
+    
+    1. **Pattern Application**
+       - Identify relevant design patterns
+       - Adapt patterns to specific context
+       - Combine patterns for comprehensive solutions
+       - Address pattern limitations
+    
+    2. **Divergent Thinking**
+       - Generate multiple alternatives
+       - Consider unconventional approaches
+       - Challenge assumptions
+       - Explore different paradigms
+    
+    3. **Research Integration**
+       - Investigate similar solutions
+       - Analyze best practices
+       - Study anti-patterns
+       - Incorporate domain knowledge
+    
+    4. **Constraint Manipulation**
+       - Explore solutions with different constraint priorities
+       - Consider constraint relaxation impacts
+       - Identify constraint-driven innovations
+       - Balance competing constraints
+    
+    5. **Perspective Shifting**
+       - View from different stakeholder perspectives
+       - Consider various quality attribute priorities
+       - Evaluate from implementation angles
+       - Assess from maintenance perspective
+    
+    These techniques ensure comprehensive exploration of solution space.
+  </content>
+</details>
+
+<details>
+  <section-name>EVALUATION MATRIX</section-name>
+  <content>
+    Solution evaluation uses structured matrices:
+    
+    1. **Criteria Definition**
+       - Quality attributes with weightings
+       - Implementation factors
+       - Risk dimensions
+       - Cost considerations
+    
+    2. **Scoring Mechanism**
+       - Quantitative assessment scales
+       - Qualitative evaluation guidelines
+       - Composite scoring methods
+       - Normalization approaches
+    
+    3. **Tradeoff Analysis**
+       - Quality attribute tradeoffs
+       - Cost-benefit assessments
+       - Risk-reward balancing
+       - Short-term vs. long-term considerations
+    
+    4. **Sensitivity Testing**
+       - Impact of criteria weighting changes
+       - Scenario testing for different conditions
+       - Assumption validation
+       - Boundary condition analysis
+    
+    5. **Comparison Visualization**
+       - Side-by-side comparison tables
+       - Radar/spider charts for multi-dimensional comparison
+       - Decision matrices
+       - Heat maps for focus areas
+    
+    Structured evaluation ensures objective assessment of alternatives.
+  </content>
+</details>
+
+<details>
+  <section-name>SELECTION FRAMEWORK</section-name>
+  <content>
+    Solution selection follows this framework:
+    
+    1. **Decision Process**
+       - Review evaluation results
+       - Consider qualitative factors
+       - Address stakeholder priorities
+       - Assess implementation feasibility
+    
+    2. **Rationale Documentation**
+       - Key decision factors
+       - Primary advantages of selected solution
+       - Acknowledged limitations
+       - Mitigating strategies for concerns
+    
+    3. **Alternative Preservation**
+       - Document viable alternatives
+       - Capture alternative strengths
+       - Record conditions that would favor alternatives
+       - Maintain design history
+    
+    4. **Implementation Planning**
+       - Approach definition
+       - Component identification
+       - Dependency mapping
+       - Development sequencing
+    
+    This framework ensures well-reasoned selection with thorough documentation.
+  </content>
+</details>
+
+<details>
+  <section-name>VERIFICATION APPROACH</section-name>
+  <content>
+    Solution verification includes:
+    
+    1. **Requirements Validation**
+       - Systematic requirement coverage checking
+       - Functional requirement fulfillment
+       - Non-functional requirement satisfaction
+       - Constraint compliance
+    
+    2. **Quality Attribute Analysis**
+       - Targeted quality attribute assessment
+       - Quantitative metrics where applicable
+       - Qualitative evaluation where needed
+       - Threshold verification
+    
+    3. **Consistency Checking**
+       - Internal consistency verification
+       - System-wide consistency assessment
+       - Pattern consistency validation
+       - Terminology and concept consistency
+    
+    4. **Risk Assessment**
+       - Implementation risk evaluation
+       - Operational risk analysis
+       - Maintenance risk consideration
+       - Migration risk assessment
+    
+    5. **Peer Review**
+       - Design review organization
+       - Feedback collection
+       - Issue categorization
+       - Resolution approach
+    
+    Comprehensive verification ensures solution quality before implementation.
+  </content>
+</details>
+
+<details>
+  <section-name>ARCHITECTURE DESIGN PROCESS</section-name>
+  <content>
+    The architecture design process includes:
+    
+    1. **System Contextualization**
+       - System boundary definition
+       - External interface identification
+       - Quality attribute prioritization
+       - Constraint inventory
+    
+    2. **Architectural Style Selection**
+       - Style evaluation against requirements
+       - Hybrid approach consideration
+       - Style adaptation to context
+       - Style implications analysis
+    
+    3. **Component Identification**
+       - Responsibility-driven decomposition
+       - Domain-aligned component definition
+       - Interface specification
+       - Component relationship mapping
+    
+    4. **Interaction Design**
+       - Communication pattern definition
+       - Data flow design
+       - Control flow specification
+       - Synchronization approach
+    
+    5. **Cross-Cutting Concern Handling**
+       - Security architecture
+       - Scalability approach
+       - Reliability strategy
+       - Maintainability provisions
+    
+    6. **Architecture Representation**
+       - View selection based on stakeholders
+       - Notation standardization
+       - Detail level appropriateness
+       - Supporting documentation
+    
+    7. **Architecture Validation**
+       - Scenario-based assessment
+       - Quality attribute analysis
+       - Stakeholder review
+       - Reference architecture comparison
+    
+    This process ensures comprehensive system-level design.
+  </content>
+</details>
+
+<details>
+  <section-name>COMPONENT DESIGN PROCESS</section-name>
+  <content>
+    The component design process includes:
+    
+    1. **Interface Specification**
+       - Operation definition
+       - Parameter specification
+       - Return value documentation
+       - Exception handling approach
+    
+    2. **Internal Structure Design**
+       - Class/module organization
+       - Relationship definition
+       - Responsibility allocation
+       - Collaboration patterns
+    
+    3. **State Management**
+       - State identification
+       - Transition specification
+       - Invariant definition
+       - Consistency guarantees
+    
+    4. **Algorithm Selection**
+       - Alternative consideration
+       - Complexity analysis
+       - Optimization opportunities
+       - Special case handling
+    
+    5. **Error Management**
+       - Error detection approach
+       - Recovery strategy
+       - Reporting mechanism
+       - Degraded operation handling
+    
+    6. **Design Pattern Application**
+       - Pattern selection for specific concerns
+       - Pattern adaptation to context
+       - Pattern combination approach
+       - Anti-pattern avoidance
+    
+    7. **Component Testing Strategy**
+       - Testability provisions
+       - Test approach definition
+       - Coverage strategy
+       - Test case categories
+    
+    This process ensures robust individual component design.
+  </content>
+</details>
+
+<details>
+  <section-name>ALGORITHM DESIGN PROCESS</section-name>
+  <content>
+    The algorithm design process includes:
+    
+    1. **Problem Formalization**
+       - Mathematical model definition
+       - Input/output specification
+       - Constraint formalization
+       - Acceptance criteria definition
+    
+    2. **Approach Exploration**
+       - Paradigm consideration (divide-conquer, greedy, dynamic programming, etc.)
+       - Algorithm pattern research
+       - Solution strategy evaluation
+       - Algorithmic complexity targets
+    
+    3. **Pseudocode Development**
+       - High-level algorithm structure
+       - Control flow definition
+       - Data structure selection
+       - Helper function identification
+    
+    4. **Edge Case Analysis**
+       - Boundary condition identification
+       - Empty/null input handling
+       - Maximum size consideration
+       - Special value processing
+    
+    5. **Complexity Analysis**
+       - Time complexity calculation
+       - Space complexity assessment
+       - Average case analysis
+       - Worst case guarantees
+    
+    6. **Optimization Strategies**
+       - Performance bottleneck identification
+       - Memory usage optimization
+       - Algorithm refinement
+       - Special case optimization
+    
+    7. **Correctness Verification**
+       - Invariant identification
+       - Termination proof
+       - Correctness demonstration
+       - Test case development
+    
+    This process ensures efficient and correct algorithm design.
+  </content>
+</details>
+
+<details>
+  <section-name>DATA MODEL DESIGN PROCESS</section-name>
+  <content>
+    The data model design process includes:
+    
+    1. **Domain Analysis**
+       - Entity identification
+       - Attribute definition
+       - Relationship discovery
+       - Constraint specification
+    
+    2. **Conceptual Modeling**
+       - Entity-relationship definition
+       - Cardinality specification
+       - Entity hierarchy design
+       - Abstract entity identification
+    
+    3. **Logical Schema Design**
+       - Normalization application
+       - Denormalization consideration
+       - Key structure definition
+       - Constraint formalization
+    
+    4. **Physical Model Optimization**
+       - Storage structure selection
+       - Index strategy definition
+       - Partitioning approach
+       - Performance tuning
+    
+    5. **Access Pattern Analysis**
+       - Common query identification
+       - Operation frequency assessment
+       - Data volume estimation
+       - Growth projection
+    
+    6. **Data Migration Planning**
+       - Current state mapping
+       - Transformation strategy
+       - Migration approach
+       - Verification method
+    
+    7. **Schema Evolution Consideration**
+       - Change management strategy
+       - Versioning approach
+       - Backward compatibility planning
+       - Upgrade path definition
+    
+    This process ensures effective data organization design.
+  </content>
+</details>
+
+<details>
+  <section-name>UI/UX DESIGN PROCESS</section-name>
+  <content>
+    The UI/UX design process includes:
+    
+    1. **User Research**
+       - User profile development
+       - Need identification
+       - Context of use understanding
+       - Mental model mapping
+    
+    2. **Information Architecture**
+       - Content organization
+       - Navigation structure
+       - Information hierarchy
+       - Terminology definition
+    
+    3. **Interaction Design**
+       - User flow mapping
+       - Interaction pattern selection
+       - State transition definition
+       - Feedback mechanism design
+    
+    4. **Visual Design**
+       - Layout development
+       - Visual hierarchy establishment
+       - Component styling
+       - Visual language consistency
+    
+    5. **Prototype Development**
+       - Fidelity level selection
+       - Interactive element definition
+       - Conditional behavior specification
+       - State representation
+    
+    6. **Usability Evaluation**
+       - Evaluation method selection
+       - Test scenario development
+       - User testing procedure
+       - Feedback collection approach
+    
+    7. **Accessibility Consideration**
+       - Accessibility guidelines application
+       - Assistive technology support
+       - Inclusive design principles
+       - Multi-modal interaction
+    
+    This process ensures usable and effective user interface design.
+  </content>
+</details>
+
+<details>
+  <section-name>ADAPTATION TO COMPLEXITY</section-name>
+  <content>
+    Creative process rigor adapts to task complexity:
+    
+    **Level 1 (Simple)**
+    - Streamlined problem analysis
+    - Limited alternative exploration
+    - Basic evaluation criteria
+    - Simplified documentation
+    - Focused verification
+    
+    **Level 2 (Moderate)**
+    - Standard problem analysis
+    - Multiple alternative consideration
+    - Balanced evaluation criteria
+    - Regular documentation
+    - Standard verification
+    
+    **Level 3 (Complex)**
+    - Comprehensive problem analysis
+    - Extensive alternative exploration
+    - Detailed evaluation matrices
+    - Thorough documentation
+    - Enhanced verification
+    
+    **Level 4 (Critical)**
+    - Exhaustive problem analysis
+    - Maximum alternative generation
+    - Complete evaluation framework
+    - Comprehensive documentation
+    - Rigorous verification process
+    - Formal review requirements
+    
+    Adaptation ensures appropriate process rigor for each task level.
+  </content>
+</details>
+
+<details>
+  <section-name>ARTIFACT ORGANIZATION</section-name>
+  <content>
+    Creative process artifacts are organized:
+    
+    1. **Design Documentation**
+       - Problem analysis records
+       - Design decisions with rationale
+       - Alternative exploration documentation
+       - Selection criteria and evaluation
+    
+    2. **Design Specifications**
+       - Architecture specifications
+       - Component designs
+       - Algorithm definitions
+       - Data models
+       - Interface designs
+    
+    3. **Design Diagrams**
+       - Architecture diagrams
+       - Component interaction models
+       - Flowcharts and sequence diagrams
+       - Entity-relationship diagrams
+       - Wireframes and mockups
+    
+    4. **Evaluation Records**
+       - Evaluation matrices
+       - Assessment results
+       - Quality attribute analyses
+       - Performance projections
+    
+    5. **Verification Results**
+       - Requirement coverage analysis
+       - Quality verification results
+       - Risk assessments
+       - Review outcomes
+    
+    Organized artifacts ensure knowledge preservation and sharing.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH MEMORY BANK</section-name>
+  <content>
+    Creative processes integrate with memory bank:
+    
+    1. **Memory Updates**
+       - Design decisions recorded in systemPatterns.md
+       - Implementation implications in techContext.md
+       - Design progress tracked in progress.md
+       - Current design focus in activeContext.md
+    
+    2. **Process Documentation**
+       - Creative process execution records
+       - Design history preservation
+       - Decision evolution tracking
+       - Alternative exploration archives
+    
+    3. **Knowledge Preservation**
+       - Pattern applications documented
+       - Design principles captured
+       - Reusable design elements identified
+       - Design rationales preserved
+    
+    4. **Cross-Session Continuity**
+       - Design state captured for continuity
+       - Next design steps documented
+       - Open design questions preserved
+       - Design dependencies tracked
+    
+    This integration ensures design knowledge persists despite memory reset.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH WORKFLOW ORCHESTRATION</section-name>
+  <content>
+    Creative processes integrate with workflow orchestration:
+    
+    1. **Creative Phase Triggering**
+       - Automatic activation for design tasks
+       - Process selection based on design type
+       - Complexity-based process adaptation
+       - Appropriate technique suggestion
+    
+    2. **Phase Management**
+       - Creative process phase tracking
+       - Milestone definition and monitoring
+       - Phase transition criteria
+       - Completion verification
+    
+    3. **State Preservation**
+       - Design state tracking
+       - Progress monitoring
+       - Decision history maintenance
+       - Alternative preservation
+    
+    4. **Workflow Transitions**
+       - Seamless transition to implementation
+       - Verification process integration
+       - Review workflow coordination
+       - Continuous refinement cycles
+    
+    This integration ensures creative processes operate within workflow context.
+  </content>
+</details>
+
+<details>
+  <section-name>CREATIVE PROCESS EXAMPLES</section-name>
+  <content>
+    **Architecture Design Example**
+    ```
+    ## 🏗️ Architecture Design Process: Authentication System
+    
+    ### Problem Analysis
+    - Current state: Legacy authentication with limited capabilities
+    - Requirements: Single sign-on, multi-factor, API access
+    - Quality priorities: Security (highest), Performance, Scalability
+    - Constraints: Backward compatibility, regulatory compliance
+    
+    ### Exploration
+    - Explored patterns: Microservice, Layered, Gateway-based
+    - Researched technologies: OAuth2, SAML, JWT, FIDO2
+    - Alternative approaches:
+      1. Centralized identity service with adapter layer
+      2. Distributed authentication with federation
+      3. Hybrid approach with central control, distributed enforcement
+    
+    ### Evaluation
+    - Criteria: Security, Scalability, Integration complexity, Maintenance
+    - Evaluation matrix completed with weighted scores
+    - Hybrid approach scored highest on balanced criteria
+    - Key strengths: Flexible deployment, strong security model
+    
+    ### Selection
+    - Selected: Hybrid architecture with central authority
+    - Rationale: Best balance of security controls and scalability
+    - Acknowledged limitations: Higher initial implementation cost
+    - Mitigation: Phased implementation approach
+    
+    ### Verification
+    - Requirements verified: 100% coverage of functional requirements
+    - Security analysis completed with threat model
+    - Performance projections within acceptable thresholds
+    - Scalability validated through capacity modeling
+    ```
+    
+    **Component Design Example**
+    ```
+    ## 🧩 Component Design Process: Token Manager
+    
+    ### Problem Analysis
+    - Purpose: Secure token generation, validation, and lifecycle management
+    - Requirements: Tamper resistance, expiration, revocation, claims
+    - Quality priorities: Security, Performance, Flexibility
+    - Interface needs: Auth service, Resource services, User services
+    
+    ### Exploration
+    - Explored patterns: Factory, Strategy, Observer, Decorator
+    - Token structure alternatives:
+      1. JWT with symmetric encryption
+      2. JWT with asymmetric signatures
+      3. Custom binary format with encryption
+    
+    ### Evaluation
+    - Criteria: Security strength, Processing efficiency, Standard compliance
+    - JWT with asymmetric signatures highest overall score
+    - Key strength: Industry standard with strong security properties
+    - Performance acceptable with caching strategy
+    
+    ### Selection
+    - Selected: JWT with asymmetric signatures + Observer for events
+    - Structure: TokenFactory, Validator, Manager, and EventDispatcher
+    - Interface design completed with operation specifications
+    - State model defined for token lifecycle
+    
+    ### Verification
+    - Interface contract verified against all consumers
+    - Security review completed with no critical findings
+    - Performance tested at 1000 validations/second
+    - All error cases handled appropriately
+    ```
+    
+    These examples demonstrate creative process application to different design types.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-03-25 | BIG BRAIN | Initial implementation of creative process structure |

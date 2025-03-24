@@ -1,0 +1,920 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN verifying design quality APPLY systematic procedures for validation
+globs: ["**/*.md", "**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** The Quality Verification Procedures provide systematic processes for validating design solutions against requirements, quality standards, and best practices to ensure optimal outcomes.
+
+<version>1.0.0</version>
+
+<context>
+  This rule establishes the Quality Verification Procedures for design validation. Since design quality verification is critical to ensure solutions meet requirements and standards, systematic validation procedures are essential for reliable quality assessment. The procedures provide verification methods, quality criteria, testing techniques, and review processes to ensure design quality.
+</context>
+
+<requirements>
+  <requirement>Define structured procedures for design quality verification</requirement>
+  <requirement>Provide specific verification methods for different design types</requirement>
+  <requirement>Support comprehensive validation against requirements and standards</requirement>
+  <requirement>Enable detection of quality issues and improvement opportunities</requirement>
+  <requirement>Integrate with the creative process and evaluation metrics</requirement>
+  <requirement>Adapt verification rigor to task complexity and criticality</requirement>
+</requirements>
+
+<details>
+  <section-name>VERIFICATION PROCESSES</section-name>
+  <content>
+    Quality verification includes these processes:
+    
+    1. **Requirements Validation**
+       - Systematic requirement coverage checking
+       - Completeness verification
+       - Correctness validation
+       - Consistency checking
+       - Traceability confirmation
+    
+    2. **Standard Compliance**
+       - Design standard adherence verification
+       - Best practice alignment checking
+       - Pattern conformance validation
+       - Style guide compliance
+       - Convention adherence
+    
+    3. **Quality Attribute Verification**
+       - Systematic quality attribute assessment
+       - Metric-based property validation
+       - Threshold satisfaction checking
+       - Target achievement verification
+       - Trade-off appropriateness
+    
+    4. **Defect Detection**
+       - Design flaw identification
+       - Anti-pattern recognition
+       - Risk exposure assessment
+       - Vulnerability discovery
+       - Edge case handling verification
+    
+    5. **Review Execution**
+       - Structured design reviews
+       - Expert assessment coordination
+       - Stakeholder validation
+       - Peer evaluation
+       - Cross-functional examination
+    
+    These processes ensure comprehensive quality verification.
+  </content>
+</details>
+
+<details>
+  <section-name>ARCHITECTURE VERIFICATION</section-name>
+  <content>
+    Architecture verification includes:
+    
+    1. **Structural Validation**
+       - Component completeness
+       - Interface adequacy
+       - Relationship correctness
+       - Responsibility allocation
+       - Boundary appropriateness
+    
+    2. **Architectural Style Analysis**
+       - Style adherence
+       - Style combination coherence
+       - Pattern application correctness
+       - Anti-pattern absence
+       - Style-requirement alignment
+    
+    3. **Quality Scenario Evaluation**
+       - Scenario-based assessment
+       - Quality attribute response
+       - Trade-off appropriateness
+       - Growth scenario handling
+       - Change scenario support
+    
+    4. **Risk Assessment**
+       - Architectural risk identification
+       - Technical debt detection
+       - Complexity hot spots
+       - Integration challenges
+       - Evolution limitations
+    
+    5. **Stakeholder Concern Coverage**
+       - Viewpoint representation
+       - Stakeholder need alignment
+       - Priority reflection
+       - Constraint compliance
+       - Goal satisfaction
+    
+    These procedures ensure architecture quality and appropriateness.
+  </content>
+</details>
+
+<details>
+  <section-name>COMPONENT VERIFICATION</section-name>
+  <content>
+    Component verification includes:
+    
+    1. **Interface Validation**
+       - Contract completeness
+       - Parameter appropriateness
+       - Exception handling coverage
+       - Pre/post-condition validity
+       - Documentation accuracy
+    
+    2. **Internal Design Assessment**
+       - Structure appropriateness
+       - Algorithm correctness
+       - Resource management
+       - State handling
+       - Concurrency approach
+    
+    3. **Integration Compatibility**
+       - Dependency correctness
+       - Protocol compliance
+       - Assumption validity
+       - Context appropriateness
+       - Configuration flexibility
+    
+    4. **Error Management Validation**
+       - Error detection coverage
+       - Recovery mechanism adequacy
+       - Reporting appropriateness
+       - Degraded operation handling
+       - Cascading failure prevention
+    
+    5. **Testability Assessment**
+       - Test approach feasibility
+       - Coverage achievability
+       - State observability
+       - Behavior controllability
+       - Isolation capability
+    
+    These procedures ensure component quality and robustness.
+  </content>
+</details>
+
+<details>
+  <section-name>ALGORITHM VERIFICATION</section-name>
+  <content>
+    Algorithm verification includes:
+    
+    1. **Correctness Proof**
+       - Logical validity
+       - Edge case handling
+       - Termination guarantee
+       - Output correctness
+       - Invariant maintenance
+    
+    2. **Complexity Validation**
+       - Time complexity verification
+       - Space complexity confirmation
+       - Scalability assessment
+       - Efficiency analysis
+       - Performance projection
+    
+    3. **Implementation Feasibility**
+       - Platform compatibility
+       - Language feasibility
+       - Library availability
+       - Tool support
+       - Implementation complexity
+    
+    4. **Robustness Testing**
+       - Boundary condition handling
+       - Invalid input management
+       - Resource exhaustion behavior
+       - Exception handling
+       - Failure recovery
+    
+    5. **Optimization Review**
+       - Algorithm refinement potential
+       - Special case optimization
+       - Cache behavior
+       - Memory access patterns
+       - Parallelization opportunities
+    
+    These procedures ensure algorithm correctness and efficiency.
+  </content>
+</details>
+
+<details>
+  <section-name>DATA MODEL VERIFICATION</section-name>
+  <content>
+    Data model verification includes:
+    
+    1. **Normalization Validation**
+       - Normalization level appropriateness
+       - Dependency correctness
+       - Redundancy justification
+       - Update anomaly assessment
+       - Integrity constraint completeness
+    
+    2. **Access Pattern Assessment**
+       - Query support verification
+       - Operation efficiency projection
+       - Index effectiveness
+       - Join complexity evaluation
+       - Read/write optimization
+    
+    3. **Schema Completeness**
+       - Entity coverage
+       - Attribute completeness
+       - Relationship correctness
+       - Constraint adequacy
+       - Domain representation
+    
+    4. **Data Quality Support**
+       - Validation rule coverage
+       - Consistency enforcement
+       - Referential integrity
+       - Default value appropriateness
+       - Constraint effectiveness
+    
+    5. **Evolution Capability**
+       - Versioning support
+       - Extension mechanism
+       - Backward compatibility
+       - Migration path
+       - Schema flexibility
+    
+    These procedures ensure data model quality and appropriateness.
+  </content>
+</details>
+
+<details>
+  <section-name>UI/UX VERIFICATION</section-name>
+  <content>
+    UI/UX verification includes:
+    
+    1. **Usability Assessment**
+       - Task completion verification
+       - Efficiency measurement
+       - Error rate evaluation
+       - Learning curve assessment
+       - Satisfaction measurement
+    
+    2. **Accessibility Validation**
+       - WCAG compliance checking
+       - Screen reader compatibility
+       - Keyboard navigation
+       - Color contrast verification
+       - Focus handling
+    
+    3. **Information Architecture Review**
+       - Navigation structure assessment
+       - Information hierarchy
+       - Content organization
+       - Labeling clarity
+       - Search functionality
+    
+    4. **Interaction Design Validation**
+       - Control appropriateness
+       - Feedback adequacy
+       - State visibility
+       - Error prevention
+       - Recovery mechanism
+    
+    5. **Visual Design Assessment**
+       - Consistency verification
+       - Hierarchy effectiveness
+       - Layout appropriateness
+       - Responsive behavior
+       - Aesthetic quality
+    
+    These procedures ensure usable and effective user interfaces.
+  </content>
+</details>
+
+<details>
+  <section-name>VERIFICATION METHODS</section-name>
+  <content>
+    Quality verification uses these methods:
+    
+    1. **Inspection-Based Methods**
+       - Structured walkthroughs
+       - Checklists and guides
+       - Pattern-based reviews
+       - Anti-pattern detection
+       - Standard compliance checking
+    
+    2. **Analysis-Based Methods**
+       - Static analysis
+       - Metric-based assessment
+       - Formal methods
+       - Traceability analysis
+       - Dependency evaluation
+    
+    3. **Modeling and Simulation**
+       - Prototype evaluation
+       - Simulation-based assessment
+       - Performance modeling
+       - Reliability projection
+       - Load testing
+    
+    4. **Expert Evaluation**
+       - Expert reviews
+       - Critique sessions
+       - Peer feedback
+       - Specialty assessments
+       - Domain expert validation
+    
+    5. **User-Centered Methods**
+       - Usability testing
+       - User feedback collection
+       - Cognitive walkthroughs
+       - Heuristic evaluation
+       - Contextual inquiry
+    
+    These methods provide diverse approaches to quality verification.
+  </content>
+</details>
+
+<details>
+  <section-name>VERIFICATION CHECKLISTS</section-name>
+  <content>
+    Verification is structured through checklists:
+    
+    1. **General Design Checklist**
+       - Does the design satisfy all functional requirements?
+       - Are all quality attribute requirements addressed?
+       - Does the design adhere to established patterns and standards?
+       - Are alternatives considered with appropriate rationale?
+       - Is the design appropriately documented?
+       - Has the design been reviewed by appropriate stakeholders?
+       - Are known limitations acknowledged with mitigation strategies?
+    
+    2. **Architecture Checklist**
+       - Is the component decomposition appropriate?
+       - Are responsibilities clearly assigned?
+       - Are interfaces well-defined and minimal?
+       - Are dependencies managed effectively?
+       - Are quality attribute requirements addressed architecturally?
+       - Are architectural patterns applied appropriately?
+       - Is the architecture flexible for expected changes?
+       - Are cross-cutting concerns handled effectively?
+    
+    3. **Component Checklist**
+       - Is the component interface complete and clear?
+       - Are error conditions handled appropriately?
+       - Is the component testable?
+       - Are dependencies minimized and explicit?
+       - Is state managed correctly?
+       - Are algorithms appropriate and efficient?
+       - Is the component documented sufficiently?
+       - Does the component follow design patterns appropriately?
+    
+    4. **Data Model Checklist**
+       - Is the model normalized appropriately?
+       - Are entities and relationships correctly identified?
+       - Are constraints defined completely?
+       - Do indexes support expected queries?
+       - Is referential integrity maintained?
+       - Does the schema support expected growth?
+       - Are data types appropriate?
+       - Is the model documented clearly?
+    
+    5. **UI Checklist**
+       - Does the UI support all required user tasks?
+       - Is the navigation intuitive and efficient?
+       - Are error states handled gracefully?
+       - Is feedback provided for all user actions?
+       - Is the UI accessible to all target users?
+       - Is the visual design consistent and appropriate?
+       - Does the UI follow platform conventions?
+       - Are all UI states properly addressed?
+    
+    These checklists ensure comprehensive verification coverage.
+  </content>
+</details>
+
+<details>
+  <section-name>DEFECT CATEGORIES</section-name>
+  <content>
+    Verification identifies these defect categories:
+    
+    1. **Omission Defects**
+       - Missing requirements
+       - Incomplete functionality
+       - Overlooked scenarios
+       - Unhandled conditions
+       - Absent validations
+    
+    2. **Commission Defects**
+       - Incorrect implementations
+       - Faulty logic
+       - Wrong assumptions
+       - Improper calculations
+       - Erroneous relationships
+    
+    3. **Inconsistency Defects**
+       - Contradictory elements
+       - Naming inconsistencies
+       - Style variations
+       - Behavioral differences
+       - Structural inconsistencies
+    
+    4. **Ambiguity Defects**
+       - Unclear specifications
+       - Vague responsibilities
+       - Imprecise interfaces
+       - Uncertain behaviors
+       - Undefined conditions
+    
+    5. **Quality Attribute Defects**
+       - Performance issues
+       - Security vulnerabilities
+       - Reliability weaknesses
+       - Maintainability problems
+       - Usability challenges
+    
+    Defect categorization enables targeted improvement efforts.
+  </content>
+</details>
+
+<details>
+  <section-name>REVIEW PROCESSES</section-name>
+  <content>
+    Design reviews follow these processes:
+    
+    1. **Preparation Phase**
+       - Review material distribution
+       - Review focus definition
+       - Participant selection
+       - Reviewer role assignment
+       - Review criteria specification
+    
+    2. **Individual Review**
+       - Materials examination
+       - Issue identification
+       - Checklist application
+       - Question formulation
+       - Improvement suggestion preparation
+    
+    3. **Group Review Meeting**
+       - Issue presentation
+       - Discussion facilitation
+       - Improvement brainstorming
+       - Decision recording
+       - Action item assignment
+    
+    4. **Resolution Phase**
+       - Issue addressing
+       - Design refinement
+       - Change implementation
+       - Response documentation
+       - Verification of corrections
+    
+    5. **Follow-up Review**
+       - Correction verification
+       - Outstanding issue tracking
+       - Lesson documentation
+       - Process improvement
+       - Knowledge sharing
+    
+    These processes ensure effective design review execution.
+  </content>
+</details>
+
+<details>
+  <section-name>REVIEW ROLES</section-name>
+  <content>
+    Reviews involve these specialized roles:
+    
+    1. **Design Author**
+       - Present design rationale
+       - Explain decisions
+       - Clarify uncertainties
+       - Consider feedback
+       - Implement improvements
+    
+    2. **Technical Reviewers**
+       - Assess technical correctness
+       - Evaluate implementation feasibility
+       - Review performance implications
+       - Check for technical risks
+       - Suggest optimizations
+    
+    3. **Domain Experts**
+       - Validate domain correctness
+       - Assess business rule compliance
+       - Evaluate workflow appropriateness
+       - Check terminology accuracy
+       - Verify domain constraints
+    
+    4. **Quality Specialists**
+       - Evaluate standard compliance
+       - Assess maintainability
+       - Review testability
+       - Check security implications
+       - Verify non-functional requirements
+    
+    5. **Review Facilitator**
+       - Manage review process
+       - Focus discussion
+       - Ensure comprehensive coverage
+       - Mediate conflicting viewpoints
+       - Document outcomes
+    
+    These roles ensure multiple perspectives in design validation.
+  </content>
+</details>
+
+<details>
+  <section-name>VERIFICATION DOCUMENTATION</section-name>
+  <content>
+    Verification results are documented in these formats:
+    
+    1. **Verification Report**
+       ```
+       ## Verification Report: [Design Name]
+       
+       ### Verification Context
+       - Design type: [Architecture/Component/Algorithm/Data Model/UI]
+       - Verification date: [Date]
+       - Verifiers: [Names/roles]
+       - Verification scope: [Scope description]
+       
+       ### Requirement Coverage
+       | Requirement | Covered | Verification Method | Notes |
+       |-------------|---------|---------------------|-------|
+       | [Req 1] | [Yes/No/Partial] | [Method] | [Notes] |
+       | [Req 2] | [Yes/No/Partial] | [Method] | [Notes] |
+       | [Req 3] | [Yes/No/Partial] | [Method] | [Notes] |
+       
+       ### Quality Attribute Verification
+       | Attribute | Target | Measured/Projected | Status | Notes |
+       |-----------|--------|-------------------|--------|-------|
+       | [Attr 1] | [Target] | [Result] | [Met/Not Met] | [Notes] |
+       | [Attr 2] | [Target] | [Result] | [Met/Not Met] | [Notes] |
+       | [Attr 3] | [Target] | [Result] | [Met/Not Met] | [Notes] |
+       
+       ### Issues Identified
+       | ID | Severity | Description | Recommendation | Status |
+       |----|----------|-------------|----------------|--------|
+       | 1 | [High/Medium/Low] | [Issue description] | [Recommendation] | [Open/Resolved] |
+       | 2 | [High/Medium/Low] | [Issue description] | [Recommendation] | [Open/Resolved] |
+       | 3 | [High/Medium/Low] | [Issue description] | [Recommendation] | [Open/Resolved] |
+       
+       ### Verification Outcome
+       - Overall status: [Approved/Conditionally Approved/Not Approved]
+       - Key strengths: [List of strengths]
+       - Key concerns: [List of concerns]
+       - Recommended actions: [List of actions]
+       ```
+    
+    2. **Review Meeting Minutes**
+       ```
+       ## Design Review Meeting: [Design Name]
+       
+       ### Meeting Details
+       - Date/Time: [Date and time]
+       - Participants: [Names and roles]
+       - Design reviewed: [Design name and version]
+       - Review type: [Review type]
+       
+       ### Discussion Points
+       1. [Topic 1]
+          - [Key point]
+          - [Key point]
+          - [Decision/Action]
+       
+       2. [Topic 2]
+          - [Key point]
+          - [Key point]
+          - [Decision/Action]
+       
+       ### Action Items
+       | ID | Action | Assignee | Due Date | Status |
+       |----|--------|----------|----------|--------|
+       | 1 | [Action description] | [Name] | [Date] | [Status] |
+       | 2 | [Action description] | [Name] | [Date] | [Status] |
+       
+       ### Decisions
+       1. [Decision 1]
+       2. [Decision 2]
+       
+       ### Next Steps
+       - [Next step 1]
+       - [Next step 2]
+       ```
+    
+    3. **Issue Tracking**
+       ```
+       ## Design Issues: [Design Name]
+       
+       | ID | Discovery Date | Type | Severity | Status | Description | Resolution |
+       |----|---------------|------|----------|--------|-------------|------------|
+       | 1 | [Date] | [Type] | [Severity] | [Status] | [Description] | [Resolution] |
+       | 2 | [Date] | [Type] | [Severity] | [Status] | [Description] | [Resolution] |
+       
+       ### Issue Statistics
+       - Total issues: [Count]
+       - Open issues: [Count]
+       - Resolved issues: [Count]
+       - High severity: [Count]
+       - Medium severity: [Count]
+       - Low severity: [Count]
+       
+       ### Trend Analysis
+       - [Observations about issue patterns]
+       - [Recurring issue types]
+       - [Improvement opportunities]
+       ```
+    
+    These formats ensure clear documentation of verification activities.
+  </content>
+</details>
+
+<details>
+  <section-name>VERIFICATION TECHNIQUES</section-name>
+  <content>
+    Verification employs these specialized techniques:
+    
+    1. **Scenario-Based Evaluation**
+       - Quality attribute scenario creation
+       - Scenario execution
+       - Response measure assessment
+       - Threshold verification
+       - Scenario coverage analysis
+    
+    2. **Architecture Trade-off Analysis**
+       - Cross-attribute impact assessment
+       - Sensitivity point identification
+       - Trade-off point analysis
+       - Risk theme recognition
+       - Decision verification
+    
+    3. **Formal Verification**
+       - Model checking
+       - Property verification
+       - Invariant validation
+       - Correctness proof
+       - Formal specification analysis
+    
+    4. **Prototype-Based Validation**
+       - Executable prototype creation
+       - Performance measurement
+       - Functionality verification
+       - User interaction validation
+       - Technical feasibility assessment
+    
+    5. **Peer Review Techniques**
+       - Structured walkthrough
+       - Inspection process
+       - Fagan inspection
+       - Pair review
+       - Perspective-based reading
+    
+    These techniques provide specialized approaches for different aspects.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH EVALUATION METRICS</section-name>
+  <content>
+    Verification integrates with evaluation metrics:
+    
+    1. **Metric-Based Validation**
+       - Target threshold verification
+       - Metric measurement execution
+       - Gap analysis performance
+       - Metric satisfaction checking
+       - Measurement validity assessment
+    
+    2. **Comparative Analysis**
+       - Benchmark comparison execution
+       - Reference implementation contrast
+       - Industry standard deviation checking
+       - Best practice alignment measurement
+       - Competitive assessment
+    
+    3. **Weighted Verification**
+       - Priority-based verification depth
+       - Risk-weighted quality focus
+       - Stakeholder-driven validation emphasis
+       - Context-sensitive checking
+       - Criticality-based rigor
+    
+    4. **Verification Visualization**
+       - Metric satisfaction visualization
+       - Quality coverage mapping
+       - Gap analysis representation
+       - Verification completeness visualization
+       - Issue distribution representation
+    
+    This integration ensures metrics inform verification priorities.
+  </content>
+</details>
+
+<details>
+  <section-name>ADAPTATION TO COMPLEXITY</section-name>
+  <content>
+    Verification rigor adapts to task complexity:
+    
+    **Level 1 (Simple)**
+    - Basic verification procedures
+    - Limited checklist application
+    - Individual review focus
+    - Essential documentation
+    - Key metric verification
+    
+    **Level 2 (Moderate)**
+    - Standard verification procedures
+    - Comprehensive checklist usage
+    - Small team review
+    - Standard documentation
+    - Primary metric verification
+    
+    **Level 3 (Complex)**
+    - Enhanced verification procedures
+    - Extended checklist application
+    - Formal review process
+    - Detailed documentation
+    - Comprehensive metric verification
+    
+    **Level 4 (Critical)**
+    - Exhaustive verification procedures
+    - Complete checklist coverage
+    - Multi-perspective formal review
+    - Comprehensive documentation
+    - Full metric verification
+    - Formal approval process
+    
+    Adaptation ensures appropriate verification rigor for each task level.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH CREATIVE PROCESS</section-name>
+  <content>
+    Verification integrates with creative process:
+    
+    1. **Early Verification**
+       - Requirement verification before exploration
+       - Design direction validation
+       - Preliminary concept checking
+       - Early risk identification
+       - Constraint compliance verification
+    
+    2. **Progressive Verification**
+       - Incremental quality checking
+       - Continuous validation
+       - Design evolution verification
+       - Decision point validation
+       - Milestone verification
+    
+    3. **Alternative Verification**
+       - Comparative verification
+       - Alternative quality assessment
+       - Cross-solution validation
+       - Selection criteria verification
+       - Decision rationale validation
+    
+    4. **Final Verification**
+       - Comprehensive design checking
+       - Formal review coordination
+       - Documentation verification
+       - Implementation readiness assessment
+       - Approval process management
+    
+    This integration ensures verification throughout the creative process.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH MEMORY BANK</section-name>
+  <content>
+    Verification integrates with memory bank:
+    
+    1. **Verification Records**
+       - Verification results documented in relevant files
+       - Issue tracking integration
+       - Decision verification history
+       - Quality verification evidence
+       - Review outcomes preservation
+    
+    2. **Process Documentation**
+       - Verification procedure documentation
+       - Review process records
+       - Verification method guidelines
+       - Checklist maintenance
+       - Best practice collection
+    
+    3. **Knowledge Building**
+       - Common issue patterns documented
+       - Verification lesson recording
+       - Quality verification insights
+       - Effective verification techniques
+       - Review effectiveness patterns
+    
+    4. **Cross-Session Continuity**
+       - Open verification items tracked
+       - Pending review status preserved
+       - Quality concerns documented
+       - Verification progress recorded
+       - Future verification needs identified
+    
+    This integration ensures verification knowledge persists despite memory reset.
+  </content>
+</details>
+
+<details>
+  <section-name>VERIFICATION EXAMPLES</section-name>
+  <content>
+    **Architecture Verification Example**
+    ```
+    ## Verification Report: Authentication System Architecture
+    
+    ### Verification Context
+    - Design type: System Architecture
+    - Verification date: 2025-03-25
+    - Verifiers: BIG BRAIN (Architecture Specialist)
+    - Verification scope: Complete architecture design
+    
+    ### Requirement Coverage
+    | Requirement | Covered | Verification Method | Notes |
+    |-------------|---------|---------------------|-------|
+    | SSO Support | Yes | Scenario Analysis | Authentication flow verified |
+    | MFA Support | Yes | Component Review | MFA integrations confirmed |
+    | API Access | Yes | Interface Analysis | API gateways properly defined |
+    | Scalability | Partial | Capacity Modeling | Further load testing needed |
+    | Security | Yes | Threat Modeling | All threats addressed |
+    
+    ### Quality Attribute Verification
+    | Attribute | Target | Measured/Projected | Status | Notes |
+    |-----------|--------|-------------------|--------|-------|
+    | Security | High | High | Met | Domain isolation confirmed |
+    | Performance | <100ms auth | ~80ms | Met | Token validation optimized |
+    | Scalability | 10K users | 12K projected | Met | Horizontal scaling verified |
+    | Maintainability | Medium | Medium | Met | Component boundaries clear |
+    | Reliability | 99.9% | 99.95% projected | Met | Redundancy validated |
+    
+    ### Issues Identified
+    | ID | Severity | Description | Recommendation | Status |
+    |----|----------|-------------|----------------|--------|
+    | 1 | Medium | Session management not fully specified | Complete session lifecycle documentation | Open |
+    | 2 | Low | Cache invalidation approach unclear | Define token revocation propagation | Resolved |
+    | 3 | Low | Deployment diagram missing | Create deployment topology view | Open |
+    
+    ### Verification Outcome
+    - Overall status: Conditionally Approved
+    - Key strengths: Strong security model, Scalable design, Clear interfaces
+    - Key concerns: Session management details, Deployment considerations
+    - Recommended actions: Address open issues before implementation
+    ```
+    
+    **Component Verification Example**
+    ```
+    ## Verification Report: Token Manager Component
+    
+    ### Verification Context
+    - Design type: Component Design
+    - Verification date: 2025-03-25
+    - Verifiers: BIG BRAIN (Component Specialist)
+    - Verification scope: Token Manager component design
+    
+    ### Requirement Coverage
+    | Requirement | Covered | Verification Method | Notes |
+    |-------------|---------|---------------------|-------|
+    | Token Generation | Yes | Interface Analysis | Generate method complete |
+    | Token Validation | Yes | Algorithm Review | Validation logic verified |
+    | Token Revocation | Yes | State Analysis | Revocation handling confirmed |
+    | Claims Management | Yes | Data Model Review | Claims structure appropriate |
+    | Expiration Handling | Yes | Logic Review | Expiration checks verified |
+    
+    ### Quality Attribute Verification
+    | Attribute | Target | Measured/Projected | Status | Notes |
+    |-----------|--------|-------------------|--------|-------|
+    | Performance | <5ms validation | ~3ms | Met | Caching strategy effective |
+    | Security | No vulnerabilities | None found | Met | Crypto approach verified |
+    | Testability | >90% coverage | 95% possible | Met | Mock points identified |
+    | Maintainability | Low coupling | Low achieved | Met | Clean interfaces |
+    
+    ### Issues Identified
+    | ID | Severity | Description | Recommendation | Status |
+    |----|----------|-------------|----------------|--------|
+    | 1 | Medium | No rate limiting on token generation | Add throttling mechanism | Open |
+    | 2 | Low | Error messages too generic | Enhance error specificity | Resolved |
+    | 3 | Low | Missing logging for security events | Add security audit logging | Open |
+    
+    ### Verification Outcome
+    - Overall status: Conditionally Approved
+    - Key strengths: Clean design, Performance optimized, Strong security
+    - Key concerns: Rate limiting, Security logging
+    - Recommended actions: Implement rate limiting before production
+    ```
+    
+    These examples demonstrate verification report application.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-03-25 | BIG BRAIN | Initial implementation of quality verification procedures |

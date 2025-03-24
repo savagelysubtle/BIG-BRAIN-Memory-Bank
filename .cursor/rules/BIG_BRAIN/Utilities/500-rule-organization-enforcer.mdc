@@ -1,0 +1,295 @@
+---
+description: WHEN adding or modifying rule files ENSURE they follow the established organization structure
+globs: ["**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** The Rule Organization Enforcer ensures all rule files are placed in their correct locations according to the established directory structure, maintaining system integrity and discoverability.
+
+<version>1.0.0</version>
+
+<context>
+  This rule enforces the organizational structure of the BIG BRAIN Memory Bank rule system. Since maintaining a consistent and logical organization is essential for system integrity, discoverability, and maintainability, this rule provides checks and guidance to ensure all rules are placed in their correct locations and follow naming conventions.
+</context>
+
+<requirements>
+  <requirement>Verify rule files are in the correct directory based on feature type</requirement>
+  <requirement>Enforce file naming conventions for different rule categories</requirement>
+  <requirement>Provide guidance for relocating improperly placed files</requirement>
+  <requirement>Enable easy identification of organizational violations</requirement>
+  <requirement>Support the expansion of the rule system with new features</requirement>
+  <requirement>Maintain separation between BIG BRAIN and codebase rules</requirement>
+</requirements>
+
+<details>
+  <section-name>DIRECTORY STRUCTURE VERIFICATION</section-name>
+  <content>
+    The system enforces this directory structure:
+
+    ```
+    .cursor/rules/
+    ├── BIG_BRAIN/             # All BIG BRAIN specific rules
+    │   ├── Core/              # Core BIG BRAIN functionality
+    │   │   ├── Foundation/    # Foundation layer components (Phase 1)
+    │   │   ├── Verification/  # Verification framework components (Phase 2)
+    │   │   ├── Command/       # Command protocol components (Phase 3)
+    │   │   ├── Creative/      # Creative phase components (Phase 4)
+    │   │   ├── Checkpoint/    # Checkpoint system components (Phase 5)
+    │   │   └── Escalation/    # Task escalation components (Phase 6)
+    │   ├── Identity/          # BIG BRAIN identity definition
+    │   ├── Protocols/         # Protocol-specific rules
+    │   └── Utilities/         # BIG BRAIN utility functions
+    ├── Codebase/              # All codebase-related rules
+    │   ├── Languages/         # Language-specific rules
+    │   ├── Frameworks/        # Framework-specific rules
+    │   └── Patterns/          # Code pattern rules
+    └── main.mdc               # Main rule file
+    ```
+
+    Each rule file must be placed in the appropriate directory based on its function and purpose.
+  </content>
+</details>
+
+<details>
+  <section-name>FILE NAMING CONVENTIONS</section-name>
+  <content>
+    BIG BRAIN rule files must follow these naming conventions:
+
+    1. **Core Foundation Layer (040-090)**
+       - Format: `0XX-descriptive-name.mdc`
+       - Location: `.cursor/rules/BIG_BRAIN/Core/Foundation/`
+       - Examples: `040-enhanced-complexity-framework.mdc`
+
+    2. **Core Verification Framework (100-130)**
+       - Format: `1XX-descriptive-name.mdc`
+       - Location: `.cursor/rules/BIG_BRAIN/Core/Verification/`
+       - Examples: `100-memory-file-verification.mdc`
+
+    3. **Core Command Protocol (140-170)**
+       - Format: `1XX-descriptive-name.mdc`
+       - Location: `.cursor/rules/BIG_BRAIN/Core/Command/`
+       - Examples: `140-unified-command-interface.mdc`
+
+    4. **Core Creative Phase (180-210)**
+       - Format: `1XX-descriptive-name.mdc` or `2XX-descriptive-name.mdc`
+       - Location: `.cursor/rules/BIG_BRAIN/Core/Creative/`
+       - Examples: `180-creative-process-structure.mdc`
+
+    5. **Core Checkpoint System (220-250)**
+       - Format: `2XX-descriptive-name.mdc`
+       - Location: `.cursor/rules/BIG_BRAIN/Core/Checkpoint/`
+       - Examples: `220-checkpoint-definition.mdc`
+
+    6. **Core Task Escalation (260-290)**
+       - Format: `2XX-descriptive-name.mdc`
+       - Location: `.cursor/rules/BIG_BRAIN/Core/Escalation/`
+       - Examples: `260-escalation-triggers.mdc`
+
+    7. **BIG BRAIN Identity**
+       - Format: `000-descriptive-name.mdc`
+       - Location: `.cursor/rules/BIG_BRAIN/Identity/`
+       - Examples: `000-big-brain-identity.mdc`
+
+    8. **BIG BRAIN Protocols**
+       - Format: `3XX-descriptive-name.mdc`
+       - Location: `.cursor/rules/BIG_BRAIN/Protocols/`
+       - Examples: `300-bedtime-protocol.mdc`
+
+    9. **BIG BRAIN Utilities**
+       - Format: `5XX-descriptive-name.mdc`
+       - Location: `.cursor/rules/BIG_BRAIN/Utilities/`
+       - Examples: `500-rule-organization-enforcer.mdc`
+
+    10. **Codebase Rules**
+        - No strict numbering required
+        - Location: Appropriate subdirectory under `.cursor/rules/Codebase/`
+        - Examples: `python-best-practices.mdc`
+
+    The descriptive name should use kebab-case and clearly indicate the rule's purpose.
+  </content>
+</details>
+
+<details>
+  <section-name>RULE CONTENT VERIFICATION</section-name>
+  <content>
+    Rule content should match its location:
+
+    1. **BIG BRAIN Core Rules**
+       - Must include `<version>` tag
+       - Must include `<context>` description
+       - Must include `<requirements>` section
+       - Should have detailed implementation in `<details>` sections
+       - Must focus on BIG BRAIN functionality, not codebase specifics
+
+    2. **Codebase Rules**
+       - Should focus on language, framework, or pattern guidance
+       - Should not contain BIG BRAIN system functionality
+       - May have simpler structure than Core rules
+
+    3. **All Rules**
+       - Must have a clear description field
+       - Must specify appropriate globs
+       - Should have a TL;DR summary
+
+    Content verification ensures rules are not only in the right location but also contain appropriate content for that location.
+  </content>
+</details>
+
+<details>
+  <section-name>VIOLATION DETECTION</section-name>
+  <content>
+    The system detects these organization violations:
+
+    1. **Location Mismatch**
+       - Rule number doesn't match containing directory
+       - Rule content doesn't match directory purpose
+       - BIG BRAIN rules placed in Codebase directory or vice versa
+
+    2. **Naming Violations**
+       - Missing or incorrect number prefix
+       - Inconsistent naming format
+       - Duplicate rule numbers
+
+    3. **Content Issues**
+       - Missing required sections for rule type
+       - Inadequate documentation for rule complexity
+       - Inconsistent structure with peer rules
+
+    When violations are detected, clear guidance is provided for correction.
+  </content>
+</details>
+
+<details>
+  <section-name>CORRECTION GUIDANCE</section-name>
+  <content>
+    When rule organization issues are detected, these correction steps are provided:
+
+    1. **Location Correction**
+       - Identify correct target directory
+       - Provide move command: `Move-Item -Path [current] -Destination [target]`
+       - Explain rationale for correct location
+
+    2. **Naming Correction**
+       - Provide correct naming format
+       - Suggest specific corrected filename
+       - Explain number sequence meaning
+
+    3. **Content Correction**
+       - Identify missing required sections
+       - Provide templates for missing content
+       - Reference exemplar rules to follow
+
+    Correction guidance is specific, actionable, and educational to prevent future violations.
+  </content>
+</details>
+
+<details>
+  <section-name>EXPANSION SUPPORT</section-name>
+  <content>
+    The organization system supports expansion:
+
+    1. **Adding New Feature Categories**
+       - Create new subdirectory under appropriate parent
+       - Define number range for new category
+       - Update README-rules-organization.md
+       - Update this enforcer rule
+
+    2. **Extending Existing Categories**
+       - Use next available number in sequence
+       - Follow established patterns for similar rules
+       - Maintain consistent documentation structure
+
+    3. **Adding New Codebase Categories**
+       - Create appropriate subdirectory
+       - Follow established naming patterns
+       - Consider relationships with existing categories
+
+    Expansion guidelines ensure the organization grows in a structured, consistent manner.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH MEMORY BANK</section-name>
+  <content>
+    The rule organization enforcer integrates with the memory bank:
+
+    1. **Documentation Updates**
+       - When reorganizing, update activeContext.md
+       - Document organization principles in systemPatterns.md
+       - Track organization changes in progress.md
+
+    2. **Organization Knowledge**
+       - Maintain understanding of rule relationships
+       - Track dependencies between rule categories
+       - Preserve organizational reasoning
+
+    Memory bank integration ensures organizational knowledge persists despite memory resets.
+  </content>
+</details>
+
+<details>
+  <section-name>EXAMPLES</section-name>
+  <content>
+    **Example 1: Location Violation**
+    ```
+    Violation: Rule file '120-error-recovery-protocols.mdc' found in '.cursor/rules/Core/'
+    Correct Location: '.cursor/rules/BIG_BRAIN/Core/Verification/'
+    Correction: Move-Item -Path ".cursor/rules/Core/120-error-recovery-protocols.mdc" -Destination ".cursor/rules/BIG_BRAIN/Core/Verification/120-error-recovery-protocols.mdc"
+    Rationale: Error recovery protocols (120-129) belong in the Verification framework category.
+    ```
+
+    **Example 2: Naming Violation**
+    ```
+    Violation: Rule file 'workflow-orchestration.mdc' missing number prefix
+    Correct Name: '160-workflow-orchestration.mdc'
+    Correction: Rename-Item -Path ".cursor/rules/BIG_BRAIN/Core/Command/workflow-orchestration.mdc" -NewName "160-workflow-orchestration.mdc"
+    Rationale: Command protocol components use 140-170 number range.
+    ```
+
+    **Example 3: Content Violation**
+    ```
+    Violation: BIG BRAIN core rule missing required sections
+    File: '.cursor/rules/BIG_BRAIN/Core/Creative/190-evaluation-metrics-system.mdc'
+    Missing: <version>, <context>, <requirements> tags
+    Correction: Add the missing sections following the pattern in other Core rules
+    Rationale: All Core rules require complete documentation for knowledge persistence.
+    ```
+
+    These examples illustrate common violations and their corrections.
+  </content>
+</details>
+
+<details>
+  <section-name>SPECIAL CASES</section-name>
+  <content>
+    The system handles these special cases:
+
+    1. **main.mdc**
+       - Always remains at the root level
+       - Not subject to numbering conventions
+       - Contains core system orchestration
+
+    2. **Transitional Rules**
+       - During reorganization, may temporarily exist in both locations
+       - Must be resolved within one implementation phase
+       - Require documentation of transition plan
+
+    3. **Multi-Category Rules**
+       - Should be split into component rules when possible
+       - If necessary, place in primary category and reference from others
+       - Document cross-category relationships
+
+    4. **Third-Party Rules**
+       - Place in appropriate Codebase category
+       - Clearly mark as external
+       - Document integration approach
+
+    Special case handling ensures the organization system remains robust despite exceptions.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                   |
+| ------- | ---------- | --------- | ----------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial rule organization enforcer implementation |

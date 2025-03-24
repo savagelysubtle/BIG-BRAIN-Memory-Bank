@@ -1,0 +1,107 @@
+%% BIG BRAIN Memory Bank 2.0 - Command Protocol
+%% This diagram illustrates the command structure, categories, and processing flow
+%% Version 1.0.0 (March 24, 2025)
+
+flowchart TB
+    %% Command input and processing
+    Start([Command Input]) --> Parser[Command Parser]
+    Parser --> Validator[Syntax Validator]
+    Validator --> Auth[Authorization]
+    Auth --> Executor[Command Executor]
+    Executor --> ResultProc[Result Processor]
+    ResultProc --> Feedback[Feedback Generator]
+    Feedback --> Logger[Command Logger]
+    Logger --> End([Command Complete])
+
+    %% Command categories
+    subgraph CmdCategories[Command Categories]
+        Init[Initialization Commands]
+        Workflow[Workflow Commands]
+        Memory[Memory Operations Commands]
+        Rule[Rule System Commands]
+        Session[Session Management Commands]
+        Utility[Utility Commands]
+    end
+
+    %% Example commands in each category
+    Init --- IC1[MEMORY BANK INITIALIZE]
+    Init --- IC2[CONFIRM READINESS]
+
+    Workflow --- WC1[ENTER PLAN MODE]
+    Workflow --- WC2[ENTER ACT MODE]
+    Workflow --- WC3[ENTER REVIEW MODE]
+    Workflow --- WC4[ENTER HYBRID MODE]
+    Workflow --- WC5[RESUME]
+
+    Memory --- MC1[UPDATE MEMORY BANK]
+    Memory --- MC2[MEMORY HEALTH CHECK]
+    Memory --- MC3[CONTEXTUALIZE]
+    Memory --- MC4[SHOW ACTIVE CONTEXT]
+
+    Rule --- RC1[SHOW ACTIVE RULES]
+    Rule --- RC2[DEBUG RULES]
+    Rule --- RC3[DEBUG RULE]
+
+    Session --- SC1[BEDTIME PROTOCOL]
+    Session --- SC2[PAUSE SESSION]
+
+    Utility --- UC1[OPTIMIZE MEMORY BANK]
+    Utility --- UC2[EXPORT MEMORY]
+
+    %% Command structure pattern
+    subgraph CmdStructure[Command Structure]
+        direction LR
+        CmdPattern["COMMAND_NAME [PARAMETER1] [PARAMETER2] [--option1=value] [--option2]"]
+    end
+
+    %% Command response pattern
+    subgraph CmdResponse[Command Response]
+        direction TB
+        Status[Status Indicator]
+        Echo[Command Echo]
+        Result[Primary Result]
+        Info[Additional Information]
+        Next[Next Steps/Recommendations]
+    end
+
+    %% Protocol enforcement mechanism
+    subgraph EnforcementMech[Protocol Enforcement]
+        direction TB
+        VGates[Validation Gates]
+        PGuards[Process Guardrails]
+        CGuide[Correction Guidance]
+        CompDoc[Compliance Documentation]
+    end
+
+    %% Connect components
+    CmdCategories -.-> Validator
+    CmdStructure -.-> Parser
+    Executor -.-> CmdCategories
+    ResultProc -.-> CmdResponse
+    EnforcementMech -.-> Validator
+    EnforcementMech -.-> Auth
+    EnforcementMech -.-> Executor
+
+    %% Error handling
+    Validator -->|Error| ErrorHandler[Error Handler]
+    Auth -->|Denied| ErrorHandler
+    Executor -->|Failure| ErrorHandler
+    ErrorHandler --> Feedback
+
+    %% Define styles
+    classDef process fill:#dae8fc,stroke:#6c8ebf,stroke-width:1px,border-radius:4px
+    classDef endpoint fill:#d5e8d4,stroke:#82b366,stroke-width:1px,border-radius:8px
+    classDef category fill:#fff2cc,stroke:#d6b656,stroke-width:1px,border-radius:6px
+    classDef command fill:#e1d5e7,stroke:#9673a6,stroke-width:1px,border-radius:4px
+    classDef structure fill:#f5f5f5,stroke:#666666,stroke-width:1px,border-radius:8px
+    classDef error fill:#f8cecc,stroke:#b85450,stroke-width:1px,border-radius:4px
+
+    %% Apply styles
+    class Start,End endpoint
+    class Parser,Validator,Auth,Executor,ResultProc,Feedback,Logger process
+    class Init,Workflow,Memory,Rule,Session,Utility category
+    class IC1,IC2,WC1,WC2,WC3,WC4,WC5,MC1,MC2,MC3,MC4,RC1,RC2,RC3,SC1,SC2,UC1,UC2 command
+    class CmdStructure,CmdResponse,EnforcementMech,CmdCategories structure
+    class ErrorHandler,VGates,PGuards,CGuide,CompDoc error
+    class Status,Echo,Result,Info,Next process
+    class CmdPattern command

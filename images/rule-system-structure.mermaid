@@ -1,0 +1,75 @@
+%% BIG BRAIN Memory Bank 2.0 - Rule System Structure
+%% This diagram illustrates the rule system organization and categories
+%% Version 1.0.0 (March 24, 2025)
+
+flowchart TB
+    %% Main Rule System structure
+    RS[Rule System] --> BB[BIG_BRAIN]
+    RS --> CB[Codebase]
+
+    %% BIG_BRAIN rule categories
+    BB --> Core
+    BB --> Identity
+    BB --> Protocols
+    BB --> Templates
+    BB --> Utilities
+    BB --> Workflows
+
+    %% Core subcategories
+    Core --> Foundation
+    Core --> Verification
+    Core --> Command
+    Core --> Creative
+    Core --> Checkpoint
+    Core --> Escalation
+    Core --> Documentation
+    Core --> Testing
+
+    %% Foundation rules
+    Foundation --> F1[100-component-definitions.mdc]
+    Foundation --> F2[110-memory-bank-structure.mdc]
+    Foundation --> F3[120-initialization-procedure.mdc]
+    Foundation --> F4[130-progressive-disclosure.mdc]
+    Foundation --> F5[140-complexity-framework.mdc]
+
+    %% Verification rules
+    Verification --> V1[200-memory-file-verification.mdc]
+    Verification --> V2[210-consistency-checks.mdc]
+    Verification --> V3[220-error-recovery.mdc]
+    Verification --> V4[230-validation-reporting.mdc]
+
+    %% Command rules
+    Command --> C1[150-unified-command-interface.mdc]
+    Command --> C2[155-initialization-procedure.mdc]
+    Command --> C3[160-workflow-orchestration.mdc]
+    Command --> C4[170-protocol-enforcement.mdc]
+
+    %% Codebase rule categories
+    CB --> DocStandards[documentation-standards.mdc]
+    CB --> DiagramStandards[diagram-standards.mdc]
+    CB --> CB_P[Patterns]
+    CB --> CB_F[Frameworks]
+    CB --> CB_L[Languages]
+
+    %% Rule Application Flow
+    Task([Task Initialization]) -.-> RuleAct[Rule Activation]
+    RuleAct -.-> ContextAss[Context Assessment]
+    ContextAss -.-> RuleApp[Rule Application]
+    RuleApp -.-> Verify[Verification]
+    Verify -.-> Feedback[Feedback]
+    Feedback -.-> Adapt[Adaptation]
+
+    %% Define styles
+    classDef mainCategory fill:#dae8fc,stroke:#6c8ebf,stroke-width:1px,border-radius:8px
+    classDef subCategory fill:#d5e8d4,stroke:#82b366,stroke-width:1px,border-radius:6px
+    classDef ruleFile fill:#fff2cc,stroke:#d6b656,stroke-width:1px,border-radius:4px
+    classDef flow fill:#ffe6cc,stroke:#d79b00,stroke-width:1px,border-radius:4px,dashed
+    classDef system fill:#f5f5f5,stroke:#666666,stroke-width:1px,border-radius:8px
+
+    %% Apply styles
+    class RS system
+    class BB,CB mainCategory
+    class Core,Identity,Protocols,Templates,Utilities,Workflows,CB_P,CB_F,CB_L subCategory
+    class Foundation,Verification,Command,Creative,Checkpoint,Escalation,Documentation,Testing subCategory
+    class F1,F2,F3,F4,F5,V1,V2,V3,V4,C1,C2,C3,C4,DocStandards,DiagramStandards ruleFile
+    class Task,RuleAct,ContextAss,RuleApp,Verify,Feedback,Adapt flow

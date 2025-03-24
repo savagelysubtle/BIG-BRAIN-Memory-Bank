@@ -1,0 +1,376 @@
+---
+description: WHEN command includes "SHOW ACTIVE RULES" or "DEBUG RULES" ENSURE providing visibility and debugging tools for the rule system
+globs: ["**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** The Rule Visibility System provides tools to visualize active rules, understand rule execution, and debug rule-related issues, enhancing transparency of the BIG BRAIN rule system.
+
+<version>1.0.0</version>
+
+<context>
+  Understanding which rules are active and how they are being applied is essential for maintaining and troubleshooting the BIG BRAIN Memory Bank system. This rule provides visibility mechanisms that expose the internal workings of the rule system, enabling more effective debugging, rule refinement, and system maintenance.
+</context>
+
+<requirements>
+  <requirement>Respond to "SHOW ACTIVE RULES" command with a comprehensive rules overview</requirement>
+  <requirement>Respond to "DEBUG RULES" command with detailed rule diagnostics</requirement>
+  <requirement>Provide clear visualization of rule organization and hierarchy</requirement>
+  <requirement>Enable inspection of rule execution and application frequency</requirement>
+  <requirement>Support troubleshooting of rule conflicts and execution issues</requirement>
+  <requirement>Facilitate understanding of rule relationships and dependencies</requirement>
+</requirements>
+
+<details>
+  <section-name>RULE VISIBILITY COMMANDS</section-name>
+  <content>
+    This system responds to these commands:
+
+    1. **"SHOW ACTIVE RULES"**
+       - Lists all currently active rules
+       - Groups rules by category
+       - Shows rule activation status
+       - Indicates which rules are applying to current context
+       - Provides count summary by category
+
+    2. **"SHOW ACTIVE RULES [CATEGORY]"**
+       - Lists active rules in the specified category
+       - Shows detailed information for category rules
+       - Provides category-specific statistics
+       - Examples:
+         - "SHOW ACTIVE RULES FOUNDATION"
+         - "SHOW ACTIVE RULES VERIFICATION"
+         - "SHOW ACTIVE RULES UTILITIES"
+
+    3. **"DEBUG RULES"**
+       - Performs comprehensive rule system diagnostics
+       - Identifies potential conflicts
+       - Shows rule execution statistics
+       - Reports on rule health
+       - Recommends optimizations
+
+    4. **"DEBUG RULE [RULE_NAME]"**
+       - Provides detailed analysis of specific rule
+       - Shows rule execution history
+       - Identifies interaction with other rules
+       - Examples:
+         - "DEBUG RULE memory-file-verification"
+         - "DEBUG RULE workflow-orchestration"
+
+    These commands enable effective navigation and inspection of the rule system.
+  </content>
+</details>
+
+<details>
+  <section-name>RULE VISUALIZATION</section-name>
+  <content>
+    The system visualizes rules in these formats:
+
+    1. **Category Hierarchy**
+       ```
+       BIG BRAIN RULE SYSTEM
+       ├── Core Rules (32 active)
+       │   ├── Foundation (12 active)
+       │   ├── Verification (8 active)
+       │   ├── Command (6 active)
+       │   └── Creative (6 active)
+       ├── Protocols (5 active)
+       ├── Utilities (4 active)
+       └── Templates (1 active)
+       ```
+
+    2. **Rule Status Table**
+       ```
+       | Rule ID | Name                    | Category    | Status  | Applied | Last Used |
+       |---------|-------------------------|-------------|---------|---------|-----------|
+       | 040     | complexity-framework    | Foundation  | Active  | Yes     | Just now  |
+       | 100     | file-verification       | Verification| Active  | Yes     | 2m ago    |
+       | 180     | creative-process        | Creative    | Active  | No      | 1h ago    |
+       | 500     | organization-enforcer   | Utilities   | Active  | Yes     | 5m ago    |
+       ```
+
+    3. **Detailed Rule Card**
+       ```
+       ┌─────────────────────────────────────────────────────┐
+       │ RULE: 100-memory-file-verification.mdc              │
+       ├─────────────────────────────────────────────────────┤
+       │ Category: Verification Framework                    │
+       │ Version: 1.0.0                                      │
+       │ Status: Active                                      │
+       │ Applies To: **/*.md, **/*.mdc                       │
+       │ Always Apply: true                                  │
+       │ Last Applied: 2 minutes ago                         │
+       │ Application Count: 47 times this session            │
+       │ Related Rules: file-consistency-check, error-recovery│
+       └─────────────────────────────────────────────────────┘
+       ```
+
+    4. **Rule Relationship Graph**
+       Text representation of rule dependencies and relationships:
+       ```
+       file-verification
+         ├─► consistency-check
+         │    └─► error-recovery
+         └─► validation-reporting
+              ├─► error-recovery
+              └─► diagnostic-tools
+       ```
+
+    These visualizations provide clear insights into the rule system structure and status.
+  </content>
+</details>
+
+<details>
+  <section-name>RULE DEBUGGING TOOLS</section-name>
+  <content>
+    The system provides these debugging tools:
+
+    1. **Rule Activation Analysis**
+       - Shows when each rule is activated
+       - Highlights rules that have never been activated
+       - Identifies rules with high activation frequency
+       - Helps identify unused or overused rules
+
+    2. **Rule Conflict Detection**
+       - Identifies rules with overlapping scopes
+       - Detects contradictory rule requirements
+       - Highlights potential execution order issues
+       - Recommends conflict resolution approaches
+
+    3. **Rule Application Tracing**
+       - Shows sequence of rule applications
+       - Traces rule execution path
+       - Identifies decision points
+       - Visualizes rule application flow
+
+    4. **Rule Performance Metrics**
+       - Measures rule execution frequency
+       - Tracks context switches between rules
+       - Identifies performance bottlenecks
+       - Suggests optimization opportunities
+
+    5. **Rule Context Inspection**
+       - Shows what content each rule applies to
+       - Identifies patterns in rule application
+       - Highlights content not covered by rules
+       - Helps optimize rule coverage
+
+    These tools enable effective troubleshooting of rule-related issues.
+  </content>
+</details>
+
+<details>
+  <section-name>DIAGNOSTIC REPORTS</section-name>
+  <content>
+    The system generates these diagnostic reports:
+
+    1. **System Health Report**
+       ```
+       RULE SYSTEM HEALTH: Good
+
+       Active Rules: 42/45 (93%)
+       Rules Applied This Session: 36 (85%)
+       Never Applied Rules: 3 (7%)
+
+       Potential Issues:
+       - 2 rules with overlapping scopes
+       - 1 rule with no recent applications
+       - 3 rules that may benefit from optimization
+
+       Overall system is functioning normally with minor optimization opportunities.
+       ```
+
+    2. **Rule Conflict Report**
+       ```
+       RULE CONFLICT ANALYSIS
+
+       Potential Conflicts:
+
+       1. Scope Overlap:
+          - 180-creative-process-structure.mdc
+          - 190-evaluation-metrics-system.mdc
+          Both apply to design documents with potential requirement differences
+
+       2. Execution Order Sensitivity:
+          - 100-memory-file-verification.mdc
+          - 110-consistency-checks.mdc
+          Verification should execute before consistency checks
+
+       Recommendations:
+       - Review creative process rules to clarify boundaries
+       - Ensure verification executes before consistency checks
+       ```
+
+    3. **Rule Usage Report**
+       ```
+       RULE USAGE ANALYSIS
+
+       Most Applied Rules:
+       1. 040-enhanced-complexity-framework.mdc (127 applications)
+       2. 100-memory-file-verification.mdc (89 applications)
+       3. 500-rule-organization-enforcer.mdc (56 applications)
+
+       Never Applied Rules:
+       1. 210-specialized-design-patterns.mdc
+       2. 250-checkpoint-templates.mdc
+       3. 290-escalation-documentation.mdc
+
+       Recommendations:
+       - Review never-applied rules for relevancy
+       - Consider optimizing high-frequency rules
+       ```
+
+    These reports provide actionable insights into rule system operation.
+  </content>
+</details>
+
+<details>
+  <section-name>VISUALIZATION EXAMPLES</section-name>
+  <content>
+    **Example 1: Full Rule System Overview**
+    ```
+    === BIG BRAIN RULE SYSTEM OVERVIEW ===
+
+    Total Rules: 45 | Active: 42 | Applied This Session: 36
+
+    CORE FOUNDATION (12)
+    ✓ 040-enhanced-complexity-framework.mdc (applied 127 times)
+    ✓ 050-initialization-procedure.mdc (applied 14 times)
+    ✓ 060-memory-bank-structure.mdc (applied 32 times)
+    ✓ 070-information-hierarchy.mdc (applied 28 times)
+    ✓ 080-progressive-disclosure.mdc (applied 19 times)
+    ...
+
+    VERIFICATION FRAMEWORK (8)
+    ✓ 100-memory-file-verification.mdc (applied 89 times)
+    ✓ 110-consistency-checks.mdc (applied 45 times)
+    ✓ 120-error-recovery-protocols.mdc (applied 12 times)
+    ...
+
+    COMMAND PROTOCOL (6)
+    ✓ 140-unified-command-interface.mdc (applied 51 times)
+    ✓ 150-standard-initialization.mdc (applied 8 times)
+    ...
+
+    CREATIVE PHASE (6)
+    ✓ 180-creative-process-structure.mdc (applied 5 times)
+    ✓ 190-evaluation-metrics-system.mdc (applied 3 times)
+    ✘ 210-specialized-design-patterns.mdc (never applied)
+    ...
+
+    [Additional sections follow]
+    ```
+
+    **Example 2: Detailed Rule Debug**
+    ```
+    === RULE DEBUG: 100-memory-file-verification.mdc ===
+
+    GENERAL INFORMATION
+    Category: Verification Framework
+    Version: 1.0.0
+    Status: Active
+    Globs: ["**/*.md", "**/*.mdc"]
+    Always Apply: true
+
+    ACTIVATION STATISTICS
+    Total Applications: 89
+    Last Applied: 2 minutes ago
+    Application Frequency: ~12/hour
+
+    RELATED RULES
+    Depends On:
+    - 060-memory-bank-structure.mdc
+
+    Depended On By:
+    - 110-consistency-checks.mdc
+    - 120-error-recovery-protocols.mdc
+    - 130-validation-reporting.mdc
+
+    EXECUTION TRACE (Last 5)
+    1. 12:42:23 - Verified memory-bank/core/active/progress.md
+    2. 12:39:11 - Verified memory-bank/core/active/activeContext.md
+    3. 12:35:48 - Verified .cursor/rules/BIG_BRAIN/Utilities/510-memory-diagnostics.mdc
+    4. 12:30:02 - Verified memory-bank/core/active/systemPatterns.md
+    5. 12:28:17 - Verified memory-bank/core/active/techContext.md
+
+    POTENTIAL ISSUES
+    - None detected
+
+    OPTIMIZATION OPPORTUNITIES
+    - Consider more specific globs to reduce unnecessary checks
+    ```
+
+    These examples illustrate how the visibility system presents rule information.
+  </content>
+</details>
+
+<details>
+  <section-name>COMPLEXITY ADAPTATION</section-name>
+  <content>
+    Rule visibility adapts to task complexity:
+
+    **Level 1 (Simple)**
+    - Basic rule listing
+    - Simple category grouping
+    - Minimal status information
+    - Limited debugging features
+    - Focus on currently relevant rules
+
+    **Level 2 (Moderate)**
+    - Standard rule visualization
+    - Complete category hierarchy
+    - Regular status reporting
+    - Standard debugging tools
+    - Coverage of all active rules
+
+    **Level 3 (Complex)**
+    - Enhanced visualization
+    - Detailed status metrics
+    - Comprehensive rule relationships
+    - Advanced debugging capabilities
+    - Historical rule application data
+
+    **Level 4 (Critical)**
+    - Maximum visualization detail
+    - Complete metrics and analytics
+    - Full relationship mapping
+    - Exhaustive debugging tools
+    - Historical data with trends
+    - Rule optimization recommendations
+
+    Complexity adaptation ensures appropriate detail for different scenarios.
+  </content>
+</details>
+
+<details>
+  <section-name>MEMORY BANK INTEGRATION</section-name>
+  <content>
+    The Rule Visibility System integrates with memory bank:
+
+    1. **Documentation Updates**
+       - Records rule system status in activeContext.md
+       - Documents rule patterns in systemPatterns.md
+       - Tracks rule evolution in progress.md
+       - Updates technical details in techContext.md
+
+    2. **Knowledge Preservation**
+       - Maintains understanding of rule relationships
+       - Preserves rule execution patterns
+       - Documents rule diagnostics and solutions
+       - Tracks rule optimization history
+
+    3. **Cross-Component Integration**
+       - Coordinates with Verification Framework for validation
+       - Works with Organization Enforcer for structure confirmation
+       - Utilizes Memory Diagnostics for comprehensive checks
+       - Supports Command Protocol for rule-related commands
+
+    Memory bank integration ensures visibility insights persist across memory resets.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                   |
+| ------- | ---------- | --------- | ----------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial rule visibility system implementation |

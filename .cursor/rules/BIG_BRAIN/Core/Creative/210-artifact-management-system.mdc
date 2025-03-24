@@ -1,0 +1,1033 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN managing design artifacts APPLY structured processes for organization and preservation
+globs: ["**/*.md", "**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** The Artifact Management System provides structured processes for organizing, storing, retrieving, and maintaining design artifacts throughout their lifecycle to ensure knowledge preservation.
+
+<version>1.0.0</version>
+
+<context>
+  This rule establishes the Artifact Management System for design documentation and artifacts. Since design knowledge must persist across memory resets, systematic artifact management is essential for effective access and utilization. The system provides classification, storage, retrieval, and maintenance processes to ensure design knowledge preservation.
+</context>
+
+<requirements>
+  <requirement>Define structured processes for design artifact management</requirement>
+  <requirement>Provide artifact classification and organization systems</requirement>
+  <requirement>Support efficient storage and retrieval of design artifacts</requirement>
+  <requirement>Enable artifact maintenance and evolution</requirement>
+  <requirement>Integrate with the creative process and memory bank</requirement>
+  <requirement>Adapt management rigor to artifact importance and task complexity</requirement>
+</requirements>
+
+<details>
+  <section-name>ARTIFACT TYPES</section-name>
+  <content>
+    The system manages these artifact types:
+    
+    1. **Design Documentation**
+       - Design briefs
+       - Design rationales
+       - Decision records
+       - Evaluation matrices
+       - Review reports
+       - Verification results
+    
+    2. **Design Specifications**
+       - Architecture specifications
+       - Component designs
+       - Interface contracts
+       - Algorithm definitions
+       - Data models
+       - UI specifications
+    
+    3. **Design Diagrams**
+       - Architecture diagrams
+       - Component models
+       - Sequence diagrams
+       - State models
+       - Entity-relationship diagrams
+       - UI wireframes
+    
+    4. **Alternative Designs**
+       - Exploration artifacts
+       - Alternative approaches
+       - Trade-off analyses
+       - Comparative evaluations
+       - Historical alternatives
+       - Evolution paths
+    
+    5. **Reference Materials**
+       - Design patterns
+       - Best practices
+       - Reusable components
+       - Style guides
+       - Conventions
+       - External references
+    
+    These artifact types encompass the full range of design knowledge.
+  </content>
+</details>
+
+<details>
+  <section-name>ARTIFACT CLASSIFICATION</section-name>
+  <content>
+    Artifacts are classified through:
+    
+    1. **Type-Based Classification**
+       - Documentation category
+       - Specification type
+       - Diagram format
+       - Alternative classification
+       - Reference category
+    
+    2. **Scope-Based Classification**
+       - System-level artifacts
+       - Subsystem artifacts
+       - Component artifacts
+       - Interface artifacts
+       - Implementation artifacts
+    
+    3. **Status-Based Classification**
+       - Draft artifacts
+       - In-review artifacts
+       - Approved artifacts
+       - Deprecated artifacts
+       - Historical artifacts
+    
+    4. **Purpose-Based Classification**
+       - Exploratory artifacts
+       - Decision artifacts
+       - Implementation artifacts
+       - Verification artifacts
+       - Educational artifacts
+    
+    5. **Relationship-Based Classification**
+       - Parent/child relationships
+       - Dependency relationships
+       - Derivation relationships
+       - Version relationships
+       - Cross-reference relationships
+    
+    These classification dimensions enable flexible organization.
+  </content>
+</details>
+
+<details>
+  <section-name>ARTIFACT NAMING CONVENTIONS</section-name>
+  <content>
+    Artifacts follow these naming conventions:
+    
+    1. **Basic Structure**
+       ```
+       [Project]-[Type]-[Component]-[Version].[Extension]
+       ```
+       Example: `AuthSystem-Arch-SecurityModel-v1.2.md`
+    
+    2. **Type Codes**
+       - `Arch`: Architecture artifact
+       - `Comp`: Component design
+       - `Data`: Data model
+       - `Alg`: Algorithm
+       - `UI`: User interface
+       - `Eval`: Evaluation artifact
+       - `Dec`: Decision record
+       - `Ver`: Verification result
+    
+    3. **Version Notation**
+       - Major versions: Significant changes (v1.0, v2.0)
+       - Minor versions: Feature additions (v1.1, v1.2)
+       - Revisions: Small updates (v1.1.1, v1.1.2)
+       - Draft indicator: Work in progress (v1.2-draft)
+       - Review indicator: Under review (v1.2-review)
+    
+    4. **Status Indicators**
+       - `-draft`: Work in progress
+       - `-review`: In review process
+       - `-approved`: Officially approved
+       - `-implemented`: In production
+       - `-deprecated`: No longer current
+       - `-historical`: Preserved for reference
+    
+    5. **Alternative Indicators**
+       - `-alt1`, `-alt2`: Alternative designs
+       - `-option-A`, `-option-B`: Design options
+       - `-variant-X`: Specific variant
+       - `-approach-1`: Numbered approach
+       - `-exploration`: Exploratory design
+    
+    These conventions ensure consistent and informative artifact naming.
+  </content>
+</details>
+
+<details>
+  <section-name>ARTIFACT STORAGE STRUCTURE</section-name>
+  <content>
+    Artifacts are organized in this structure:
+    
+    ```
+    /designs/
+      /architecture/
+        /system/
+          - overall-architecture.md
+          - component-model.md
+          /views/
+            - module-view.md
+            - runtime-view.md
+          /decisions/
+            - arch-decision-001.md
+            - arch-decision-002.md
+          /alternatives/
+            - alternative-approaches.md
+            
+      /components/
+        /authentication/
+          - auth-component-spec.md
+          - token-manager-design.md
+          /interfaces/
+            - auth-service-interface.md
+          /algorithms/
+            - token-validation-algorithm.md
+        /user-management/
+          ...
+            
+      /data-models/
+        - user-data-model.md
+        - session-data-model.md
+        /schemas/
+          - user-schema.md
+        /relationships/
+          - entity-relationships.md
+            
+      /ui-designs/
+        - ui-styleguide.md
+        /flows/
+          - authentication-flow.md
+        /screens/
+          - login-screen.md
+          - dashboard-screen.md
+            
+      /evaluations/
+        - architecture-evaluation.md
+        - component-evaluation.md
+        /reviews/
+          - design-review-001.md
+        /verifications/
+          - quality-verification-report.md
+            
+      /references/
+        /patterns/
+          - auth-patterns.md
+        /best-practices/
+          - security-best-practices.md
+        /standards/
+          - coding-standards.md
+    ```
+    
+    This structure provides logical organization for all artifact types.
+  </content>
+</details>
+
+<details>
+  <section-name>ARTIFACT TEMPLATES</section-name>
+  <content>
+    Standardized templates include:
+    
+    1. **Architecture Specification Template**
+       ```
+       # [System] Architecture Specification
+       
+       ## Overview
+       [Brief description of the architecture]
+       
+       ## Context
+       [System context and environment]
+       
+       ## Quality Attributes
+       [Key quality attributes and priorities]
+       
+       ## Constraints
+       [Design and implementation constraints]
+       
+       ## Component Model
+       [Description of system components]
+       
+       ## Component Interactions
+       [Description of component interactions]
+       
+       ## Data Flow
+       [Description of data flow through the system]
+       
+       ## Cross-Cutting Concerns
+       [Description of cross-cutting concerns]
+       
+       ## Architectural Decisions
+       [Key architectural decisions with rationale]
+       
+       ## Alternatives Considered
+       [Architectural alternatives with evaluation]
+       
+       ## Risk Analysis
+       [Architectural risks and mitigations]
+       ```
+    
+    2. **Component Design Template**
+       ```
+       # [Component] Design
+       
+       ## Purpose
+       [Component purpose and responsibilities]
+       
+       ## Interface
+       [Public interface definition]
+       
+       ## Dependencies
+       [External dependencies]
+       
+       ## Internal Structure
+       [Internal component structure]
+       
+       ## State Management
+       [State handling approach]
+       
+       ## Error Handling
+       [Error detection and recovery]
+       
+       ## Algorithm Details
+       [Key algorithms and approaches]
+       
+       ## Performance Considerations
+       [Performance factors and optimizations]
+       
+       ## Security Considerations
+       [Security concerns and mitigations]
+       
+       ## Testing Approach
+       [Component testing strategy]
+       ```
+    
+    3. **Design Decision Record Template**
+       ```
+       # Design Decision: [Decision Title]
+       
+       ## Context
+       [Decision context and background]
+       
+       ## Problem
+       [Problem being addressed]
+       
+       ## Decision
+       [Decision made]
+       
+       ## Status
+       [Decision status: proposed/accepted/deprecated]
+       
+       ## Assumptions
+       [Key assumptions]
+       
+       ## Constraints
+       [Relevant constraints]
+       
+       ## Options Considered
+       [Alternative options]
+       
+       ## Evaluation Criteria
+       [Selection criteria]
+       
+       ## Evaluation
+       [Option evaluation against criteria]
+       
+       ## Rationale
+       [Justification for selection]
+       
+       ## Implications
+       [Decision implications]
+       
+       ## Related Decisions
+       [Related design decisions]
+       ```
+    
+    4. **Verification Report Template**
+       ```
+       # Verification Report: [Artifact]
+       
+       ## Verification Context
+       [Context of the verification]
+       
+       ## Verification Scope
+       [Scope of verification]
+       
+       ## Verification Methods
+       [Methods applied]
+       
+       ## Requirement Coverage
+       [Requirement verification results]
+       
+       ## Quality Attribute Verification
+       [Quality attribute verification results]
+       
+       ## Issues Identified
+       [Issues found during verification]
+       
+       ## Verification Outcome
+       [Overall verification result]
+       
+       ## Recommendations
+       [Improvement recommendations]
+       ```
+    
+    These templates ensure consistent artifact structure.
+  </content>
+</details>
+
+<details>
+  <section-name>METADATA STANDARDS</section-name>
+  <content>
+    Artifacts include this metadata:
+    
+    1. **Identification Metadata**
+       - Unique identifier
+       - Title
+       - Artifact type
+       - Classification tags
+       - Creation date
+    
+    2. **Version Metadata**
+       - Version number
+       - Last modified date
+       - Modification author
+       - Revision history
+       - Status
+    
+    3. **Relationship Metadata**
+       - Parent artifacts
+       - Child artifacts
+       - Related artifacts
+       - Dependent artifacts
+       - Derived artifacts
+    
+    4. **Content Metadata**
+       - Purpose statement
+       - Scope definition
+       - Key topics
+       - Keywords
+       - Abstract/summary
+    
+    5. **Management Metadata**
+       - Approval status
+       - Review information
+       - Ownership
+       - Access permissions
+       - Retention period
+    
+    Standardized metadata enables efficient artifact management.
+  </content>
+</details>
+
+<details>
+  <section-name>ARTIFACT LIFECYCLE</section-name>
+  <content>
+    Artifacts follow this lifecycle:
+    
+    1. **Creation Phase**
+       - Initiation: Artifact need identification
+       - Planning: Structure and content planning
+       - Drafting: Initial content creation
+       - Refinement: Content improvement
+       - Validation: Self-review and verification
+    
+    2. **Review Phase**
+       - Submission: Formal review request
+       - Inspection: Reviewer examination
+       - Feedback: Comment and suggestion collection
+       - Discussion: Feedback clarification
+       - Revision: Content update based on feedback
+    
+    3. **Approval Phase**
+       - Final Verification: Compliance checking
+       - Formal Approval: Authorization
+       - Publication: Official release
+       - Notification: Stakeholder announcement
+       - Integration: Repository inclusion
+    
+    4. **Maintenance Phase**
+       - Usage: Active reference and application
+       - Evaluation: Continued relevance assessment
+       - Update: Content revision
+       - Version Control: Change tracking
+       - Reference Maintenance: Link and relationship updates
+    
+    5. **Retirement Phase**
+       - Obsolescence Identification: Relevance assessment
+       - Deprecation: Status change
+       - Archiving: Historical preservation
+       - Replacement: Successor artifact linking
+       - Knowledge Transfer: Valuable content migration
+    
+    This lifecycle ensures proper artifact evolution management.
+  </content>
+</details>
+
+<details>
+  <section-name>ARTIFACT RETRIEVAL</section-name>
+  <content>
+    Artifacts are retrieved through:
+    
+    1. **Direct Navigation**
+       - Folder structure browsing
+       - Path-based access
+       - Navigation through organization hierarchy
+       - Bookmark access
+       - Recent artifact history
+    
+    2. **Search Mechanisms**
+       - Keyword search
+       - Metadata-based search
+       - Full-text search
+       - Classification-based filtering
+       - Relationship-based discovery
+    
+    3. **Reference Following**
+       - Cross-reference navigation
+       - Relationship traversal
+       - Dependency tracing
+       - Parent-child navigation
+       - Version history exploration
+    
+    4. **Contextual Access**
+       - Task-based artifact suggestion
+       - Workflow-integrated retrieval
+       - Role-based artifact recommendation
+       - Problem-focused artifact presentation
+       - Design phase-specific collections
+    
+    5. **Artifact Collections**
+       - Curated artifact sets
+       - Virtual folders
+       - Saved searches
+       - Tagged collections
+       - User-defined groupings
+    
+    These mechanisms ensure efficient artifact discovery.
+  </content>
+</details>
+
+<details>
+  <section-name>VERSION CONTROL</section-name>
+  <content>
+    Artifacts maintain version history through:
+    
+    1. **Version Numbering**
+       - Semantic versioning (major.minor.patch)
+       - Status indicators in version
+       - Date-based versioning where applicable
+       - Release labeling
+       - Branch indication
+    
+    2. **Change Tracking**
+       - Modification timestamps
+       - Author attribution
+       - Change descriptions
+       - Diff-based change records
+       - Change categorization
+    
+    3. **Version Comparison**
+       - Side-by-side comparison
+       - Difference highlighting
+       - Change visualization
+       - Merge capability
+       - Version annotation
+    
+    4. **Branch Management**
+       - Parallel version development
+       - Alternative exploration branches
+       - Experimental versions
+       - Maintenance branches
+       - Version merging
+    
+    5. **Release Management**
+       - Baseline establishment
+       - Release composition
+       - Release notes generation
+       - Version set coordination
+       - Milestone marking
+    
+    These capabilities ensure proper artifact evolution tracking.
+  </content>
+</details>
+
+<details>
+  <section-name>QUALITY STANDARDS</section-name>
+  <content>
+    Artifacts adhere to these quality standards:
+    
+    1. **Content Quality**
+       - Accuracy: Information correctness
+       - Completeness: Required information presence
+       - Consistency: Internal alignment
+       - Clarity: Clear expression
+       - Conciseness: Appropriate detail level
+    
+    2. **Structural Quality**
+       - Organization: Logical information structure
+       - Formatting: Consistent presentation
+       - Navigation: Effective section organization
+       - References: Proper citation and linking
+       - Templates: Standard structure adherence
+    
+    3. **Metadata Quality**
+       - Identification: Clear artifact identification
+       - Classification: Proper categorization
+       - Relationships: Accurate relationship specification
+       - Versioning: Proper version information
+       - Status: Accurate status indication
+    
+    4. **Maintenance Quality**
+       - Currency: Up-to-date information
+       - Relevance: Continued usefulness
+       - Availability: Appropriate accessibility
+       - Integrity: Consistent state
+       - Traceability: Change history preservation
+    
+    5. **Usability Quality**
+       - Discoverability: Findable when needed
+       - Readability: Comprehensible content
+       - Applicability: Fitness for purpose
+       - Learnability: Ease of understanding
+       - Referenceability: Citable content
+    
+    These standards ensure high-quality artifact management.
+  </content>
+</details>
+
+<details>
+  <section-name>RELATIONSHIP MANAGEMENT</section-name>
+  <content>
+    Artifact relationships are managed through:
+    
+    1. **Relationship Types**
+       - Parent-Child: Hierarchical structure
+       - Dependency: Required artifacts
+       - Reference: Referenced information
+       - Implementation: Design to implementation
+       - Derivation: Source and derived artifacts
+       - Version: Historical progression
+       - Alternative: Design options
+    
+    2. **Relationship Documentation**
+       - Inline references
+       - Dedicated relationship sections
+       - Relationship metadata
+       - Bidirectional links
+       - Relationship attributes
+    
+    3. **Relationship Visualization**
+       - Dependency graphs
+       - Hierarchy trees
+       - Relationship matrices
+       - Impact mapping
+       - Traversal paths
+    
+    4. **Relationship Maintenance**
+       - Consistency checking
+       - Link validation
+       - Orphan detection
+       - Circular reference prevention
+       - Relationship impact analysis
+    
+    5. **Relationship Navigation**
+       - Link following
+       - Relationship traversal
+       - Impact exploration
+       - Version traversal
+       - Dependency chain analysis
+    
+    These capabilities ensure effective knowledge connection.
+  </content>
+</details>
+
+<details>
+  <section-name>ARTIFACT REVIEW PROCESS</section-name>
+  <content>
+    Artifacts undergo these review processes:
+    
+    1. **Review Types**
+       - Technical accuracy review
+       - Completeness review
+       - Consistency review
+       - Usability review
+       - Conformance review
+    
+    2. **Review Roles**
+       - Author: Content creator
+       - Reviewer: Content evaluator
+       - Approver: Authorization authority
+       - Stakeholder: Interest representative
+       - Subject Expert: Domain specialist
+    
+    3. **Review Workflow**
+       - Submission: Review request
+       - Planning: Review preparation
+       - Execution: Review performance
+       - Feedback: Review comment provision
+       - Resolution: Issue addressing
+       - Verification: Resolution checking
+       - Approval: Final acceptance
+    
+    4. **Review Documentation**
+       - Review comments
+       - Resolution notes
+       - Approval records
+       - Review history
+       - Review metrics
+    
+    5. **Review Criteria**
+       - Content accuracy
+       - Format compliance
+       - Completeness
+       - Consistency
+       - Clarity
+       - Utility
+       - Standards adherence
+    
+    These processes ensure artifact quality control.
+  </content>
+</details>
+
+<details>
+  <section-name>COLLABORATION MECHANISMS</section-name>
+  <content>
+    Artifact collaboration includes:
+    
+    1. **Co-Creation Patterns**
+       - Sequential contribution
+       - Parallel section development
+       - Iterative refinement
+       - Expert consultation
+       - Stakeholder input
+    
+    2. **Commenting Capabilities**
+       - Inline comments
+       - Section feedback
+       - General observations
+       - Suggestion proposals
+       - Question raising
+    
+    3. **Change Management**
+       - Change requests
+       - Revision proposals
+       - Change approval workflow
+       - Conflict resolution
+       - Change notification
+    
+    4. **Knowledge Integration**
+       - Cross-artifact synthesis
+       - Insight incorporation
+       - Gap identification
+       - Redundancy reduction
+       - Contradiction resolution
+    
+    5. **Decision Processes**
+       - Consensus building
+       - Expert judgment
+       - Objective criteria application
+       - Trade-off analysis
+       - Resolution documentation
+    
+    These mechanisms support collaborative artifact development.
+  </content>
+</details>
+
+<details>
+  <section-name>ADAPTATION TO COMPLEXITY</section-name>
+  <content>
+    Artifact management adapts to task complexity:
+    
+    **Level 1 (Simple)**
+    - Basic artifact set
+    - Limited metadata
+    - Simplified relationships
+    - Lightweight reviews
+    - Essential versioning
+    
+    **Level 2 (Moderate)**
+    - Standard artifact set
+    - Regular metadata
+    - Common relationships
+    - Standard reviews
+    - Basic version control
+    
+    **Level 3 (Complex)**
+    - Comprehensive artifact set
+    - Enhanced metadata
+    - Detailed relationships
+    - Formal review process
+    - Full version control
+    
+    **Level 4 (Critical)**
+    - Complete artifact ecosystem
+    - Extensive metadata
+    - Comprehensive relationships
+    - Rigorous review protocols
+    - Advanced version management
+    - Formal approval process
+    
+    Adaptation ensures appropriate management rigor for each task level.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH CREATIVE PROCESS</section-name>
+  <content>
+    Artifact management integrates with creative process:
+    
+    1. **Problem Analysis Integration**
+       - Requirement artifact creation
+       - Context documentation
+       - Constraint recording
+       - Success criteria definition
+       - Analysis artifact templates
+    
+    2. **Exploration Integration**
+       - Alternative documentation
+       - Research findings capture
+       - Pattern application recording
+       - Design option organization
+       - Exploration history preservation
+    
+    3. **Evaluation Integration**
+       - Evaluation matrix creation
+       - Criteria documentation
+       - Assessment recording
+       - Comparative analysis preservation
+       - Decision factor documentation
+    
+    4. **Selection Integration**
+       - Decision recording
+       - Rationale documentation
+       - Alternative preservation
+       - Selection criteria capturing
+       - Implementation guidance creation
+    
+    5. **Verification Integration**
+       - Verification result documentation
+       - Quality confirmation recording
+       - Issue tracking
+       - Improvement recommendation capture
+       - Verification evidence preservation
+    
+    This integration ensures creative outputs become managed artifacts.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH MEMORY BANK</section-name>
+  <content>
+    Artifact management integrates with memory bank:
+    
+    1. **Core Memory File Integration**
+       - systemPatterns.md: Architecture artifacts
+       - techContext.md: Implementation artifacts
+       - activeContext.md: Current artifact focus
+       - progress.md: Artifact status tracking
+       - projectbrief.md: Requirements artifacts
+    
+    2. **Reference System**
+       - Cross-file linking
+       - Artifact reference notation
+       - Memory bank citation
+       - Artifact location pointers
+       - Version references
+    
+    3. **Knowledge Preservation**
+       - Design decision recording
+       - Rationale preservation
+       - Alternative documentation
+       - Pattern application capturing
+       - Implementation guidance
+    
+    4. **Cross-Session Continuity**
+       - Artifact state preservation
+       - Work-in-progress tracking
+       - Review status maintenance
+       - Artifact context documentation
+       - Next steps recording
+    
+    This integration ensures design knowledge persists despite memory reset.
+  </content>
+</details>
+
+<details>
+  <section-name>ARTIFACT EXAMPLES</section-name>
+  <content>
+    **Architecture Specification Example**
+    ```
+    # Authentication System Architecture Specification v1.2
+    
+    ## Overview
+    This document specifies the architecture for the Authentication System, 
+    providing secure authentication services with single sign-on and multi-factor
+    authentication capabilities.
+    
+    ## Context
+    The Authentication System operates within a distributed microservices 
+    environment, serving as a central security component for all system services.
+    
+    ## Quality Attributes
+    - Security (Primary): Protect against unauthorized access and attacks
+    - Performance: Support high-volume authentication requests (<100ms)
+    - Scalability: Handle growth to 100K users and 1M daily authentications
+    - Reliability: Maintain 99.9% availability
+    - Maintainability: Support ongoing security updates and protocol changes
+    
+    ## Constraints
+    - Must support existing client applications without modification
+    - Must comply with GDPR, CCPA, and SOC2 requirements
+    - Must integrate with existing user management systems
+    
+    ## Component Model
+    The architecture follows a hybrid approach with these components:
+    
+    1. **Identity Provider**: Central authority for identity management
+       - User Profile Service: Manages user identity information
+       - Credential Service: Handles password and credential management
+       - MFA Service: Provides multi-factor authentication capabilities
+    
+    2. **Authentication Gateway**: Distributed authentication endpoint
+       - Protocol Adapters: Support OAuth2, SAML, and custom protocols
+       - Token Service: Issues and validates authentication tokens
+       - Session Manager: Maintains session state
+    
+    3. **Security Services**:
+       - Audit Service: Records security-relevant events
+       - Policy Engine: Enforces security policies
+       - Threat Detection: Identifies suspicious activities
+    
+    ## Component Interactions
+    [Description of interaction patterns between components]
+    
+    ## Data Flow
+    [Description of authentication data flow]
+    
+    ## Architectural Decisions
+    [Key architectural decisions with rationale]
+    
+    ## Version History
+    | Version | Date       | Author    | Changes                                 |
+    | ------- | ---------- | --------- | --------------------------------------- |
+    | 1.0     | 2025-03-10 | BIG BRAIN | Initial architecture specification      |
+    | 1.1     | 2025-03-15 | BIG BRAIN | Added MFA component details             |
+    | 1.2     | 2025-03-25 | BIG BRAIN | Refined token service based on feedback |
+    ```
+    
+    **Design Decision Record Example**
+    ```
+    # Design Decision: Token-Based Authentication Approach
+    
+    ## Context
+    The authentication system needs a mechanism to verify user identity across 
+    distributed services without requiring repeated credential validation.
+    
+    ## Problem
+    How should we represent and validate authentication state across services 
+    while maintaining security, performance, and scalability?
+    
+    ## Decision
+    Use JWT (JSON Web Tokens) with asymmetric signatures for authentication tokens.
+    
+    ## Status
+    Accepted (2025-03-25)
+    
+    ## Assumptions
+    - Services have access to token validation capabilities
+    - Public key distribution is secure and manageable
+    - Clock synchronization between services is maintained
+    
+    ## Options Considered
+    1. Session IDs with central validation
+    2. JWT with symmetric encryption
+    3. JWT with asymmetric signatures
+    4. Custom token format with encryption
+    
+    ## Evaluation Criteria
+    - Security: Protection against tampering and forgery
+    - Performance: Validation speed and resource requirements
+    - Scalability: Operation without central bottlenecks
+    - Standards compliance: Use of established protocols
+    - Implementation complexity: Development effort required
+    
+    ## Evaluation
+    | Criterion | Session IDs | JWT (Symmetric) | JWT (Asymmetric) | Custom Format |
+    |-----------|-------------|-----------------|------------------|---------------|
+    | Security | Medium | Medium | High | Medium |
+    | Performance | Low | High | Medium | Medium |
+    | Scalability | Low | Medium | High | Medium |
+    | Standards | Medium | High | High | Low |
+    | Complexity | Low | Low | Medium | High |
+    
+    ## Rationale
+    JWT with asymmetric signatures provides the best balance of security and 
+    scalability. While introducing some additional complexity and slightly lower 
+    performance than symmetric approaches, it eliminates the need to distribute 
+    shared secrets across services.
+    
+    ## Implications
+    - Need to implement secure key management
+    - Services must verify token signatures
+    - Token size is larger than session IDs
+    - Token revocation requires additional mechanisms
+    
+    ## Related Decisions
+    - Key Management Approach (DD-005)
+    - Token Revocation Strategy (DD-007)
+    ```
+    
+    These examples demonstrate artifact documentation structure.
+  </content>
+</details>
+
+<details>
+  <section-name>ARTIFACT COMMANDS</section-name>
+  <content>
+    Artifacts are managed through these commands:
+    
+    **Creation Commands**
+    - `BIG artifact create [type] [name] [--template]`
+    - `BIG artifact draft [type] [name] [--from]`
+    - `BIG artifact from-template [template] [name]`
+    
+    **Retrieval Commands**
+    - `BIG artifact find [query] [--type] [--status]`
+    - `BIG artifact open [artifact-id]`
+    - `BIG artifact list [--type] [--status] [--recent]`
+    
+    **Update Commands**
+    - `BIG artifact update [artifact-id] [--section]`
+    - `BIG artifact version [artifact-id] [--increment]`
+    - `BIG artifact status [artifact-id] [new-status]`
+    
+    **Review Commands**
+    - `BIG artifact review [artifact-id] [--reviewer]`
+    - `BIG artifact comment [artifact-id] [--section]`
+    - `BIG artifact approve [artifact-id] [--with-notes]`
+    
+    **Relationship Commands**
+    - `BIG artifact relate [artifact-id] [relation-type] [target-id]`
+    - `BIG artifact dependencies [artifact-id] [--direction]`
+    - `BIG artifact impact [artifact-id] [--depth]`
+    
+    These commands provide a consistent interface for artifact management.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-03-25 | BIG BRAIN | Initial implementation of artifact management system |

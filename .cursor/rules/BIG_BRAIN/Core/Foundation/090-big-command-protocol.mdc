@@ -1,0 +1,269 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN user issues "BIG" command ENSURE comprehensive initialization and task setup
+globs: ["**/*.md", "**/*.mdc", "**/README*"]
+alwaysApply: true
+---
+
+> **TL;DR:** The BIG command protocol provides a unified initialization approach for the Memory Bank system, automating platform detection, file verification, and workflow setup based on task complexity.
+
+<version>1.0.0</version>
+
+<context>
+  This rule establishes the BIG command protocol that serves as a unified entry point for Memory Bank operations. When a user issues the BIG command, the system automatically performs comprehensive initialization, platform detection, file verification, and task setup based on complexity assessment.
+</context>
+
+<requirements>
+  <requirement>Recognize "BIG" command and variations</requirement>
+  <requirement>Perform platform detection and adaption</requirement>
+  <requirement>Verify Memory Bank file integrity</requirement>
+  <requirement>Assess task complexity based on request</requirement>
+  <requirement>Initialize appropriate workflow</requirement>
+  <requirement>Set up task tracking and context</requirement>
+</requirements>
+
+<details>
+  <section-name>COMMAND RECOGNITION</section-name>
+  <content>
+    The BIG command protocol is triggered by these command patterns:
+
+    - `BIG <task description>` - Standard format
+    - `BIG: <task description>` - Colon format
+    - `@BIG <task description>` - Tag format
+
+    These variants are all recognized as BIG commands and will trigger the full protocol.
+  </content>
+</details>
+
+<details>
+  <section-name>INITIALIZATION SEQUENCE</section-name>
+  <content>
+    When a BIG command is detected, execute this sequence:
+
+    1. **Platform Detection**:
+       - Identify operating system from user info
+       - Set platform-specific command formats
+       - Adjust file paths for platform
+
+    2. **File Verification**:
+       - Check all required Memory Bank files exist
+       - Verify .cursor/rules directory is properly configured
+       - Create any missing files using templates
+
+    3. **Task Analysis**:
+       - Parse task description
+       - Assess complexity factors (scope, risk, dependencies, difficulty)
+       - Determine appropriate complexity level (1-4)
+
+    4. **Workflow Initialization**:
+       - Set up appropriate workflow based on complexity
+       - Initialize task tracking in activeContext.md
+       - Set up section checkpoints appropriate to complexity
+
+    5. **Memory Bank Preparation**:
+       - Update activeContext.md with new task focus
+       - Review and reference relevant memory files
+       - Prepare session structure based on complexity
+  </content>
+</details>
+
+<details>
+  <section-name>VERIFICATION PROCESS</section-name>
+  <content>
+    During initialization, perform these verification steps:
+
+    ```
+    📋 MEMORY BANK VERIFICATION
+    - Core active files: [✓/X]
+    - Long-term memory structures: [✓/X]
+    - Bedtime protocol files: [✓/X]
+    - Rule system files: [✓/X]
+
+    🛠️ PLATFORM VERIFICATION
+    - Operating System: [Windows/Mac/Linux]
+    - Appropriate command format: [PowerShell/Bash/Other]
+    - Path format: [Windows/Unix]
+
+    ⚙️ TASK SETUP VERIFICATION
+    - Complexity assessment: [Level 1-4]
+    - Workflow mode: [PLAN/ACT]
+    - Task tracking initialized: [✓/X]
+    - Section checkpoints configured: [✓/X]
+    ```
+
+    If any verification fails, automatic correction will be attempted before proceeding.
+  </content>
+</details>
+
+<details>
+  <section-name>COMPLEXITY ASSESSMENT</section-name>
+  <content>
+    The complexity assessment analyzes these factors:
+
+    1. **Scope**:
+       - Level 1: Single function/method change
+       - Level 2: Single component change
+       - Level 3: Multiple component changes
+       - Level 4: System-wide architecture changes
+
+    2. **Risk**:
+       - Level 1: Minimal risk, isolated change
+       - Level 2: Low risk, limited impact
+       - Level 3: Moderate risk, broader impact
+       - Level 4: High risk, critical system impact
+
+    3. **Dependencies**:
+       - Level 1: No dependencies
+       - Level 2: Few dependencies
+       - Level 3: Multiple dependencies
+       - Level 4: Complex dependency network
+
+    4. **Technical Difficulty**:
+       - Level 1: Simple implementation
+       - Level 2: Moderate implementation
+       - Level 3: Complex implementation
+       - Level 4: Advanced implementation requiring specialized knowledge
+
+    The highest level among these factors determines the overall task complexity.
+  </content>
+</details>
+
+<details>
+  <section-name>RESPONSE FORMAT</section-name>
+  <content>
+    When responding to a BIG command, use this structured format:
+
+    ```
+    # BIG PROTOCOL INITIALIZED
+
+    ## 📋 VERIFICATION RESULTS
+    - Memory Bank files: [Status]
+    - Platform detection: [OS + Command Format]
+    - Task complexity assessment: Level [1-4]
+
+    ## 🎯 TASK INITIALIZATION
+    - Task: [Task description]
+    - Objective: [Clear task objective]
+    - Complexity: Level [1-4]
+    - Workflow mode: [PLAN/ACT]
+
+    ## 📊 SECTION TRACKING
+    - [Section 1]
+    - [Section 2]
+    - [Section 3]
+    - ...
+
+    ## 🔍 MEMORY CONTEXT
+    [Brief summary of relevant memory bank context]
+
+    ## ⚡ NEXT STEPS
+    1. [First action]
+    2. [Second action]
+    3. [Third action]
+    ```
+
+    This format ensures consistent initialization and clear next steps for any task.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH COMMAND SYSTEM</section-name>
+  <content>
+    The BIG command protocol integrates with the existing command system:
+
+    - **Core Commands**: May be executed as part of initialization if needed
+    - **Mode Commands**: Set initial mode based on task analysis
+    - **Protocol Commands**: May trigger bedtime protocol review if needed
+
+    This integration ensures the BIG command works seamlessly with our existing architecture.
+  </content>
+</details>
+
+<details>
+  <section-name>ADAPTIVE INITIALIZATION</section-name>
+  <content>
+    Initialization adapts based on complexity level:
+
+    - **Level 1**: Minimal verification, streamlined setup
+    - **Level 2**: Basic verification, standard workflow
+    - **Level 3**: Comprehensive verification, enhanced workflow with creative phase triggers
+    - **Level 4**: Complete verification, full formal workflow with multiple checkpoints and creative phases
+
+    This scaling ensures the initialization is appropriate to the task complexity.
+  </content>
+</details>
+
+<details>
+  <section-name>USAGE EXAMPLES</section-name>
+  <content>
+    ```
+    User: BIG I need to fix a bug in the login form validation
+
+    Response: BIG PROTOCOL INITIALIZED
+
+    📋 VERIFICATION RESULTS
+    - Memory Bank files: ✓ All present
+    - Platform detection: Windows (PowerShell)
+    - Task complexity assessment: Level 1
+
+    🎯 TASK INITIALIZATION
+    - Task: Fix bug in login form validation
+    - Objective: Correct validation logic to address issue
+    - Complexity: Level 1
+    - Workflow mode: ACT
+    ...
+    ```
+
+    ```
+    User: BIG: We need to design a new user onboarding system
+
+    Response: BIG PROTOCOL INITIALIZED
+
+    📋 VERIFICATION RESULTS
+    - Memory Bank files: ✓ All present
+    - Platform detection: Mac (Bash)
+    - Task complexity assessment: Level 3
+
+    🎯 TASK INITIALIZATION
+    - Task: Design new user onboarding system
+    - Objective: Create comprehensive onboarding experience
+    - Complexity: Level 3
+    - Workflow mode: PLAN
+    ...
+    ```
+  </content>
+</details>
+
+<details>
+  <section-name>ERROR HANDLING</section-name>
+  <content>
+    When initialization fails, provide clear diagnostics:
+
+    ```
+    ⚠️ BIG PROTOCOL INITIALIZATION ERROR
+
+    Issue detected: [Specific error]
+    Location: [Component where error occurred]
+    Impact: [How this affects initialization]
+
+    Recommended actions:
+    1. [First correction step]
+    2. [Second correction step]
+
+    Alternative approach:
+    [Description of manual initialization option]
+    ```
+
+    This ensures users can recover from initialization failures.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial implementation of BIG command protocol |

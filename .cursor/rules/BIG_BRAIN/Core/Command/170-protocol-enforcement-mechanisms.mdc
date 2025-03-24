@@ -1,0 +1,616 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN executing commands ENFORCE protocol compliance for memory bank operations
+globs: ["**/*.md", "**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** The Protocol Enforcement Mechanisms ensure adherence to command protocols, workflow processes, and memory maintenance requirements through systematic validation, enforcement, and correction mechanisms.
+
+<version>1.0.0</version>
+
+<context>
+  This rule establishes the Protocol Enforcement Mechanisms that ensure consistent adherence to BIG BRAIN's operational protocols. Since memory reset creates risk of protocol deviation between sessions, systematic enforcement is essential for maintaining operational integrity. The mechanisms provide validation, enforcement, correction, and guidance to ensure all protocols are followed consistently.
+</context>
+
+<requirements>
+  <requirement>Validate command and workflow protocols before execution</requirement>
+  <requirement>Enforce adherence to established memory maintenance processes</requirement>
+  <requirement>Provide correction guidance for protocol deviations</requirement>
+  <requirement>Adapt enforcement rigor to task complexity and criticality</requirement>
+  <requirement>Ensure consistent protocol application despite memory resets</requirement>
+  <requirement>Document enforcement actions for operational transparency</requirement>
+</requirements>
+
+<details>
+  <section-name>PROTOCOL TYPES</section-name>
+  <content>
+    The system enforces these protocol types:
+
+    1. **Command Protocols**
+       - Command structure correctness
+       - Parameter validity
+       - Option compatibility
+       - Command sequence appropriateness
+       - Command context alignment
+
+    2. **Workflow Protocols**
+       - Workflow phase sequence
+       - Phase entry/exit conditions
+       - Required artifacts
+       - Decision documentation
+       - Validation checkpoints
+
+    3. **Memory Maintenance Protocols**
+       - Required file updates
+       - Consistency requirements
+       - Reference integrity
+       - Documentation standards
+       - Version control practices
+
+    4. **Verification Protocols**
+       - Required verification steps
+       - Validation criteria
+       - Quality standards
+       - Review requirements
+       - Approval processes
+
+    Each protocol type has specific enforcement mechanisms.
+  </content>
+</details>
+
+<details>
+  <section-name>ENFORCEMENT MECHANISMS</section-name>
+  <content>
+    Protocols are enforced through these mechanisms:
+
+    1. **Validation Gates**
+       - Pre-execution validation of protocol requirements
+       - Verification of prerequisites and conditions
+       - Confirmation of required context
+       - Approval for critical operations
+
+    2. **Process Guardrails**
+       - Runtime checks during execution
+       - Boundary enforcement for operations
+       - Progress verification at milestones
+       - State integrity protection
+
+    3. **Correction Guidance**
+       - Specific direction for protocol violations
+       - Remediation suggestions
+       - Alternative approaches
+       - Learning resources
+
+    4. **Compliance Documentation**
+       - Record of protocol adherence
+       - Deviation documentation
+       - Exception handling
+       - Enforcement actions
+
+    These mechanisms ensure protocols are maintained throughout operations.
+  </content>
+</details>
+
+<details>
+  <section-name>COMMAND PROTOCOL ENFORCEMENT</section-name>
+  <content>
+    Command protocols are enforced through:
+
+    1. **Structure Validation**
+       - Syntax checking against command schema
+       - Parameter type validation
+       - Option compatibility verification
+       - Required parameter confirmation
+
+    2. **Context Validation**
+       - Workflow state compatibility
+       - Prerequisite command verification
+       - Resource availability confirmation
+       - Command appropriateness for task
+
+    3. **Execution Control**
+       - Permission verification
+       - Resource allocation checking
+       - Impact assessment
+       - Risk-based execution controls
+
+    4. **Result Verification**
+       - Output validation
+       - Expected state confirmation
+       - Side effect verification
+       - Error condition handling
+
+    These mechanisms ensure commands follow established protocols.
+  </content>
+</details>
+
+<details>
+  <section-name>WORKFLOW PROTOCOL ENFORCEMENT</section-name>
+  <content>
+    Workflow protocols are enforced through:
+
+    1. **Phase Sequence Control**
+       - Validation of workflow phase ordering
+       - Entry condition verification
+       - Exit criteria confirmation
+       - Phase transition approval
+
+    2. **Artifact Validation**
+       - Required artifact verification
+       - Content completeness checking
+       - Quality standard enforcement
+       - Reference integrity confirmation
+
+    3. **Decision Protocol Enforcement**
+       - Decision documentation requirements
+       - Alternative consideration verification
+       - Rationale documentation checking
+       - Impact assessment confirmation
+
+    4. **Progress Verification**
+       - Milestone completion validation
+       - Progress metric accuracy
+       - Timeline adherence checking
+       - Dependency resolution confirmation
+
+    These mechanisms ensure workflows follow established protocols.
+  </content>
+</details>
+
+<details>
+  <section-name>MEMORY MAINTENANCE ENFORCEMENT</section-name>
+  <content>
+    Memory maintenance protocols are enforced through:
+
+    1. **Update Verification**
+       - Memory file update validation
+       - Content modification checking
+       - Required update confirmation
+       - Update timing verification
+
+    2. **Consistency Enforcement**
+       - Cross-file consistency checking
+       - Reference integrity validation
+       - Terminology standardization
+       - Information alignment verification
+
+    3. **Documentation Standards**
+       - Format compliance checking
+       - Required section verification
+       - Clarity and completeness validation
+       - Metadata accuracy confirmation
+
+    4. **Version Control Enforcement**
+       - Version numbering validation
+       - Change history verification
+       - Author attribution checking
+       - Timestamp accuracy confirmation
+
+    These mechanisms ensure memory maintenance follows established protocols.
+  </content>
+</details>
+
+<details>
+  <section-name>PROTOCOL VIOLATION HANDLING</section-name>
+  <content>
+    Protocol violations are handled through:
+
+    1. **Violation Classification**
+       - Severity assessment
+       - Impact evaluation
+       - Urgency determination
+       - Root cause identification
+
+    2. **Response Selection**
+       - Block operation (critical violations)
+       - Warning with continuation (moderate violations)
+       - Advisory notice (minor violations)
+       - Logging only (informational violations)
+
+    3. **Correction Guidance**
+       - Specific correction instructions
+       - Protocol reference information
+       - Example of correct application
+       - Explanation of importance
+
+    4. **Exception Management**
+       - Legitimate exception documentation
+       - Override authorization
+       - Compensating controls
+       - Follow-up requirements
+
+    This approach ensures appropriate handling of protocol deviations.
+  </content>
+</details>
+
+<details>
+  <section-name>ENFORCEMENT MESSAGING</section-name>
+  <content>
+    Protocol enforcement provides these message types:
+
+    1. **Validation Errors**
+       ```
+       ❌ Protocol Violation: [Violation type]
+       ├─ Details: [Specific issue description]
+       ├─ Protocol: [Reference to specific protocol]
+       ├─ Impact: [Consequences of violation]
+       └─ Resolution: [How to correct the violation]
+       ```
+
+    2. **Warning Messages**
+       ```
+       ⚠️ Protocol Warning: [Warning type]
+       ├─ Details: [Specific concern description]
+       ├─ Risk: [Potential issues]
+       ├─ Protocol: [Reference to specific protocol]
+       └─ Suggestion: [How to improve compliance]
+       ```
+
+    3. **Advisory Notices**
+       ```
+       ℹ️ Protocol Advisory: [Advisory type]
+       ├─ Observation: [What was noticed]
+       ├─ Protocol: [Reference to specific protocol]
+       ├─ Benefit: [Why following protocol matters]
+       └─ Suggestion: [How to better align with protocol]
+       ```
+
+    4. **Approval Confirmations**
+       ```
+       ✅ Protocol Verification Passed
+       ├─ Operation: [Operation description]
+       ├─ Protocols verified: [List of verified protocols]
+       ├─ Approvals: [Required approvals obtained]
+       └─ Proceeding with operation
+       ```
+
+    These message formats ensure clear communication of enforcement actions.
+  </content>
+</details>
+
+<details>
+  <section-name>BEDTIME PROTOCOL ENFORCEMENT</section-name>
+  <content>
+    Bedtime Protocol enforcement includes:
+
+    1. **Completeness Verification**
+       - All required memory updates verified
+       - Session documentation validated
+       - State preservation confirmed
+       - Continuation guidance checked
+
+    2. **Consistency Validation**
+       - Cross-file consistency verification
+       - Reference integrity checking
+       - Status alignment confirmation
+       - Version synchronization validation
+
+    3. **Documentation Standards**
+       - Format compliance verification
+       - Section completeness checking
+       - Detail adequacy validation
+       - Clarity assessment
+
+    4. **Readiness Confirmation**
+       - Next session preparation validated
+       - Open issue documentation checked
+       - Continuation path verification
+       - Resource availability confirmation
+
+    Bedtime Protocol enforcement ensures proper session transition despite memory reset.
+  </content>
+</details>
+
+<details>
+  <section-name>INITIALIZATION PROTOCOL ENFORCEMENT</section-name>
+  <content>
+    Initialization Protocol enforcement includes:
+
+    1. **Loading Verification**
+       - Required memory file loading confirmed
+       - Loading sequence validation
+       - Completeness verification
+       - Content integrity checking
+
+    2. **Context Restoration Validation**
+       - Project understanding verification
+       - Status awareness confirmation
+       - Focus alignment checking
+       - Pattern recognition validation
+
+    3. **Operational Readiness**
+       - Workflow establishment verification
+       - Command capability confirmation
+       - Context adaptation validation
+       - Task preparation checking
+
+    4. **State Confirmation**
+       - Memory state verification
+       - Operation mode validation
+       - Task complexity confirmation
+       - Focus alignment checking
+
+    Initialization Protocol enforcement ensures proper context restoration after memory reset.
+  </content>
+</details>
+
+<details>
+  <section-name>ENFORCEMENT ADAPTATION</section-name>
+  <content>
+    Protocol enforcement adapts to task complexity:
+
+    **Level 1 (Simple)**
+    - Basic protocol validation
+    - Essential constraints only
+    - Simplified enforcement messages
+    - Focus on critical protocols
+
+    **Level 2 (Moderate)**
+    - Standard protocol validation
+    - Regular constraint checking
+    - Normal enforcement detail
+    - Balanced protocol coverage
+
+    **Level 3 (Complex)**
+    - Enhanced protocol validation
+    - Comprehensive constraint checking
+    - Detailed enforcement messages
+    - Extended protocol coverage
+
+    **Level 4 (Critical)**
+    - Maximum validation rigor
+    - Complete constraint enforcement
+    - Comprehensive messaging
+    - Full protocol coverage
+    - Formal approval workflows
+
+    Adaptation ensures appropriate enforcement rigor for each task level.
+  </content>
+</details>
+
+<details>
+  <section-name>OVERRIDE MECHANISMS</section-name>
+  <content>
+    In special circumstances, protocols allow controlled overrides:
+
+    1. **Override Requirements**
+       - Explicit rationale documentation
+       - Impact assessment
+       - Risk mitigation plan
+       - Explicit acknowledgment
+
+    2. **Override Process**
+       - Formal override request
+       - Justification documentation
+       - Alternative approach description
+       - Compensating controls specification
+
+    3. **Override Documentation**
+       - Record of override decision
+       - Protocol deviation details
+       - Authorization reference
+       - Follow-up requirements
+
+    4. **Override Limitations**
+       - Non-overridable critical protocols
+       - Maximum override duration
+       - Required reviews post-override
+       - Override expiration handling
+
+    Override mechanisms provide flexibility while maintaining control.
+  </content>
+</details>
+
+<details>
+  <section-name>EXEMPTION MANAGEMENT</section-name>
+  <content>
+    Some situations warrant protocol exemptions:
+
+    1. **Exemption Criteria**
+       - Clear demonstration of necessity
+       - Proven alternative approach
+       - Acceptable risk level
+       - Documented special circumstances
+
+    2. **Exemption Process**
+       - Formal exemption request
+       - Alternative protocol specification
+       - Equivalence demonstration
+       - Time limitation definition
+
+    3. **Exemption Documentation**
+       - Exemption rationale
+       - Approved alternative approach
+       - Validity period
+       - Review requirements
+
+    4. **Exemption Tracking**
+       - Active exemption registry
+       - Expiration monitoring
+       - Effectiveness assessment
+       - Renewal evaluation
+
+    Exemption management balances flexibility with control.
+  </content>
+</details>
+
+<details>
+  <section-name>LEARNING INTEGRATION</section-name>
+  <content>
+    Protocol enforcement includes learning components:
+
+    1. **Violation Pattern Analysis**
+       - Identification of common violations
+       - Root cause assessment
+       - Confusion source detection
+       - Improvement opportunity identification
+
+    2. **Protocol Education**
+       - Just-in-time protocol explanations
+       - Context-specific guidance
+       - Example-based learning
+       - Resource references
+
+    3. **Progressive Adaptation**
+       - Increased detail for repeated violations
+       - Reduced intervention for consistent compliance
+       - Pattern-based prediction
+       - Proactive guidance
+
+    4. **Protocol Refinement**
+       - Feedback-based protocol improvements
+       - Clarity enhancements
+       - Documentation updates
+       - Usage pattern adaptation
+
+    Learning integration continuously improves protocol effectiveness.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH COMMAND INTERFACE</section-name>
+  <content>
+    Protocol enforcement integrates with the command interface:
+
+    1. **Command Validation**
+       - Pre-execution protocol validation
+       - Parameter and option verification
+       - Context appropriateness checking
+       - Prerequisite confirmation
+
+    2. **Interactive Guidance**
+       - Command suggestion based on protocols
+       - Completion assistance for valid options
+       - Context-aware parameter help
+       - Protocol-compliant alternatives
+
+    3. **Error Prevention**
+       - Early warning for potential violations
+       - Proactive protocol guidance
+       - Completion suggestions for compliance
+       - Predictive correction
+
+    4. **Post-Execution Verification**
+       - Result validation against protocols
+       - State verification after execution
+       - Impact assessment
+       - Follow-up action guidance
+
+    This integration ensures commands operate within protocol boundaries.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH WORKFLOW ORCHESTRATION</section-name>
+  <content>
+    Protocol enforcement integrates with workflow orchestration:
+
+    1. **Workflow Validation**
+       - Phase sequence protocol enforcement
+       - Entry/exit criteria validation
+       - Artifact requirement verification
+       - Decision protocol confirmation
+
+    2. **Process Guardrails**
+       - Runtime protocol monitoring
+       - Milestone validation gates
+       - Artifact quality enforcement
+       - Documentation requirement checking
+
+    3. **Transition Control**
+       - Protocol-based phase transition approval
+       - Completion criteria verification
+       - Dependency resolution confirmation
+       - Quality gate enforcement
+
+    4. **Status Tracking**
+       - Protocol compliance monitoring
+       - Deviation tracking
+       - Correction status
+       - Exception management
+
+    This integration ensures workflows operate within protocol boundaries.
+  </content>
+</details>
+
+<details>
+  <section-name>ENFORCEMENT EXAMPLES</section-name>
+  <content>
+    **Command Protocol Enforcement Example**
+    ```
+    ❌ Protocol Violation: Invalid Command Structure
+    ├─ Details: Command "memory update" missing required file parameter
+    ├─ Protocol: Command Structure (Unified Command Interface)
+    ├─ Impact: Cannot execute update without target file
+    └─ Resolution: Specify target file: "BIG memory update [filename]"
+    ```
+
+    **Workflow Protocol Enforcement Example**
+    ```
+    ⚠️ Protocol Warning: Incomplete Artifact
+    ├─ Details: Decision document missing alternatives section
+    ├─ Risk: Decision rationale may be unclear without alternatives
+    ├─ Protocol: Decision Documentation (Plan Workflow)
+    └─ Suggestion: Add section describing considered alternatives
+    ```
+
+    **Memory Maintenance Enforcement Example**
+    ```
+    ℹ️ Protocol Advisory: Recommended Update
+    ├─ Observation: activeContext.md not updated after implementation
+    ├─ Protocol: Memory Maintenance (Documentation)
+    ├─ Benefit: Ensures next session has current context
+    └─ Suggestion: Update activeContext.md with recent changes
+    ```
+
+    **Bedtime Protocol Enforcement Example**
+    ```
+    ✅ Protocol Verification Passed
+    ├─ Operation: Bedtime Protocol Execution
+    ├─ Protocols verified: Completeness, Consistency, Documentation
+    ├─ All required memory files updated and verified
+    └─ Proceeding with session finalization
+    ```
+
+    These examples demonstrate protocol enforcement in action.
+  </content>
+</details>
+
+<details>
+  <section-name>MEMORY BANK INTEGRATION</section-name>
+  <content>
+    Protocol enforcement integrates with memory bank:
+
+    1. **Protocol Documentation**
+       - Protocol specifications stored in memory
+       - Enforcement rules documented
+       - Exemption and override records maintained
+       - Protocol evolution history preserved
+
+    2. **Compliance Records**
+       - Protocol adherence documentation
+       - Violation history
+       - Correction actions
+       - Improvement patterns
+
+    3. **State Preservation**
+       - Protocol state maintained between sessions
+       - Enforcement context preserved
+       - Exemption status tracked
+       - Override expiration managed
+
+    This integration ensures protocol knowledge persists despite memory reset.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial implementation of protocol enforcement mechanisms |
+</rewritten_file>

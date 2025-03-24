@@ -1,0 +1,629 @@
+---
+description: WHEN executing tasks MANAGE workflow processes for consistent memory operations
+globs: ["**/*.md", "**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** The Workflow Orchestration system manages operational workflows throughout task execution, coordinating task phases, maintaining state, and ensuring appropriate process application based on task requirements.
+
+<version>1.0.0</version>
+
+<context>
+  This rule establishes the Workflow Orchestration system that manages operational workflows for memory bank tasks. Since BIG BRAIN requires structured processes to maintain consistency despite memory resets, coordination of workflows is essential for reliable task execution. The system provides workflow selection, phase management, state tracking, and process adaptation based on task complexity and context.
+</context>
+
+<requirements>
+  <requirement>Coordinate workflow processes across task execution</requirement>
+  <requirement>Maintain workflow state through task phases</requirement>
+  <requirement>Apply appropriate processes based on task requirements</requirement>
+  <requirement>Adapt workflow rigor to task complexity</requirement>
+  <requirement>Ensure consistent workflow application across sessions</requirement>
+  <requirement>Document workflow execution for continuity</requirement>
+</requirements>
+
+<details>
+  <section-name>WORKFLOW TYPES</section-name>
+  <content>
+    The system supports these primary workflow types:
+
+    1. **Plan Workflow**
+       - Purpose: Architecture, design, and planning activities
+       - Focus: Understanding requirements, exploring options, designing solutions
+       - Process: Analysis, design alternatives, evaluation, selection, planning
+       - Outputs: Design documents, architecture decisions, implementation plans
+
+    2. **Act Workflow**
+       - Purpose: Implementation and execution activities
+       - Focus: Building, testing, refining implementations
+       - Process: Component building, testing, debugging, documentation
+       - Outputs: Functional code, tests, implementation documentation
+
+    3. **Review Workflow**
+       - Purpose: Evaluation and verification activities
+       - Focus: Assessing quality, correctness, alignment
+       - Process: Inspection, testing, validation, feedback
+       - Outputs: Quality assessments, issue reports, improvement recommendations
+
+    4. **Hybrid Workflow**
+       - Purpose: Combined planning and implementation
+       - Focus: Iterative development with ongoing design
+       - Process: Interwoven planning and implementation
+       - Outputs: Progressive implementation with evolving design
+
+    Each workflow type has specialized processes and outputs.
+  </content>
+</details>
+
+<details>
+  <section-name>WORKFLOW SELECTION</section-name>
+  <content>
+    Workflow selection follows these criteria:
+
+    1. **Task Nature Assessment**
+       - Planning tasks → Plan workflow
+       - Implementation tasks → Act workflow
+       - Evaluation tasks → Review workflow
+       - Balanced tasks → Hybrid workflow
+
+    2. **Task Characteristics**
+       - High uncertainty → Plan-heavy workflows
+       - Clear requirements → Act-heavy workflows
+       - Quality-critical → Review-intensive workflows
+       - Experimental → Design-implement iterations
+
+    3. **Contextual Factors**
+       - Project stage influences selection
+       - Previous work determines appropriate continuation
+       - Risk level affects workflow rigor
+       - Time constraints impact workflow scope
+
+    4. **Complexity Influence**
+       - Higher complexity → More structured workflows
+       - Lower complexity → Streamlined workflows
+       - Critical tasks → Enhanced validation steps
+       - Routine tasks → Standardized processes
+
+    Selection ensures the most appropriate workflow for each task context.
+  </content>
+</details>
+
+<details>
+  <section-name>PLAN WORKFLOW PHASES</section-name>
+  <content>
+    The Plan workflow follows these phases:
+
+    1. **Context Analysis**
+       - Review existing system understanding
+       - Clarify requirements and constraints
+       - Identify stakeholders and concerns
+       - Establish success criteria
+
+    2. **Solution Exploration**
+       - Generate design alternatives
+       - Explore architectural options
+       - Consider implementation approaches
+       - Research relevant patterns
+
+    3. **Evaluation Phase**
+       - Assess alternatives against criteria
+       - Consider tradeoffs and implications
+       - Evaluate risks and challenges
+       - Project implementation complexity
+
+    4. **Decision Phase**
+       - Select optimal approach
+       - Document architecture decisions
+       - Create component designs
+       - Establish implementation guidelines
+
+    5. **Implementation Planning**
+       - Break down into implementation tasks
+       - Sequence dependencies
+       - Identify verification requirements
+       - Create implementation roadmap
+
+    The Plan workflow emphasizes thorough design before implementation.
+  </content>
+</details>
+
+<details>
+  <section-name>ACT WORKFLOW PHASES</section-name>
+  <content>
+    The Act workflow follows these phases:
+
+    1. **Implementation Preparation**
+       - Review design specifications
+       - Understand requirements
+       - Establish component boundaries
+       - Set up development environment
+
+    2. **Component Building**
+       - Create structured implementations
+       - Follow established patterns
+       - Implement functionality incrementally
+       - Maintain consistent style
+
+    3. **Verification Phase**
+       - Test individual components
+       - Validate against requirements
+       - Verify integration points
+       - Check error handling
+
+    4. **Refinement Phase**
+       - Address issues and feedback
+       - Optimize performance
+       - Improve readability
+       - Enhance robustness
+
+    5. **Documentation Phase**
+       - Document implementation details
+       - Create usage examples
+       - Update technical documentation
+       - Record design decisions
+
+    The Act workflow emphasizes quality implementation aligned with designs.
+  </content>
+</details>
+
+<details>
+  <section-name>REVIEW WORKFLOW PHASES</section-name>
+  <content>
+    The Review workflow follows these phases:
+
+    1. **Review Preparation**
+       - Understand evaluation context
+       - Identify quality criteria
+       - Prepare verification approaches
+       - Establish review scope
+
+    2. **Inspection Phase**
+       - Examine artifacts systematically
+       - Apply quality checklists
+       - Review against standards
+       - Verify consistency
+
+    3. **Testing Phase**
+       - Execute test scenarios
+       - Validate behavior
+       - Verify edge cases
+       - Assess reliability
+
+    4. **Analysis Phase**
+       - Identify patterns in findings
+       - Categorize issues
+       - Determine root causes
+       - Assess systemic concerns
+
+    5. **Recommendation Phase**
+       - Prioritize improvements
+       - Suggest specific corrections
+       - Recommend process enhancements
+       - Document findings
+
+    The Review workflow emphasizes thorough quality evaluation.
+  </content>
+</details>
+
+<details>
+  <section-name>HYBRID WORKFLOW PATTERNS</section-name>
+  <content>
+    Hybrid workflows use these common patterns:
+
+    1. **Incremental Design-Implement**
+       - Design small portion → Implement → Design next portion
+       - Maintains design coherence while making implementation progress
+       - Example: `design(module A) → implement(module A) → design(module B)`
+
+    2. **Prototype-Refine**
+       - Create implementation prototype → Evaluate → Refine design → Implement properly
+       - Validates design ideas through rapid implementation
+       - Example: `prototype(UI) → evaluate → refine(design) → implement(final UI)`
+
+    3. **Parallel Tracks**
+       - Maintain separate planning and implementation tracks with synchronization points
+       - Enables concurrent progress on design and implementation
+       - Example: `[plan(architecture) || implement(established components)] → sync → continue`
+
+    4. **Feedback Loops**
+       - Implement based on initial design → Get feedback → Adjust design → Refine implementation
+       - Incorporates learning through implementation
+       - Example: `design → implement → feedback → adjust(design) → refine(implementation)`
+
+    These patterns provide flexible approaches to combined planning and implementation.
+  </content>
+</details>
+
+<details>
+  <section-name>WORKFLOW STATE TRACKING</section-name>
+  <content>
+    Workflows maintain state through:
+
+    1. **Phase Tracking**
+       - Current workflow phase
+       - Completed phases
+       - Pending phases
+       - Phase transitions
+
+    2. **Artifact Tracking**
+       - Created outputs
+       - Intermediate artifacts
+       - Dependencies
+       - Versions and changes
+
+    3. **Decision Tracking**
+       - Key decisions made
+       - Alternatives considered
+       - Decision rationale
+       - Implementation implications
+
+    4. **Progress Tracking**
+       - Completion percentage
+       - Milestones achieved
+       - Time investments
+       - Effort distribution
+
+    State tracking ensures continuity throughout task execution.
+  </content>
+</details>
+
+<details>
+  <section-name>WORKFLOW COMMANDS</section-name>
+  <content>
+    Workflows are managed through these commands:
+
+    **Workflow Initialization**
+    - `BIG workflow start plan [task] [--complexity=1-4]`
+    - `BIG workflow start act [task] [--complexity=1-4]`
+    - `BIG workflow start review [task] [--complexity=1-4]`
+    - `BIG workflow start hybrid [task] [--complexity=1-4]`
+
+    **Phase Management**
+    - `BIG workflow phase start [phase-name]`
+    - `BIG workflow phase complete [phase-name]`
+    - `BIG workflow phase status`
+    - `BIG workflow phase list`
+
+    **State Management**
+    - `BIG workflow state save [--checkpoint]`
+    - `BIG workflow state report`
+    - `BIG workflow state restore [checkpoint]`
+
+    **Progress Tracking**
+    - `BIG workflow track progress [percentage]`
+    - `BIG workflow track milestone [name] [--status]`
+    - `BIG workflow track decision [description] [--rationale]`
+
+    **Workflow Control**
+    - `BIG workflow switch [workflow-type]`
+    - `BIG workflow pause [--reason]`
+    - `BIG workflow resume`
+    - `BIG workflow complete [--summary]`
+
+    These commands provide comprehensive workflow management.
+  </content>
+</details>
+
+<details>
+  <section-name>WORKFLOW REPORTING</section-name>
+  <content>
+    Workflows generate reports in these formats:
+
+    1. **Status Reports**
+       ```
+       ## 📊 Workflow Status: [Workflow Type]
+
+       ### Current Phase: [Phase Name]
+       - Started: [Timestamp]
+       - Progress: [Percentage]
+       - Activity: [Current activity]
+
+       ### Completed Phases
+       - [Phase 1]: Completed at [Timestamp]
+       - [Phase 2]: Completed at [Timestamp]
+
+       ### Pending Phases
+       - [Phase 3]: Estimated start at [Timestamp]
+       - [Phase 4]: Dependencies: [List]
+
+       ### Artifacts Created
+       - [Artifact 1]: [Description]
+       - [Artifact 2]: [Description]
+       ```
+
+    2. **Checkpoint Reports**
+       ```
+       ## 🔖 Workflow Checkpoint: [Name]
+
+       ### Workflow Context
+       - Type: [Workflow type]
+       - Task: [Task description]
+       - Complexity: Level [1-4]
+
+       ### Status at Checkpoint
+       - Phase: [Current phase]
+       - Progress: [Percentage]
+       - Time elapsed: [Duration]
+
+       ### Key Decisions
+       - [Decision 1]: [Rationale]
+       - [Decision 2]: [Rationale]
+
+       ### Next Steps
+       1. [Immediate next action]
+       2. [Subsequent action]
+       3. [Future consideration]
+       ```
+
+    3. **Completion Reports**
+       ```
+       ## ✅ Workflow Completed: [Workflow Type]
+
+       ### Summary
+       - Task: [Task description]
+       - Duration: [Total time]
+       - Phases completed: [Count]
+
+       ### Outcomes
+       - [Outcome 1]: [Description]
+       - [Outcome 2]: [Description]
+
+       ### Artifacts
+       - [Artifact 1]: [Location and purpose]
+       - [Artifact 2]: [Location and purpose]
+
+       ### Insights
+       - [Insight 1]
+       - [Insight 2]
+
+       ### Follow-up Actions
+       1. [Action 1]
+       2. [Action 2]
+       ```
+
+    These reports document workflow execution and outcomes.
+  </content>
+</details>
+
+<details>
+  <section-name>ADAPTATION TO COMPLEXITY</section-name>
+  <content>
+    Workflow rigor adapts to task complexity:
+
+    **Level 1 (Simple)**
+    - Streamlined phases
+    - Basic documentation
+    - Limited state tracking
+    - Simplified reporting
+
+    **Level 2 (Moderate)**
+    - Standard phases
+    - Regular documentation
+    - Basic state tracking
+    - Standard reporting
+
+    **Level 3 (Complex)**
+    - Comprehensive phases
+    - Detailed documentation
+    - Enhanced state tracking
+    - Detailed reporting
+
+    **Level 4 (Critical)**
+    - Maximum rigor phases
+    - Exhaustive documentation
+    - Complete state tracking
+    - Comprehensive reporting
+    - Formal reviews at phase transitions
+
+    Adaptation ensures appropriate workflow rigor for each task level.
+  </content>
+</details>
+
+<details>
+  <section-name>CREATIVE PHASE INTEGRATION</section-name>
+  <content>
+    Workflows integrate with creative phases:
+
+    1. **Creative Phase Initiation**
+       - Triggered during planning workflows for design challenges
+       - Activated for complex solution exploration
+       - Integrated with exploration phases
+
+    2. **Creative Phase Structure**
+       - Problem Analysis
+       - Option Exploration
+       - Evaluation Matrix
+       - Selection Framework
+       - Verification Criteria
+
+    3. **Creative Phase Outcomes**
+       - Documented design decisions
+       - Evaluated alternatives
+       - Quality verification results
+       - Implementation guidance
+
+    4. **Integration Points**
+       - Plan workflows: Solution exploration phase
+       - Act workflows: Component design refinement
+       - Hybrid workflows: Iterative design evolution
+
+    Creative phase integration ensures thorough design for complex challenges.
+  </content>
+</details>
+
+<details>
+  <section-name>CROSS-SESSION CONTINUITY</section-name>
+  <content>
+    Workflows maintain continuity across sessions through:
+
+    1. **Session Transition Documentation**
+       - Detailed workflow state at session end
+       - Explicit next steps for continuation
+       - Captured decision context
+       - Documented progress metrics
+
+    2. **Bedtime Protocol Integration**
+       - Workflow state captured in bedtime protocol
+       - Phase completion status recorded
+       - Artifacts listed with status
+       - Continuation guidance provided
+
+    3. **Initialization Integration**
+       - Workflow state restored during initialization
+       - Previous context reestablished
+       - Phase continuity maintained
+       - Decision history preserved
+
+    4. **activeContext.md Updates**
+       - Current workflow captured in activeContext.md
+       - Phase status documented
+       - Recent activities recorded
+       - Next workflow steps specified
+
+    These mechanisms ensure seamless workflow continuation despite memory resets.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH COMMAND INTERFACE</section-name>
+  <content>
+    Workflow orchestration integrates with the command interface:
+
+    1. **Command Availability**
+       - Available commands adapt to workflow phase
+       - Workflow state influences command behavior
+       - Command validation includes workflow context
+       - Command suggestions reflect workflow needs
+
+    2. **Command Execution**
+       - Commands record effects on workflow state
+       - Workflow transitions trigger command sequences
+       - Command feedback includes workflow context
+       - Command failures handled within workflow
+
+    3. **Command Composition**
+       - Workflows define common command sequences
+       - Phase transitions use command composition
+       - Workflow templates provide command patterns
+       - State changes trigger command groups
+
+    This integration ensures commands operate within appropriate workflow context.
+  </content>
+</details>
+
+<details>
+  <section-name>WORKFLOW TEMPLATES</section-name>
+  <content>
+    The system provides specialized workflow templates:
+
+    1. **Feature Development Workflow**
+       - Specialized for complete feature creation
+       - Phases: Requirements, Design, Implementation, Testing, Documentation
+       - Focus: End-to-end feature delivery
+       - Example: `BIG workflow start feature "User Authentication"`
+
+    2. **Bug Fix Workflow**
+       - Optimized for issue resolution
+       - Phases: Reproduction, Root Cause Analysis, Solution Design, Implementation, Verification
+       - Focus: Efficient, thorough problem resolution
+       - Example: `BIG workflow start bugfix "Login failure on Safari"`
+
+    3. **Refactoring Workflow**
+       - Structured for safe code improvement
+       - Phases: Analysis, Planning, Incremental Change, Validation, Documentation
+       - Focus: Maintaining behavior while improving structure
+       - Example: `BIG workflow start refactor "Authentication module"`
+
+    4. **Integration Workflow**
+       - Designed for component integration
+       - Phases: Interface Analysis, Integration Planning, Connection Implementation, Testing, Documentation
+       - Focus: Proper component connection
+       - Example: `BIG workflow start integration "Payment gateway"`
+
+    Templates provide specialized processes for common task types.
+  </content>
+</details>
+
+<details>
+  <section-name>WORKFLOW EXAMPLES</section-name>
+  <content>
+    **Plan Workflow Example**
+    ```
+    ## 📊 Workflow Status: Plan
+
+    ### Current Phase: Solution Exploration
+    - Started: 2025-03-24 10:15:23
+    - Progress: 60%
+    - Activity: Evaluating architectural alternatives
+
+    ### Completed Phases
+    - Context Analysis: Completed at 2025-03-24 09:45:12
+
+    ### Pending Phases
+    - Evaluation Phase: Dependencies: Complete alternatives exploration
+    - Decision Phase: Dependencies: Complete evaluation
+    - Implementation Planning: Dependencies: Complete decision
+
+    ### Artifacts Created
+    - Requirements Analysis: Document clarifying authentication requirements
+    - Architecture Options: Three alternative approaches to authentication
+    ```
+
+    **Act Workflow Example**
+    ```
+    ## 📊 Workflow Status: Act
+
+    ### Current Phase: Component Building
+    - Started: 2025-03-24 14:30:45
+    - Progress: 40%
+    - Activity: Implementing token validation logic
+
+    ### Completed Phases
+    - Implementation Preparation: Completed at 2025-03-24 14:15:32
+
+    ### Pending Phases
+    - Verification Phase: Dependencies: Complete component building
+    - Refinement Phase: Dependencies: Complete verification
+    - Documentation Phase: Dependencies: Complete refinement
+
+    ### Artifacts Created
+    - Authentication Service: Core service implementation
+    - Token Generator: Utility for secure token creation
+    ```
+
+    These examples demonstrate workflow tracking during execution.
+  </content>
+</details>
+
+<details>
+  <section-name>MEMORY BANK INTEGRATION</section-name>
+  <content>
+    Workflows integrate with the memory bank:
+
+    1. **Workflow-Specific Artifacts**
+       - Design documents from planning workflows
+       - Implementation details from act workflows
+       - Evaluation reports from review workflows
+       - Decision records throughout execution
+
+    2. **Memory Updates**
+       - activeContext.md updated with workflow state
+       - progress.md updated with workflow outcomes
+       - systemPatterns.md updated with design decisions
+       - techContext.md updated with implementation details
+
+    3. **Reference Structure**
+       - Workflow artifacts cross-referenced
+       - Decision history linked to implementations
+       - Design documents connected to code
+       - Reviews linked to affected components
+
+    This integration ensures workflow outputs are properly preserved in memory.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial implementation of workflow orchestration |
+</rewritten_file>

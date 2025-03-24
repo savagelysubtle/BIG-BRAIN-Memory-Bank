@@ -1,0 +1,87 @@
+{
+  "description": "Memory Management Configuration for Bedtime Protocol",
+  "timestamp": "2025-03-23T01:45:00Z",
+  "operations": [
+    {
+      "operation_type": "move",
+      "source": "activeContext_v1.2.md",
+      "destination_folder": "Bedtime Protocol/Long term memory",
+      "description": "Move active context to long-term memory for archival"
+    },
+    {
+      "operation_type": "move",
+      "source": "progress_v1.1.md",
+      "destination_folder": "Bedtime Protocol/Long term memory",
+      "description": "Move progress document to long-term memory for archival"
+    },
+    {
+      "operation_type": "move",
+      "source": "systemPatterns_v1.1.md",
+      "destination_folder": "Bedtime Protocol/Long term memory",
+      "description": "Move system patterns to long-term memory for archival"
+    },
+    {
+      "operation_type": "move",
+      "source": "techContext_v1.1.md",
+      "destination_folder": "Bedtime Protocol/Long term memory",
+      "description": "Move technical context to long-term memory for archival"
+    },
+    {
+      "operation_type": "move",
+      "source": "refactoring_plan_v1.1.md",
+      "destination_folder": "Bedtime Protocol/Long term memory",
+      "description": "Move refactoring plan to long-term memory for archival"
+    },
+    {
+      "operation_type": "move",
+      "source": "codebase_analysis_approach_v1.1.md",
+      "destination_folder": "Bedtime Protocol/Long term memory",
+      "description": "Move codebase analysis to long-term memory for archival"
+    },
+    {
+      "operation_type": "move",
+      "source": "architecture_migration_guide_v1.1.md",
+      "destination_folder": "Bedtime Protocol/Long term memory",
+      "description": "Move architecture migration guide to long-term memory for archival"
+    },
+    {
+      "operation_type": "move",
+      "source": "import_best_practices_v1.1.md",
+      "destination_folder": "Bedtime Protocol/Long term memory",
+      "description": "Move import best practices to long-term memory for archival"
+    },
+    {
+      "operation_type": "move",
+      "source": "projectbrief_v1.0.md",
+      "destination_folder": "Bedtime Protocol/Long term memory",
+      "description": "Move project brief to long-term memory for archival"
+    },
+    {
+      "operation_type": "move",
+      "source": "productContext_v1.0.md",
+      "destination_folder": "Bedtime Protocol/Long term memory",
+      "description": "Move product context to long-term memory for archival"
+    }
+  ],
+  "options": {
+    "create_folders": true,
+    "organize_by_topic": true,
+    "generate_log": true,
+    "category_detection": "smart",
+    "create_category_metadata": true,
+    "default_categories": [
+      "projectbrief",
+      "productContext",
+      "activeContext",
+      "systemPatterns",
+      "techContext",
+      "progress",
+      "research",
+      "architecture",
+      "codebase",
+      "refactoring",
+      "import",
+      "metadata"
+    ]
+  }
+}

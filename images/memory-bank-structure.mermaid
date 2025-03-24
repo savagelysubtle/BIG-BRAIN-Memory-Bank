@@ -1,0 +1,53 @@
+%% BIG BRAIN Memory Bank 2.0 - Memory Bank Structure
+%% This diagram illustrates the memory bank directory structure and file relationships
+%% Version 1.0.0 (March 24, 2025)
+
+flowchart TB
+    %% Main Memory Bank directory
+    MB[Memory Bank] --> Core
+    MB --> ShortTerm[Short-Term]
+    MB --> LongTerm[Long-Term]
+
+    %% Core subdirectories
+    Core --> Active
+    Core --> Foundation
+    Core --> Reference
+
+    %% Active directory contents (core memory files)
+    Active --> PB[projectbrief.md]
+    Active --> PC[productContext.md]
+    Active --> AC[activeContext.md]
+    Active --> SP[systemPatterns.md]
+    Active --> TC[techContext.md]
+    Active --> PR[progress.md]
+
+    %% File relationships (as described in Architecture Overview)
+    PB -->|informs| PC
+    PC -->|influences| SP
+    PB -->|informs| SP
+    SP -->|details| TC
+    TC -->|informs| AC
+    SP -->|informs| AC
+    AC -->|tracks| PR
+
+    %% Short-Term structure
+    ShortTerm --> STD1[Documentation]
+    ShortTerm --> STD2[Tasks]
+    ShortTerm --> STD3[Experiments]
+
+    %% Long-Term structure
+    LongTerm --> LTD1[Archive]
+    LongTerm --> LTD2[History]
+    LongTerm --> LTD3[Reference]
+
+    %% Define styles
+    classDef directory fill:#dae8fc,stroke:#6c8ebf,stroke-width:1px,border-radius:8px
+    classDef coreFile fill:#d5e8d4,stroke:#82b366,stroke-width:1px,border-radius:4px
+    classDef secondaryDir fill:#ffe6cc,stroke:#d79b00,stroke-width:1px,border-radius:8px
+    classDef subDir fill:#f5f5f5,stroke:#666666,stroke-width:1px,border-radius:4px
+
+    %% Apply styles
+    class MB,Core,ShortTerm,LongTerm directory
+    class Active,Foundation,Reference secondaryDir
+    class PB,PC,AC,SP,TC,PR coreFile
+    class STD1,STD2,STD3,LTD1,LTD2,LTD3 subDir

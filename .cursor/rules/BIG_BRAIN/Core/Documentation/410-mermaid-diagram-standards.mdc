@@ -1,0 +1,386 @@
+---
+description: WHEN creating or updating diagrams in documentation ENSURE consistent Mermaid styling and practices
+globs: ["docs/**/*.md", "docs/**/*.mermaid", "images/**/*.mermaid"]
+alwaysApply: true
+---
+
+> **TL;DR:** This rule defines standards for creating, storing, and using Mermaid diagrams in the BIG BRAIN documentation, ensuring visual consistency and maintainability across all diagrams.
+
+<version>1.0.0</version>
+
+<context>
+  Visual documentation through diagrams is essential for understanding the BIG BRAIN Memory Bank system architecture and workflows. This rule establishes standards for creating, storing, and using Mermaid diagrams to ensure consistency, readability, and maintainability across the documentation. Consistent diagram styling improves comprehension and helps maintain knowledge persistence across memory resets.
+</context>
+
+<requirements>
+  <requirement>Follow consistent styling conventions for all Mermaid diagrams</requirement>
+  <requirement>Store diagram source files in designated locations</requirement>
+  <requirement>Generate and maintain image exports in standard formats</requirement>
+  <requirement>Document diagram purpose and relationships clearly</requirement>
+  <requirement>Ensure diagrams are accessible and properly referenced in documentation</requirement>
+  <requirement>Maintain synchronization between source files and rendered images</requirement>
+</requirements>
+
+<details>
+  <section-name>FILE ORGANIZATION</section-name>
+  <content>
+    Maintain this organization for diagram files:
+
+    ```
+    /images/
+      ├── *.mermaid            # Source files for all diagrams
+      ├── *.png                # PNG exports of diagrams
+      ├── *.svg                # SVG exports of diagrams
+      └── README.md            # Directory documentation
+
+    /docs/assets/
+      ├── *.png                # Diagram PNGs used in documentation
+      ├── *.svg                # Diagram SVGs used in documentation
+      └── .gitkeep             # Ensures directory exists in git
+    ```
+
+    Each diagram must have:
+    1. A source `.mermaid` file in the `/images` directory
+    2. Corresponding `.png` and `.svg` exports in `/images`
+    3. Copies of exported images in `/docs/assets` when used in documentation
+
+    Diagram naming must be:
+    - Descriptive of content (e.g., `memory-bank-structure.mermaid`)
+    - Kebab-case format (lowercase with hyphens)
+    - Consistent across source and export files (same base name)
+  </content>
+</details>
+
+<details>
+  <section-name>DIAGRAM TYPES AND USAGE</section-name>
+  <content>
+    Use appropriate diagram types for different documentation needs:
+
+    1. **Flowcharts** (`flowchart` or `graph`)
+       - For process flows, algorithms, and decision trees
+       - Direction: TD (top-down) for procedures, LR (left-right) for sequences
+       - Example use: Bedtime Protocol process flow
+
+    2. **Sequence Diagrams** (`sequenceDiagram`)
+       - For interaction between components over time
+       - Example use: Memory Bank initialization sequence
+
+    3. **Class Diagrams** (`classDiagram`)
+       - For system structure and relationships
+       - Example use: Memory Bank component relationships
+
+    4. **State Diagrams** (`stateDiagram-v2`)
+       - For state transitions and lifecycle management
+       - Example use: Task state transitions
+
+    5. **Entity Relationship Diagrams** (`erDiagram`)
+       - For data relationships
+       - Example use: Memory file relationships
+
+    6. **Gantt Charts** (`gantt`)
+       - For project planning and timelines
+       - Example use: Implementation phase schedule
+
+    Choose the diagram type that best communicates the concept being documented.
+  </content>
+</details>
+
+<details>
+  <section-name>STYLING CONVENTIONS</section-name>
+  <content>
+    Apply these styling conventions to all diagrams:
+
+    1. **Color Scheme**
+       - Use consistent colors for specific component types:
+         - Foundation Layer: `#4285F4` (blue)
+         - Verification Framework: `#34A853` (green)
+         - Command Protocol: `#FBBC05` (yellow)
+         - Creative Phase: `#EA4335` (red)
+         - Files/Documents: `#9AA0A6` (gray)
+         - User Interaction: `#8AB4F8` (light blue)
+         - External Systems: `#F6AEA9` (light red)
+
+    2. **Node Styling**
+       - Use appropriate shapes for different element types:
+         - Process/Action: Rectangle `[]`
+         - Decision: Diamond `{}`
+         - Start/End: Rounded Rectangle `()`
+         - Document: Document shape `[/Document/]`
+         - Database: Database shape `[(Database)]`
+         - Input/Output: Parallelogram `[/Input/]`
+
+    3. **Line Styling**
+       - Standard flow: Solid line with arrow `-->`
+       - Alternative flow: Dashed line with arrow `-..->`
+       - Conditional flow: Solid line with text `-->|Condition|`
+       - Bidirectional: Double arrow `<-->`
+
+    4. **Text Formatting**
+       - Keep node text concise (3-7 words preferred)
+       - Use sentence case for node text
+       - Use lowercase for flow labels
+       - Use quotes for exact messages/commands
+
+    5. **Subgraphs**
+       - Use subgraphs to group related components
+       - Apply light background colors to subgraphs
+       - Include clear subgraph titles
+
+    Example styling:
+    ```mermaid
+    flowchart TD
+      %% Define styles
+      classDef foundation fill:#4285F4,stroke:#333,stroke-width:1px,color:white;
+      classDef verification fill:#34A853,stroke:#333,stroke-width:1px,color:white;
+      classDef command fill:#FBBC05,stroke:#333,stroke-width:1px,color:black;
+      classDef file fill:#9AA0A6,stroke:#333,stroke-width:1px,color:white;
+
+      %% Nodes with appropriate shapes
+      A([Start]) --> B[Process task]
+      B --> C{Decision point}
+      C -->|yes| D[(Memory Bank)]
+      C -->|no| E[/Output results/]
+
+      %% Subgraph example
+      subgraph Memory Operations
+        D --> F[Update memory files]
+        F --> G[Verify integrity]
+      end
+
+      G --> E
+      E --> H([End])
+
+      %% Apply styles
+      class A,H command;
+      class B,F,G foundation;
+      class C verification;
+      class D,E file;
+    ```
+  </content>
+</details>
+
+<details>
+  <section-name>DIAGRAM DOCUMENTATION</section-name>
+  <content>
+    Document every diagram with:
+
+    1. **Source File Header**
+       Include at the top of each `.mermaid` file:
+       ```
+       %% DIAGRAM: [Title]
+       %% PURPOSE: [Brief description of diagram purpose]
+       %% RELATED: [Related documentation files]
+       %% UPDATED: [Date last updated]
+       %% VERSION: [Version number]
+       ```
+
+    2. **Inline Comments**
+       - Group related elements with section comments: `%% --- Section Name ---`
+       - Explain complex logic: `%% This handles the edge case when...`
+       - Document style choices: `%% Using red to highlight critical path`
+
+    3. **Documentation References**
+       When including diagrams in documentation:
+       ```markdown
+       ![Diagram Title](../assets/diagram-name.png)
+
+       *Figure X: Brief description of the diagram. [Source](../../images/diagram-name.mermaid)*
+       ```
+
+    4. **README References**
+       Include all diagrams in the `/images/README.md` with:
+       - Diagram title and purpose
+       - Link to source file
+       - Preview image
+       - Related documentation
+  </content>
+</details>
+
+<details>
+  <section-name>GENERATION PROCESS</section-name>
+  <content>
+    Follow this process for creating and updating diagrams:
+
+    1. **Create/Update Source File**
+       - Create or edit `.mermaid` file in the `/images` directory
+       - Follow styling conventions and documentation requirements
+       - Test rendering using Mermaid Live Editor (https://mermaid.live)
+
+    2. **Generate Image Files**
+       - Use the provided script: `scripts/generate_diagrams.ps1`
+       - This creates both PNG and SVG outputs automatically
+       - Command: `./scripts/generate_diagrams.ps1 [filename.mermaid]`
+
+    3. **Update Documentation**
+       - Copy generated images to `/docs/assets` if used in documentation
+       - Update image references in documentation files
+       - Ensure documentation accurately describes current diagram
+
+    4. **Commit Changes**
+       - Commit source `.mermaid` file
+       - Commit generated `.png` and `.svg` files
+       - Commit documentation updates
+       - Use commit message: "Update diagram: [diagram-name] - [brief change description]"
+  </content>
+</details>
+
+<details>
+  <section-name>BEST PRACTICES</section-name>
+  <content>
+    Follow these best practices for effective diagrams:
+
+    1. **Readability**
+       - Limit diagram complexity (15-25 nodes maximum)
+       - Split complex diagrams into multiple focused diagrams
+       - Ensure text is readable at standard zoom levels
+       - Use consistent terminology matching documentation
+
+    2. **Maintainability**
+       - Create hierarchical diagrams (overview → detail)
+       - Design for black and white printing when possible
+       - Consider visual accessibility (color blindness, etc.)
+       - Make small, focused changes to avoid breaking layout
+
+    3. **Consistency**
+       - Use the same representation for the same concept across diagrams
+       - Maintain consistent direction (left-to-right, top-to-bottom)
+       - Use consistent levels of detail at each diagram level
+       - Reuse styling definitions across similar diagrams
+
+    4. **Completeness**
+       - Include legend for custom symbols or colors
+       - Show all relevant connections between components
+       - Label all important flows and relationships
+       - Provide context for diagram's place in overall system
+  </content>
+</details>
+
+<details>
+  <section-name>DIAGRAM REVIEW</section-name>
+  <content>
+    Review diagrams for:
+
+    1. **Technical Accuracy**
+       - Correct representation of system components
+       - Accurate relationships and connections
+       - Alignment with current implementation
+
+    2. **Visual Clarity**
+       - Logical flow and organization
+       - Appropriate use of shapes and colors
+       - Readable text and labels
+
+    3. **Documentation Integration**
+       - Proper references in documentation
+       - Consistency between diagram and text descriptions
+       - Appropriate level of detail for context
+
+    4. **Style Compliance**
+       - Adherence to color scheme guidelines
+       - Consistent node and line styling
+       - Proper use of diagram type for content
+
+    When updating diagrams, maintain a version history in the source file header.
+  </content>
+</details>
+
+<details>
+  <section-name>EXAMPLES</section-name>
+  <content>
+    **Example 1: System Architecture Flowchart**
+    ```mermaid
+    %% DIAGRAM: System Architecture Overview
+    %% PURPOSE: Shows high-level components of the Memory Bank system
+    %% RELATED: docs/Architecture/Overview.md
+    %% UPDATED: 2025-03-24
+    %% VERSION: 1.0.0
+
+    flowchart TD
+      %% Define styles
+      classDef foundation fill:#4285F4,stroke:#333,stroke-width:1px,color:white;
+      classDef verification fill:#34A853,stroke:#333,stroke-width:1px,color:white;
+      classDef command fill:#FBBC05,stroke:#333,stroke-width:1px,color:black;
+      classDef creative fill:#EA4335,stroke:#333,stroke-width:1px,color:white;
+      classDef file fill:#9AA0A6,stroke:#333,stroke-width:1px,color:white;
+
+      %% Main system components
+      User([User]) --> CP[Command Protocol]
+      CP --> WO[Workflow Orchestration]
+
+      %% Memory operations
+      WO --> MB[(Memory Bank)]
+      MB --> VF[Verification Framework]
+      VF --> MB
+
+      %% Process flows
+      WO --> FL[Foundation Layer]
+      WO --> CF[Creative Framework]
+      FL --> MB
+      CF --> MB
+
+      %% Apply styles
+      class User command;
+      class CP,WO command;
+      class FL foundation;
+      class VF verification;
+      class CF creative;
+      class MB file;
+    ```
+
+    **Example 2: Workflow Sequence Diagram**
+    ```mermaid
+    %% DIAGRAM: Memory Initialization Sequence
+    %% PURPOSE: Shows the sequence of operations during memory initialization
+    %% RELATED: docs/Guides/Startup.md
+    %% UPDATED: 2025-03-24
+    %% VERSION: 1.0.0
+
+    sequenceDiagram
+      participant U as User
+      participant CP as Command Protocol
+      participant MB as Memory Bank
+      participant VF as Verification Framework
+
+      U->>CP: Issue initialization command
+      CP->>MB: Load core memory files
+      MB-->>CP: Files loaded
+      CP->>VF: Request verification
+      VF->>MB: Check file integrity
+      MB-->>VF: File status
+      VF-->>CP: Verification results
+      CP->>MB: Update activeContext
+      MB-->>CP: Context updated
+      CP-->>U: Initialization complete
+    ```
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH MEMORY BANK</section-name>
+  <content>
+    Ensure diagram changes are reflected in the Memory Bank:
+
+    1. **Update activeContext.md**
+       - Document significant diagram changes
+       - Note additions of new diagram types
+       - Record relationships between new/updated diagrams
+
+    2. **Update systemPatterns.md**
+       - Ensure architectural diagrams match described patterns
+       - Document visual patterns used in diagrams
+       - Note significant visualization decisions
+
+    3. **Update progress.md**
+       - Record completion of diagram-related tasks
+       - Track diagram improvements over time
+       - Note pending diagram updates
+
+    This integration ensures knowledge about diagrams persists across memory resets.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial Mermaid diagram standards implementation |

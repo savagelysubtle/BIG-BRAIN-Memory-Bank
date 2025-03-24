@@ -1,0 +1,385 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN verifying memory bank ENSURE consistency across related files and sections
+globs: ["**/*.md", "**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** The Automated Consistency Checks system ensures information consistency across all Memory Bank files, detecting and reporting contradictions, outdated information, and alignment issues.
+
+<version>1.0.0</version>
+
+<context>
+  This rule establishes the Automated Consistency Checks system that verifies cross-file information consistency throughout the Memory Bank. Since BIG BRAIN's memory resets completely between sessions, ensuring consistent information across different memory files is essential for reliable context. The system identifies contradictions, version mismatches, outdated references, and alignment issues between related sections of different files.
+</context>
+
+<requirements>
+  <requirement>Detect contradictions between related information across files</requirement>
+  <requirement>Identify version and date misalignments</requirement>
+  <requirement>Verify consistency of linked references and content</requirement>
+  <requirement>Report inconsistencies with clear context and resolution guidance</requirement>
+  <requirement>Prioritize inconsistencies by severity and impact</requirement>
+</requirements>
+
+<details>
+  <section-name>CONSISTENCY DOMAINS</section-name>
+  <content>
+    Consistency checks operate across these domains:
+    
+    1. **Factual Consistency**
+       - Same facts represented identically across files
+       - No contradictory information about system state
+       - Aligned technical descriptions and architecture
+    
+    2. **Temporal Consistency**
+       - Consistent dates and timestamps
+       - Version numbers aligned across files
+       - Event sequences consistently described
+    
+    3. **Structural Consistency**
+       - Aligned component naming conventions
+       - Consistent terminology usage
+       - Aligned file organization references
+    
+    4. **Relational Consistency**
+       - Consistent descriptions of relationships between components
+       - Aligned dependency references
+       - Interface descriptions match across components
+    
+    Each domain has specialized detection rules and resolution approaches.
+  </content>
+</details>
+
+<details>
+  <section-name>RELATIONSHIP MAPPING</section-name>
+  <content>
+    The system maps these key relationships for consistency checking:
+    
+    **Core Relationships**
+    - `activeContext.md:Current Focus` ↔ `progress.md:Status`
+    - `systemPatterns.md:Architecture` ↔ `techContext.md:Components`
+    - `projectbrief.md:Requirements` ↔ `progress.md:Feature Status`
+    - `activeContext.md:Next Steps` ↔ `progress.md:Next Phase`
+    
+    **Extended Relationships**
+    - `productContext.md:User Experience` ↔ `projectbrief.md:Success Criteria`
+    - `systemPatterns.md:Implementation Decisions` ↔ `techContext.md:Technology Stack`
+    - `progress.md:Known Issues` ↔ `activeContext.md:Open Issues`
+    - `.cursor/rules/main.mdc` ↔ `systemPatterns.md:Architecture`
+    
+    **Version Relationships**
+    - Version numbers across all files
+    - "Last Updated" dates across all files
+    - Feature status descriptions between files
+    
+    These relationships form the foundation for automated consistency checks.
+  </content>
+</details>
+
+<details>
+  <section-name>CONSISTENCY CHECK TYPES</section-name>
+  <content>
+    The system performs these types of checks:
+    
+    1. **Text Comparison**
+       - Direct comparison of equivalent text sections
+       - Semantic similarity assessment for related descriptions
+       - Terminology usage consistency
+    
+    2. **Date and Version Verification**
+       - Comparison of timestamps and version numbers
+       - Sequential validation (newer versions should have newer dates)
+       - Last updated verification across related files
+    
+    3. **List and Status Comparison**
+       - Feature list completeness across files
+       - Status consistency for same features
+       - Priority alignment between planning and status
+    
+    4. **Reference Validation**
+       - Cross-reference correctness
+       - Reference target existence
+       - Reference context alignment
+    
+    5. **Architecture Consistency**
+       - Component naming consistency
+       - Interface description alignment
+       - Dependency declaration consistency
+    
+    Each check type employs specialized algorithms and validation rules.
+  </content>
+</details>
+
+<details>
+  <section-name>CONSISTENCY ANALYSIS PROCESS</section-name>
+  <content>
+    The consistency analysis follows this process:
+    
+    1. **Information Extraction**
+       - Parse all relevant memory files
+       - Extract key information elements
+       - Identify declared relationships
+       - Map related content sections
+    
+    2. **Comparison Execution**
+       - Apply appropriate comparison methods to related content
+       - Calculate similarity and consistency scores
+       - Identify specific discrepancies
+       - Flag potential contradictions
+    
+    3. **Context Analysis**
+       - Analyze surrounding context of inconsistencies
+       - Determine likely cause of discrepancy
+       - Assess intentional vs. accidental inconsistency
+       - Evaluate severity and impact
+    
+    4. **Result Compilation**
+       - Generate detailed consistency report
+       - Categorize issues by type and severity
+       - Suggest resolution approaches
+       - Provide specific examples of inconsistencies
+    
+    This process runs after file verification passes and can be triggered independently.
+  </content>
+</details>
+
+<details>
+  <section-name>REPORTING FORMAT</section-name>
+  <content>
+    Consistency check results use this format:
+    
+    ```
+    ## 📊 Consistency Check Report
+    
+    ### Summary
+    - Files checked: [count]
+    - Consistency score: [percentage]
+    - Critical inconsistencies: [count]
+    - Warnings: [count]
+    - Overall status: [✓/⚠️/❌]
+    
+    ### Critical Inconsistencies
+    - [File1:Section] ↔ [File2:Section] - [Inconsistency description]
+      > [Example from File1]
+      > [Example from File2]
+      > Recommendation: [Resolution approach]
+    
+    ### Warnings
+    - [File1:Section] ↔ [File2:Section] - [Warning description]
+      > [Details]
+      > Recommendation: [Resolution approach]
+    
+    ### Information
+    - [Observation about consistency patterns]
+    - [Potential improvement suggestions]
+    ```
+    
+    This format clearly communicates inconsistencies and resolution approaches.
+  </content>
+</details>
+
+<details>
+  <section-name>RESOLUTION STRATEGIES</section-name>
+  <content>
+    For each inconsistency type, specific resolution strategies are recommended:
+    
+    1. **For Factual Contradictions**
+       - Identify most recent/authoritative version
+       - Suggest specific update to align information
+       - Propose clarifying notes for ambiguous cases
+    
+    2. **For Temporal Misalignments**
+       - Identify correct chronology
+       - Suggest timestamp and version updates
+       - Recommend event sequence clarification
+    
+    3. **For Structural Inconsistencies**
+       - Propose consistent naming convention
+       - Suggest terminology standardization
+       - Recommend organizational alignment
+    
+    4. **For Relational Inconsistencies**
+       - Identify correct relationship definition
+       - Suggest relationship clarification
+       - Recommend explicit mapping of dependencies
+    
+    Resolution strategies include specific actions and suggest edits to affected files.
+  </content>
+</details>
+
+<details>
+  <section-name>CONSISTENCY THRESHOLDS</section-name>
+  <content>
+    Consistency is evaluated against these thresholds:
+    
+    - **Critical Inconsistency**: Direct contradiction between important facts
+    - **Warning**: Potential inconsistency or minor factual misalignment
+    - **Note**: Stylistic inconsistency or improvement opportunity
+    
+    Specific threshold rules include:
+    
+    - Version numbers must match exactly or follow clear progression
+    - Timestamps should align within reasonable timeframes for related updates
+    - Component names must be consistent or have explicit mapping
+    - Status descriptions should not contradict across files
+    - Architecture descriptions must align with implementation references
+    
+    Thresholds are calibrated to minimize false positives while catching significant issues.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH VERIFICATION SYSTEM</section-name>
+  <content>
+    Consistency checks integrate with the broader verification system:
+    
+    1. **Sequential Operation**
+       - Runs after basic file verification succeeds
+       - Provides input to recovery protocols when issues found
+       - Triggers targeted re-verification of resolved inconsistencies
+    
+    2. **Shared Results**
+       - Contributes to overall verification score
+       - Findings incorporated into verification reports
+       - Critical inconsistencies block verification success
+    
+    3. **Coordinated Recovery**
+       - Resolution actions coordinated with file repair
+       - Recovery prioritizes consistency restoration
+       - Verification validates consistency after repairs
+    
+    This integration ensures consistency checks are part of the comprehensive verification framework.
+  </content>
+</details>
+
+<details>
+  <section-name>VERIFICATION TRIGGERS</section-name>
+  <content>
+    Consistency checks are triggered by:
+    
+    1. **Automatic Triggers**
+       - After successful file verification during initialization
+       - Before Bedtime Protocol execution
+       - After significant Memory Bank updates
+    
+    2. **Manual Triggers**
+       - "check consistency" command
+       - "verify references" command
+       - "align documentation" command
+    
+    3. **Contextual Triggers**
+       - When contradictory information is encountered during task execution
+       - Before major architecture or design decisions
+       - When using information from multiple memory sources
+    
+    Triggers can specify focus areas for targeted consistency checking.
+  </content>
+</details>
+
+<details>
+  <section-name>EXAMPLE APPLICATION</section-name>
+  <content>
+    ```
+    ## 📊 Consistency Check Report
+    
+    ### Summary
+    - Files checked: 6
+    - Consistency score: 87%
+    - Critical inconsistencies: 1
+    - Warnings: 3
+    - Overall status: ⚠️ Needs attention
+    
+    ### Critical Inconsistencies
+    - systemPatterns.md:Authentication ↔ techContext.md:Security - Authentication method contradiction
+      > systemPatterns.md: "The system uses OAuth 2.0 with JWT tokens for authentication"
+      > techContext.md: "Authentication is handled through basic auth with session cookies"
+      > Recommendation: Update techContext.md to reflect OAuth 2.0 implementation
+    
+    ### Warnings
+    - activeContext.md:Next Steps ↔ progress.md:Next Phase - Feature priority mismatch
+      > activeContext.md lists UI implementation as priority 1
+      > progress.md lists API integration as next phase
+      > Recommendation: Align priorities or clarify sequence rationale
+    
+    - projectbrief.md:Requirements ↔ progress.md:Features - Missing requirement tracking
+      > Requirement "User profile management" present in brief but not tracked in progress
+      > Recommendation: Add user profile management to progress tracking
+    
+    - systemPatterns.md:Version ↔ main.mdc:Version - Version mismatch
+      > systemPatterns.md shows version 2.0.0 (2025-03-20)
+      > main.mdc shows version 2.0.0 (2025-03-24)
+      > Recommendation: Update systemPatterns.md date to match
+    
+    ### Information
+    - Strong consistency in component naming conventions across all files
+    - Architecture descriptions well-aligned between systemPatterns.md and implementation
+    - Consider adding explicit version tracking to all major memory files
+    ```
+    
+    This example illustrates a comprehensive consistency check report with actionable recommendations.
+  </content>
+</details>
+
+<details>
+  <section-name>ADAPTATION TO COMPLEXITY</section-name>
+  <content>
+    Consistency check depth adapts to task complexity:
+    
+    **Level 1 (Simple)**
+    - Basic version and date alignment checks
+    - Critical contradiction detection
+    - Focus on task-relevant sections only
+    
+    **Level 2 (Moderate)**
+    - Standard consistency checking of major sections
+    - Alignment verification for key components
+    - Focus on files directly relevant to task
+    
+    **Level 3 (Complex)**
+    - Comprehensive consistency checking
+    - Deep relationship verification
+    - Terminology standardization assessment
+    
+    **Level 4 (Critical)**
+    - Exhaustive consistency verification
+    - Semantic analysis of related content
+    - Cross-reference graph validation
+    - Historical consistency tracking
+    
+    Consistency check depth increases with task complexity to ensure appropriate rigor.
+  </content>
+</details>
+
+<details>
+  <section-name>SEMANTIC CONSISTENCY</section-name>
+  <content>
+    Beyond literal matching, the system checks semantic consistency:
+    
+    1. **Conceptual Alignment**
+       - Similar concepts described compatibly
+       - Aligned mental models across documentation
+       - Consistent abstraction levels
+    
+    2. **Intent Consistency**
+       - Goals and objectives aligned across files
+       - Consistent problem framing
+       - Compatible solution approaches
+    
+    3. **Assumption Alignment**
+       - Consistent underlying assumptions
+       - Compatible constraint recognition
+       - Aligned environmental expectations
+    
+    Semantic consistency ensures deeper alignment beyond surface-level text matching.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial implementation of automated consistency checks |

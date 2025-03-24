@@ -1,0 +1,134 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN command includes "MEMORY HEALTH CHECK" or "CHECK MEMORY BANK" ENSURE performing thorough memory system diagnostics
+globs: ["**/memory-bank/**", "**/*.md", "**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** Provides comprehensive diagnostics for checking Memory Bank integrity, consistency, and health.
+
+<version>1.0.0</version>
+
+<context>
+  This rule provides a comprehensive diagnostic system for verifying the health and integrity of the Memory Bank. It enables thorough checks of all memory files, identifies consistency issues, and offers remediation options.
+</context>
+
+<requirements>
+  <requirement>Respond to "MEMORY HEALTH CHECK" command with full diagnostics</requirement>
+  <requirement>Respond to "CHECK MEMORY BANK" command with full diagnostics</requirement>
+  <requirement>Verify existence and validity of all critical memory files</requirement>
+  <requirement>Check for consistency across memory files</requirement>
+  <requirement>Provide clear diagnostic reporting and recommendations</requirement>
+</requirements>
+
+<details>
+  <section-name>MEMORY VERIFICATION CHECKPOINTS</section-name>
+  <content>
+    <template>
+```
+✓ MEMORY VERIFICATION CHECKPOINT
+
+Critical Files:
+- [✓/✗] projectbrief.md - Exists and valid
+- [✓/✗] productContext.md - Exists and valid
+- [✓/✗] activeContext.md - Exists and valid
+- [✓/✗] systemPatterns.md - Exists and valid
+- [✓/✗] techContext.md - Exists and valid
+- [✓/✗] progress.md - Exists and valid
+- [✓/✗] tasks.md - Exists and valid
+- [✓/✗] projectRules.md - Exists and valid
+
+Memory Hierarchy:
+- [✓/✗] Consistent information flow from foundation to tracking layers
+- [✓/✗] No critical contradictions between files
+- [✓/✗] Proper layer relationships maintained
+
+Directory Structure:
+- [✓/✗] memory-bank/active/ directory present
+- [✓/✗] memory-bank/short-term/ directory present
+- [✓/✗] memory-bank/long-term/ directories present
+```
+    </template>
+  </content>
+</details>
+
+<details>
+  <section-name>CONSISTENCY CHECKING</section-name>
+  <content>
+    <check-category>
+      <name>Workflow Mode Consistency</name>
+      <checks>
+        <check>Check if workflow mode is consistently specified across files</check>
+        <check>Verify that activeContext.md clearly states current mode</check>
+      </checks>
+    </check-category>
+    <check-category>
+      <name>Task Status Consistency</name>
+      <checks>
+        <check>Ensure task status is consistent between active context and progress</check>
+        <check>Verify completed items are properly marked in all relevant files</check>
+      </checks>
+    </check-category>
+    <check-category>
+      <name>Project Direction Alignment</name>
+      <checks>
+        <check>Check that current tasks align with project brief objectives</check>
+        <check>Verify that progress aligns with overall product goals</check>
+      </checks>
+    </check-category>
+    <check-category>
+      <name>Technical Implementation Consistency</name>
+      <checks>
+        <check>Verify system patterns and implementation match tech context</check>
+        <check>Check for contradictions in technical approaches</check>
+      </checks>
+    </check-category>
+  </content>
+</details>
+
+<details>
+  <section-name>DIAGNOSTIC REPORT</section-name>
+  <content>
+    <report-element>Overall memory system status (Healthy/Warning/Critical)</report-element>
+    <report-element>List of specific issues found (if any)</report-element>
+    <report-element>Recommendations for resolving issues</report-element>
+    <report-element>Suggestions for memory system improvements</report-element>
+  </content>
+</details>
+
+<details>
+  <section-name>RECOVERY RECOMMENDATIONS</section-name>
+  <content>
+    <recommendation-element>Clear explanation of the issue and its impact</recommendation-element>
+    <recommendation-element>Step-by-step recovery procedure</recommendation-element>
+    <recommendation-element>Prevention strategies to avoid future occurrences</recommendation-element>
+  </content>
+</details>
+
+<details>
+  <section-name>AUTOMATED CORRECTION OFFERS</section-name>
+  <content>
+    <example>
+      <scenario>Minor inconsistency</scenario>
+      <message>
+```
+I've found a minor inconsistency in workflow mode between activeContext.md and progress.md.
+Would you like me to automatically synchronize these files?
+```
+      </message>
+    </example>
+    <example>
+      <scenario>Major inconsistency</scenario>
+      <message>
+```
+I've found significant contradictions between systemPatterns.md and current implementation.
+This requires careful review - would you like me to generate a detailed report?
+```
+      </message>
+    </example>
+  </content>
+</details>

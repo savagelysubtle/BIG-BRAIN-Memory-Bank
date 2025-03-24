@@ -1,0 +1,101 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN command includes "SHOW ACTIVE RULES" or "DEBUG RULES" ENSURE displaying visible rule information
+globs: ["**/*.md", "**/*.mdc", "**/*.{js,ts,jsx,tsx,py}"]
+alwaysApply: true
+---
+
+> **TL;DR:** Provides tools for understanding which rules are active and how they're influencing behavior.
+
+<version>1.0.0</version>
+
+<context>
+  This rule provides debugging capabilities for the rule system. It enables visibility into which rules are active, why they're being applied, and helps identify potential conflicts between rules.
+</context>
+
+<requirements>
+  <requirement>Respond to "SHOW ACTIVE RULES" command with list of current rules</requirement>
+  <requirement>Respond to "TRACE RULE" command with detailed rule information</requirement>
+  <requirement>Respond to "DEBUG GLOB" command with pattern analysis</requirement>
+  <requirement>Respond to "RULE CONFLICTS" command with conflict detection</requirement>
+</requirements>
+
+<details>
+  <section-name>RULE DEBUGGING COMMANDS</section-name>
+  <content>
+    <command>
+      <name>SHOW ACTIVE RULES</name>
+      <description>List all currently active rules</description>
+    </command>
+    <command>
+      <name>TRACE RULE [rule-name]</name>
+      <description>Show why a specific rule was activated</description>
+    </command>
+    <command>
+      <name>DEBUG GLOB [pattern]</name>
+      <description>Analyze which files would match the pattern</description>
+    </command>
+    <command>
+      <name>RULE CONFLICTS</name>
+      <description>Identify any contradicting rules</description>
+    </command>
+  </content>
+</details>
+
+<details>
+  <section-name>RULE DISPLAY FORMAT</section-name>
+  <content>
+    <template>
+```
+📊 ACTIVE RULES
+
+ALWAYS-APPLIED RULES:
+- 000-memory-bank-core.mdc (Critical memory system operations)
+- 010-workflow-modes.mdc (Plan/Act mode implementation)
+- 060-platform-awareness.mdc (OS-specific adaptations)
+
+AUTO-ATTACHED RULES:
+- 1000-javascript.mdc (Active for *.js files)
+- 2000-react.mdc (Active for *.tsx files)
+
+EXPLICITLY REFERENCED RULES:
+- creative-phase-examples.mdc (Referenced for current design task)
+```
+    </template>
+  </content>
+</details>
+
+<details>
+  <section-name>RULE TRACING</section-name>
+  <content>
+    <step>Rule location and filename</step>
+    <step>Activation trigger (always-applied, glob match, or explicit reference)</step>
+    <step>Current application status (active/inactive)</step>
+    <step>Most relevant sections for current context</step>
+    <step>Any conflicts with other rules</step>
+  </content>
+</details>
+
+<details>
+  <section-name>GLOB PATTERN ANALYSIS</section-name>
+  <content>
+    <step>Interpret the pattern and explain its matching logic</step>
+    <step>List example files that would match</step>
+    <step>Identify potential performance issues</step>
+    <step>Suggest optimizations if applicable</step>
+  </content>
+</details>
+
+<details>
+  <section-name>CONFLICT DETECTION</section-name>
+  <content>
+    <step>Identify rules with overlapping scopes</step>
+    <step>Highlight contradictory instructions</step>
+    <step>Explain the precedence rules being applied</step>
+    <step>Suggest resolution approaches</step>
+  </content>
+</details>

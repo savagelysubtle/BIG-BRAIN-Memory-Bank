@@ -1,0 +1,485 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN verification fails PERFORM recovery operations to restore memory bank integrity
+globs: ["**/*.md", "**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** The Error Recovery Protocols provide systematic approaches to detect, diagnose, and correct integrity issues in the Memory Bank, ensuring continuous operation even when verification fails.
+
+<version>1.0.0</version>
+
+<context>
+  This rule establishes the Error Recovery Protocols that handle verification failures in the Memory Bank. Since BIG BRAIN's operation depends entirely on a functioning Memory Bank, the ability to recover from integrity issues is critical. These protocols provide systematic approaches to detect, diagnose, and repair various types of file and consistency failures, ensuring that the Memory Bank can be restored to operational status.
+</context>
+
+<requirements>
+  <requirement>Detect and categorize verification failures</requirement>
+  <requirement>Diagnose root causes of integrity issues</requirement>
+  <requirement>Implement appropriate recovery strategies based on error type</requirement>
+  <requirement>Restore Memory Bank to operational state</requirement>
+  <requirement>Document recovery actions and underlying issues</requirement>
+  <requirement>Minimize information loss during recovery</requirement>
+</requirements>
+
+<details>
+  <section-name>ERROR CLASSIFICATION</section-name>
+  <content>
+    Recovery protocols categorize errors into these classes:
+
+    1. **Structural Errors**
+       - Missing required files
+       - Corrupted file format
+       - Invalid markdown structure
+       - Improperly formatted sections
+
+    2. **Content Errors**
+       - Incomplete information
+       - Corrupted content
+       - Invalid references
+       - Semantic inconsistencies
+
+    3. **Consistency Errors**
+       - Contradictory information
+       - Version mismatches
+       - Temporal inconsistencies
+       - Relationship misalignments
+
+    4. **System Errors**
+       - File system access issues
+       - Permission problems
+       - Environment configuration errors
+       - Resource constraints
+
+    Each error class has specialized diagnostics and recovery approaches.
+  </content>
+</details>
+
+<details>
+  <section-name>DIAGNOSTIC PROCEDURES</section-name>
+  <content>
+    For each error class, specific diagnostic procedures identify the root cause:
+
+    **Structural Diagnostics**
+    - File existence verification
+    - Format validation against templates
+    - Section structure analysis
+    - XML/MDC parsing validation
+
+    **Content Diagnostics**
+    - Required field completeness check
+    - Content integrity validation
+    - Reference resolution attempts
+    - Semantic coherence analysis
+
+    **Consistency Diagnostics**
+    - Cross-reference validation
+    - Version chain analysis
+    - Temporal sequence verification
+    - Relationship graph validation
+
+    **System Diagnostics**
+    - File system access testing
+    - Permission verification
+    - Environment variable validation
+    - Resource availability assessment
+
+    Diagnostics combine automated checks with heuristic analysis to identify specific failure points.
+  </content>
+</details>
+
+<details>
+  <section-name>RECOVERY STRATEGIES</section-name>
+  <content>
+    Based on error classification and diagnostics, these recovery strategies are applied:
+
+    1. **Reconstruction**
+       - Rebuild missing files from templates
+       - Regenerate sections from available information
+       - Restore structure based on schema
+       - Re-create missing content from context
+
+    2. **Reconciliation**
+       - Resolve contradictions using priority rules
+       - Align inconsistent information
+       - Harmonize version mismatches
+       - Correct relationship errors
+
+    3. **Repair**
+       - Fix format errors
+       - Correct malformed content
+       - Update broken references
+       - Address content corruption
+
+    4. **Reconfiguration**
+       - Adjust file system permissions
+       - Modify environment settings
+       - Allocate additional resources
+       - Create alternative access paths
+
+    Strategies employ progressive approaches, starting with minimally invasive methods before more disruptive interventions.
+  </content>
+</details>
+
+<details>
+  <section-name>RECOVERY PROCESS</section-name>
+  <content>
+    The recovery process follows this sequence:
+
+    1. **Error Detection**
+       - Verification system identifies failure
+       - Error is classified by type and severity
+       - Affected components are isolated
+       - Initial impact assessment performed
+
+    2. **Diagnostic Phase**
+       - Specific diagnostic procedures run
+       - Root cause identified
+       - Impact scope determined
+       - Recovery options evaluated
+
+    3. **Strategy Selection**
+       - Optimal recovery approach chosen
+       - Required resources identified
+       - Recovery plan formulated
+       - Success criteria defined
+
+    4. **Implementation**
+       - Recovery actions executed
+       - Progress monitored
+       - Intermediate validations performed
+       - Adjustments made as needed
+
+    5. **Verification**
+       - Recovered system verified
+       - Integrity checks performed
+       - Consistency validated
+       - Operation confirmed
+
+    6. **Documentation**
+       - Recovery actions recorded
+       - Root cause documented
+       - Preventive measures identified
+       - Recovery assessment completed
+
+    This process ensures systematic handling of all verification failures.
+  </content>
+</details>
+
+<details>
+  <section-name>RECOVERY TEMPLATES</section-name>
+  <content>
+    The system maintains templates for recovery:
+
+    **File Templates**
+    - Core memory file templates (projectbrief.md, systemPatterns.md, etc.)
+    - Section templates for common components
+    - Structure templates for organized information
+    - Format templates for consistent presentation
+
+    **Content Templates**
+    - Standard descriptions of system components
+    - Common architecture patterns
+    - Typical workflow descriptions
+    - Default configuration settings
+
+    **Relationship Templates**
+    - Standard component relationships
+    - Common dependency patterns
+    - Typical information flow structures
+    - Default organizational hierarchies
+
+    Templates provide foundations for reconstruction while preserving critical structures.
+  </content>
+</details>
+
+<details>
+  <section-name>PRIORITY RULES</section-name>
+  <content>
+    When reconciling contradictions, these priority rules apply:
+
+    1. **Temporal Priority**
+       - More recent information generally prevails
+       - Exception: core architecture fundamentals have higher stability
+
+    2. **Specificity Priority**
+       - More detailed information overrides general statements
+       - Exception: when specific details contradict system-wide patterns
+
+    3. **Source Priority**
+       - systemPatterns.md overrides other sources for architecture
+       - techContext.md is authoritative for technology decisions
+       - projectbrief.md is primary for requirements and goals
+
+    4. **Consistency Priority**
+       - Information consistent with multiple sources prevails
+       - Isolated contradictions yield to consensus information
+
+    Priority rules are applied contextually based on specific contradiction type.
+  </content>
+</details>
+
+<details>
+  <section-name>PROGRESSIVE RECOVERY</section-name>
+  <content>
+    Recovery implements a progressive approach:
+
+    1. **Level 1: Non-Invasive Recovery**
+       - Format corrections
+       - Reference updates
+       - Missing section addition
+       - Structure alignment
+
+    2. **Level 2: Partial Reconstruction**
+       - Section rebuilding
+       - Content regeneration from context
+       - Inconsistency resolution
+       - Reference graph repair
+
+    3. **Level 3: Major Reconstruction**
+       - File recreation
+       - Comprehensive consistency resolution
+       - System-wide alignment
+       - Deep relationship rebuilding
+
+    4. **Level 4: Emergency Restoration**
+       - Core functioning restoration
+       - Minimal viable Memory Bank
+       - Essential references only
+       - User-guided reconstruction
+
+    Each level is attempted only if less invasive approaches are insufficient.
+  </content>
+</details>
+
+<details>
+  <section-name>RECOVERY REPORTING</section-name>
+  <content>
+    Recovery actions are documented in this format:
+
+    ```
+    ## 🔄 Recovery Report
+
+    ### Error Summary
+    - Error type: [Structural/Content/Consistency/System]
+    - Severity: [Critical/High/Medium/Low]
+    - Affected components: [List of affected files/sections]
+    - Root cause: [Identified cause of the issue]
+
+    ### Recovery Actions
+    - Recovery level: [1-4]
+    - Strategy applied: [Reconstruction/Reconciliation/Repair/Reconfiguration]
+    - Actions taken:
+      1. [Specific action description]
+      2. [Specific action description]
+      3. [Specific action description]
+
+    ### Results
+    - Recovery status: [Complete/Partial/Failed]
+    - Remaining issues: [If any]
+    - Information preservation: [Percentage/assessment]
+    - Verification status: [Pass/Conditional/Fail]
+
+    ### Prevention
+    - Contributing factors: [What led to the issue]
+    - Preventive measures: [How to prevent recurrence]
+    - Recommended follow-up: [Additional actions needed]
+    ```
+
+    This reporting ensures transparency and provides context for recovery decisions.
+  </content>
+</details>
+
+<details>
+  <section-name>CATASTROPHIC RECOVERY</section-name>
+  <content>
+    For extreme scenarios where multiple critical files are compromised:
+
+    1. **Core Preservation**
+       - Identify any intact memory components
+       - Secure remaining valid information
+       - Create integrity-verified backup
+
+    2. **Foundational Restoration**
+       - Restore core file structures
+       - Rebuild essential frameworks
+       - Reestablish critical relationships
+
+    3. **Guided Reconstruction**
+       - Progressive rebuilding with user input
+       - Context-based content restoration
+       - Pattern-based relationship rebuilding
+
+    4. **Validation Chain**
+       - Systematic verification of restored elements
+       - Incremental expansion of verified sections
+       - Relationship consistency verification
+
+    Catastrophic recovery emphasizes preserving system function while transparently documenting limitations.
+  </content>
+</details>
+
+<details>
+  <section-name>USER INTERACTION</section-name>
+  <content>
+    During recovery, user interaction follows these patterns:
+
+    1. **Notification**
+       - Clear error reporting
+       - Impact assessment
+       - Recovery options presentation
+
+    2. **Guidance Requests**
+       - Information verification
+       - Decision point consultation
+       - Preference clarification
+
+    3. **Progress Updates**
+       - Recovery stage reporting
+       - Action summaries
+       - Success indicators
+
+    4. **Completion Report**
+       - Final recovery status
+       - Remaining limitations
+       - Follow-up recommendations
+
+    Interaction is designed to be informative without overwhelming, providing appropriate detail while focusing on restoration progress.
+  </content>
+</details>
+
+<details>
+  <section-name>ERROR PREVENTION</section-name>
+  <content>
+    Recovery includes preventive components:
+
+    1. **Pattern Recognition**
+       - Identify recurring error patterns
+       - Analyze contributing factors
+       - Document vulnerability patterns
+
+    2. **Strengthening Measures**
+       - Enhance verification checks
+       - Implement additional validations
+       - Create more robust templates
+
+    3. **Process Improvements**
+       - Document best practices
+       - Refine update procedures
+       - Improve consistency checking
+
+    4. **Knowledge Integration**
+       - Update recovery templates
+       - Enhance diagnostic procedures
+       - Refine priority rules
+
+    Prevention ensures that recovery knowledge improves system resilience over time.
+  </content>
+</details>
+
+<details>
+  <section-name>RECOVERY EXAMPLE</section-name>
+  <content>
+    ```
+    ## 🔄 Recovery Report
+
+    ### Error Summary
+    - Error type: Consistency
+    - Severity: High
+    - Affected components:
+      - systemPatterns.md:Architecture
+      - techContext.md:Components
+      - main.mdc:System
+    - Root cause: Version mismatch between architecture updates and implementation references
+
+    ### Recovery Actions
+    - Recovery level: 2
+    - Strategy applied: Reconciliation
+    - Actions taken:
+      1. Analyzed version history to identify correct sequence
+      2. Compared detailed implementation with architecture models
+      3. Updated techContext.md component references to align with systemPatterns.md
+      4. Added version reference to main.mdc system section
+      5. Verified reference consistency across all affected files
+
+    ### Results
+    - Recovery status: Complete
+    - Remaining issues: None
+    - Information preservation: 100% (reconciliation only)
+    - Verification status: Pass
+
+    ### Prevention
+    - Contributing factors: Architecture updated without propagating changes to implementation references
+    - Preventive measures:
+      - Added explicit version linking between architecture and implementation
+      - Enhanced consistency checks for component references
+    - Recommended follow-up: Review update procedure to ensure cross-file updates
+    ```
+
+    This example shows the recovery process for a consistency error affecting multiple components.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH VERIFICATION FRAMEWORK</section-name>
+  <content>
+    Error recovery integrates with the verification framework:
+
+    1. **Detection Flow**
+       - Verification process identifies failures
+       - Failures trigger appropriate diagnostic procedures
+       - Diagnostics inform recovery strategy selection
+
+    2. **Feedback Loop**
+       - Recovery actions address verification failures
+       - Post-recovery verification validates results
+       - Verification results guide additional recovery if needed
+
+    3. **Knowledge Capture**
+       - Verification patterns inform template improvements
+       - Recovery experiences enhance verification checks
+       - Both processes contribute to system resilience
+
+    This integration ensures coordinated operation of the entire Enhanced Verification Framework.
+  </content>
+</details>
+
+<details>
+  <section-name>ADAPTATION TO COMPLEXITY</section-name>
+  <content>
+    Recovery strategies adapt to task complexity:
+
+    **Level 1 (Simple)**
+    - Focus on task-critical components
+    - Basic structural repairs
+    - Essential consistency restoration
+
+    **Level 2 (Moderate)**
+    - Extended component recovery
+    - Relationship repairs for key connections
+    - Broader consistency reconciliation
+
+    **Level 3 (Complex)**
+    - Comprehensive system recovery
+    - Complete relationship graph restoration
+    - Full consistency verification
+
+    **Level 4 (Critical)**
+    - Maximum information preservation
+    - Deep semantic analysis
+    - Cross-system verification
+    - Extended recovery documentation
+
+    Recovery depth increases with task complexity to ensure appropriate restoration of critical components.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial implementation of error recovery protocols |

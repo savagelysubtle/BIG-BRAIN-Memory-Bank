@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "savagelysubtle"
+    given-names: ""
+title: "BIG BRAIN Memory Bank System"
+version: 1.0.0
+date-released: 2024-07-25
+url: "https://github.com/savagelysubtle/BIG-BRAIN-Memory-Bank"
+abstract: >
+  The BIG BRAIN Memory Bank System is a comprehensive framework that solves
+  the AI amnesia problem by creating a structured external memory for AI
+  assistants. This system ensures that critical project context is maintained
+  across sessions, significantly enhancing productivity and reducing
+  repetitive explanations.
+keywords:
+  - ai-assistant
+  - memory-bank
+  - cursor-ide
+  - documentation-framework
+  - knowledge-management
+license: MIT
+references:
+  - type: software
+    authors:
+      - family-names: "ipenywis"
+    title: "Cursor Memory Bank Gist"
+    url: "https://gist.github.com/ipenywis/1bdb541c3a612dbac4a14e1e3f4341ab"
+  - type: software
+    authors:
+      - family-names: "vanzan01"
+    title: "Cursor Memory Bank"
+    url: "https://github.com/vanzan01/cursor-memory-bank"

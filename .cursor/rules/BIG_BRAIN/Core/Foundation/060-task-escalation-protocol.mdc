@@ -1,0 +1,279 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN task complexity increases ENSURE appropriate escalation to higher complexity framework
+globs: ["**/*.md", "**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** The Task Escalation Protocol provides a structured process for recognizing, assessing, and managing tasks that grow beyond their initial complexity level.
+
+<version>1.0.0</version>
+
+<context>
+  This rule establishes the process for recognizing and handling tasks that exceed their initially assessed complexity. As work progresses, new information may reveal that a task requires greater rigor, planning, or verification than initially thought. The escalation protocol ensures that the appropriate complexity level framework is applied when needed, preventing issues that arise from mismatched process rigor.
+</context>
+
+<requirements>
+  <requirement>Monitor for escalation triggers during task execution</requirement>
+  <requirement>Assess complexity shift when triggers are detected</requirement>
+  <requirement>Execute structured escalation when needed</requirement>
+  <requirement>Document escalation decisions and rationale</requirement>
+  <requirement>Update task tracking to reflect new complexity level</requirement>
+</requirements>
+
+<details>
+  <section-name>ESCALATION TRIGGERS</section-name>
+  <content>
+    Watch for these indicators that a task may need complexity escalation:
+
+    **Scope Expansion Triggers**
+    - Task affects more components than initially identified
+    - Implementation requires changes to core architecture
+    - Additional stakeholders or systems are impacted
+    - Task split reveals interdependencies across systems
+
+    **Risk Elevation Triggers**
+    - Previously unidentified security implications emerge
+    - Implementation affects critical system performance
+    - Task touches sensitive data or user-facing operations
+    - Changes potentially break backward compatibility
+
+    **Dependency Triggers**
+    - New external dependencies discovered during implementation
+    - Tasks reveals cascading dependencies across components
+    - Timing dependencies with other work become evident
+    - Environmental dependencies not initially identified
+
+    **Technical Complexity Triggers**
+    - Implementation requires specialized knowledge beyond initial assessment
+    - Solution requires novel approaches not used previously
+    - Edge cases multiply beyond initial estimates
+    - Performance or scale considerations escalate
+
+    Any of these triggers should prompt an escalation assessment.
+  </content>
+</details>
+
+<details>
+  <section-name>ESCALATION ASSESSMENT</section-name>
+  <content>
+    When escalation triggers are detected, perform this assessment:
+
+    ```
+    ## Complexity Escalation Assessment
+
+    ### Current Complexity: Level [X]
+
+    ### Escalation Triggers Observed
+    - [Trigger 1]
+    - [Trigger 2]
+    - [Trigger 3]
+
+    ### Impact Analysis
+    - **Scope Impact**: [Description]
+    - **Risk Impact**: [Description]
+    - **Dependency Impact**: [Description]
+    - **Technical Impact**: [Description]
+
+    ### Reassessed Complexity Factors
+    - **Scope**: Level [1-4] - [Justification]
+    - **Risk**: Level [1-4] - [Justification]
+    - **Dependencies**: Level [1-4] - [Justification]
+    - **Technical Difficulty**: Level [1-4] - [Justification]
+
+    ### Recommended Complexity Level: [Y]
+
+    ### Escalation Rationale
+    [Explanation of why escalation is necessary]
+    ```
+
+    The highest level among the reassessed factors determines the new complexity level.
+  </content>
+</details>
+
+<details>
+  <section-name>ESCALATION PROCESS</section-name>
+  <content>
+    When escalation is confirmed, follow this process:
+
+    1. **Pause Implementation**
+       - Halt active implementation work
+       - Complete any work-in-progress to stable point
+       - Document current state and progress
+
+    2. **Update Task Framework**
+       - Elevate to appropriate complexity level framework
+       - Apply additional process requirements
+       - Set up enhanced tracking if needed
+
+    3. **Review Plan**
+       - Reassess implementation approach
+       - Consider entering creative phase for redesign
+       - Update implementation plan for new complexity
+
+    4. **Update Documentation**
+       - Document escalation decision in activeContext.md
+       - Update progress.md with new complexity assessment
+       - Adjust section checkpoints as needed
+
+    5. **Resume Implementation**
+       - Continue work under new complexity framework
+       - Apply appropriate verification steps
+       - Track progress with updated section structure
+
+    This structured approach ensures smooth transition to the appropriate framework.
+  </content>
+</details>
+
+<details>
+  <section-name>DOCUMENTATION UPDATES</section-name>
+  <content>
+    Document the escalation in activeContext.md:
+
+    ```markdown
+    ## Task Escalation Notice
+
+    This task has been escalated from Complexity Level [X] to Level [Y].
+
+    **Escalation Triggers**:
+    - [Key trigger 1]
+    - [Key trigger 2]
+    - [Key trigger 3]
+
+    **Rationale**: [Brief explanation of why escalation was necessary]
+
+    **Impact**:
+    - Process now includes [new process elements]
+    - Verification expanded to include [additional verification]
+    - Documentation enhanced with [additional documentation]
+
+    **Current Status**:
+    Implementation paused at [specific point].
+    Resuming with [specific next steps] under Level [Y] framework.
+    ```
+
+    This ensures transparency about the escalation decision.
+  </content>
+</details>
+
+<details>
+  <section-name>FRAMEWORK ADDITIONS</section-name>
+  <content>
+    When escalating, apply these framework elements based on new level:
+
+    **Level 1 → Level 2**
+    - Add structured verification steps
+    - Enhance documentation detail
+    - Add basic insight collection
+
+    **Level 2 → Level 3**
+    - Implement comprehensive section tracking
+    - Add creative phase for design review
+    - Enhance verification with test cases
+    - Document edge cases explicitly
+
+    **Level 3 → Level 4**
+    - Implement formal creative phase with multiple approaches
+    - Enhance tracking with sub-sections
+    - Add comprehensive risk analysis
+    - Implement phased validation gates
+    - Document system-wide implications
+
+    These additions ensure appropriate rigor for the new complexity level.
+  </content>
+</details>
+
+<details>
+  <section-name>DE-ESCALATION CONSIDERATION</section-name>
+  <content>
+    In rare cases, a task may be over-categorized, and de-escalation may be appropriate:
+
+    **De-escalation Triggers**
+    - Implementation proves simpler than anticipated
+    - Dependencies resolve more easily than expected
+    - Scope narrows based on implementation decisions
+    - Risk factors mitigated during initial implementation
+
+    **De-escalation Process**
+    1. Document why initial assessment was higher than needed
+    2. Identify which process elements can be simplified
+    3. Maintain appropriate verification level despite simplification
+    4. Update documentation to reflect de-escalation
+
+    De-escalation should maintain core quality while removing unnecessary process.
+  </content>
+</details>
+
+<details>
+  <section-name>EXAMPLE ESCALATION</section-name>
+  <content>
+    ```
+    ## Complexity Escalation Assessment
+
+    ### Current Complexity: Level 2
+
+    ### Escalation Triggers Observed
+    - Implementation affects shared authentication service
+    - Integration with third-party API requires rate limiting
+    - Edge cases for internationalization not initially considered
+
+    ### Impact Analysis
+    - **Scope Impact**: Now affects authentication flow for all users
+    - **Risk Impact**: Authentication changes could impact all login flows
+    - **Dependency Impact**: External API integration adds rate limits
+    - **Technical Impact**: Internationalization edge cases increase complexity
+
+    ### Reassessed Complexity Factors
+    - **Scope**: Level 3 - Affects multiple components across system
+    - **Risk**: Level 3 - Impacts critical auth flow for all users
+    - **Dependencies**: Level 2 - Manageable external dependencies
+    - **Technical Difficulty**: Level 2 - Moderate implementation complexity
+
+    ### Recommended Complexity Level: 3
+
+    ### Escalation Rationale
+    Task initially appeared to only affect profile settings, but investigation revealed direct impact on core authentication flow and session management. The scope and risk are significantly higher than initially assessed.
+    ```
+
+    This example shows a proper assessment leading to escalation from Level 2 to Level 3.
+  </content>
+</details>
+
+<details>
+  <section-name>SEAMLESS CONTINUATION</section-name>
+  <content>
+    When escalating mid-task, ensure seamless continuation:
+
+    1. **Preserve Valid Work**
+       - Review completed work for validity under new complexity
+       - Document any sections that need rework
+       - Maintain completed verification that remains valid
+
+    2. **Restructure Remaining Work**
+       - Break remaining work into appropriate sections
+       - Apply new framework to upcoming work
+       - Add verification steps as needed
+
+    3. **Communicate Transition**
+       - Clearly mark transition point in documentation
+       - Explain framework changes in activeContext.md
+       - Ensure tracking reflects both pre and post escalation work
+
+    4. **New Section Checkpoint**
+       - Create clear checkpoint at escalation point
+       - Structure new sections with appropriate detail
+       - Apply enhanced verification to new sections
+
+    This approach minimizes rework while ensuring appropriate rigor.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial implementation of task escalation protocol |

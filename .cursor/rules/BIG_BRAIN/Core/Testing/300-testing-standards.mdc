@@ -1,0 +1,449 @@
+---
+description: WHEN implementing or validating BIG BRAIN components APPLY systematic testing and verification
+globs: ["**/*.mdc", "**/*.md"]
+alwaysApply: true
+---
+
+> **TL;DR:** This rule establishes comprehensive testing standards for BIG BRAIN components, ensuring reliable operation through structured verification approaches, consistency validation, and performance evaluation.
+
+<version>1.0.0</version>
+
+<context>
+  Robust testing is essential for ensuring the reliability, correctness, and performance of the BIG BRAIN Memory Bank system. Since memory resets create unique challenges for maintaining operational consistency, systematic testing approaches are needed to verify component behavior, integration integrity, and overall system performance.
+</context>
+
+<requirements>
+  <requirement>Define standardized testing approaches for all component types</requirement>
+  <requirement>Establish verification procedures for different complexity levels</requirement>
+  <requirement>Provide guidelines for consistency and integration testing</requirement>
+  <requirement>Specify performance evaluation criteria for memory operations</requirement>
+  <requirement>Include testing documentation standards</requirement>
+  <requirement>Ensure testing adapts to the unique challenges of memory resets</requirement>
+</requirements>
+
+<details>
+  <section-name>TESTING CATEGORIES</section-name>
+  <content>
+    BIG BRAIN testing encompasses these categories:
+
+    1. **Component Verification**
+       - Individual component functionality testing
+       - Interface contract validation
+       - Implementation correctness
+       - Edge case handling
+       - Documentation accuracy
+
+    2. **Integration Testing**
+       - Component interaction validation
+       - Cross-component dependencies
+       - Information flow verification
+       - Interface compatibility
+       - Combined functionality
+
+    3. **Consistency Validation**
+       - Cross-file consistency
+       - Terminology alignment
+       - Pattern adherence
+       - Standard compliance
+       - Version compatibility
+
+    4. **Memory Persistence Verification**
+       - Memory reset survival testing
+       - Knowledge retention verification
+       - Information retrieval accuracy
+       - Context restoration correctness
+       - Transition consistency
+
+    5. **Performance Evaluation**
+       - Response time measurement
+       - Memory efficiency assessment
+       - Context window utilization
+       - Operational scalability
+       - Resource optimization
+
+    Each testing category requires specific approaches, tools, and verification criteria.
+  </content>
+</details>
+
+<details>
+  <section-name>COMPONENT VERIFICATION</section-name>
+  <content>
+    Individual components must be verified using:
+
+    1. **Functionality Testing**
+       - Verify each requirement is implemented
+       - Test for correct behavior in normal conditions
+       - Validate outputs match expected results
+       - Confirm side effects are as intended
+       - Check that operations occur in correct sequence
+
+    2. **Edge Case Testing**
+       - Test boundary conditions
+       - Verify error handling
+       - Test with empty or minimal inputs
+       - Test with maximum allowed inputs
+       - Check handling of malformed inputs
+
+    3. **Contract Validation**
+       - Verify component adheres to its interface
+       - Test all exposed operations
+       - Confirm requirements are satisfied
+       - Validate documentation accuracy
+       - Check version compatibility
+
+    4. **Implementation Inspection**
+       - Review for logic correctness
+       - Verify algorithm implementation
+       - Check for pattern adherence
+       - Confirm style consistency
+       - Ensure documentation matches implementation
+
+    Component verification ensures each part works correctly in isolation.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION TESTING</section-name>
+  <content>
+    Component interactions must be verified through:
+
+    1. **Dependency Verification**
+       - Identify all component dependencies
+       - Verify correct version compatibility
+       - Test interaction between components
+       - Confirm information flow is correct
+       - Check for circular dependencies
+
+    2. **Interface Compatibility**
+       - Test all interface contracts between components
+       - Verify data format compatibility
+       - Confirm handling of all states
+       - Check error propagation
+       - Test boundary conditions at interfaces
+
+    3. **Workflow Validation**
+       - Test end-to-end workflows
+       - Verify correct component sequencing
+       - Confirm state transitions
+       - Check for timing issues
+       - Test parallel operations
+
+    4. **Data Flow Testing**
+       - Trace information through multiple components
+       - Verify data transformations
+       - Test data persistence between components
+       - Check reference integrity
+       - Validate complex data structures
+
+    Integration testing ensures components work together properly.
+  </content>
+</details>
+
+<details>
+  <section-name>CONSISTENCY VALIDATION</section-name>
+  <content>
+    System-wide consistency must be validated through:
+
+    1. **Cross-File Verification**
+       - Check for consistent terminology
+       - Verify cross-references are correct
+       - Test for contradictory information
+       - Confirm version alignment
+       - Check for duplicate information
+
+    2. **Pattern Compliance**
+       - Verify adherence to established patterns
+       - Test for consistent formatting
+       - Check structural consistency
+       - Confirm naming convention compliance
+       - Validate organization standard adherence
+
+    3. **Version Compatibility**
+       - Test for backward compatibility
+       - Verify forward compatibility provisions
+       - Check migration paths
+       - Confirm version number correctness
+       - Validate changelog accuracy
+
+    4. **Content Integrity**
+       - Check for information completeness
+       - Verify no orphaned references
+       - Test for broken links
+       - Confirm no contradictory guidance
+       - Check for outdated information
+
+    Consistency validation ensures the system functions coherently.
+  </content>
+</details>
+
+<details>
+  <section-name>MEMORY PERSISTENCE VERIFICATION</section-name>
+  <content>
+    Memory persistence across resets must be verified through:
+
+    1. **Reset Survival Testing**
+       - Perform pre-reset state capture
+       - Execute memory reset
+       - Verify state restoration
+       - Test for information preservation
+       - Check operational continuity
+
+    2. **Knowledge Retention**
+       - Verify critical information is preserved
+       - Test for contextual knowledge persistence
+       - Check decision rationale preservation
+       - Confirm historical information retention
+       - Validate progressive knowledge building
+
+    3. **Context Restoration**
+       - Test initialization procedures
+       - Verify context loading
+       - Check reference resolution
+       - Test cross-session continuity
+       - Validate state reconstruction
+
+    4. **Transition Verification**
+       - Test session termination procedures
+       - Verify Bedtime Protocol execution
+       - Confirm wakeup sequence correctness
+       - Check state transfer completeness
+       - Test for information loss during transitions
+
+    Memory persistence verification addresses BIG BRAIN's unique reset challenge.
+  </content>
+</details>
+
+<details>
+  <section-name>PERFORMANCE EVALUATION</section-name>
+  <content>
+    System performance must be evaluated through:
+
+    1. **Response Time Measurement**
+       - Measure initialization time
+       - Track operation response times
+       - Test complex query performance
+       - Measure recovery time after errors
+       - Check transition timing
+
+    2. **Memory Efficiency**
+       - Measure memory bank size
+       - Track growth over time
+       - Evaluate compression effectiveness
+       - Test with varying information volumes
+       - Check memory organization impact
+
+    3. **Context Window Utilization**
+       - Measure token usage efficiency
+       - Test information density impact
+       - Evaluate progressive disclosure effectiveness
+       - Check prioritization mechanism performance
+       - Measure reference system efficiency
+
+    4. **Scalability Assessment**
+       - Test with increasing rule counts
+       - Evaluate performance with growing memory bank
+       - Check handling of complex hierarchies
+       - Test with diverse file types
+       - Measure resource scaling
+
+    Performance evaluation ensures efficient system operation.
+  </content>
+</details>
+
+<details>
+  <section-name>TESTING DOCUMENTATION</section-name>
+  <content>
+    All testing activities must be documented:
+
+    1. **Test Plans**
+       - Define test objectives
+       - Specify test scenarios
+       - Document test environment
+       - List test data requirements
+       - Outline expected results
+
+    2. **Test Cases**
+       - Provide step-by-step procedures
+       - Include input data
+       - Document expected outcomes
+       - Specify verification criteria
+       - Note relevant dependencies
+
+    3. **Test Results**
+       - Record actual outcomes
+       - Document any deviations
+       - Capture performance metrics
+       - Note environmental factors
+       - Include test artifacts
+
+    4. **Issue Reports**
+       - Document found issues
+       - Specify reproduction steps
+       - Assess severity and impact
+       - Identify root causes
+       - Recommend corrective actions
+
+    5. **Test Summary**
+       - Provide overview of test coverage
+       - Summarize key results
+       - Highlight outstanding issues
+       - Include metrics and trends
+       - Make recommendations
+
+    Thorough documentation ensures testing knowledge persists across resets.
+  </content>
+</details>
+
+<details>
+  <section-name>COMPLEXITY ADAPTATION</section-name>
+  <content>
+    Testing rigor must adapt to component complexity:
+
+    **Level 1 (Simple)**
+    - Basic functionality verification
+    - Limited edge case testing
+    - Simple integration checks
+    - Minimal performance assessment
+    - Brief test documentation
+
+    **Level 2 (Moderate)**
+    - Standard functionality verification
+    - Key edge case testing
+    - Regular integration validation
+    - Basic performance evaluation
+    - Standard test documentation
+
+    **Level 3 (Complex)**
+    - Comprehensive functionality verification
+    - Extensive edge case testing
+    - Thorough integration validation
+    - Detailed performance analysis
+    - Complete test documentation
+
+    **Level 4 (Critical)**
+    - Exhaustive functionality verification
+    - Complete edge case coverage
+    - Rigorous integration testing
+    - Advanced performance profiling
+    - Comprehensive test documentation
+    - Formal review process
+
+    Complexity-based testing ensures appropriate rigor for each component.
+  </content>
+</details>
+
+<details>
+  <section-name>TEST DATA MANAGEMENT</section-name>
+  <content>
+    Test data must be managed systematically:
+
+    1. **Test Data Creation**
+       - Generate representative data sets
+       - Include normal, boundary, and error cases
+       - Create data for performance testing
+       - Develop consistency test cases
+       - Build memory persistence scenarios
+
+    2. **Test Data Organization**
+       - Categorize by test type
+       - Structure for easy access
+       - Version control test data
+       - Document data relationships
+       - Maintain test data integrity
+
+    3. **Reference Data**
+       - Maintain golden data sets
+       - Document expected results
+       - Create verification checkpoints
+       - Build comparison baselines
+       - Establish performance benchmarks
+
+    4. **Test Environment**
+       - Document environment configuration
+       - Specify initialization procedures
+       - Define clean state characteristics
+       - Describe reset procedures
+       - Maintain environment consistency
+
+    Proper test data management ensures reliable testing across sessions.
+  </content>
+</details>
+
+<details>
+  <section-name>MEMORY BANK INTEGRATION</section-name>
+  <content>
+    Testing activities integrate with memory bank:
+
+    1. **Test Results Recording**
+       - Document key test results in progress.md
+       - Update system status in activeContext.md
+       - Note performance metrics in techContext.md
+       - Record testing patterns in systemPatterns.md
+
+    2. **Issue Tracking**
+       - Document known issues
+       - Track resolution status
+       - Record workarounds
+       - Link to test evidence
+       - Update as issues are resolved
+
+    3. **Test Knowledge Preservation**
+       - Document testing approaches
+       - Record effective test strategies
+       - Preserve test case designs
+       - Maintain testing history
+       - Build testing knowledge base
+
+    Memory bank integration ensures testing knowledge persists despite resets.
+  </content>
+</details>
+
+<details>
+  <section-name>TESTING WORKFLOW</section-name>
+  <content>
+    Standard testing workflow includes:
+
+    1. **Planning Phase**
+       - Define test objectives
+       - Identify test scenarios
+       - Determine test approach
+       - Select testing techniques
+       - Create test plan
+
+    2. **Preparation Phase**
+       - Create test cases
+       - Prepare test data
+       - Set up test environment
+       - Establish baselines
+       - Create verification checklist
+
+    3. **Execution Phase**
+       - Run test cases
+       - Document results
+       - Verify outputs
+       - Record observations
+       - Track issues found
+
+    4. **Analysis Phase**
+       - Evaluate test results
+       - Identify patterns
+       - Analyze performance metrics
+       - Compare against baselines
+       - Make recommendations
+
+    5. **Reporting Phase**
+       - Summarize test results
+       - Document coverage achieved
+       - Report issues found
+       - Provide action recommendations
+       - Update memory bank
+
+    This structured approach ensures thorough testing and reliable outcomes.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                |
+| ------- | ---------- | --------- | -------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial testing standards implementation |

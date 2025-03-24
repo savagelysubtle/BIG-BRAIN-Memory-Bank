@@ -1,0 +1,113 @@
+%% BIG BRAIN Memory Bank 2.0 - Workflow Orchestration
+%% This diagram illustrates the workflow types and execution phases
+%% Version 1.0.0 (March 24, 2025)
+
+flowchart TB
+    %% Task entry point and complexity assessment
+    Start([Task Start]) --> TaskClass[Task Classification]
+    TaskClass --> Complexity{Assess<br>Complexity}
+
+    %% Complexity-based routing
+    Complexity -->|Level 1| Simple[Simple Task]
+    Complexity -->|Level 2| Moderate[Moderate Task]
+    Complexity -->|Level 3| Complex[Complex Task]
+    Complexity -->|Level 4| Critical[Critical Task]
+
+    %% Workflow type selection
+    TaskClass --> WorkflowSelect{Select<br>Workflow}
+
+    %% Workflow types
+    WorkflowSelect -->|Design/Strategy| PlanMode[Plan Mode]
+    WorkflowSelect -->|Implementation| ActMode[Act Mode]
+    WorkflowSelect -->|Evaluation| ReviewMode[Review Mode]
+    WorkflowSelect -->|Mixed| HybridMode[Hybrid Mode]
+
+    %% Plan Mode Workflow
+    subgraph PlanWorkflow[Plan Mode Workflow]
+        direction TB
+        P1[Initialization] --> P2[Context Loading]
+        P2 --> P3[Requirements Analysis]
+        P3 --> P4[Design Exploration]
+        P4 --> P5[Option Evaluation]
+        P5 --> P6[Documentation]
+        P6 --> P7[Verification]
+        P7 --> P8[Transition]
+    end
+
+    %% Act Mode Workflow
+    subgraph ActWorkflow[Act Mode Workflow]
+        direction TB
+        A1[Initialization] --> A2[Context Loading]
+        A2 --> A3[Task Planning]
+        A3 --> A4[Implementation]
+        A4 --> A5[Testing]
+        A5 --> A6[Documentation]
+        A6 --> A7[Verification]
+        A7 --> A8[Transition]
+    end
+
+    %% Review Mode Workflow
+    subgraph ReviewWorkflow[Review Mode Workflow]
+        direction TB
+        R1[Initialization] --> R2[Context Loading]
+        R2 --> R3[Review Planning]
+        R3 --> R4[Criteria Definition]
+        R4 --> R5[Evaluation]
+        R5 --> R6[Findings Documentation]
+        R6 --> R7[Recommendations]
+        R7 --> R8[Transition]
+    end
+
+    %% Hybrid Mode Workflow
+    subgraph HybridWorkflow[Hybrid Mode Workflow]
+        direction TB
+        H1[Initialization] --> H2[Context Loading]
+        H2 --> H3[Primary Mode Selection]
+        H3 --> H4[Task Breakdown]
+        H4 --> H5[Mode-Specific Execution]
+        H5 --> H6[Integration]
+        H6 --> H7[Verification]
+        H7 --> H8[Transition]
+    end
+
+    %% Connect workflow types to their workflows
+    PlanMode --> PlanWorkflow
+    ActMode --> ActWorkflow
+    ReviewMode --> ReviewWorkflow
+    HybridMode --> HybridWorkflow
+
+    %% Complexity influence on workflow execution
+    Simple -.->|Minimal Requirements| PlanWorkflow
+    Moderate -.->|Standard Requirements| PlanWorkflow
+    Complex -.->|Enhanced Requirements| PlanWorkflow
+    Critical -.->|Comprehensive Requirements| PlanWorkflow
+
+    Simple -.->|Minimal Verification| ActWorkflow
+    Moderate -.->|Standard Verification| ActWorkflow
+    Complex -.->|Enhanced Verification| ActWorkflow
+    Critical -.->|Comprehensive Verification| ActWorkflow
+
+    %% Workflow completion
+    PlanWorkflow -->|Complete| Update[Update Memory Bank]
+    ActWorkflow -->|Complete| Update
+    ReviewWorkflow -->|Complete| Update
+    HybridWorkflow -->|Complete| Update
+
+    Update --> End([Task Complete])
+
+    %% Define styles
+    classDef start fill:#d5e8d4,stroke:#82b366,stroke-width:1px,border-radius:8px
+    classDef process fill:#dae8fc,stroke:#6c8ebf,stroke-width:1px,border-radius:4px
+    classDef decision fill:#ffe6cc,stroke:#d79b00,stroke-width:1px,border-radius:10px
+    classDef complexity fill:#e1d5e7,stroke:#9673a6,stroke-width:1px,border-radius:4px
+    classDef workflow fill:#fff2cc,stroke:#d6b656,stroke-width:1px,border-radius:6px
+    classDef workflowBox fill:#f5f5f5,stroke:#666666,stroke-width:1px,border-radius:8px
+
+    %% Apply styles
+    class Start,End start
+    class TaskClass,Update process
+    class Complexity,WorkflowSelect decision
+    class Simple,Moderate,Complex,Critical complexity
+    class PlanMode,ActMode,ReviewMode,HybridMode workflow
+    class PlanWorkflow,ActWorkflow,ReviewWorkflow,HybridWorkflow workflowBox
+    class P1,P2,P3,P4,P5,P6,P7,P8,A1,A2,A3,A4,A5,A6,A7,A8,R1,R2,R3,R4,R5,R6,R7,R8,H1,H2,H3,H4,H5,H6,H7,H8 process

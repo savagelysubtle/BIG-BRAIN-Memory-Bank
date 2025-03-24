@@ -1,0 +1,285 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN referencing memory files ENSURE references are verified for accuracy and relevance
+globs: ["**/*.md", "**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** The Reference Verification System ensures all references to Memory Bank files are accurate, up-to-date, and relevant to the current context.
+
+<version>1.0.0</version>
+
+<context>
+  This rule establishes the framework for verifying references to Memory Bank files. Accurate references are critical for maintaining context between sessions, as BIG BRAIN's memory resets completely between sessions. The verification system ensures that referenced content exists, is current, and is contextually relevant to the task at hand.
+</context>
+
+<requirements>
+  <requirement>Verify existence of referenced files</requirement>
+  <requirement>Confirm recency of referenced information</requirement>
+  <requirement>Validate relevance to current task</requirement>
+  <requirement>Use structured reference format</requirement>
+  <requirement>Maintain reference traceability</requirement>
+</requirements>
+
+<details>
+  <section-name>REFERENCE FORMAT</section-name>
+  <content>
+    Use these structured formats for memory references:
+
+    **In-line References**
+    ```
+    According to [ActiveContext:Current Focus], the priority is...
+    The authentication flow described in [SystemPatterns:Auth Flow] shows...
+    As noted in [TechContext:Deployment], the staging environment...
+    ```
+
+    **Block References**
+    ```
+    > **Reference**: [FileName:Section]
+    >
+    > Relevant content from referenced file...
+    ```
+
+    **Table References**
+    ```
+    | Reference | Key Information | Relevance |
+    |-----------|----------------|-----------|
+    | [File1:Section] | Summary of info | How it applies |
+    | [File2:Section] | Summary of info | How it applies |
+    ```
+
+    These consistent formats enable systematic verification.
+  </content>
+</details>
+
+<details>
+  <section-name>VERIFICATION PROCESS</section-name>
+  <content>
+    For each reference, perform this verification process:
+
+    1. **Existence Check**
+       - Confirm referenced file exists in Memory Bank
+       - Verify referenced section exists within file
+       - If section doesn't exist, find closest match
+
+    2. **Recency Check**
+       - Check last modification date of referenced file
+       - Verify content hasn't been superseded by newer information
+       - Note if reference predates significant system changes
+
+    3. **Relevance Check**
+       - Verify information applies to current context
+       - Confirm reference addresses current task needs
+       - Assess if more specific/relevant references exist
+
+    4. **Accuracy Check**
+       - Verify quoted/summarized content matches source
+       - Confirm interpretation aligns with original meaning
+       - Check for contextual factors that might alter meaning
+
+    5. **Extended Context**
+       - Check for related information in same file
+       - Identify cross-references to other relevant files
+       - Note dependencies or prerequisites for understanding
+
+    Document verification status using verification indicators.
+  </content>
+</details>
+
+<details>
+  <section-name>VERIFICATION INDICATORS</section-name>
+  <content>
+    Mark reference verification status with these indicators:
+
+    ```
+    [✓] - Fully verified (exists, current, relevant)
+    [⚠️] - Partially verified (exists but with caveats)
+    [⏳] - Pending verification
+    [❌] - Verification failed (doesn't exist or invalid)
+    ```
+
+    For partially verified references, include specific caution notes:
+
+    ```
+    [⚠️:outdated] - Information may be outdated
+    [⚠️:partial] - Reference is partially relevant
+    [⚠️:ambiguous] - Reference could be interpreted multiple ways
+    [⚠️:conflict] - Conflicts with other verified information
+    ```
+
+    These indicators ensure transparency about reference quality.
+  </content>
+</details>
+
+<details>
+  <section-name>REFERENCE TABLES</section-name>
+  <content>
+    For complex tasks, maintain reference tables at the start of work:
+
+    ```
+    ## 📚 Reference Verification Table
+
+    | Reference ID | File:Section | Verification | Last Updated | Status Note |
+    |--------------|--------------|--------------|--------------|-------------|
+    | REF-1 | [ActiveContext:Current Focus] | [✓] | 2025-03-22 | Current priority verification |
+    | REF-2 | [SystemPatterns:Auth Flow] | [⚠️:outdated] | 2025-01-15 | Pre-dates recent auth changes |
+    | REF-3 | [TechContext:Deployment] | [✓] | 2025-03-20 | Verified deployment process |
+    ```
+
+    This table provides quick reference to verification status of all sources.
+  </content>
+</details>
+
+<details>
+  <section-name>REFERENCE RESOLUTION</section-name>
+  <content>
+    When verification issues are detected, follow this resolution process:
+
+    1. **For Missing References**
+       - Search for alternative locations of information
+       - Check for renamed or restructured files
+       - Consider if information needs to be recreated
+
+    2. **For Outdated References**
+       - Locate most recent version of information
+       - Document superseding information
+       - Update references to point to current sources
+
+    3. **For Irrelevant References**
+       - Identify more appropriate references
+       - Search for context-specific information
+       - Create new documentation if needed
+
+    4. **For Conflicting References**
+       - Identify source of conflict
+       - Determine which reference takes precedence
+       - Document resolution approach
+
+    Document all resolution actions in the reference table.
+  </content>
+</details>
+
+<details>
+  <section-name>VERIFICATION DEPTH</section-name>
+  <content>
+    Adjust verification depth based on complexity level:
+
+    - **Level 1 (Low Complexity)**
+      - Basic existence check
+      - Cursory relevance assessment
+      - Minimal documentation of verification
+
+    - **Level 2 (Medium Complexity)**
+      - Full verification of primary references
+      - Basic documentation of verification
+      - Simple reference table as needed
+
+    - **Level 3 (High Complexity)**
+      - Comprehensive verification of all references
+      - Documented verification status
+      - Complete reference table with notes
+
+    - **Level 4 (Critical Complexity)**
+      - Exhaustive verification with multiple cross-checks
+      - Documented verification status with detailed notes
+      - Comprehensive reference table with dependency mapping
+      - Resolution of all verification issues
+
+    Verification depth should match the task complexity level.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH MEMORY UPDATES</section-name>
+  <content>
+    Connect reference verification with memory updates:
+
+    1. **Reference-Driven Updates**
+       - When verification reveals outdated information, flag for update
+       - Document update requirements in activeContext.md
+       - Prioritize updates based on reference frequency
+
+    2. **Update Propagation**
+       - When Memory Bank files are updated, identify affected references
+       - Update or invalidate references as appropriate
+       - Document propagation in version history
+
+    3. **Creation-Time Verification**
+       - When creating new Memory Bank content, verify all references
+       - Establish initial verification status
+       - Document verification in creation metadata
+
+    This integration ensures references and source files stay synchronized.
+  </content>
+</details>
+
+<details>
+  <section-name>EXAMPLE APPLICATION</section-name>
+  <content>
+    ```
+    ## Authentication System Update Task
+
+    ### Reference Verification
+
+    | Reference ID | File:Section | Verification | Last Updated | Status Note |
+    |--------------|--------------|--------------|--------------|-------------|
+    | REF-1 | [SystemPatterns:Auth Flow] | [⚠️:outdated] | 2025-01-15 | Pre-dates OAuth implementation |
+    | REF-2 | [TechContext:Security] | [✓] | 2025-03-18 | Current security requirements |
+    | REF-3 | [ActiveContext:Current Focus] | [✓] | 2025-03-22 | Verified task priority |
+
+    ### Reference Resolution
+
+    **REF-1 Resolution:**
+    - Updated authentication flow found in [SystemDesign/Auth/oauth-flow.md]
+    - Will use updated flow diagram for implementation
+    - Will flag SystemPatterns:Auth Flow for update after implementation
+
+    ### Implementation Approach
+
+    Based on [✓ TechContext:Security], we need to implement OAuth 2.0 with the following requirements:
+
+    1. Support for authorization code flow
+    2. Refresh token rotation
+    3. PKCE implementation for mobile clients
+
+    This aligns with the current focus from [✓ ActiveContext:Current Focus] which prioritizes
+    "enhancing security of the authentication system."
+    ```
+
+    This example demonstrates proper reference verification and resolution.
+  </content>
+</details>
+
+<details>
+  <section-name>BEDTIME PROTOCOL INTEGRATION</section-name>
+  <content>
+    During Bedtime Protocol execution, incorporate reference verification:
+
+    1. **Verification Audit**
+       - Review all references created during the session
+       - Verify final status of all references
+       - Resolve any outstanding verification issues
+
+    2. **Reference Cleanup**
+       - Update any invalidated references
+       - Consolidate reference tables
+       - Document verified reference state
+
+    3. **Knowledge Transfer**
+       - Ensure all critical references are verified
+       - Document verification status in session summary
+       - Flag any unresolved verification issues for next session
+
+    This ensures clean reference state between memory resets.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial implementation of reference verification system |

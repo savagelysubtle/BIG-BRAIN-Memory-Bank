@@ -1,0 +1,359 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN assessing task complexity ENSURE appropriate process rigor is applied
+globs: ["**/*.md", "**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** The Enhanced Complexity Framework provides objective criteria for assessing task complexity and selecting the appropriate level of process rigor.
+
+<version>1.0.0</version>
+
+<context>
+  This rule establishes a formal framework for assessing task complexity and applying appropriate process rigor. Tasks vary greatly in complexity - from simple modifications to architectural redesigns. The framework ensures we apply the right level of planning, documentation, and verification based on objective complexity factors.
+</context>
+
+<requirements>
+  <requirement>Assess task complexity using objective criteria</requirement>
+  <requirement>Apply appropriate process rigor based on complexity level</requirement>
+  <requirement>Scale documentation and verification proportionally</requirement>
+  <requirement>Adapt creative phases to complexity requirements</requirement>
+  <requirement>Support complexity re-assessment when factors change</requirement>
+</requirements>
+
+<details>
+  <section-name>COMPLEXITY FACTORS</section-name>
+  <content>
+    Assess complexity using these four key factors:
+
+    1. **Scope**
+       - What is the breadth of the system affected?
+       - How many components or modules are impacted?
+       - How many interfaces need to change?
+       - What is the scope of testing required?
+
+    2. **Risk**
+       - What is the potential impact of failure?
+       - How critical is the affected functionality?
+       - What is the security sensitivity of affected areas?
+       - What is the visibility to users or other systems?
+
+    3. **Dependencies**
+       - How many dependencies exist between components?
+       - Are there external system dependencies?
+       - What is the complexity of the dependency network?
+       - Are there timing or sequencing dependencies?
+
+    4. **Technical Difficulty**
+       - What is the algorithmic complexity?
+       - How sophisticated is the solution required?
+       - What level of specialized knowledge is needed?
+       - Are there performance considerations or constraints?
+
+    Each factor is rated from Level 1 (low) to Level 4 (extreme). The highest level among the factors determines the overall complexity level.
+  </content>
+</details>
+
+<details>
+  <section-name>COMPLEXITY LEVELS</section-name>
+  <content>
+    The framework defines four complexity levels:
+
+    **Level 1: Simple**
+    - **Scope**: Single function or small feature
+    - **Risk**: Minimal impact, isolated change
+    - **Dependencies**: Few or no dependencies
+    - **Difficulty**: Straightforward implementation
+    - **Example**: Bug fix, small feature enhancement, documentation update
+
+    **Level 2: Moderate**
+    - **Scope**: Single component or module
+    - **Risk**: Limited impact, contained to feature area
+    - **Dependencies**: Moderate dependencies within system
+    - **Difficulty**: Standard implementation techniques
+    - **Example**: New feature, component enhancement, API addition
+
+    **Level 3: Complex**
+    - **Scope**: Multiple components or modules
+    - **Risk**: Significant impact, affects key functionality
+    - **Dependencies**: Multiple dependencies, some external
+    - **Difficulty**: Advanced implementation, specialized knowledge
+    - **Example**: Major feature, integration with external system, security enhancement
+
+    **Level 4: Critical**
+    - **Scope**: System-wide or architectural changes
+    - **Risk**: Critical impact, core functionality affected
+    - **Dependencies**: Complex network of dependencies
+    - **Difficulty**: Cutting-edge implementation, deep expertise required
+    - **Example**: Architectural redesign, core system replacement, platform migration
+
+    The highest level among the four factors determines the overall complexity level.
+  </content>
+</details>
+
+<details>
+  <section-name>COMPLEXITY ASSESSMENT</section-name>
+  <content>
+    Document complexity assessment using this format:
+
+    ```
+    ## Complexity Assessment
+
+    **Task**: [Brief task description]
+
+    **Scope**: Level [1-4]
+    - [Justification for scope rating]
+
+    **Risk**: Level [1-4]
+    - [Justification for risk rating]
+
+    **Dependencies**: Level [1-4]
+    - [Justification for dependencies rating]
+
+    **Technical Difficulty**: Level [1-4]
+    - [Justification for difficulty rating]
+
+    **Overall Complexity**: Level [1-4]
+    - [Summary of assessment]
+    ```
+
+    This detailed assessment ensures objective evaluation and clear reasoning.
+  </content>
+</details>
+
+<details>
+  <section-name>PROCESS RIGOR BY LEVEL</section-name>
+  <content>
+    Apply process rigor appropriate to each complexity level:
+
+    **Level 1 (Simple)**
+    - **Planning**: Basic plan, minimal documentation
+    - **Documentation**: Simple implementation notes
+    - **Verification**: Basic testing, manual verification
+    - **Creative Phase**: Not required, straightforward approach
+    - **Section Tracking**: Minimal (start/end)
+
+    **Level 2 (Moderate)**
+    - **Planning**: Structured plan with steps
+    - **Documentation**: Implementation notes with key decisions
+    - **Verification**: Comprehensive testing, edge cases
+    - **Creative Phase**: Brief exploration of approaches
+    - **Section Tracking**: Basic sections (3-5)
+
+    **Level 3 (Complex)**
+    - **Planning**: Detailed plan with risk assessment
+    - **Documentation**: Comprehensive documentation, architecture notes
+    - **Verification**: Thorough testing strategy, performance validation
+    - **Creative Phase**: Full creative phase with multiple approaches
+    - **Section Tracking**: Detailed sections (5-8)
+
+    **Level 4 (Critical)**
+    - **Planning**: Comprehensive plan with phased approach
+    - **Documentation**: Extensive documentation, architecture diagrams
+    - **Verification**: Rigorous testing, security validation, performance testing
+    - **Creative Phase**: Structured creative phase with formal evaluation
+    - **Section Tracking**: Comprehensive sections with sub-sections
+
+    Process rigor scales with complexity to ensure appropriate attention without overburdening simpler tasks.
+  </content>
+</details>
+
+<details>
+  <section-name>DOCUMENTATION REQUIREMENTS</section-name>
+  <content>
+    Documentation requirements by complexity level:
+
+    **Level 1 (Simple)**
+    - Brief description of change
+    - Simple implementation notes
+    - Basic testing approach
+    - Memory Bank updates as needed
+
+    **Level 2 (Moderate)**
+    - Detailed implementation plan
+    - Key decision documentation
+    - Potential alternatives considered
+    - Test cases and edge cases
+    - Memory Bank updates
+
+    **Level 3 (Complex)**
+    - Comprehensive design documentation
+    - Detailed implementation plan with phases
+    - Multiple alternatives with evaluation
+    - Risk assessment and mitigation
+    - Testing strategy with verification points
+    - Complete Memory Bank updates
+
+    **Level 4 (Critical)**
+    - Architectural documentation
+    - System impact analysis
+    - Comprehensive alternatives analysis
+    - Detailed phased implementation plan
+    - Risk register with mitigation strategies
+    - Complete testing strategy
+    - Performance considerations
+    - Migration plan if applicable
+    - Thorough Memory Bank updates
+
+    Documentation should be proportional to complexity and focused on knowledge transfer.
+  </content>
+</details>
+
+<details>
+  <section-name>VERIFICATION REQUIREMENTS</section-name>
+  <content>
+    Verification requirements by complexity level:
+
+    **Level 1 (Simple)**
+    - Basic functional testing
+    - Manual verification of requirements
+    - No regressions introduced
+
+    **Level 2 (Moderate)**
+    - Comprehensive functional testing
+    - Edge case verification
+    - Basic performance check
+    - No regressions introduced
+    - Security check if applicable
+
+    **Level 3 (Complex)**
+    - Thorough functional testing
+    - Complete edge case verification
+    - Performance testing
+    - Security validation
+    - Integration testing
+    - Regression testing
+    - Documentation review
+
+    **Level 4 (Critical)**
+    - Comprehensive test plan
+    - Full functional verification
+    - Extensive edge case testing
+    - Thorough performance testing
+    - Complete security validation
+    - Integration testing across system
+    - Complete regression testing
+    - Documentation validation
+    - Migration validation if applicable
+
+    Verification depth should match complexity to ensure quality while maintaining efficiency.
+  </content>
+</details>
+
+<details>
+  <section-name>EXAMPLE ASSESSMENT</section-name>
+  <content>
+    ```
+    ## Complexity Assessment
+
+    **Task**: Implement OAuth 2.0 authentication to replace basic auth
+
+    **Scope**: Level 3
+    - Affects authentication module, user service, and multiple client applications
+    - Requires API changes visible to all clients
+    - Impacts user onboarding and login flows
+
+    **Risk**: Level 3
+    - Authentication is critical to system security
+    - Affects all users' ability to access the system
+    - Backwards compatibility needed for transition period
+
+    **Dependencies**: Level 2
+    - Depends on user service and profile management
+    - External dependency on OAuth provider
+    - Moderate interdependencies between components
+
+    **Technical Difficulty**: Level 2
+    - OAuth implementation is well-documented
+    - Standard implementation patterns exist
+    - Some specialized knowledge required for security best practices
+
+    **Overall Complexity**: Level 3
+    - Highest rating is Level 3 (Scope and Risk)
+    - This task will require comprehensive planning, documentation, and verification
+    ```
+
+    This example demonstrates proper assessment of a moderately complex authentication upgrade.
+  </content>
+</details>
+
+<details>
+  <section-name>COMPLEXITY REASSESSMENT</section-name>
+  <content>
+    Tasks may require complexity reassessment when:
+
+    1. **Scope Changes**
+       - Additional components affected
+       - Feature expansion or reduction
+       - Interface changes beyond initial estimates
+
+    2. **Risk Elevation**
+       - New security implications identified
+       - Increased visibility or criticality
+       - Additional stakeholder concerns
+
+    3. **Dependency Discoveries**
+       - New dependencies uncovered
+       - Integration challenges emerge
+       - External system constraints identified
+
+    4. **Technical Challenges**
+       - Solution more difficult than anticipated
+       - Performance issues discovered
+       - Specialized knowledge requirements emerge
+
+    When reassessment indicates a higher complexity level, escalate the task using the Task Escalation Protocol.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH TASK TRACKING</section-name>
+  <content>
+    Integrate complexity assessment with task tracking:
+
+    ```
+    # Task: Implement OAuth 2.0 Authentication
+
+    **Complexity**: Level 3
+
+    ## Task Breakdown
+
+    ### Planning Phase
+    - [ ] Comprehensive requirements gathering
+    - [ ] Security analysis
+    - [ ] Architecture design
+    - [ ] Implementation planning
+
+    ### Implementation Phase
+    - [ ] OAuth provider integration
+    - [ ] Authentication flow implementation
+    - [ ] Token management
+    - [ ] User service integration
+    - [ ] Client application updates
+
+    ### Verification Phase
+    - [ ] Security testing
+    - [ ] Functional testing
+    - [ ] Performance testing
+    - [ ] Integration testing
+    - [ ] Backward compatibility testing
+
+    ### Documentation Phase
+    - [ ] Architecture documentation
+    - [ ] Implementation details
+    - [ ] Memory Bank updates
+    ```
+
+    Task tracking should reflect the appropriate process rigor for the complexity level.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial implementation of enhanced complexity framework |

@@ -1,0 +1,191 @@
+---
+description: WHEN creating or updating rules ALWAYS follow these precise XML formatting and structure guidelines
+globs: ".cursor/rules/*.mdc"
+alwaysApply: false
+---
+<cursor-rule>
+  <version>1.1.0</version>
+
+  <context>
+    This rule defines the precise format and structure for creating effective Cursor rules (.mdc files). These guidelines ensure rules are optimally processed by AI models and provide maximum value.
+  </context>
+
+  <file-organization>
+    <location>
+      <path>.cursor/rules/</path>
+      <extension>.mdc</extension>
+    </location>
+
+    <naming-convention>
+      <pattern>PREFIX-name.mdc</pattern>
+      <prefixes>
+        <prefix code="0XX">Core standards (highest priority)</prefix>
+        <prefix code="1XX">Tool configs</prefix>
+        <prefix code="3XX">Testing standards</prefix>
+        <prefix code="4XX">Documentation standards</prefix>
+        <prefix code="1XXX">Language rules</prefix>
+        <prefix code="2XXX">Framework rules</prefix>
+        <prefix code="8XX">Workflows</prefix>
+        <prefix code="9XX">Templates</prefix>
+        <prefix code="__XXX_name.mdc">Private rules</prefix>
+      </prefixes>
+    </naming-convention>
+
+    <glob-patterns>
+      <pattern type="core-standards">.cursor/rules/*.mdc</pattern>
+      <pattern type="language-rules">src/**/*.{js,ts}</pattern>
+      <pattern type="testing-standards">**/*.test.{js,ts}</pattern>
+      <pattern type="react-components">src/components/**/*.tsx</pattern>
+      <pattern type="documentation">docs/**/*.md</pattern>
+      <pattern type="configuration">*.config.{js,json}</pattern>
+      <pattern type="build-artifacts">dist/**/*</pattern>
+      <pattern type="multiple-extensions">src/**/*.{js,jsx,ts,tsx}</pattern>
+      <pattern type="multiple-files">dist/**/*, docs/**/*.md</pattern>
+    </glob-patterns>
+  </file-organization>
+
+  <frontmatter-requirements>
+    <structure>
+      <required-format>
+        ---
+        description: ACTION TRIGGER OUTCOME format
+        globs: glob pattern for files where rule applies
+        ---
+      </required-format>
+    </structure>
+
+    <description-field>
+      <format>Use deterministic ACTION TRIGGER OUTCOME format</format>
+      <pattern>WHEN X occurs THEN do Y (e.g., "WHEN writing Python code ALWAYS use type hints")</pattern>
+      <length>Keep under 120 characters while maintaining clear intent</length>
+    </description-field>
+
+    <globs-field>
+      <format>Standard glob patterns without quotes</format>
+      <examples>
+        <example>*.js</example>
+        <example>src/**/*.py</example>
+        <example>**/*.{ts,tsx}</example>
+      </examples>
+    </globs-field>
+  </frontmatter-requirements>
+
+  <content-structure>
+    <essential-sections>
+      <section name="version">Always include version tag in X.Y.Z format</section>
+      <section name="context">Explain when and where the rule applies</section>
+      <section name="requirements">List actionable items clearly</section>
+      <section name="examples">Include both good and bad examples</section>
+    </essential-sections>
+
+    <trigger-sections>
+      <section name="activation">
+        <purpose>Define clear trigger conditions and responses</purpose>
+        <example>
+          &lt;activation&gt;
+            &lt;trigger&gt;Memory bank update&lt;/trigger&gt;
+            &lt;action&gt;Review all memory bank files&lt;/action&gt;
+          &lt;/activation&gt;
+        </example>
+      </section>
+    </trigger-sections>
+
+    <procedural-sections>
+      <section name="steps" or "process" or "workflow">
+        <purpose>Define ordered sequences of actions</purpose>
+        <example>
+          &lt;process&gt;
+            &lt;step&gt;Review requirements&lt;/step&gt;
+            &lt;step&gt;Analyze existing code&lt;/step&gt;
+            &lt;step&gt;Create implementation plan&lt;/step&gt;
+          &lt;/process&gt;
+        </example>
+      </section>
+    </procedural-sections>
+  </content-structure>
+
+  <xml-formatting-rules>
+    <rule>Always use descriptive, full-word XML tag names (e.g., use &lt;name&gt; not &lt;n&gt;)</rule>
+    <rule>Never abbreviate tag names (e.g., use &lt;title&gt; not &lt;t&gt;, use &lt;link&gt; not &lt;l&gt;)</rule>
+    <rule>All XML tags must have proper opening and closing tags (e.g., &lt;tag&gt;content&lt;/tag&gt;)</rule>
+    <rule>Empty tags should use the self-closing syntax (e.g., &lt;tag/&gt;)</rule>
+    <rule>Always indent content within XML or nested XML tags by 2 spaces</rule>
+    <rule>Use consistent casing for tag names (prefer lowercase for all tags)</rule>
+    <rule>Related tags should follow consistent naming patterns (e.g., &lt;resource&gt; with &lt;name&gt;)</rule>
+    <rule>For collections of items, use plural container tag with singular item tags (e.g., &lt;resources&gt;&lt;resource&gt;...&lt;/resource&gt;&lt;/resources&gt;)</rule>
+    <rule>Use semantic sectioning tags that clearly indicate purpose (e.g., &lt;context&gt;, &lt;requirements&gt;, &lt;examples&gt;)</rule>
+  </xml-formatting-rules>
+
+  <xml-examples>
+    <good-practice>
+      <description>Example of properly structured XML</description>
+      <example>
+&lt;test-resources&gt;
+  &lt;resource&gt;
+    &lt;name&gt;example.pdf&lt;/name&gt;
+    &lt;location&gt;tests/examples/output_examples/&lt;/location&gt;
+    &lt;description&gt;Standard PDF file for testing&lt;/description&gt;
+  &lt;/resource&gt;
+  &lt;resource&gt;
+    &lt;name&gt;complex.pdf&lt;/name&gt;
+    &lt;location&gt;tests/examples/output_examples/&lt;/location&gt;
+    &lt;description&gt;Complex PDF with images&lt;/description&gt;
+  &lt;/resource&gt;
+&lt;/test-resources&gt;
+      </example>
+    </good-practice>
+
+    <bad-practice>
+      <description>Example of improper XML with abbreviated tags</description>
+      <example>
+&lt;test-resources&gt;
+  &lt;resource&gt;
+    &lt;n&gt;example.pdf&lt;/n&gt;        &lt;-- BAD: abbreviated tag name
+    &lt;loc&gt;tests/examples/&lt;/loc&gt;  &lt;-- BAD: abbreviated tag name
+    &lt;desc&gt;PDF file&lt;/desc&gt;       &lt;-- BAD: abbreviated tag name
+  &lt;/resource&gt;
+&lt;/test-resources&gt;
+      </example>
+    </bad-practice>
+  </xml-examples>
+
+  <ai-optimization>
+    <content-density>
+      <guideline>Keep rules as short as possible without sacrificing clarity</guideline>
+      <guideline>Use hierarchical structure for quick parsing</guideline>
+      <guideline>Focus on machine-actionable instructions over human explanations</guideline>
+      <guideline>Maintain high information density with minimal tokens</guideline>
+    </content-density>
+
+    <rule-effectiveness>
+      <guideline>Make trigger conditions specific and unambiguous</guideline>
+      <guideline>Include both positive reinforcement (benefits) and negative consequences</guideline>
+      <guideline>Provide step-by-step instructions for complex processes</guideline>
+      <guideline>Use ordered lists for sequential steps and unordered lists for options</guideline>
+    </rule-effectiveness>
+
+    <examples-section>
+      <guideline>Always include both good and bad examples to illustrate the rule</guideline>
+      <guideline>Keep examples concise but complete enough to demonstrate the principle</guideline>
+      <guideline>Show realistic implementations that demonstrate actual usage</guideline>
+    </examples-section>
+  </ai-optimization>
+
+  <critical-instructions>
+    <instruction>The frontmatter MUST follow the exact format with only description and globs fields</instruction>
+    <instruction>ALL content after frontmatter MUST use proper XML formatting</instruction>
+    <instruction>ALWAYS include a version tag at the beginning of the XML content</instruction>
+    <instruction>NEVER include verbose explanations that increase AI token overhead</instruction>
+    <instruction>ALWAYS use complete, descriptive XML tag names - never abbreviate</instruction>
+    <instruction>ALWAYS provide both good and bad examples to illustrate rule implementation</instruction>
+    <instruction>When multiple rules overlap, lower prefix numbers (e.g., 0XX) take precedence</instruction>
+    <instruction>Design rules to be complementary rather than redundant or conflicting</instruction>
+  </critical-instructions>
+
+  <testing-guidelines>
+    <guideline>Test rules in isolation to verify they trigger as expected</guideline>
+    <guideline>Test rules in combination to check for conflicts</guideline>
+    <guideline>Refine rules based on actual usage patterns and effectiveness</guideline>
+    <guideline>Periodically review and update rules to maintain relevance</guideline>
+  </testing-guidelines>
+</cursor-rule>

@@ -1,0 +1,219 @@
+---
+description: WHEN creating or modifying diagram files ENSURE consistent formatting and organization standards for Mermaid diagrams
+globs: ["**/*.mermaid", "**/docs/**/*.md"]
+alwaysApply: true
+---
+
+> **TL;DR:** This rule establishes consistent standards for creating, formatting, and using Mermaid diagrams in the project to ensure visual consistency, maintainability, and proper integration with documentation.
+
+## Mermaid Diagram Standards
+
+<version>1.0.0</version>
+
+<context>
+Diagrams are critical for communicating system architecture, workflows, and relationships in the BIG BRAIN Memory Bank system. Mermaid provides a text-based approach to diagramming that integrates well with Markdown documentation and version control. These standards ensure diagrams remain consistent, maintainable, and effective across the project.
+</context>
+
+<requirements>
+<requirement>All system diagrams should use Mermaid format when possible</requirement>
+<requirement>Diagrams must maintain consistent styling and formatting</requirement>
+<requirement>Both source files (.mermaid) and rendered images (.png/.svg) must be maintained</requirement>
+<requirement>Diagrams must be properly integrated with documentation</requirement>
+<requirement>All diagrams should follow accessibility best practices</requirement>
+</requirements>
+
+### File Organization
+
+Mermaid diagrams should follow this organizational structure:
+
+```
+project-root/
+├── images/                  # Main images directory
+│   ├── *.mermaid            # Source Mermaid files
+│   ├── *.png                # Rendered PNG images
+│   └── *.svg                # Rendered SVG images (preferred)
+├── docs/
+│   ├── assets/              # Documentation-specific images
+│   │   ├── *.mermaid        # Source files for doc-specific diagrams
+│   │   ├── *.png            # Rendered images
+│   │   └── *.svg            # Rendered SVG images
+```
+
+### Diagram Types and Usage
+
+Use appropriate diagram types for specific content:
+
+1. **Flowcharts**
+   - Use for: processes, workflows, decision trees
+   - Direction: TD (top-down) for processes, LR (left-right) for timelines
+   - Example use: Memory initialization process, command execution flow
+
+2. **Sequence Diagrams**
+   - Use for: interactions between components, message flows
+   - Include timing where relevant
+   - Example use: Command processing sequence, verification workflows
+
+3. **Class Diagrams**
+   - Use for: system component relationships, data structures
+   - Include key methods and attributes only
+   - Example use: Memory bank structure, rule system organization
+
+4. **State Diagrams**
+   - Use for: state transitions, mode changes
+   - Include transition conditions
+   - Example use: Workflow state transitions, memory file states
+
+5. **Entity Relationship Diagrams**
+   - Use for: data relationships, storage structures
+   - Include cardinality
+   - Example use: Memory file relationships, rule dependencies
+
+### Styling Conventions
+
+Apply these styling standards consistently:
+
+1. **Node Styling**
+   - Define consistent style classes for node types
+   - Use meaningful shapes for different entity types
+   - Maintain a standardized color palette
+   - Example:
+   ```
+   classDef process fill:#f4f4f4,stroke:#333,stroke-width:1px
+   classDef decision fill:#ffe6cc,stroke:#d79b00,stroke-width:1px
+   classDef storage fill:#dae8fc,stroke:#6c8ebf,stroke-width:1px
+   ```
+
+2. **Color Palette**
+   - Primary: #dae8fc (light blue) - Standard processes
+   - Warning: #ffe6cc (light orange) - Decision points
+   - Success: #d5e8d4 (light green) - Completed states
+   - Error: #f8cecc (light red) - Error states/bottlenecks
+   - Neutral: #f4f4f4 (light gray) - Background/grouping
+   - Use consistent colors across all diagrams
+
+3. **Text Formatting**
+   - Use short, clear labels
+   - Break long text with `<br>` for readability
+   - Use consistent capitalization (typically sentence case)
+   - Limit text per node to 1-3 words when possible
+
+4. **Layout**
+   - Group related elements using subgraphs
+   - Maintain clear flow direction (top-to-bottom, left-to-right)
+   - Minimize crossing lines
+   - Use appropriate spacing
+
+### Diagram Creation Process
+
+Follow this process when creating or updating diagrams:
+
+1. **Planning**
+   - Identify diagram purpose and audience
+   - Select appropriate diagram type
+   - Outline key elements and relationships
+   - Determine appropriate level of detail
+
+2. **Creation**
+   - Create `.mermaid` file in appropriate directory
+   - Use proper Mermaid syntax and styling conventions
+   - Include comments for complex sections
+   - Validate syntax with Mermaid Live Editor
+
+3. **Generation**
+   - Generate image file (SVG preferred, PNG secondary)
+   - Use consistent naming: `[diagram-name].[extension]`
+   - Use mermaid-cli for automated generation:
+   ```bash
+   mmdc -i images/diagram-name.mermaid -o images/diagram-name.svg -b transparent
+   ```
+
+4. **Documentation Integration**
+   - Reference image in documentation using relative paths
+   - Include descriptive alt text
+   - Example: `![Memory Bank Architecture](../images/memory-bank-architecture.svg)`
+
+5. **Maintenance**
+   - Update `.mermaid` file when changes needed
+   - Regenerate images after updates
+   - Maintain version history in comments
+
+### Accessibility Considerations
+
+Ensure diagrams are accessible:
+
+1. **Text Alternatives**
+   - Always provide alt text for images in documentation
+   - Include text description of complex diagrams
+   - Consider providing text-based summaries
+
+2. **Color Usage**
+   - Ensure sufficient contrast (4.5:1 minimum)
+   - Don't rely solely on color to convey information
+   - Use patterns/shapes in addition to colors
+
+3. **Complexity Management**
+   - Break complex diagrams into simpler ones
+   - Use consistent levels of abstraction
+   - Provide overview + detail views for complex systems
+
+### Example Mermaid Diagram
+
+```mermaid
+flowchart TD
+    %% System Initialization Flow
+    A[System Start] --> B[Load Memory Files]
+    B --> C[Verify Integrity]
+    C --> D[Restore Context]
+    D --> E[Initialize Rules]
+    E --> F[Establish Current State]
+
+    %% Style definitions
+    classDef process fill:#dae8fc,stroke:#6c8ebf,stroke-width:1px,border-radius:4px;
+    classDef start fill:#d5e8d4,stroke:#82b366,stroke-width:1px,border-radius:4px;
+    classDef end fill:#ffe6cc,stroke:#d79b00,stroke-width:1px,border-radius:4px;
+
+    %% Apply styles
+    class A start;
+    class B,C,D,E process;
+    class F end;
+```
+
+### Common Pitfalls and Solutions
+
+1. **Overcomplicated Diagrams**
+   - Problem: Too many elements make diagrams unreadable
+   - Solution: Break into multiple diagrams, use subgraphs, increase abstraction
+
+2. **Inconsistent Styling**
+   - Problem: Inconsistent colors/shapes reduce comprehension
+   - Solution: Define and reuse style classes, create template diagrams
+
+3. **Poor Integration with Documentation**
+   - Problem: Diagrams don't align with text descriptions
+   - Solution: Reference specific diagram elements in text, keep diagrams and text in sync
+
+4. **Outdated Visualizations**
+   - Problem: Diagrams become outdated as system evolves
+   - Solution: Update diagrams during document reviews, automate generation
+
+### Tools and Resources
+
+1. **Development Tools**
+   - [Mermaid Live Editor](https://mermaid.live/)
+   - [Mermaid CLI](https://github.com/mermaid-js/mermaid-cli)
+   - [VS Code Mermaid Extension](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid)
+
+2. **References**
+   - [Mermaid Official Documentation](https://mermaid-js.github.io/mermaid/)
+   - [Project Mermaid Guide](./images/MERMAID_DIAGRAM_GUIDE.md)
+
+3. **Automation**
+   - GitHub Actions for automated rendering
+   - Pre-commit hooks for diagram validation
+
+## Version History
+
+- 1.0.0 (March 24, 2025): Initial diagram standards implementation
+- Established styling conventions and creation process
+- Defined organization and integration standards
+- Provided examples and common pitfall solutions

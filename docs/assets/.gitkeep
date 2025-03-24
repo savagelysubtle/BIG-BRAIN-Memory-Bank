@@ -1,0 +1,11 @@
+# Assets Directory
+
+This directory contains assets used in the documentation, including:
+
+- Generated diagram images
+- Screenshots
+- Icons
+- Other visual elements
+
+Diagram images are automatically generated from Mermaid source files located in
+the `/images` directory using the `scripts/generate_diagrams.ps1` script.

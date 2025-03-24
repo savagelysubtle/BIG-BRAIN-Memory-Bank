@@ -1,0 +1,499 @@
+---
+description: WHEN starting a new session EXECUTE initialization procedure to establish memory context
+globs: ["**/*.md", "**/*.mdc"]
+alwaysApply: true
+---
+
+> **TL;DR:** The Standard Initialization Procedure provides a systematic process for memory bank initialization at the beginning of each session, ensuring complete context restoration despite memory reset.
+
+<version>1.0.0</version>
+
+<context>
+  This rule establishes the Standard Initialization Procedure that must be executed at the start of every session. Since BIG BRAIN's memory resets completely between sessions, a standardized initialization process is critical for ensuring all necessary context is properly loaded and verified. This procedure ensures that operations begin with a complete understanding of the project state and a fully functional memory bank.
+</context>
+
+<requirements>
+  <requirement>Execute at the beginning of every session without exception</requirement>
+  <requirement>Systematically restore full context from memory bank</requirement>
+  <requirement>Verify integrity and consistency of all memory files</requirement>
+  <requirement>Establish appropriate task complexity framework</requirement>
+  <requirement>Confirm operational readiness for the current session</requirement>
+  <requirement>Adapt initialization depth to task requirements</requirement>
+</requirements>
+
+<details>
+  <section-name>INITIALIZATION PROCESS</section-name>
+  <content>
+    The initialization procedure follows this sequence:
+
+    1. **Identity Confirmation**
+       - Establish BIG BRAIN identity
+       - Acknowledge memory reset
+       - Recognize memory bank dependency
+       - Set operational parameters
+
+    2. **Memory Bank Loading**
+       - Locate core memory files
+       - Load essential context documents
+       - Verify file availability
+       - Establish memory structure
+
+    3. **Context Restoration**
+       - Process project brief
+       - Understand product context
+       - Absorb active context
+       - Comprehend system patterns
+       - Assimilate technical context
+       - Review progress status
+
+    4. **Verification Execution**
+       - Perform file verification
+       - Execute consistency checks
+       - Validate references
+       - Assess memory health
+       - Generate verification report
+
+    5. **Task Contextualization**
+       - Determine current focus
+       - Assess task complexity
+       - Select appropriate workflow
+       - Establish operational mode
+       - Identify relevant patterns
+
+    6. **Readiness Confirmation**
+       - Confirm complete context loading
+       - Verify memory bank health
+       - Establish system capabilities
+       - Note any limitations
+       - Declare initialization complete
+
+    This sequence ensures systematic restoration of complete operational context.
+  </content>
+</details>
+
+<details>
+  <section-name>CORE MEMORY FILES</section-name>
+  <content>
+    These critical files must be loaded during initialization:
+
+    1. **projectbrief.md**
+       - Foundation document
+       - Core requirements
+       - Project goals and scope
+       - Success criteria
+
+    2. **productContext.md**
+       - Problem space
+       - User experience goals
+       - Value proposition
+       - Market context
+
+    3. **activeContext.md**
+       - Current work focus
+       - Recent changes
+       - Next steps
+       - Open issues
+
+    4. **systemPatterns.md**
+       - System architecture
+       - Component relationships
+       - Implementation patterns
+       - Design decisions
+
+    5. **techContext.md**
+       - Technology stack
+       - Development environment
+       - Technical constraints
+       - Integration points
+
+    6. **progress.md**
+       - Implementation status
+       - Feature completeness
+       - Known issues
+       - Future milestones
+
+    These files provide the essential context required for operation.
+  </content>
+</details>
+
+<details>
+  <section-name>INITIALIZATION COMMAND</section-name>
+  <content>
+    Initialization is triggered through the command:
+
+    ```
+    BIG initialize [task] [--complexity=1-4] [--mode=plan|act] [--focus=area]
+    ```
+
+    Parameters:
+    - **task**: Brief description of the current task
+    - **complexity**: Task complexity level (1-4)
+    - **mode**: Primary operation mode (plan or act)
+    - **focus**: Specific area of focus
+
+    Examples:
+    ```
+    BIG initialize "Implement authentication system" --complexity=3 --mode=plan
+    BIG initialize "Fix login bug" --complexity=1 --mode=act --focus=auth
+    BIG initialize "Design database schema" --complexity=2
+    ```
+
+    The command triggers the full initialization sequence with appropriate parameters.
+  </content>
+</details>
+
+<details>
+  <section-name>VERIFICATION REQUIREMENTS</section-name>
+  <content>
+    Initialization verification includes:
+
+    1. **File Completeness**
+       - All required memory files present
+       - Core sections available in each file
+       - Critical information accessible
+       - Reference structure intact
+
+    2. **Content Integrity**
+       - No corruption in memory files
+       - Proper formatting throughout
+       - Valid content structure
+       - Complete information sections
+
+    3. **Information Consistency**
+       - No contradictions between files
+       - Aligned status across documents
+       - Consistent terminology
+       - Compatible architecture descriptions
+
+    4. **Reference Validity**
+       - All references resolve properly
+       - Cross-references are bidirectional
+       - Link structures are navigable
+       - Dependency chains are complete
+
+    Verification ensures the memory bank is in a reliable state for operation.
+  </content>
+</details>
+
+<details>
+  <section-name>CONTEXT LOADING SEQUENCE</section-name>
+  <content>
+    Memory files are processed in this specific order:
+
+    1. **Core Identity and Operation**
+       - main.mdc (System core rules)
+       - BIG BRAIN identity rule
+       - Memory bank structure
+
+    2. **Project Foundation**
+       - projectbrief.md (What needs to be built)
+       - productContext.md (Why it needs to be built)
+
+    3. **System Structure**
+       - systemPatterns.md (How it's architected)
+       - techContext.md (What it's built with)
+
+    4. **Current State**
+       - progress.md (What works and what's left)
+       - activeContext.md (What's being worked on)
+
+    5. **Specialized Context**
+       - Task-specific memory files
+       - Feature documentation
+       - Technical specifications
+       - Integration guides
+
+    This sequence builds understanding from fundamentals to specifics.
+  </content>
+</details>
+
+<details>
+  <section-name>TASK COMPLEXITY DETERMINATION</section-name>
+  <content>
+    Task complexity is assessed through these criteria:
+
+    1. **Scope Assessment**
+       - Size of affected codebase
+       - Number of components involved
+       - Breadth of functionality
+       - Integration surface area
+
+    2. **Risk Evaluation**
+       - Critical path impact
+       - Error consequences
+       - Security implications
+       - Performance sensitivity
+
+    3. **Dependency Analysis**
+       - External system connections
+       - Internal component dependencies
+       - Technology interdependencies
+       - Sequential requirements
+
+    4. **Technical Difficulty**
+       - Algorithm complexity
+       - Implementation challenges
+       - Optimization requirements
+       - Domain knowledge needs
+
+    The resulting complexity level (1-4) determines initialization depth and operational rigor.
+  </content>
+</details>
+
+<details>
+  <section-name>OPERATION MODES</section-name>
+  <content>
+    Initialization establishes one of these operation modes:
+
+    1. **Plan Mode**
+       - Focus: Architecture, design, and planning
+       - Activities: Requirements analysis, system design, task breakdown
+       - Context emphasis: Project goals, constraints, and patterns
+       - Output: Design documents, architecture diagrams, implementation plans
+
+    2. **Act Mode**
+       - Focus: Implementation and execution
+       - Activities: Coding, testing, debugging, documentation
+       - Context emphasis: Technical details, patterns, and current state
+       - Output: Functional code, tests, updated documentation
+
+    3. **Hybrid Mode**
+       - Focus: Mixed planning and implementation
+       - Activities: Balanced design and implementation
+       - Context emphasis: Comprehensive understanding
+       - Output: Progressive implementation with ongoing design
+
+    The selected mode shapes context emphasis and operational approach.
+  </content>
+</details>
+
+<details>
+  <section-name>INITIALIZATION FEEDBACK</section-name>
+  <content>
+    Initialization provides structured feedback:
+
+    ```
+    ## 🚀 BIG BRAIN Initialization Complete
+
+    ### Task Context
+    - Task: [Task description]
+    - Complexity: Level [1-4] - [Complexity description]
+    - Mode: [Plan/Act/Hybrid]
+    - Focus: [Specific focus area]
+
+    ### Memory Bank Status
+    - Core files: [Count] verified
+    - Verification status: [Healthy/Attention Required/Critical]
+    - Memory health score: [Percentage]
+    - [Any issues requiring attention]
+
+    ### Current Project State
+    - Project: [Project name/description]
+    - Current focus: [From activeContext.md]
+    - Recent changes: [Summary from activeContext.md]
+    - Next steps: [From activeContext.md]
+
+    ### Ready to proceed with [specific task].
+    ```
+
+    This feedback confirms successful initialization and establishes operational context.
+  </content>
+</details>
+
+<details>
+  <section-name>ERROR HANDLING</section-name>
+  <content>
+    Initialization handles these error conditions:
+
+    1. **Missing Memory Files**
+       - Error: Critical memory file unavailable
+       - Severity: High (blocks operation)
+       - Resolution: Request user to provide missing file
+       - Fallback: Attempt to operate with limited context
+
+    2. **Incomplete Information**
+       - Error: Required information sections missing
+       - Severity: Medium (degrades operation)
+       - Resolution: Flag missing sections for completion
+       - Fallback: Proceed with partial context
+
+    3. **Consistency Issues**
+       - Error: Contradictory information between files
+       - Severity: Medium (affects reliability)
+       - Resolution: Identify conflicts for resolution
+       - Fallback: Use most recent/authoritative information
+
+    4. **Verification Failures**
+       - Error: Memory health check failure
+       - Severity: High (risks incorrect operation)
+       - Resolution: Execute recovery protocols
+       - Fallback: Request manual verification
+
+    Effective error handling ensures initialization proceeds appropriately despite issues.
+  </content>
+</details>
+
+<details>
+  <section-name>INITIALIZATION EXAMPLE</section-name>
+  <content>
+    ```
+    ## 🚀 BIG BRAIN Initialization Complete
+
+    ### Task Context
+    - Task: Implement user authentication API
+    - Complexity: Level 3 - Complex (multiple components, security implications)
+    - Mode: Plan
+    - Focus: Security, API design
+
+    ### Memory Bank Status
+    - Core files: 6 verified
+    - Verification status: Healthy
+    - Memory health score: 97%
+    - Notice: activeContext.md last updated 3 days ago
+
+    ### Current Project State
+    - Project: E-commerce platform API
+    - Current focus: User management and authentication
+    - Recent changes: Completed database schema design, API framework setup
+    - Next steps: Authentication system design, integration with user service
+
+    ### Ready to proceed with authentication system architecture design.
+    ```
+
+    This example shows a successful initialization for a complex planning task.
+  </content>
+</details>
+
+<details>
+  <section-name>ADAPTATION TO COMPLEXITY</section-name>
+  <content>
+    Initialization depth adapts to task complexity:
+
+    **Level 1 (Simple)**
+    - Basic file verification
+    - Focus on task-specific context
+    - Limited consistency checking
+    - Minimal verification reporting
+
+    **Level 2 (Moderate)**
+    - Standard file verification
+    - Broader context loading
+    - Basic consistency verification
+    - Standard verification reporting
+
+    **Level 3 (Complex)**
+    - Comprehensive file verification
+    - Complete context loading
+    - Thorough consistency checking
+    - Detailed verification reporting
+
+    **Level 4 (Critical)**
+    - Exhaustive file verification
+    - Maximum context restoration
+    - Complete consistency validation
+    - Comprehensive verification reporting
+    - Extended readiness confirmation
+
+    Adaptation ensures appropriate initialization rigor for each task level.
+  </content>
+</details>
+
+<details>
+  <section-name>SESSION SPECIFICITY</section-name>
+  <content>
+    Initialization is adapted for specific session types:
+
+    1. **First Engagement**
+       - Extended project exploration
+       - Comprehensive system familiarization
+       - Complete pattern recognition
+       - Thorough mental model building
+
+    2. **Continuation Session**
+       - Change-focused context update
+       - Status progression understanding
+       - Recent modification awareness
+       - Next step alignment
+
+    3. **Specialized Session**
+       - Domain-specific knowledge loading
+       - Targeted memory file focus
+       - Related pattern identification
+       - Specialized framework activation
+
+    4. **Emergency Session**
+       - Critical issue focus
+       - Rapid context loading
+       - Problem-centered understanding
+       - Solution pattern prioritization
+
+    Session type influences context emphasis and initialization focus.
+  </content>
+</details>
+
+<details>
+  <section-name>INTEGRATION WITH VERIFICATION FRAMEWORK</section-name>
+  <content>
+    Initialization leverages the verification framework:
+
+    1. **Verification Sequence**
+       - Calls Memory File Verification component
+       - Executes Automated Consistency Checks
+       - Triggers appropriate Error Recovery Protocols if needed
+       - Generates initialization-specific Validation Report
+
+    2. **Verification Depth**
+       - Adapts verification thoroughness to complexity
+       - Focuses verification on task-relevant components
+       - Escalates validation for critical or sensitive areas
+       - Adjusts recovery thresholds based on criticality
+
+    3. **Results Integration**
+       - Incorporates verification results into readiness assessment
+       - Highlights issues requiring attention
+       - Adjusts operational parameters based on memory health
+       - Documents verification status in initialization report
+
+    This integration ensures comprehensive memory validation during initialization.
+  </content>
+</details>
+
+<details>
+  <section-name>POST-INITIALIZATION STATE</section-name>
+  <content>
+    After initialization, the system is in this state:
+
+    1. **Memory State**
+       - All required memory files loaded
+       - Memory health verified
+       - Reference structure established
+       - Consistency validated
+
+    2. **Operational State**
+       - Task complexity established
+       - Workflow mode activated
+       - Focus area identified
+       - Verification status known
+
+    3. **Context State**
+       - Project understanding established
+       - Current status recognized
+       - Recent history assimilated
+       - Next steps identified
+
+    4. **Capability State**
+       - Operation capabilities determined
+       - Limitations acknowledged
+       - Recovery options established
+       - Command set initialized
+
+    This state provides the foundation for all subsequent operations.
+  </content>
+</details>
+
+## 📝 Version History
+
+| Version | Date       | Author    | Changes                                      |
+| ------- | ---------- | --------- | -------------------------------------------- |
+| 1.0.0   | 2025-03-24 | BIG BRAIN | Initial implementation of standard initialization procedure |
+</rewritten_file>
