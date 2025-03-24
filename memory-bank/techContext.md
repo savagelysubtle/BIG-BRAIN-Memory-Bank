@@ -14,6 +14,7 @@ title: Technical Context
 - **Branch Structure:**
   - `main` - Stable "clean install" version for new users
   - `memory-bank-dev` - Development branch with current improvements and context
+  - Branch-specific content maintained through specialized scripts
 
 ### Documentation Platform
 
@@ -42,12 +43,22 @@ title: Technical Context
   - Core files: projectbrief.md, productContext.md, activeContext.md, etc.
   - Specialized documentation in subdirectories
 
+- **`inspiration/`**: Branch-specific folder kept only in main branch
+
+  - Contains reference materials and inspiration sources
+  - Intentionally excluded from development branch
+
 - **`scripts/`**: Utility scripts for development and maintenance
 
 ### Key Files
 
-- **`update_docs.bat`**: Script for committing and pushing documentation changes
+- **`update_docs.bat`**: Script for automatically committing and pushing
+  documentation changes
 - **`setup-dev-branch.bat`**: Script for setting up the development branch
+- **`merge-to-main.bat`**: Script for merging development to main with content
+  protection
+- **`protect-branch-content.bat`**: Script for setting up branch-specific
+  content protection
 - **`DEVELOPMENT.md`**: Documentation for the development workflow
 - **`SETUP-DEV-BRANCH.md`**: Manual instructions for branch setup
 
@@ -66,6 +77,13 @@ title: Technical Context
 - Cross-references must be maintained carefully
 - Documentation should be navigable both on GitHub and GitHub Pages
 
+### Branch-Specific Content Management
+
+- `.gitignore` entries must be branch-specific
+- Merge operations must preserve branch-specific content
+- Automated protection mechanisms are needed for consistent results
+- System must handle frequent merges between branches
+
 ## Development Workflow
 
 ### Branch Usage Guidelines
@@ -75,6 +93,7 @@ title: Technical Context
 - Feature branches can be created from `memory-bank-dev` for specific tasks
 - Changes to `main` should only occur through controlled merges from
   `memory-bank-dev`
+- Branch-specific content requires special handling during merges
 
 ### Update Procedure
 
@@ -82,12 +101,29 @@ title: Technical Context
 2. Use `update_docs.bat` to commit and push changes
 3. When ready for a stable release, merge to `main` using:
    ```
-   git checkout main
-   git pull origin main
-   git merge --no-ff memory-bank-dev -m "Merge development into main: [DESCRIPTION]"
-   git push origin main
+   .\merge-to-main.bat "Your merge message here"
    ```
-4. Return to the development branch for continued work
+4. The script handles branch-specific content automatically
+5. Return to the development branch for continued work
+
+### Branch-Specific Content Protection
+
+1. **Initial Setup:**
+
+   - Run `protect-branch-content.bat` on development branch
+   - This adds appropriate entries to .gitignore
+   - Content will remain in main but be excluded from development
+
+2. **During Development:**
+
+   - Work normally on development branch
+   - Specified content (inspiration folder) remains hidden
+   - Other files operate normally
+
+3. **During Merges:**
+   - Use `merge-to-main.bat` for automated protection
+   - The script preserves branch-specific content
+   - Ensures inspiration folder remains in main
 
 ## Technical Decisions
 
@@ -99,6 +135,15 @@ The dual-branch structure allows:
 - A development version with the latest context (memory-bank-dev)
 - Separation of concerns between stable and development code
 - Controlled updates to the stable version
+
+### Why Branch-Specific Content?
+
+Branch-specific content was implemented to:
+
+- Keep reference materials in the stable branch
+- Maintain a clean, focused development environment
+- Allow different content needs for different branch purposes
+- Avoid accidental deletion of important content
 
 ### Documentation Framework Choices
 

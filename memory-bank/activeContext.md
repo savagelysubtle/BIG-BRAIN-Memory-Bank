@@ -6,10 +6,11 @@ title: Active Context
 
 ## Current Focus
 
-The current focus is establishing a robust dual-branch structure for the BIG
-BRAIN Memory Bank system. We've recently implemented a development branch
-strategy to separate the stable "clean install" version from the development
-version with current improvements.
+The current focus is implementing branch-specific content protection for the BIG
+BRAIN Memory Bank system. We've established a robust dual-branch structure and
+added specialized scripts to maintain different content between the stable and
+development branches, particularly to keep the inspiration folder in main while
+removing it from development.
 
 Additionally, we're continuing to enhance the comprehensive documentation of the
 BIG BRAIN Memory Bank system workflows and processes. We've recently completed
@@ -17,6 +18,16 @@ the creation of detailed workflow documentation pages to provide structured
 guidance for key operational processes.
 
 ## Recent Changes
+
+- **Branch-Specific Content Protection**:
+
+  - Created specialized scripts (protect-branch-content.bat and enhanced
+    merge-to-main.bat) to maintain branch-specific content
+  - Implemented mechanisms to preserve the inspiration folder in main branch
+    while excluding it from development
+  - Added branch-specific .gitignore entries to maintain separation
+  - Created automated merge processes that maintain content differences between
+    branches
 
 - **Repository Structure**:
 
@@ -40,15 +51,23 @@ guidance for key operational processes.
   workflows connect and transition between each other, including a visual
   diagram
 
-- **Documentation Management**: Created and improved an update_docs.bat script
-  to streamline the process of committing and pushing documentation changes to
-  GitHub, with options to handle documentation-only or all file changes
+- **Documentation Management**: Created and improved scripts to streamline the
+  process of committing and pushing documentation changes to GitHub, with fully
+  automated operations
 
 - **Documentation Structure**: Organized the workflows documentation with
   consistent formatting, clear navigation hierarchy, and cross-references
   between related workflows
 
 ## Impact of Changes
+
+The branch-specific content protection provides:
+
+- Ability to maintain different content between branches (inspiration folder in
+  main but not in development)
+- Automatic preservation of branch-specific content during merges
+- Clean separation of concerns between production and development environments
+- Simplified workflow for managing branch-specific content
 
 The dual-branch structure provides:
 
@@ -70,6 +89,10 @@ The documentation improvements:
 
 ## Open Questions
 
+- Are there other folders or files that should have branch-specific treatment?
+- Should we document branch-specific content patterns in a dedicated file?
+- What is the best approach to handle updates to branch-specific content over
+  time?
 - How should we handle the transition period when users migrate from the
   single-branch to dual-branch structure?
 - What is the best approach to synchronize Memory Bank files between branches
@@ -77,21 +100,14 @@ The documentation improvements:
 - Should we implement automated testing for the Memory Bank documentation?
 - Would additional specialized workflow documentation be beneficial for specific
   recurring tasks?
-- Should workflow templates be created to make following these processes more
-  straightforward?
-- Are there opportunities to automate parts of the Documentation Updates
-  workflow?
-- How should workflow adherence be measured or validated?
 
 ## Next Steps
 
+- Document the branch-specific content protection pattern in systemPatterns.md
+- Consider implementing similar protection for other folders if needed
+- Add guidance on when and how to use branch-specific content in documentation
 - Finalize the development branch setup with proper permissions and protection
 - Create clear guidance for users on how to work with the dual-branch structure
 - Consider implementing branch protection rules on GitHub
 - Create documentation for the Bedtime Protocol with detailed step-by-step
   instructions
-- Consider creating visual aids or flowcharts for complex decision paths within
-  workflows
-- Develop checklists for each workflow to simplify verification of completeness
-- Create examples of workflow outputs based on real-world scenarios
-- Gather feedback on workflow documentation usability and improve as needed
