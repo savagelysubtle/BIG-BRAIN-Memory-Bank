@@ -1,8 +1,0 @@
-[33mcommit 158e3f34ac334d692de09b91fcca22be9128ff37[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdocs-clean-signed[m[33m)[m
-[36mgpg: Signature made Mon, Mar 24, 2025  6:16:37 AM PDT[m
-[36mgpg:                using EDDSA key A2FBF1115A71DB8899553919D06B2E186F437249[m
-[36mgpg: Good signature from "Steven Oatman (My BIG BRAIN key) <s.m.oatman@gmail.com>" [ultimate][m
-Author: savagelysubtle <163227725+savagelysubtle@users.noreply.github.com>
-Date:   Mon Mar 24 06:16:37 2025 -0700
-
-    Enhance GitHub Pages documentation with improved structure and build tools
