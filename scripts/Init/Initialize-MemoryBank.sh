@@ -2,7 +2,7 @@
 
 # BIG BRAIN Memory Bank 2.0 Initialization Script
 # This script initializes the complete BIG BRAIN Memory Bank structure with all required directories and files.
-# Auto-generated on 2025-03-24 04:49:13
+# Auto-generated on 2025-03-24 07:28:28
 
 echo "🧠 BIG BRAIN Memory Bank 2.0 Initialization" 
 echo "=================================================" 
@@ -49,85 +49,17 @@ Create-Directory -Path $coreDir
 Create-Directory -Path $coreActiveDir
 
 # Create memory-bank structure
-$Bedtime_ProtocolDir = /"Bedtime Protocol"
-Create-Directory -Path $Bedtime_ProtocolDir
-$Bedtime_Protocol_memory_toolsDir = $Bedtime_ProtocolDir/"memory-tools"
-Create-Directory -Path $Bedtime_Protocol_memory_toolsDir
-$Bedtime_Protocol_memory_tools_config_templatesDir = $Bedtime_Protocol_memory_toolsDir/"config_templates"
-Create-Directory -Path $Bedtime_Protocol_memory_tools_config_templatesDir
-$Bedtime_Protocol_memory_tools_templatesDir = $Bedtime_Protocol_memory_toolsDir/"templates"
-Create-Directory -Path $Bedtime_Protocol_memory_tools_templatesDir
-$Bedtime_Protocol_memory_tools_logsDir = $Bedtime_Protocol_memory_toolsDir/"logs"
-Create-Directory -Path $Bedtime_Protocol_memory_tools_logsDir
-$Bedtime_Protocol_memory_tools___pycache__Dir = $Bedtime_Protocol_memory_toolsDir/"__pycache__"
-Create-Directory -Path $Bedtime_Protocol_memory_tools___pycache__Dir
-$proceduralDir = /"procedural"
-Create-Directory -Path $proceduralDir
-$procedural_activeDir = $proceduralDir/"active"
-Create-Directory -Path $procedural_activeDir
 $coreDir = /"core"
 Create-Directory -Path $coreDir
 $core_activeDir = $coreDir/"active"
 Create-Directory -Path $core_activeDir
-$episodicDir = /"episodic"
-Create-Directory -Path $episodicDir
-$episodic_activeDir = $episodicDir/"active"
-Create-Directory -Path $episodic_activeDir
-$semanticDir = /"semantic"
-Create-Directory -Path $semanticDir
-$semantic_activeDir = $semanticDir/"active"
-Create-Directory -Path $semantic_activeDir
 
 
 # Create rules structure
 $BIG_BRAINDir = /"BIG_BRAIN"
 Create-Directory -Path $BIG_BRAINDir
-$BIG_BRAIN_WorkflowsDir = $BIG_BRAINDir/"Workflows"
-Create-Directory -Path $BIG_BRAIN_WorkflowsDir
-$BIG_BRAIN_UtilitiesDir = $BIG_BRAINDir/"Utilities"
-Create-Directory -Path $BIG_BRAIN_UtilitiesDir
-$BIG_BRAIN_CoreDir = $BIG_BRAINDir/"Core"
-Create-Directory -Path $BIG_BRAIN_CoreDir
-$BIG_BRAIN_Core_DocumentationDir = $BIG_BRAIN_CoreDir/"Documentation"
-Create-Directory -Path $BIG_BRAIN_Core_DocumentationDir
-$BIG_BRAIN_Core_FoundationDir = $BIG_BRAIN_CoreDir/"Foundation"
-Create-Directory -Path $BIG_BRAIN_Core_FoundationDir
-$BIG_BRAIN_Core_TestingDir = $BIG_BRAIN_CoreDir/"Testing"
-Create-Directory -Path $BIG_BRAIN_Core_TestingDir
-$BIG_BRAIN_Core_VerificationDir = $BIG_BRAIN_CoreDir/"Verification"
-Create-Directory -Path $BIG_BRAIN_Core_VerificationDir
-$BIG_BRAIN_Core_CommandDir = $BIG_BRAIN_CoreDir/"Command"
-Create-Directory -Path $BIG_BRAIN_Core_CommandDir
-$BIG_BRAIN_Core_CreativeDir = $BIG_BRAIN_CoreDir/"Creative"
-Create-Directory -Path $BIG_BRAIN_Core_CreativeDir
-$BIG_BRAIN_Core_EscalationDir = $BIG_BRAIN_CoreDir/"Escalation"
-Create-Directory -Path $BIG_BRAIN_Core_EscalationDir
-$BIG_BRAIN_Core_CheckpointDir = $BIG_BRAIN_CoreDir/"Checkpoint"
-Create-Directory -Path $BIG_BRAIN_Core_CheckpointDir
-$BIG_BRAIN_IdentityDir = $BIG_BRAINDir/"Identity"
-Create-Directory -Path $BIG_BRAIN_IdentityDir
-$BIG_BRAIN_ProtocolsDir = $BIG_BRAINDir/"Protocols"
-Create-Directory -Path $BIG_BRAIN_ProtocolsDir
-$BIG_BRAIN_TemplatesDir = $BIG_BRAINDir/"Templates"
-Create-Directory -Path $BIG_BRAIN_TemplatesDir
 $CodebaseDir = /"Codebase"
 Create-Directory -Path $CodebaseDir
-$Codebase_PatternsDir = $CodebaseDir/"Patterns"
-Create-Directory -Path $Codebase_PatternsDir
-$Codebase_FrameworksDir = $CodebaseDir/"Frameworks"
-Create-Directory -Path $Codebase_FrameworksDir
-$Codebase_Frameworks_DjangoDir = $Codebase_FrameworksDir/"Django"
-Create-Directory -Path $Codebase_Frameworks_DjangoDir
-$Codebase_Frameworks_ReactDir = $Codebase_FrameworksDir/"React"
-Create-Directory -Path $Codebase_Frameworks_ReactDir
-$Codebase_LanguagesDir = $CodebaseDir/"Languages"
-Create-Directory -Path $Codebase_LanguagesDir
-$Codebase_Languages_TypeScriptDir = $Codebase_LanguagesDir/"TypeScript"
-Create-Directory -Path $Codebase_Languages_TypeScriptDir
-$Codebase_Languages_PythonDir = $Codebase_LanguagesDir/"Python"
-Create-Directory -Path $Codebase_Languages_PythonDir
-$Codebase_Languages_JavaScriptDir = $Codebase_LanguagesDir/"JavaScript"
-Create-Directory -Path $Codebase_Languages_JavaScriptDir
 
 
 # Create file function

@@ -1,6 +1,6 @@
 # BIG BRAIN Memory Bank 2.0 Initialization Script
 # This script initializes the complete BIG BRAIN Memory Bank structure with all required directories and files.
-# Auto-generated on 2025-03-24 04:49:13
+# Auto-generated on 2025-03-24 07:28:28
 
 Write-Host "🧠 BIG BRAIN Memory Bank 2.0 Initialization" -ForegroundColor Cyan
 Write-Host "=================================================" -ForegroundColor Cyan
@@ -46,87 +46,16 @@ Create-Directory -Path $memoryBankDir
 Create-Directory -Path $coreDir
 Create-Directory -Path $coreActiveDir
 
-# Create memory-bank structure
-$Bedtime_ProtocolDir = Join-Path -Path  -ChildPath "Bedtime Protocol"
-Create-Directory -Path $Bedtime_ProtocolDir
-$Bedtime_Protocol_memory_toolsDir = Join-Path -Path $Bedtime_ProtocolDir -ChildPath "memory-tools"
-Create-Directory -Path $Bedtime_Protocol_memory_toolsDir
-$Bedtime_Protocol_memory_tools_config_templatesDir = Join-Path -Path $Bedtime_Protocol_memory_toolsDir -ChildPath "config_templates"
-Create-Directory -Path $Bedtime_Protocol_memory_tools_config_templatesDir
-$Bedtime_Protocol_memory_tools_templatesDir = Join-Path -Path $Bedtime_Protocol_memory_toolsDir -ChildPath "templates"
-Create-Directory -Path $Bedtime_Protocol_memory_tools_templatesDir
-$Bedtime_Protocol_memory_tools_logsDir = Join-Path -Path $Bedtime_Protocol_memory_toolsDir -ChildPath "logs"
-Create-Directory -Path $Bedtime_Protocol_memory_tools_logsDir
-$Bedtime_Protocol_memory_tools___pycache__Dir = Join-Path -Path $Bedtime_Protocol_memory_toolsDir -ChildPath "__pycache__"
-Create-Directory -Path $Bedtime_Protocol_memory_tools___pycache__Dir
-$proceduralDir = Join-Path -Path  -ChildPath "procedural"
-Create-Directory -Path $proceduralDir
-$procedural_activeDir = Join-Path -Path $proceduralDir -ChildPath "active"
-Create-Directory -Path $procedural_activeDir
-$coreDir = Join-Path -Path  -ChildPath "core"
+# Fix for path parameters - using the root memory bank directory
+$coreDir = Join-Path -Path $memoryBankDir -ChildPath "core"
 Create-Directory -Path $coreDir
-$core_activeDir = Join-Path -Path $coreDir -ChildPath "active"
-Create-Directory -Path $core_activeDir
-$episodicDir = Join-Path -Path  -ChildPath "episodic"
-Create-Directory -Path $episodicDir
-$episodic_activeDir = Join-Path -Path $episodicDir -ChildPath "active"
-Create-Directory -Path $episodic_activeDir
-$semanticDir = Join-Path -Path  -ChildPath "semantic"
-Create-Directory -Path $semanticDir
-$semantic_activeDir = Join-Path -Path $semanticDir -ChildPath "active"
-Create-Directory -Path $semantic_activeDir
 
-
-# Create rules structure
-$BIG_BRAINDir = Join-Path -Path  -ChildPath "BIG_BRAIN"
+# Rules directories
+$BIG_BRAINDir = Join-Path -Path $rulesDir -ChildPath "BIG_BRAIN"
 Create-Directory -Path $BIG_BRAINDir
-$BIG_BRAIN_WorkflowsDir = Join-Path -Path $BIG_BRAINDir -ChildPath "Workflows"
-Create-Directory -Path $BIG_BRAIN_WorkflowsDir
-$BIG_BRAIN_UtilitiesDir = Join-Path -Path $BIG_BRAINDir -ChildPath "Utilities"
-Create-Directory -Path $BIG_BRAIN_UtilitiesDir
-$BIG_BRAIN_CoreDir = Join-Path -Path $BIG_BRAINDir -ChildPath "Core"
-Create-Directory -Path $BIG_BRAIN_CoreDir
-$BIG_BRAIN_Core_DocumentationDir = Join-Path -Path $BIG_BRAIN_CoreDir -ChildPath "Documentation"
-Create-Directory -Path $BIG_BRAIN_Core_DocumentationDir
-$BIG_BRAIN_Core_FoundationDir = Join-Path -Path $BIG_BRAIN_CoreDir -ChildPath "Foundation"
-Create-Directory -Path $BIG_BRAIN_Core_FoundationDir
-$BIG_BRAIN_Core_TestingDir = Join-Path -Path $BIG_BRAIN_CoreDir -ChildPath "Testing"
-Create-Directory -Path $BIG_BRAIN_Core_TestingDir
-$BIG_BRAIN_Core_VerificationDir = Join-Path -Path $BIG_BRAIN_CoreDir -ChildPath "Verification"
-Create-Directory -Path $BIG_BRAIN_Core_VerificationDir
-$BIG_BRAIN_Core_CommandDir = Join-Path -Path $BIG_BRAIN_CoreDir -ChildPath "Command"
-Create-Directory -Path $BIG_BRAIN_Core_CommandDir
-$BIG_BRAIN_Core_CreativeDir = Join-Path -Path $BIG_BRAIN_CoreDir -ChildPath "Creative"
-Create-Directory -Path $BIG_BRAIN_Core_CreativeDir
-$BIG_BRAIN_Core_EscalationDir = Join-Path -Path $BIG_BRAIN_CoreDir -ChildPath "Escalation"
-Create-Directory -Path $BIG_BRAIN_Core_EscalationDir
-$BIG_BRAIN_Core_CheckpointDir = Join-Path -Path $BIG_BRAIN_CoreDir -ChildPath "Checkpoint"
-Create-Directory -Path $BIG_BRAIN_Core_CheckpointDir
-$BIG_BRAIN_IdentityDir = Join-Path -Path $BIG_BRAINDir -ChildPath "Identity"
-Create-Directory -Path $BIG_BRAIN_IdentityDir
-$BIG_BRAIN_ProtocolsDir = Join-Path -Path $BIG_BRAINDir -ChildPath "Protocols"
-Create-Directory -Path $BIG_BRAIN_ProtocolsDir
-$BIG_BRAIN_TemplatesDir = Join-Path -Path $BIG_BRAINDir -ChildPath "Templates"
-Create-Directory -Path $BIG_BRAIN_TemplatesDir
-$CodebaseDir = Join-Path -Path  -ChildPath "Codebase"
-Create-Directory -Path $CodebaseDir
-$Codebase_PatternsDir = Join-Path -Path $CodebaseDir -ChildPath "Patterns"
-Create-Directory -Path $Codebase_PatternsDir
-$Codebase_FrameworksDir = Join-Path -Path $CodebaseDir -ChildPath "Frameworks"
-Create-Directory -Path $Codebase_FrameworksDir
-$Codebase_Frameworks_DjangoDir = Join-Path -Path $Codebase_FrameworksDir -ChildPath "Django"
-Create-Directory -Path $Codebase_Frameworks_DjangoDir
-$Codebase_Frameworks_ReactDir = Join-Path -Path $Codebase_FrameworksDir -ChildPath "React"
-Create-Directory -Path $Codebase_Frameworks_ReactDir
-$Codebase_LanguagesDir = Join-Path -Path $CodebaseDir -ChildPath "Languages"
-Create-Directory -Path $Codebase_LanguagesDir
-$Codebase_Languages_TypeScriptDir = Join-Path -Path $Codebase_LanguagesDir -ChildPath "TypeScript"
-Create-Directory -Path $Codebase_Languages_TypeScriptDir
-$Codebase_Languages_PythonDir = Join-Path -Path $Codebase_LanguagesDir -ChildPath "Python"
-Create-Directory -Path $Codebase_Languages_PythonDir
-$Codebase_Languages_JavaScriptDir = Join-Path -Path $Codebase_LanguagesDir -ChildPath "JavaScript"
-Create-Directory -Path $Codebase_Languages_JavaScriptDir
 
+$CodebaseDir = Join-Path -Path $rulesDir -ChildPath "Codebase"
+Create-Directory -Path $CodebaseDir
 
 # Create file function
 function Create-FileIfNotExists {
