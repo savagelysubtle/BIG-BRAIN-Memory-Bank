@@ -11,8 +11,8 @@ plugins:
 # Site settings
 title: BIG BRAIN Memory Bank 2.0
 description: "The definitive knowledge persistence system designed for perfect recall across memory resets"
-baseurl: ""
-url: "https://savagelysubtle.github.io/BIG-BRAIN-Memory-Bank"
+baseurl: "/BIG-BRAIN-Memory-Bank"
+url: "https://savagelysubtle.github.io"
 logo: /assets/images/logo.png
 
 # Theme color settings

@@ -14,6 +14,13 @@ $dimmed-text: #BBBBBB;         // Slightly dimmed text
 $code-bg: #2A2A2A;             // Code background
 $border-color: #3A3A3A;        // Border color
 
+// Container for content
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 // Global styles
 body {
   font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
