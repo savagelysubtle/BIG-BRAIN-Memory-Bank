@@ -1,76 +1,149 @@
 {
-  "description": "Memory Management Configuration for BIG BRAIN Bedtime Protocol",
-  "timestamp": "2025-03-23T01:45:00Z",
+  "description": "Memory Management Configuration for Memory Bank Restructuring",
+  "timestamp": "2024-03-24T12:00:00Z",
   "operations": [
     {
-      "operation_type": "move",
-      "source": "core/active/projectbrief.md",
-      "destination_folder": "core/archive",
-      "description": "Archive projectbrief",
-      "memory_type": "core"
-    },
-    {
-      "operation_type": "move",
-      "source": "core/active/productContext.md",
-      "destination_folder": "core/archive",
-      "description": "Archive productContext",
-      "memory_type": "core"
-    },
-    {
-      "operation_type": "move",
-      "source": "core/active/systemPatterns.md",
-      "destination_folder": "core/archive",
-      "description": "Archive systemPatterns",
-      "memory_type": "core"
-    },
-    {
-      "operation_type": "move",
-      "source": "core/active/techContext.md",
-      "destination_folder": "core/archive",
-      "description": "Archive techContext",
-      "memory_type": "core"
-    },
-    {
-      "operation_type": "move",
-      "source": "core/active/activeContext.md",
-      "destination_folder": "core/archive",
-      "description": "Archive activeContext",
-      "memory_type": "core"
-    },
-    {
-      "operation_type": "move",
-      "source": "core/active/progress.md",
-      "destination_folder": "core/archive",
-      "description": "Archive progress",
-      "memory_type": "core"
-    },
-    {
-      "operation_type": "move",
-      "source": "core/active/projectRules.md",
-      "destination_folder": "core/archive",
-      "description": "Archive projectRules",
-      "memory_type": "core"
-    },
-    {
-      "operation_type": "move",
-      "source": "episodic/active/session_summary.md",
-      "destination_folder": "episodic/archive",
-      "description": "Archive session summary",
-      "memory_type": "episodic"
-    },
-    {
-      "operation_type": "move",
-      "source": "semantic/active/updated_patterns.md",
-      "destination_folder": "semantic/archive",
-      "description": "Archive semantic patterns",
+      "operation_type": "create_directory",
+      "target": "semantic/active/design_patterns",
+      "description": "Create new design patterns directory",
       "memory_type": "semantic"
     },
     {
-      "operation_type": "move",
-      "source": "procedural/active/workflow_updates.md",
-      "destination_folder": "procedural/archive",
-      "description": "Archive procedural workflows",
+      "operation_type": "create_directory",
+      "target": "semantic/active/interfaces",
+      "description": "Create new interfaces directory",
+      "memory_type": "semantic"
+    },
+    {
+      "operation_type": "create_directory",
+      "target": "stable/foundations",
+      "description": "Create new stable foundations directory",
+      "memory_type": "stable"
+    },
+    {
+      "operation_type": "create_directory",
+      "target": "stable/reference",
+      "description": "Create new stable reference directory",
+      "memory_type": "stable"
+    },
+    {
+      "operation_type": "create_file",
+      "target": "semantic/active/design_patterns/README.md",
+      "content_template": "# Design Patterns\n\nThis directory stores reusable design pattern documentation for the BIG BRAIN system.\n\n## Purpose\n\nThe design_patterns directory provides a centralized location for documenting reusable patterns identified during development.\n\n## Content Types\n\n- Pattern definitions\n- Implementation examples\n- Application guidelines\n- Pattern relationships\n\n## Organization\n\nPatterns are organized by category and application domain.\n",
+      "description": "Create README for design patterns directory",
+      "memory_type": "semantic"
+    },
+    {
+      "operation_type": "create_file",
+      "target": "semantic/active/interfaces/README.md",
+      "content_template": "# Interfaces\n\nThis directory documents interaction points between system components.\n\n## Purpose\n\nThe interfaces directory provides documentation for how different parts of the system interact with each other.\n\n## Content Types\n\n- API documentation\n- Integration specifications\n- Interface contracts\n- Communication protocols\n\n## Organization\n\nInterface documentation is organized by system component and interaction type.\n",
+      "description": "Create README for interfaces directory",
+      "memory_type": "semantic"
+    },
+    {
+      "operation_type": "create_file",
+      "target": "stable/foundations/README.md",
+      "content_template": "# Foundations\n\nThis directory stores core cognitive principles and foundational knowledge.\n\n## Purpose\n\nThe foundations directory contains immutable, foundational knowledge that has been fully consolidated and verified.\n\n## Content Types\n\n- Core cognitive principles\n- Foundational concepts\n- Established constants\n- Verified axioms\n\n## Organization\n\nFoundation knowledge is organized by domain and principle type.\n",
+      "description": "Create README for stable foundations directory",
+      "memory_type": "stable"
+    },
+    {
+      "operation_type": "create_file",
+      "target": "stable/reference/README.md",
+      "content_template": "# Reference\n\nThis directory stores fully consolidated reference information.\n\n## Purpose\n\nThe reference directory contains validated, stable knowledge resources that serve as authoritative references.\n\n## Content Types\n\n- Standard definitions\n- Reference tables\n- Canonical documentation\n- Validated formulas\n\n## Organization\n\nReference information is organized by subject matter and usage context.\n",
+      "description": "Create README for stable reference directory",
+      "memory_type": "stable"
+    },
+    {
+      "operation_type": "create_file",
+      "target": "episodic/active/timeline/README.md",
+      "content_template": "# Timeline\n\nThis directory documents the chronological sequence of project events and milestones.\n\n## Purpose\n\nThe timeline directory maintains a historical record of key events, decisions, and milestones.\n\n## Content Types\n\n- Event records\n- Milestone documentation\n- Version histories\n- Release timelines\n\n## Organization\n\nTimeline entries are organized chronologically with ISO date prefixes (YYYY-MM-DD).\n",
+      "description": "Create README for timeline directory",
+      "memory_type": "episodic"
+    },
+    {
+      "operation_type": "create_file",
+      "target": "episodic/active/decisions/README.md",
+      "content_template": "# Decisions\n\nThis directory documents important decisions made during the project.\n\n## Purpose\n\nThe decisions directory maintains a record of significant choices, their rationale, and their outcomes.\n\n## Content Types\n\n- Decision records\n- Decision matrices\n- Alternative analyses\n- Impact assessments\n\n## Organization\n\nDecision records are organized by topic area and impact level.\n",
+      "description": "Create README for decisions directory",
+      "memory_type": "episodic"
+    },
+    {
+      "operation_type": "create_file",
+      "target": "stable/README.md",
+      "content_template": "# Stable Memory\n\nThis directory contains fully consolidated, unchanging knowledge.\n\n## Purpose\n\nThe stable memory directory stores information that has completed the memory consolidation path (episodic → semantic → stable) and is now considered permanent and unchanging.\n\n## Memory Consolidation Path\n\nInformation typically follows this path:\n\n1. **Episodic**: Specific experiences and observations\n2. **Semantic**: Structured knowledge extracted from multiple experiences\n3. **Stable**: Fully consolidated, validated knowledge that rarely changes\n\n## Content Types\n\n- Foundational principles (in foundations/)\n- Reference information (in reference/)\n- Consolidated learnings\n- Verified constants\n\n## Organization\n\nStable memory is organized into subdirectories based on knowledge type and application domain.\n",
+      "description": "Create README for stable memory directory",
+      "memory_type": "stable"
+    },
+    {
+      "operation_type": "create_file",
+      "target": "episodic/active/timeline/timeline_entry_template.md",
+      "content_template": "---\ntitle: [Event Title]\ndate: YYYY-MM-DD\nstatus: [completed|ongoing|planned]\nimportance: [high|medium|low]\ncategory: [feature|milestone|decision|release|other]\nrelated_files:\n  - [path/to/related/file.md]\n---\n\n# [Event Title]\n\n## Summary\n\nBrief description of the event or milestone.\n\n## Details\n\nDetailed description with relevant context and information.\n\n## Impact\n\nHow this event impacts the project or system.\n\n## Related Events\n\n- [Link to related timeline event]\n- [Link to related timeline event]\n\n## References\n\n- [Link to relevant documentation]\n- [Link to relevant decision record]\n",
+      "description": "Create timeline entry template",
+      "memory_type": "episodic"
+    },
+    {
+      "operation_type": "create_file",
+      "target": "episodic/active/decisions/decision_record_template.md",
+      "content_template": "---\ntitle: [Decision Title]\ndecision_id: YYYY-MM-DD-[short-name]\nstatus: [proposed|accepted|rejected|superseded]\ndate: YYYY-MM-DD\ndeciders: [list of decision-makers]\ncomplexity: [Level 1-5]\nimpact: [high|medium|low]\nsupersedes: [previous-decision-id]\nsuperseded_by: [newer-decision-id]\nrelated_files:\n  - [path/to/related/file.md]\n---\n\n# [Decision Title]\n\n## Context\n\nDescribe the context and background that led to this decision.\n\n## Decision\n\nClearly state the decision that was made.\n\n## Alternatives Considered\n\n### Alternative 1\n\n- **Description**: Brief description\n- **Pros**: List of benefits\n- **Cons**: List of drawbacks\n\n### Alternative 2\n\n- **Description**: Brief description\n- **Pros**: List of benefits\n- **Cons**: List of drawbacks\n\n## Rationale\n\nExplain the reasoning behind the chosen option.\n\n## Consequences\n\n### Positive\n\n- List positive consequences\n\n### Negative\n\n- List negative consequences\n\n## Implementation Notes\n\nProvide guidance for implementing this decision.\n\n## Verification\n\nDescribe how to verify that the decision has been implemented correctly.\n",
+      "description": "Create decision record template",
+      "memory_type": "episodic"
+    },
+    {
+      "operation_type": "create_file",
+      "target": "semantic/active/design_patterns/design_pattern_template.md",
+      "content_template": "---\ntitle: [Pattern Name]\ncategory: [structural|behavioral|creational|architectural]\ncomplexity: [Level 1-5]\nstatus: [proposed|accepted|deprecated]\ndate_documented: YYYY-MM-DD\nauthor: [pattern documenter]\nrelated_patterns:\n  - [related pattern name]\nrelated_files:\n  - [path/to/related/file.md]\n---\n\n# [Pattern Name]\n\n## Intent\n\nDescribe the purpose and intent of this pattern.\n\n## Problem\n\nDescribe the problem this pattern solves.\n\n## Solution\n\nDescribe how the pattern solves the problem.\n\n## Structure\n\nDescribe or diagram the structure of the pattern.\n\n## Implementation\n\nProvide implementation guidelines or examples.\n\n## Consequences\n\nList the benefits and drawbacks of using this pattern.\n\n## Known Uses\n\nDescribe where this pattern has been applied successfully.\n\n## Related Patterns\n\nList and describe relationships with other patterns.\n",
+      "description": "Create design pattern template",
+      "memory_type": "semantic"
+    },
+    {
+      "operation_type": "create_file",
+      "target": "semantic/active/interfaces/interface_documentation_template.md",
+      "content_template": "---\ntitle: [Interface Name]\ninterface_type: [API|protocol|UI|data]\nstatus: [stable|draft|deprecated]\nversion: X.Y.Z\ndate_documented: YYYY-MM-DD\nauthor: [documenter name]\nprovider: [component providing the interface]\nconsumers: [components consuming the interface]\nrelated_files:\n  - [path/to/related/file.md]\n---\n\n# [Interface Name]\n\n## Purpose\n\nDescribe the purpose of this interface.\n\n## Contract\n\nDescribe the formal contract or agreement of this interface.\n\n### Input\n\nDocument the expected input format and parameters.\n\n### Output\n\nDocument the expected output format and return values.\n\n### Errors\n\nDocument possible error conditions and handling.\n\n## Examples\n\nProvide usage examples.\n\n## Versioning\n\nDescribe versioning strategy and backward compatibility.\n\n## Security Considerations\n\nDocument security requirements or concerns.\n\n## Performance Characteristics\n\nDocument performance expectations and limitations.\n\n## Related Interfaces\n\nList and describe relationships with other interfaces.\n",
+      "description": "Create interface documentation template",
+      "memory_type": "semantic"
+    },
+    {
+      "operation_type": "create_file",
+      "target": "stable/foundations/foundation_knowledge_template.md",
+      "content_template": "---\ntitle: [Foundation Title]\ncategory: [principle|concept|constant|axiom]\nstability: [immutable|core|fundamental]\nverification_level: [proven|established|accepted]\ndate_stabilized: YYYY-MM-DD\noriginated_from: [episodic/semantic source]\nrelated_files:\n  - [path/to/related/file.md]\n---\n\n# [Foundation Title]\n\n## Definition\n\nClear, precise definition of this foundational knowledge.\n\n## Origin\n\nExplain how this knowledge was established and its origins.\n\n## Verification\n\nDescribe the verification process that established this as foundational.\n\n## Application\n\nExplain how this foundation is applied throughout the system.\n\n## Dependencies\n\nList any other foundational knowledge this depends upon.\n\n## Derived Knowledge\n\nList knowledge that is derived from this foundation.\n\n## Stability Justification\n\nExplain why this knowledge is considered stable and foundational.\n",
+      "description": "Create foundation knowledge template",
+      "memory_type": "stable"
+    },
+    {
+      "operation_type": "create_file",
+      "target": "stable/reference/reference_document_template.md",
+      "content_template": "---\ntitle: [Reference Title]\ncategory: [definition|taxonomy|standard|formula]\nstatus: [authoritative|accepted|provisional]\nversion: X.Y.Z\ndate_stabilized: YYYY-MM-DD\nauthor: [original author]\nvalidation_method: [how this was validated]\nrelated_files:\n  - [path/to/related/file.md]\n---\n\n# [Reference Title]\n\n## Purpose\n\nDescribe the purpose of this reference document.\n\n## Content\n\nThe main reference content in appropriate format.\n\n## Validation\n\nDescribe how this reference was validated for accuracy.\n\n## Usage Guidelines\n\nProvide guidance on how to use this reference correctly.\n\n## Maintenance\n\nDescribe the process for maintaining and updating this reference.\n\n## Related References\n\nList and describe relationships with other reference documents.\n",
+      "description": "Create reference document template",
+      "memory_type": "stable"
+    },
+    {
+      "operation_type": "rename",
+      "source": "Bedtime Protocol",
+      "destination": "bedtime_protocol",
+      "description": "Rename Bedtime Protocol directory to snake_case",
       "memory_type": "procedural"
+    },
+    {
+      "operation_type": "create_file",
+      "target": "bedtime_protocol/protocol_step_template.md",
+      "content_template": "---\ntitle: [Protocol Step Title]\nstep_number: N\nrequired: [true|false]\ndependencies: [previous steps required]\ncomplexity: [simple|medium|complex]\nfrequency: [every_session|conditional|special_case]\nvalidation_required: [true|false]\nrelated_files:\n  - [path/to/related/file.md]\n---\n\n# [Protocol Step Title]\n\n## Purpose\n\nDescribe the purpose of this protocol step.\n\n## Prerequisites\n\nList any prerequisites that must be completed before this step.\n\n## Procedure\n\nDetailed instructions for completing this step:\n\n1. First action\n2. Second action\n3. Third action\n\n## Verification\n\nDescribe how to verify this step was completed correctly.\n\n## Troubleshooting\n\nCommon issues and their resolutions.\n\n## Notes\n\nAdditional information or context about this step.\n\n## Related Steps\n\nList and describe relationships with other protocol steps.\n",
+      "description": "Create protocol step template",
+      "memory_type": "procedural"
+    },
+    {
+      "operation_type": "verify_directory_empty",
+      "target": "core",
+      "description": "Verify core directory is empty or contains no unique content",
+      "memory_type": "core",
+      "action_if_not_empty": "document"
+    },
+    {
+      "operation_type": "mark_for_removal",
+      "target": "core",
+      "description": "Mark core directory for removal as final cleanup step",
+      "memory_type": "core",
+      "removal_date": "final_cleanup_phase"
     }
   ],
   "options": {
@@ -79,11 +152,14 @@
     "generate_log": true,
     "category_detection": "smart",
     "create_category_metadata": true,
+    "backup_before_changes": true,
+    "verify_after_changes": true,
     "memory_types": {
       "core": ["projectbrief", "productContext", "activeContext", "systemPatterns", "techContext", "progress", "projectRules"],
-      "episodic": ["sessions", "decisions", "implementation", "history"],
-      "semantic": ["domain", "features", "concepts", "patterns"],
-      "procedural": ["workflows", "guides", "processes", "setup"]
+      "episodic": ["sessions", "decisions", "timeline", "history"],
+      "semantic": ["architecture", "concepts", "knowledge_base", "design_patterns", "interfaces"],
+      "procedural": ["workflows", "guidelines", "plans", "analyses", "checklists"],
+      "stable": ["foundations", "reference"]
     },
     "default_categories": [
       "projectbrief",
@@ -95,10 +171,19 @@
       "projectRules",
       "sessions",
       "decisions",
-      "domain",
-      "features",
+      "timeline",
+      "architecture",
+      "concepts",
+      "knowledge_base",
+      "design_patterns",
+      "interfaces",
       "workflows",
-      "guides"
+      "guidelines",
+      "plans",
+      "analyses",
+      "checklists",
+      "foundations",
+      "reference"
     ]
   }
 }

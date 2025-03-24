@@ -1,0 +1,78 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN creating glob patterns, ENSURE they are explicit, efficient, and enforce placement of rule files under .cursor/rules.
+globs: ["**/*.mdc", ".cursor/rules/**/*"]
+alwaysApply: false
+---
+<rule>
+  <tl;dr>Use specific glob patterns—do not use overly broad patterns like "**/*". Always target .mdc files and files within .cursor/rules using: ["**/*.mdc", ".cursor/rules/**/*"].</tl;dr>
+  <examples>
+    <example>src/**/*.ts targets all TypeScript files within the src directory.</example>
+    <example>!**/node_modules/** excludes all files in node_modules.</example>
+    <example>The enforced pattern for rule files: ["**/*.mdc", ".cursor/rules/**/*"].</example>
+  </examples>
+  <instructions>
+    <instruction>Glob patterns should be as specific as possible to reduce processing overhead.</instruction>
+    <instruction>Combine with exclusion patterns to avoid scanning irrelevant directories.</instruction>
+    <instruction>Write with explicit directory paths; for rule files, always use ["**/*.mdc", ".cursor/rules/**/*"].</instruction>
+  </instructions>
+</rule>
+
+<details>
+  <section-name>EXCLUSION PATTERNS</section-name>
+  <content>
+    <explanation>Use exclusion patterns to avoid processing unnecessary files:</explanation>
+    <example>
+```
+globs:
+  - "src/**/*.js"
+  - "!src/test/**/*.js"
+  - "!src/vendor/**/*.js"
+  - "!**/node_modules/**"
+```
+    </example>
+    <benefits>
+      <benefit>Improves performance by reducing file scanning</benefit>
+      <benefit>Prevents rules from applying to third-party code</benefit>
+      <benefit>Avoids conflicts with test files that may have different standards</benefit>
+    </benefits>
+  </content>
+</details>
+
+<examples>
+  <good-practice>
+    <description>Well-structured glob definition for React components</description>
+    <code>
+```
+---
+description: Best practices for React component architecture
+globs:
+  - "src/components/**/*.tsx"
+  - "src/components/**/*.jsx"
+  - "!src/components/**/*.test.{tsx,jsx}"
+  - "!src/components/**/*.stories.{tsx,jsx}"
+alwaysApply: false
+---
+```
+    </code>
+    <explanation>This pattern targets React component files while excluding test and Storybook files</explanation>
+  </good-practice>
+
+  <bad-practice>
+    <description>Inefficient glob pattern</description>
+    <code>
+```
+---
+description: JavaScript best practices
+globs: "**/*.js"
+alwaysApply: false
+---
+```
+    </code>
+    <explanation>This pattern is too broad and will unnecessarily scan all directories, including node_modules and other irrelevant locations</explanation>
+  </bad-practice>
+</examples>

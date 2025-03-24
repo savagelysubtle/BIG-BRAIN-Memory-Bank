@@ -1,4 +1,9 @@
 ---
+description: 
+globs: 
+alwaysApply: false
+---
+---
 description: WHEN performing memory bank operations FOLLOW standardized workflows for consistency and reliability
 globs: ["**/*.md", "**/*.mdc"]
 alwaysApply: true

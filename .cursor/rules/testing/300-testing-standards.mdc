@@ -1,4 +1,9 @@
 ---
+description: 
+globs: 
+alwaysApply: false
+---
+---
 description: WHEN implementing or validating BIG BRAIN components APPLY systematic testing and verification
 globs: ["**/*.mdc", "**/*.md"]
 alwaysApply: true

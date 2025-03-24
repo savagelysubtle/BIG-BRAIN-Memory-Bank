@@ -1,0 +1,40 @@
+---
+description: WHEN creating or updating rules ALWAYS follow these precise XML formatting and structure guidelines
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN editing Cursor rules in .mdc files, ENSURE strict XML formatting and placement in .cursor/rules based on the folder structure and rule type.
+globs: ["**/*.mdc", ".cursor/rules/**/*"]
+alwaysApply: false
+---
+> **TL;DR:** Use full-word, lowercase XML tags; include a <version> tag; indent nested tags by 2 spaces; and place all rule files under .cursor/rules.
+<version>1.0.0</version>
+<context>
+  This rule applies to all .mdc files that include XML content and must reside in the .cursor/rules directory.
+</context>
+<requirements>
+  <requirement>Use full-word, lowercase XML tag names (e.g., &lt;version&gt;, &lt;context&gt;).</requirement>
+  <requirement>Indent nested tags by 2 spaces for readability.</requirement>
+  <requirement>Always include a <version> tag at the top to track rule versions.</requirement>
+  <requirement>All rule files must be located under .cursor/rules and use the .mdc extension.</requirement>
+</requirements>
+<examples>
+  <good-practice>
+    <description>Proper XML Formatting Example</description>
+    <code>
+      &lt;version&gt;1.0.0&lt;/version&gt;
+      &lt;context&gt;Applies to React component rules&lt;/context&gt;
+      &lt;requirements&gt;
+        &lt;requirement&gt;Use functional components&lt;/requirement&gt;
+      &lt;/requirements&gt;
+    </code>
+  </good-practice>
+  <bad-practice>
+    <description>Poor Formatting Example</description>
+    <code>
+      &lt;ver&gt;1.0&lt;/ver&gt;
+      &lt;ctx&gt;React components&lt;/ctx&gt;
+    </code>
+  </bad-practice>
+</examples>

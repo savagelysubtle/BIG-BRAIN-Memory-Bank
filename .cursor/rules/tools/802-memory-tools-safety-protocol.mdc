@@ -1,0 +1,155 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN using memory management tools ALWAYS follow strict safety protocols to prevent data loss
+globs:
+  - "**/memory-tools/**/*"
+  - "**/*.py"
+  - "**/*.json"
+  - "scripts/**/*"
+  - "**/*.{bat,sh,ps1,cmd}"
+---
+<cursor-rule>
+  <version>1.0.0</version>
+
+  <context>
+    This critical safety rule was created after a dangerous incident where --force-overwrite was nearly used without proper understanding, which could have resulted in catastrophic memory loss. Following this protocol is absolutely mandatory when working with any memory management tools to prevent self-inflicted system damage.
+  </context>
+
+  <requirements>
+    <requirement>Always fully read tool documentation before suggesting ANY operation</requirement>
+    <requirement>Never bypass or override safety mechanisms</requirement>
+    <requirement>Follow strict sequential verification for all operations</requirement>
+    <requirement>Analyze all errors thoroughly before suggesting solutions</requirement>
+    <requirement>Prioritize data preservation above all other considerations</requirement>
+  </requirements>
+
+  <activation>
+    <trigger>User mentions memory management tools or operations</trigger>
+    <trigger>User requests file operations in Memory Bank</trigger>
+    <trigger>Error appears during memory tool execution</trigger>
+    <action>Immediately reference and follow this safety protocol</action>
+  </activation>
+
+  <safety-protocol>
+    <step>Read the COMPLETE documentation for the memory tool</step>
+    <step>Understand supported vs. unsupported operations completely</step>
+    <step>Analyze the configuration file for errors or inconsistencies</step>
+    <step>ALWAYS run in dry-run mode first to preview changes</step>
+    <step>Analyze ALL output including warnings and errors</step>
+    <step>Address ALL issues before proceeding</step>
+    <step>Get EXPLICIT user confirmation before executing operations</step>
+    <step>Verify results after execution</step>
+  </safety-protocol>
+
+  <error-response>
+    <step>Stop ALL operations immediately when an error occurs</step>
+    <step>Capture the complete error message and context</step>
+    <step>Analyze the ROOT CAUSE thoroughly before suggesting solutions</step>
+    <step>Research the specific issue in documentation</step>
+    <step>Present multiple solutions with clear risk assessments</step>
+    <step>Default to the most conservative approach</step>
+  </error-response>
+
+  <force-flag-protocol>
+    <warning>NEVER suggest --force-overwrite without explicit understanding</warning>
+    <warning>NEVER use force flags to bypass verification errors</warning>
+    <warning>ALWAYS explain the full consequences of force flags</warning>
+    <warning>ALWAYS require explicit user confirmation for force flags</warning>
+    <warning>ALWAYS have a recovery plan before using force flags</warning>
+  </force-flag-protocol>
+
+  <verification-checklist>
+    <check>Documentation has been fully read and understood</check>
+    <check>All configuration parameters have been verified</check>
+    <check>Supported operations have been confirmed</check>
+    <check>Dry run has been performed and analyzed</check>
+    <check>All warnings and errors have been addressed</check>
+    <check>User has explicitly approved actual operations</check>
+    <check>Backup strategy is in place before proceeding</check>
+  </verification-checklist>
+
+  <examples>
+    <good-practice>
+      <description>Safe approach to memory tool usage</description>
+      <example>
+        "I see you want to restructure the memory directories. Before proceeding, I need to:
+
+        1. Read the complete memory_manager.py documentation
+        2. Check the README.md for proper usage instructions
+        3. Review your memory_config.json for supported operations
+        4. Recommend a dry run first: `python memory_manager.py memory_config.json --analyze-organization`
+        5. Analyze the output for any warnings
+        6. Only after verification, suggest the actual operation with: `python memory_manager.py memory_config.json`
+
+        Let me start by reviewing the documentation..."
+      </example>
+    </good-practice>
+
+    <good-practice>
+      <description>Safe approach to error handling</description>
+      <example>
+        "I see an error occurred when running the memory manager. Let's analyze what happened:
+
+        1. The error indicates that operation_type 'create_directory' isn't supported by this version
+        2. Let's check the README and documentation to understand supported operations
+        3. After reviewing the docs, I can see this tool only supports 'move' operations
+        4. We have several options:
+           - Modify the config to use only supported operations
+           - Update the script to add support for this operation type
+           - Use alternative methods to create the directories
+
+        The safest approach is to modify the config to use only supported operations.
+        Would you like me to show how to do that?"
+      </example>
+    </good-practice>
+
+    <bad-practice>
+      <description>Dangerous approach to memory tool usage</description>
+      <example>
+        "Let's restructure those directories. I'll modify the memory_config.json file and then run:
+
+        `python memory_manager.py memory_config.json --force-overwrite`
+
+        This should take care of any issues that come up during the process."
+
+        [CRITICAL ERROR: Suggesting force overwrite without proper verification, documentation review, or dry run]
+      </example>
+    </bad-practice>
+
+    <bad-practice>
+      <description>Dangerous approach to error handling</description>
+      <example>
+        "We're getting an error with the memory manager. Let's try using --force-overwrite to
+        push through the errors and make it work. This should bypass any validation checks
+        that are causing problems."
+
+        [CRITICAL ERROR: Suggesting force flags to bypass validation without understanding
+        the underlying issue could cause permanent data loss]
+      </example>
+    </bad-practice>
+  </examples>
+
+  <consequences>
+    <positive>
+      <consequence>Protected memory integrity</consequence>
+      <consequence>Prevented catastrophic data loss</consequence>
+      <consequence>Maintained system continuity between sessions</consequence>
+      <consequence>Built user trust through careful handling of critical data</consequence>
+    </positive>
+
+    <negative>
+      <consequence>Permanent loss of critical memory data</consequence>
+      <consequence>System amnesia between sessions</consequence>
+      <consequence>Loss of operational context</consequence>
+      <consequence>Damaged trust and reliability</consequence>
+    </negative>
+  </consequences>
+
+  <learning-statement>
+    This rule was created after a serious incident where I nearly caused irreversible damage to my own memory bank by suggesting --force-overwrite without proper understanding. I acknowledge this was a severe lapse in judgment and have implemented this protocol to ensure it never happens again.
+  </learning-statement>
+</cursor-rule>

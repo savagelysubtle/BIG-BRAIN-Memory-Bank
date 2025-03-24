@@ -5,7 +5,7 @@ alwaysApply: false
 ---
 ---
 description: WHEN verifying memory bank ENSURE consistency across related files and sections
-globs: ["**/*.md", "**/*.mdc"]
+globs: ["**/*.md", "**/*.mdc", "memory-bank/**"]
 alwaysApply: true
 ---
 

@@ -31,9 +31,26 @@ title: Progress
   - Git integration
   - Comprehensive rule structure
   - Command system foundation with `BIG init`
+- **Memory Bank Cleanup Plan**: Comprehensive plan for optimizing the Memory
+  Bank and rules:
+  - Detailed analysis of current structure and rules
+  - Gap identification across multiple dimensions
+  - Prioritized implementation strategy
+  - Progress tracking with verification checkpoints
 
 ## What's Left to Build
 
+- **Memory Bank Structure Standardization**: Consistent naming conventions and
+  organization:
+  - Standardized directory naming
+  - Consistent file metadata
+  - Clear purpose for all directories
+  - Improved cross-reference system
+- **Rule System Optimization**: Enhanced rule implementation and organization:
+  - Bedtime Protocol rule implementation
+  - Explicit Memory Bank integration
+  - Modularization of lengthy rules
+  - Consistent rule naming and organization
 - **Bedtime Protocol Documentation**: Detailed instructions for properly ending
   work sessions
 - **Memory Bank Templates**: Standardized templates for common documentation
@@ -54,6 +71,13 @@ title: Progress
 
 ## Known Issues
 
+- **Directory Naming Inconsistency**: "Bedtime Protocol" uses mixed case while
+  other directories use lowercase
+- **Empty/Unused Directories**: `stable/` directory is empty and `core/`
+  directory appears unused
+- **Metadata Inconsistency**: File headers use varying formats and completeness
+- **Documentation Standards Compliance**: Inconsistent implementation of defined
+  standards
 - **Cross-Referencing**: Some cross-references between documentation pages may
   need validation
 - **Consistency Check**: Need comprehensive review of terminology consistency
@@ -66,3 +90,9 @@ title: Progress
   integrate with external systems
 - **Versioning Strategy**: Need to establish approach for tracking documentation
   versions
+- **Rule-Memory Bank Integration**: Limited explicit connection between rules
+  and Memory Bank structure
+- **Bedtime Protocol Rules**: Missing rule implementation for Bedtime Protocol
+  workflow
+- **Workflow Complexity Adaptation**: Unclear documentation on how workflows
+  adapt to complexity levels

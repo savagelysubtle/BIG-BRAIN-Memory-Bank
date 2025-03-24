@@ -1,4 +1,9 @@
 ---
+description: 
+globs: 
+alwaysApply: false
+---
+---
 description: WHEN creating new BIG BRAIN components USE this template structure for consistent implementation
 globs: ["**/*.mdc"]
 alwaysApply: false

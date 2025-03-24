@@ -1,4 +1,9 @@
 ---
+description: 
+globs: 
+alwaysApply: false
+---
+---
 description: WHEN adding or modifying rule files ENSURE they follow the established organization structure
 globs: ["**/*.mdc"]
 alwaysApply: true
