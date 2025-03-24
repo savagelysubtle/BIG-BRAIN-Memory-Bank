@@ -1,0 +1,148 @@
+@import "{{ site.theme }}";
+
+/* Custom styles for BIG BRAIN Memory Bank 2.0 documentation */
+
+// Color variables
+$primary-color: #2e6da4;
+$secondary-color: #5cb85c;
+$accent-color: #f0ad4e;
+$text-color: #333;
+$light-bg: #f8f9fa;
+$code-bg: #f5f5f5;
+
+// Global styles
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: $text-color;
+  line-height: 1.6;
+}
+
+.page-header {
+  background-color: $primary-color;
+  background-image: linear-gradient(120deg, $primary-color, darken($primary-color, 10%));
+
+  .project-name {
+    font-weight: 700;
+  }
+
+  .project-tagline {
+    opacity: 0.9;
+  }
+}
+
+// Navigation improvements
+.site-nav {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  a {
+    display: inline-block;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    color: $primary-color;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgba($primary-color, 0.1);
+    }
+  }
+}
+
+// Content styling
+.main-content {
+  h1, h2, h3, h4, h5, h6 {
+    color: $primary-color;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  h1 {
+    border-bottom: 1px solid lighten($primary-color, 40%);
+    padding-bottom: 0.5rem;
+  }
+
+  code {
+    background-color: $code-bg;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+  }
+
+  pre {
+    background-color: $code-bg;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  // Directory structure styling
+  pre.directory-structure {
+    background-color: $light-bg;
+    border-left: 4px solid $secondary-color;
+  }
+
+  // Buttons and links
+  .btn {
+    background-color: $primary-color;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      text-decoration: none;
+    }
+  }
+
+  a {
+    color: $primary-color;
+
+    &:hover {
+      color: darken($primary-color, 15%);
+    }
+  }
+
+  // Tables
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+
+    th {
+      background-color: $light-bg;
+      font-weight: 600;
+    }
+
+    th, td {
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+    }
+
+    tr:nth-child(even) {
+      background-color: $light-bg;
+    }
+  }
+
+  // Callouts
+  blockquote {
+    background-color: $light-bg;
+    border-left: 4px solid $accent-color;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+}
+
+// Footer styling
+.site-footer {
+  border-top: 1px solid #eee;
+  margin-top: 2rem;
+  padding-top: 2rem;
+
+  .site-footer-owner {
+    font-weight: 600;
+  }
+}

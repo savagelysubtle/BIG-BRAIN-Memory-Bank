@@ -1,3 +1,11 @@
+---
+layout: default
+title: Installation Guide
+parent: Guides
+nav_order: 1
+permalink: /guides/installation/
+---
+
 # Installation Guide
 
 ## Overview

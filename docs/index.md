@@ -1,8 +1,26 @@
+---
+layout: default
+title: Home
+nav_order: 1
+description:
+  'BIG BRAIN Memory Bank 2.0 - Comprehensive documentation for the sophisticated
+  system designed to maintain operational consistency and knowledge persistence
+  across memory resets.'
+permalink: /
+---
+
 # BIG BRAIN Memory Bank 2.0 Documentation
 
 Welcome to the comprehensive documentation for the BIG BRAIN Memory Bank 2.0
 system. This documentation provides detailed information about installation,
 usage, architecture, and implementation of the Memory Bank system.
+
+{: .fs-6 .fw-300 } [Get Started](#getting-started){: .btn .btn-primary .fs-5
+.mb-4 .mb-md-0 .mr-2 }
+[View on GitHub](https://github.com/your-username/TheMemoryBank){: .btn .fs-5
+.mb-4 .mb-md-0 }
+
+---
 
 ## Introduction
 
@@ -76,6 +94,8 @@ memory-bank/
 └── long-term/        # Historical or archived information
 ```
 
+{: .directory-structure }
+
 ## Scripts Structure
 
 ```
@@ -96,6 +116,8 @@ scripts/
 └── ScriptCatalog.md      # Comprehensive script documentation
 ```
 
+{: .directory-structure }
+
 ## Rule System Structure
 
 The rule system is organized as follows:
@@ -115,6 +137,8 @@ The rule system is organized as follows:
 │   └── Utilities/       # Utility functions
 └── Codebase/            # Codebase-related rules
 ```
+
+{: .directory-structure }
 
 ## Getting Help
 
