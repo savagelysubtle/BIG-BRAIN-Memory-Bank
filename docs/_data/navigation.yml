@@ -1,0 +1,34 @@
+# Main navigation links
+main:
+  - title: "Home"
+    url: /
+  - title: "Getting Started"
+    url: /getting-started/
+    children:
+      - title: "Installation"
+        url: /guides/installation/
+      - title: "Startup Guide"
+        url: /guides/startup/
+      - title: "Commands Guide"
+        url: /guides/commands/
+  - title: "Architecture"
+    url: /architecture/
+    children:
+      - title: "Overview"
+        url: /architecture/overview/
+      - title: "Components"
+        url: /architecture/components/
+  - title: "Scripts"
+    url: /scripts/
+    children:
+      - title: "Script Catalog"
+        url: /scripts/catalog/
+      - title: "Script Organization"
+        url: /reference/script-organization/
+      - title: "Initialization Scripts"
+        url: /guides/initialization-scripts/
+  - title: "Reference"
+    url: /reference/
+    children:
+      - title: "System Patterns"
+        url: /reference/system-patterns/

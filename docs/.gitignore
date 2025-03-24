@@ -1,0 +1,19 @@
+# Jekyll build artifacts
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+
+# Environment variables
+.env
+
+# Ruby dependency management
+Gemfile.lock
+
+# macOS system files
+.DS_Store
+
+# Windows thumbnail files
+Thumbs.db

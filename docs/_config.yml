@@ -1,0 +1,42 @@
+# GitHub Pages Configuration for BIG BRAIN Memory Bank 2.0
+
+# Theme settings
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Site settings
+title: BIG BRAIN Memory Bank 2.0
+description: Comprehensive documentation for the BIG BRAIN Memory Bank system
+baseurl: ""
+url: ""
+
+# Navigation structure
+header_pages:
+  - index.md
+  - Guides/Installation.md
+  - Guides/Startup.md
+  - Guides/Commands.md
+  - Architecture/Overview.md
+
+# Google Analytics (if needed, uncomment and add your ID)
+# google_analytics: UA-XXXXXXXXX-X
+
+# Defaults for all pages
+defaults:
+  -
+    scope:
+      path: "" # all files
+    values:
+      layout: "default"
+      author: "BIG BRAIN"
+
+# Exclude from processing (files/folders not needed in the site)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
