@@ -32,8 +32,19 @@ if "%COMMIT_MSG%"=="" (
 )
 
 echo.
-echo Adding documentation files...
-git add docs/
+echo Do you want to add all changed files, or just documentation? (A for all, D for docs only)
+set /p ADD_OPTION=
+
+if /i "%ADD_OPTION%" EQU "A" (
+    echo Adding all changed files...
+    git add .
+) else (
+    echo Adding documentation files...
+    git add docs/ *.md
+    echo.
+    echo Note: This won't add script files or other non-documentation changes.
+    echo If you need to add other files, use 'A' option or add them manually.
+)
 
 echo.
 echo Committing changes with message: "%COMMIT_MSG%"
