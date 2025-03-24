@@ -194,3 +194,44 @@ Scripts are designed with recovery in mind:
 These patterns provide the structural framework that enables the Memory Bank
 system to function effectively across memory resets, maintaining consistency,
 completeness, and clarity throughout the development process.
+
+## Installation Patterns
+
+### Bootstrapper Pattern
+
+The Memory Bank implements a bootstrapper pattern for new installations:
+
+- **Lightweight Entry Point**: Minimal scripts that expand into a complete
+  system
+- **Self-Contained Templates**: All necessary templates bundled in the
+  bootstrapper script
+- **Progressive Disclosure**: Installation process guides users through
+  configuration in logical steps
+- **Cross-Platform Design**: Parallel implementations with identical
+  functionality for different platforms
+- **Project Adaptation**: Tailors installation to the specific project through
+  interactive questionnaire
+
+#### Implementation Mechanism
+
+The bootstrapper pattern is implemented using:
+
+1. **Platform-Specific Scripts**: Dedicated implementations for Windows
+   (PowerShell) and Unix (Bash)
+2. **Embedded Templates**: Complete template files embedded as heredocs within
+   the scripts
+3. **Interactive Configuration**: User-guided setup through targeted questions
+4. **Git Integration**: Automatic configuration of .gitignore and other Git
+   settings
+5. **Command System Foundation**: Setup of the core command system, particularly
+   the `BIG init` command
+
+#### Benefits of the Bootstrapper Pattern
+
+This pattern provides several advantages:
+
+- Minimizes initial download size for new users
+- Creates personalized Memory Bank structures tailored to specific projects
+- Enables integration with existing projects
+- Provides consistent experience across different platforms
+- Establishes foundation for the command system

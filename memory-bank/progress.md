@@ -24,6 +24,13 @@ title: Progress
   connections and transitions
 - **Repository Structure**: Organized repository with clear separation of
   documentation and operational components
+- **Bootstrapper Implementation**: Lightweight entry scripts for easily setting
+  up the Memory Bank:
+  - Cross-platform support (PowerShell and Bash)
+  - Interactive project questionnaire
+  - Git integration
+  - Comprehensive rule structure
+  - Command system foundation with `BIG init`
 
 ## What's Left to Build
 
@@ -42,6 +49,8 @@ title: Progress
 - **Example Outputs**: Sample outputs from each workflow for reference
 - **Performance Metrics**: Methods to measure effectiveness of the Memory Bank
   system
+- **Enhanced Command System**: Full implementation of the command system,
+  building on the foundation established in the bootstrapper
 
 ## Known Issues
 

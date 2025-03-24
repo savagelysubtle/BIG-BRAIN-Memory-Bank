@@ -4,7 +4,10 @@ BIG BRAIN Memory Bank was inspired by and builds upon the work of:
 
 ## Original Concept
 
-- **Memory Bank Concept** by [ipenywis](https://github.com/ipenywis)
+- **Memory Bank Concept**
+  - [Cline-Memory-Bank](https://github.com/nickbaumann98/cline_docs/blob/main/prompting/custom%20instructions%20library/cline-memory-bank.md)
+    the original memory bank system
+  - [ipenywis](https://github.com/ipenywis)
   - Initial discovery through this YouTube video:
     [I Used This TRICK To Solve The AI Amnesia Problem](https://www.youtube.com/watch?v=Uufa6flWid4)
   - Original gist:

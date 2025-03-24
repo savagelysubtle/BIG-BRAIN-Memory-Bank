@@ -29,10 +29,11 @@ Complexity System, and comprehensive Bedtime Protocol.
 
 ## Overview
 
-BIG BRAIN Memory Bank System is a comprehensive framework that attempts to solve the AI
-amnesia problem by creating a structured external memory for AI assistants. This
-system ensures that critical project context is maintained across sessions,
-significantly enhancing productivity and reducing repetitive explanations.
+BIG BRAIN Memory Bank System is a comprehensive framework that attempts to solve
+the AI amnesia problem by creating a structured external memory for AI
+assistants. This system ensures that critical project context is maintained
+across sessions, significantly enhancing productivity and reducing repetitive
+explanations.
 
 ## Key Features
 
@@ -182,6 +183,8 @@ workflow that scales with task complexity.
 
 Special thanks to:
 
+- [cline-memory-bank](https://github.com/nickbaumann98/cline_docs/blob/main/prompting/custom%20instructions%20library/cline-memory-bank.md)
+  for the base to all projects mentioned
 - [ipenywis](https://github.com/ipenywis) for their contributions to memory
   systems for AI assistants via their
   [Cursor Memory Bank Gist](https://gist.github.com/ipenywis/1bdb541c3a612dbac4a14e1e3f4341ab)
@@ -207,6 +210,12 @@ AI assistant that truly never forgets._
 
 ## Origins & Acknowledgments
 
-BIG BRAIN Memory Bank builds upon the Memory Bank concept initially developed by [ipenywis](https://github.com/ipenywis) and further implemented by [vanzan01](https://github.com/vanzan01/cursor-memory-bank). While inspired by these projects, BIG BRAIN Memory Bank has evolved into a distinct implementation with significant enhancements to the architecture, workflow systems, and memory management protocols.
+BIG BRAIN Memory Bank builds upon the Memory Bank concept initially developed by
+[ipenywis](https://github.com/ipenywis) and further implemented by
+[vanzan01](https://github.com/vanzan01/cursor-memory-bank). While inspired by
+these projects, BIG BRAIN Memory Bank has evolved into a distinct implementation
+with significant enhancements to the architecture, workflow systems, and memory
+management protocols.
 
-We gratefully acknowledge these original creators whose work provided valuable inspiration.
+We gratefully acknowledge these original creators whose work provided valuable
+inspiration.

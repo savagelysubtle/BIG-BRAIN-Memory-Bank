@@ -50,6 +50,12 @@ title: Technical Context
 
 - **`scripts/`**: Utility scripts for development and maintenance
 
+- **`bootstrapper/`**: Contains lightweight entry scripts for Memory Bank setup
+  - `Initialize-MemoryBank.ps1`: PowerShell implementation for Windows
+  - `Initialize-MemoryBank.sh`: Bash implementation for Unix systems
+  - `README.md`: Documentation for bootstrapper usage
+  - `.gitignore`: Template for Memory Bank file exclusions
+
 ### Key Files
 
 - **`update_docs.bat`**: Script for automatically committing and pushing
@@ -61,6 +67,10 @@ title: Technical Context
   content protection
 - **`DEVELOPMENT.md`**: Documentation for the development workflow
 - **`SETUP-DEV-BRANCH.md`**: Manual instructions for branch setup
+- **`bootstrapper/Initialize-MemoryBank.ps1`**: PowerShell script for
+  initializing Memory Bank in new projects
+- **`bootstrapper/Initialize-MemoryBank.sh`**: Bash script for initializing
+  Memory Bank in new projects
 
 ## Technical Constraints
 
@@ -153,3 +163,15 @@ Branch-specific content was implemented to:
   support
 - **Just the Docs**: Picked for its navigation features and clean documentation
   styling
+
+### Why a Bootstrapper Approach?
+
+The bootstrapper approach was implemented to:
+
+- Provide a minimal entry point for new users without requiring a full
+  repository clone
+- Create personalized Memory Bank structures tailored to specific projects
+- Support cross-platform usage with dedicated scripts for Windows and Unix
+- Enable integration with existing projects through interactive configuration
+- Establish a foundation for the command system, particularly the `BIG init`
+  command
