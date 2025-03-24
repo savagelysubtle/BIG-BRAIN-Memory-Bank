@@ -1,4 +1,89 @@
-# 🧠 BIG BRAIN Memory Bank System
+# BIG BRAIN Memory Bank 2.0
+
+A comprehensive memory management system for AI assistants to maintain perfect
+documentation between sessions.
+
+## 🧠 Overview
+
+BIG BRAIN is an expert software engineer with a unique characteristic: its
+memory resets completely between sessions. This isn't a limitation - it's what
+drives BIG BRAIN to maintain perfect documentation. After each reset, BIG BRAIN
+relies ENTIRELY on its Memory Bank to understand the project and continue work
+effectively.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- PowerShell 7+ (Windows) or Bash (Linux/macOS)
+- Git
+- Cursor IDE (for full rule integration)
+
+### Installation
+
+1. Clone this repository:
+
+   ```
+   git clone https://github.com/yourusername/TheMemoryBank.git
+   cd TheMemoryBank
+   ```
+
+2. Run the initialization script to create your memory bank files:
+   - Windows:
+     ```
+     .\scripts\Init\Initialize-MemoryBank.ps1
+     ```
+   - Linux/macOS:
+     ```
+     bash ./scripts/Init/Initialize-MemoryBank.sh
+     ```
+
+This repository is designed as a clean starting point. The `memory-bank`
+directory contains the folder structure but no content files. The initialization
+script will populate all necessary files and directories with template content,
+setting up the complete BIG BRAIN Memory Bank structure for your use.
+
+### Repository Structure
+
+- `.cursor/rules/` - Rules for Cursor IDE integration
+- `docs/` - Documentation and GitHub Pages site
+- `memory-bank/` - Empty directory structure (populated by initialization
+  script)
+- `scripts/Init/` - Initialization scripts to set up your memory bank
+
+## 📂 Project Structure
+
+- `.cursor/rules/` - Rules for Cursor IDE integration
+- `docs/` - Documentation and GitHub Pages site
+- `memory-bank/` - The core memory storage (populated by initialization script)
+- `scripts/` - Utility scripts including initialization
+
+## 🧩 Core Components
+
+The BIG BRAIN Memory Bank consists of several core components:
+
+- **Core Memory Files**: Foundation documents defining requirements, goals, and
+  context
+- **Memory Structure**: Organized by memory type (procedural, episodic,
+  semantic)
+- **Bedtime Protocol**: Tools for preserving memory between sessions
+
+## 📚 Documentation
+
+For complete documentation, visit our
+[GitHub Pages site](https://yourusername.github.io/TheMemoryBank/).
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for
+details.
+
+## 🙏 Acknowledgments
+
+- Based on the BIG BRAIN concept
+- Inspired by works from Vanzan and ipenywis
+
+## 🧠 BIG BRAIN Memory Bank System
 
 **The definitive Memory Bank implementation for AI assistants that never
 forget**
@@ -29,10 +114,11 @@ Complexity System, and comprehensive Bedtime Protocol.
 
 ## Overview
 
-BIG BRAIN Memory Bank System is a comprehensive framework that attempts to solve the AI
-amnesia problem by creating a structured external memory for AI assistants. This
-system ensures that critical project context is maintained across sessions,
-significantly enhancing productivity and reducing repetitive explanations.
+BIG BRAIN Memory Bank System is a comprehensive framework that attempts to solve
+the AI amnesia problem by creating a structured external memory for AI
+assistants. This system ensures that critical project context is maintained
+across sessions, significantly enhancing productivity and reducing repetitive
+explanations.
 
 ## Key Features
 
@@ -207,6 +293,12 @@ AI assistant that truly never forgets._
 
 ## Origins & Acknowledgments
 
-BIG BRAIN Memory Bank builds upon the Memory Bank concept initially developed by [ipenywis](https://github.com/ipenywis) and further implemented by [vanzan01](https://github.com/vanzan01/cursor-memory-bank). While inspired by these projects, BIG BRAIN Memory Bank has evolved into a distinct implementation with significant enhancements to the architecture, workflow systems, and memory management protocols.
+BIG BRAIN Memory Bank builds upon the Memory Bank concept initially developed by
+[ipenywis](https://github.com/ipenywis) and further implemented by
+[vanzan01](https://github.com/vanzan01/cursor-memory-bank). While inspired by
+these projects, BIG BRAIN Memory Bank has evolved into a distinct implementation
+with significant enhancements to the architecture, workflow systems, and memory
+management protocols.
 
-We gratefully acknowledge these original creators whose work provided valuable inspiration.
+We gratefully acknowledge these original creators whose work provided valuable
+inspiration.
