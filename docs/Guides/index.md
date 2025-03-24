@@ -1,49 +1,88 @@
 ---
 layout: default
-title: Guides
+title: Getting Started
 nav_order: 2
 has_children: true
 permalink: /guides/
 ---
 
-# BIG BRAIN Memory Bank 2.0 Guides
+# Getting Started with BIG BRAIN Memory Bank 2.0
 
-This section contains comprehensive guides for working with the BIG BRAIN Memory
-Bank 2.0 system. These guides provide step-by-step instructions for different
-aspects of the system, from installation to advanced usage.
+Welcome to the Getting Started section of the BIG BRAIN Memory Bank 2.0
+documentation. This section provides all the essential guides to help you begin
+using the Memory Bank system effectively.
+
+{: .fs-6 .fw-300 }
+
+## What is BIG BRAIN Memory Bank?
+
+BIG BRAIN Memory Bank is a sophisticated knowledge persistence system designed
+specifically for environments where memory completely resets between sessions.
+It provides a structured approach to documentation, allowing for perfect recall
+of project information, system architecture, and operational context even after
+a complete memory reset.
+
+## Key Capabilities
+
+- **Perfect Recall** - Access complete project knowledge after memory resets
+- **Structured Documentation** - Organized information architecture for
+  efficient retrieval
+- **Consistent Operations** - Maintain operational continuity across sessions
+- **Systematic Verification** - Built-in mechanisms to validate system integrity
+- **Standardized Workflows** - Clear processes for common tasks
 
 ## Available Guides
 
-- [Installation Guide](Installation.md) - How to install and configure the
-  system
-- [Startup Guide](Startup.md) - How to initialize and start using the system
-- [Commands Guide](Commands.md) - Reference for all system commands
-- [Initialization Scripts](InitializationScripts.md) - Guide to system
-  initialization scripts
+<div class="guides-grid">
+  <div class="guide-card">
+    <h3><a href="{{ site.baseurl }}/guides/installation/">Installation Guide</a></h3>
+    <p>Step-by-step instructions for setting up BIG BRAIN Memory Bank 2.0</p>
+    <a href="{{ site.baseurl }}/guides/installation/" class="btn">Read Guide</a>
+  </div>
 
-## Guide Selection
+  <div class="guide-card">
+    <h3><a href="{{ site.baseurl }}/guides/startup/">Startup Guide</a></h3>
+    <p>Learn how to initialize and start using the Memory Bank system</p>
+    <a href="{{ site.baseurl }}/guides/startup/" class="btn">Read Guide</a>
+  </div>
 
-Choose the appropriate guide based on your current needs:
+  <div class="guide-card">
+    <h3><a href="{{ site.baseurl }}/guides/commands/">Commands Guide</a></h3>
+    <p>Reference for all system commands and how to use them effectively</p>
+    <a href="{{ site.baseurl }}/guides/commands/" class="btn">Read Guide</a>
+  </div>
 
-1. **New to BIG BRAIN?** Start with the [Installation Guide](Installation.md)
-   followed by the [Startup Guide](Startup.md)
-2. **Already installed?** Use the [Commands Guide](Commands.md) for quick
-   reference
-3. **Need to initialize or reset?** Refer to the
-   [Initialization Scripts](InitializationScripts.md) guide
+  <div class="guide-card">
+    <h3><a href="{{ site.baseurl }}/guides/initialization-scripts/">Initialization Scripts</a></h3>
+    <p>Understanding the scripts that help bootstrap the system</p>
+    <a href="{{ site.baseurl }}/guides/initialization-scripts/" class="btn">Read Guide</a>
+  </div>
+</div>
 
-## Guide Usage Tips
+## First Steps
 
-- Each guide is designed to be self-contained but may reference other guides for
-  related information
-- Code examples can be copied directly from the guides
-- Command references include all required parameters and options
-- Screenshots are provided for complex operations
+If you're new to BIG BRAIN Memory Bank, we recommend following these steps:
 
-## Getting Help
+1. **Installation** - Follow the [Installation
+   Guide]({{ site.baseurl }}/guides/installation/) to set up the system
+2. **System Initialization** - Use the [Startup
+   Guide]({{ site.baseurl }}/guides/startup/) to initialize the system
+3. **Learn Commands** - Familiarize yourself with the [Commands
+   Guide]({{ site.baseurl }}/guides/commands/)
+4. **Explore Architecture** - Understand the [system
+   architecture]({{ site.baseurl }}/architecture/overview/)
 
-If you encounter issues with any of the guides:
+## Need Help?
 
-1. Check the specific guide's troubleshooting section
-2. Refer to the [Known Issues](../Reference/KnownIssues.md) documentation
-3. Run the `MEMORY HEALTH CHECK` command for system diagnostics
+If you encounter any issues while getting started:
+
+- Review the [Troubleshooting
+  Guide]({{ site.baseurl }}/reference/troubleshooting/)
+- Execute the `MEMORY HEALTH CHECK` command to diagnose system issues
+- Check for [known issues]({{ site.baseurl }}/reference/known-issues/) that
+  might affect your setup
+
+---
+
+Ready to dive in? Start with the [Installation
+Guide]({{ site.baseurl }}/guides/installation/) →

@@ -2,33 +2,95 @@
 main:
   - title: "Home"
     url: /
+    description: "BIG BRAIN Memory Bank 2.0 Documentation Home"
   - title: "Getting Started"
-    url: /getting-started/
+    url: /guides/
+    description: "Everything you need to start using Memory Bank"
     children:
       - title: "Installation"
         url: /guides/installation/
+        description: "How to install and configure the system"
       - title: "Startup Guide"
         url: /guides/startup/
+        description: "How to initialize and start using the system"
       - title: "Commands Guide"
         url: /guides/commands/
+        description: "Reference for all system commands"
+      - title: "Initialization Scripts"
+        url: /guides/initialization-scripts/
+        description: "Essential scripts for system startup"
   - title: "Architecture"
     url: /architecture/
+    description: "Understanding the system architecture"
     children:
       - title: "Overview"
         url: /architecture/overview/
+        description: "High-level system architecture"
       - title: "Components"
         url: /architecture/components/
-  - title: "Scripts"
-    url: /scripts/
+        description: "Detailed component information"
+      - title: "Memory Storage"
+        url: /architecture/memory-storage/
+        description: "How memory is structured and stored"
+      - title: "Rules System"
+        url: /architecture/rules-system/
+        description: "How the rule system works"
+  - title: "Memory Bank"
+    url: /memory-bank/
+    description: "The heart of the system - the Memory Bank"
     children:
-      - title: "Script Catalog"
-        url: /scripts/catalog/
-      - title: "Script Organization"
-        url: /reference/script-organization/
-      - title: "Initialization Scripts"
-        url: /guides/initialization-scripts/
+      - title: "Core Files"
+        url: /memory-bank/core-files/
+        description: "Essential memory bank core files"
+      - title: "Structure"
+        url: /memory-bank/structure/
+        description: "Memory Bank directory structure"
+      - title: "Memory States"
+        url: /memory-bank/states/
+        description: "Understanding memory states"
+      - title: "Bedtime Protocol"
+        url: /memory-bank/bedtime-protocol/
+        description: "End-of-session preservation system"
+  - title: "Workflows"
+    url: /workflows/
+    description: "Standard operating procedures"
+    children:
+      - title: "Planning Mode"
+        url: /workflows/planning-mode/
+        description: "How to plan effectively"
+      - title: "Action Mode"
+        url: /workflows/action-mode/
+        description: "How to execute tasks effectively"
+      - title: "Documentation Updates"
+        url: /workflows/documentation-updates/
+        description: "How to maintain documentation"
+      - title: "Memory Reset Handling"
+        url: /workflows/memory-reset/
+        description: "Managing memory resets"
   - title: "Reference"
     url: /reference/
+    description: "Technical reference materials"
     children:
       - title: "System Patterns"
         url: /reference/system-patterns/
+        description: "Key architectural and design patterns"
+      - title: "Script Organization"
+        url: /reference/script-organization/
+        description: "Pattern for script categorization"
+      - title: "API Reference"
+        url: /reference/api/
+        description: "API documentation"
+      - title: "Troubleshooting"
+        url: /reference/troubleshooting/
+        description: "Common issues and solutions"
+
+# Footer links
+footer:
+  - title: "GitHub"
+    url: "https://github.com/savagelysubtle/BIG-BRAIN-Memory-Bank"
+  - title: "Documentation"
+    url: "https://savagelysubtle.github.io/BIG-BRAIN-Memory-Bank"
+  - title: "Changelog"
+    url: "/changelog/"
+  - title: "Privacy Policy"
+    url: "/privacy-policy/"

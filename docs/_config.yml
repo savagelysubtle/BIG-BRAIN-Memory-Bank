@@ -6,20 +6,35 @@ plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 # Site settings
 title: BIG BRAIN Memory Bank 2.0
-description: Comprehensive documentation for the BIG BRAIN Memory Bank system
+description: "The definitive knowledge persistence system designed for perfect recall across memory resets"
 baseurl: ""
-url: ""
+url: "https://savagelysubtle.github.io/BIG-BRAIN-Memory-Bank"
+logo: /assets/images/logo.png
+
+# Theme color settings
+color_scheme: dark
 
 # Navigation structure
 header_pages:
   - index.md
-  - Guides/Installation.md
-  - Guides/Startup.md
-  - Guides/Commands.md
-  - Architecture/Overview.md
+  - Guides/index.md
+  - Architecture/index.md
+  - Reference/index.md
+
+# Enable search
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s\-/]+/
+  rel_url: true
+  button: true
 
 # Google Analytics (if needed, uncomment and add your ID)
 # google_analytics: UA-XXXXXXXXX-X
@@ -32,6 +47,7 @@ defaults:
     values:
       layout: "default"
       author: "BIG BRAIN"
+      toc: true
 
 # Exclude from processing (files/folders not needed in the site)
 exclude:
@@ -40,3 +56,13 @@ exclude:
   - node_modules
   - vendor
   - .gitignore
+  - README.md
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    default_lang: shell
+    css_class: 'highlight'

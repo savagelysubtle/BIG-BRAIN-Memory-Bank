@@ -1,25 +1,31 @@
 @import "{{ site.theme }}";
 
-/* Custom styles for BIG BRAIN Memory Bank 2.0 documentation */
+/* Custom styles for BIG BRAIN Memory Bank 2.0 documentation - Dark Green Theme */
 
 // Color variables
-$primary-color: #2e6da4;
-$secondary-color: #5cb85c;
-$accent-color: #f0ad4e;
-$text-color: #333;
-$light-bg: #f8f9fa;
-$code-bg: #f5f5f5;
+$primary-color: #0B7A0B;      // Dark green
+$secondary-color: #00C200;     // Brighter green
+$accent-color: #5DFF5D;        // Light green accent
+$dark-bg: #121212;             // Very dark background
+$darker-bg: #0A0A0A;           // Even darker background
+$medium-bg: #1E1E1E;           // Medium dark background
+$light-text: #E0E0E0;          // Light text
+$dimmed-text: #BBBBBB;         // Slightly dimmed text
+$code-bg: #2A2A2A;             // Code background
+$border-color: #3A3A3A;        // Border color
 
 // Global styles
 body {
   font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: $text-color;
+  color: $light-text;
   line-height: 1.6;
+  background-color: $dark-bg;
 }
 
 .page-header {
   background-color: $primary-color;
   background-image: linear-gradient(120deg, $primary-color, darken($primary-color, 10%));
+  color: white;
 
   .project-name {
     font-weight: 700;
@@ -34,53 +40,66 @@ body {
 .site-nav {
   text-align: center;
   margin-bottom: 2rem;
+  background-color: $medium-bg;
+  padding: 1rem 0;
+  border-radius: 5px;
 
   a {
     display: inline-block;
     margin: 0 1rem;
     padding: 0.5rem 1rem;
-    color: $primary-color;
+    color: $secondary-color;
     text-decoration: none;
     border-radius: 4px;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
 
     &:hover {
-      background-color: rgba($primary-color, 0.1);
+      background-color: rgba($secondary-color, 0.2);
+      color: $accent-color;
     }
   }
 }
 
 // Content styling
 .main-content {
+  background-color: $dark-bg;
+  color: $light-text;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
   h1, h2, h3, h4, h5, h6 {
-    color: $primary-color;
+    color: $secondary-color;
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-weight: 600;
   }
 
   h1 {
-    border-bottom: 1px solid lighten($primary-color, 40%);
+    border-bottom: 1px solid $primary-color;
     padding-bottom: 0.5rem;
   }
 
   code {
     background-color: $code-bg;
+    color: $accent-color;
     padding: 0.2rem 0.4rem;
     border-radius: 3px;
   }
 
   pre {
     background-color: $code-bg;
-    border: 1px solid #ddd;
+    border: 1px solid $border-color;
     padding: 1rem;
     border-radius: 5px;
+    color: $light-text;
   }
 
   // Directory structure styling
   pre.directory-structure {
-    background-color: $light-bg;
+    background-color: $medium-bg;
     border-left: 4px solid $secondary-color;
+    color: $light-text;
   }
 
   // Buttons and links
@@ -93,16 +112,17 @@ body {
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: darken($primary-color, 10%);
+      background-color: lighten($primary-color, 10%);
       text-decoration: none;
     }
   }
 
   a {
-    color: $primary-color;
+    color: $secondary-color;
 
     &:hover {
-      color: darken($primary-color, 15%);
+      color: $accent-color;
+      text-decoration: none;
     }
   }
 
@@ -111,38 +131,260 @@ body {
     width: 100%;
     border-collapse: collapse;
     margin: 1rem 0;
+    background-color: $medium-bg;
 
     th {
-      background-color: $light-bg;
+      background-color: $primary-color;
+      color: white;
       font-weight: 600;
     }
 
     th, td {
       padding: 0.75rem;
-      border: 1px solid #ddd;
+      border: 1px solid $border-color;
     }
 
     tr:nth-child(even) {
-      background-color: $light-bg;
+      background-color: rgba($primary-color, 0.1);
     }
   }
 
   // Callouts
   blockquote {
-    background-color: $light-bg;
+    background-color: $medium-bg;
     border-left: 4px solid $accent-color;
     padding: 1rem;
     margin: 1rem 0;
+  }
+
+  hr {
+    border-color: $border-color;
   }
 }
 
 // Footer styling
 .site-footer {
-  border-top: 1px solid #eee;
+  border-top: 1px solid $border-color;
   margin-top: 2rem;
   padding-top: 2rem;
+  color: $dimmed-text;
 
   .site-footer-owner {
     font-weight: 600;
+    color: $light-text;
   }
 }
+
+// Code syntax highlighting adjustments for dark theme
+.highlight {
+  background-color: $code-bg;
+
+  .c, .c1, .cm, .cp, .cs { color: #75715e; } // Comments
+  .k, .kd, .kn, .kp, .kr, .kt { color: $accent-color; } // Keywords
+  .o, .ow { color: #f92672; } // Operators
+  .n, .nb, .bp, .nc, .no, .nd, .ni, .ne, .nf, .nl, .nn, .nx, .py, .nt, .nv, .vc, .vg, .vi { color: #a6e22e; } // Names
+  .mi, .mf, .mh, .il, .m { color: #ae81ff; } // Numbers
+  .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss { color: #e6db74; } // Strings
+}
+
+// Ensure dark theme for all elements
+* {
+  scrollbar-color: $primary-color $dark-bg;
+}
+
+// Print styles adjustment
+@media print {
+  body {
+    color: #000;
+    background-color: #fff;
+  }
+
+  .main-content {
+    color: #000;
+    background-color: #fff;
+  }
+}
+
+// Guide cards styling
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.guide-card {
+  background-color: $medium-bg;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 4px solid $secondary-color;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  h3 {
+    margin-top: 0;
+    border-bottom: 1px solid rgba($secondary-color, 0.3);
+    padding-bottom: 0.5rem;
+
+    a {
+      text-decoration: none;
+      color: $secondary-color;
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+
+  p {
+    color: $dimmed-text;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn {
+    display: inline-block;
+    background-color: rgba($primary-color, 0.8);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}
+
+// Memory Bank file cards
+.memory-bank-files {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.file-card {
+  background-color: $medium-bg;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid $secondary-color;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: $light-text;
+    font-family: "Consolas", "Monaco", monospace;
+    font-size: 1.2rem;
+  }
+
+  p {
+    color: $dimmed-text;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .file-priority {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &.critical {
+      background-color: rgba(255, 50, 50, 0.2);
+      color: #ff5050;
+      border: 1px solid rgba(255, 50, 50, 0.3);
+    }
+
+    &.high {
+      background-color: rgba(255, 180, 0, 0.2);
+      color: #ffb400;
+      border: 1px solid rgba(255, 180, 0, 0.3);
+    }
+
+    &.medium {
+      background-color: rgba(30, 144, 255, 0.2);
+      color: #1e90ff;
+      border: 1px solid rgba(30, 144, 255, 0.3);
+    }
+
+    &.low {
+      background-color: rgba($secondary-color, 0.2);
+      color: $secondary-color;
+      border: 1px solid rgba($secondary-color, 0.3);
+    }
+  }
+}
+
+// Protocol phases styling
+.protocol-phases {
+  margin: 2rem 0;
+}
+
+.phase {
+  display: flex;
+  margin-bottom: 2rem;
+  background-color: $medium-bg;
+  border-radius: 8px;
+  padding: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.phase-number {
+  background-color: $primary-color;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4rem;
+}
+
+.phase-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+
+  h3 {
+    margin-top: 0;
+    color: $secondary-color;
+    border-bottom: 1px solid rgba($secondary-color, 0.3);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    margin-bottom: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Fix for Jekyll front matter with SCSS variables
