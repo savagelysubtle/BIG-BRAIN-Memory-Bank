@@ -55,12 +55,28 @@ if %ERRORLEVEL% NEQ 0 (
     exit /b 1
 )
 
-echo Merging memory-bank-dev into main...
-git merge --no-ff memory-bank-dev -m "%MERGE_MSG%"
+echo Merging memory-bank-dev into main WITHOUT committing...
+git merge --no-commit --no-ff memory-bank-dev
 if %ERRORLEVEL% NEQ 0 (
     echo Error: Merge conflict detected.
     echo Please resolve conflicts manually, then complete the merge.
     echo After resolving, push changes with: git push origin main
+    exit /b 1
+)
+
+echo Checking inspiration folder status...
+if not exist inspiration (
+    echo Restoring inspiration folder that should remain in main...
+    git reset HEAD inspiration
+    git checkout -- inspiration
+)
+
+echo Committing the merge...
+git commit -S -m "%MERGE_MSG%"
+if %ERRORLEVEL% NEQ 0 (
+    echo Error: Failed to commit the merge.
+    echo Returning to %RETURN_BRANCH% branch...
+    git checkout %RETURN_BRANCH%
     exit /b 1
 )
 
@@ -77,5 +93,6 @@ git checkout %RETURN_BRANCH%
 
 echo.
 echo Merge complete! Changes from memory-bank-dev have been merged into main.
+echo The inspiration folder has been preserved in the main branch.
 echo.
 exit /b 0
