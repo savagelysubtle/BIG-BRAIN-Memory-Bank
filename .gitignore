@@ -117,4 +117,6 @@ tmp/
 
 # Accidental file creations
 -clean-signed
-h origin*
+h origin* 
+# Branch-specific ignores for memory-bank-dev 
+/inspiration/ 
