@@ -14,37 +14,17 @@ if %ERRORLEVEL% NEQ 0 (
 echo Checking git status...
 git status
 
-echo.
-echo Are you ready to commit and push the documentation changes? (Y/N)
-set /p CONFIRM=
+REM Default commit message if none provided
+set COMMIT_MSG=Update documentation
 
-if /i "%CONFIRM%" NEQ "Y" (
-    echo Update canceled.
-    exit /b 0
+REM Check if a commit message was provided as an argument
+if not "%~1"=="" (
+    set COMMIT_MSG=%~1
 )
 
 echo.
-echo Please enter a commit message describing your documentation updates:
-set /p COMMIT_MSG=
-
-if "%COMMIT_MSG%"=="" (
-    set COMMIT_MSG=Update documentation
-)
-
-echo.
-echo Do you want to add all changed files, or just documentation? (A for all, D for docs only)
-set /p ADD_OPTION=
-
-if /i "%ADD_OPTION%" EQU "A" (
-    echo Adding all changed files...
-    git add .
-) else (
-    echo Adding documentation files...
-    git add docs/ *.md
-    echo.
-    echo Note: This won't add script files or other non-documentation changes.
-    echo If you need to add other files, use 'A' option or add them manually.
-)
+echo Adding all files...
+git add .
 
 echo.
 echo Committing changes with message: "%COMMIT_MSG%"
@@ -70,22 +50,4 @@ echo.
 echo Documentation update complete!
 echo Changes have been committed and pushed to the repository.
 echo.
-
-echo Would you like to create a pull request? (Y/N)
-set /p CREATE_PR=
-
-if /i "%CREATE_PR%" EQU "Y" (
-    echo.
-    echo Please create a pull request on GitHub:
-    echo 1. Go to your repository on GitHub
-    echo 2. Click on "Pull requests"
-    echo 3. Click on "New pull request"
-    echo 4. Select the appropriate base and compare branches
-    echo 5. Click "Create pull request"
-    echo 6. Add a title and description
-    echo 7. Click "Create pull request" again
-)
-
-echo.
-echo Thank you for updating the BIG BRAIN Memory Bank documentation!
 exit /b 0
