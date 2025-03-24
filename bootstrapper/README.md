@@ -61,29 +61,58 @@ The bootstrapper creates the following directory structure:
 
 ```
 your-project/
-├── .cursor/rules/BIG_BRAIN/  # Rules for Cursor IDE integration
-├── memory-bank/             # The core memory storage
-│   ├── core/                # Foundation memory files
-│   │   └── active/          # Current working files
-│   ├── episodic/            # Experience-based memory
-│   ├── procedural/          # Action-based memory
-│   ├── semantic/            # Knowledge-based memory
-│   └── Bedtime Protocol/    # End-of-session protocol
-└── .gitignore              # Updated to ignore memory files
+├── .cursor/rules/
+│   ├── BIG_BRAIN/             # Rules for BIG BRAIN core functionality
+│   │   ├── Identity/          # Core identity rules
+│   │   ├── Core/              # Core operation rules
+│   │   │   ├── Foundation/    # Foundation layer rules
+│   │   │   ├── Command/       # Command handling rules
+│   │   │   └── ...           # Other core rule categories
+│   │   ├── Workflows/         # Workflow operation rules
+│   │   └── Protocols/         # Process protocol rules
+│   └── Codebase/              # Language/framework specific rules
+│       ├── JavaScript/        # JavaScript specific rules
+│       ├── Python/            # Python specific rules
+│       ├── Java/              # Java specific rules
+│       ├── ...                # Other language directories
+│       ├── Git/               # Git operation rules
+│       └── Testing/           # Testing-related rules
+├── memory-bank/              # The core memory storage
+│   ├── core/                 # Foundation memory files
+│   │   └── active/           # Current working files
+│   ├── episodic/             # Experience-based memory
+│   ├── procedural/           # Action-based memory
+│   ├── semantic/             # Knowledge-based memory
+│   └── Bedtime Protocol/     # End-of-session protocol
+└── .gitignore               # Updated to ignore memory files
 ```
 
 ## Using BIG BRAIN
 
-After initialization, you can start using BIG BRAIN by typing commands that
-begin with "BIG" in your Cursor AI chat, such as:
+After initialization, you can start using BIG BRAIN by following these steps:
 
-- `BIG tell me about this project`
-- `BIG switch to plan mode`
-- `BIG update memory bank`
+1. **Initialize Project Context**:
 
-At the end of your working session, don't forget to run:
+   ```
+   BIG init
+   ```
 
-- `BIG execute bedtime protocol`
+   This command analyzes your project structure and populates the memory bank
+   with context about your codebase.
+
+2. **Query BIG BRAIN** with commands that begin with "BIG":
+
+   ```
+   BIG tell me about this project
+   BIG switch to plan mode
+   BIG update memory bank
+   ```
+
+3. **End Your Session** with the Bedtime Protocol:
+   ```
+   BIG execute bedtime protocol
+   ```
+   This ensures all context is properly saved for future sessions.
 
 ## License
 

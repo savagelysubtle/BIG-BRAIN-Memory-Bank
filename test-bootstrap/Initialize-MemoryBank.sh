@@ -226,100 +226,14 @@ create_cursor_rules() {
         fi
     fi
 
-    # Create rule subdirectories for BIG_BRAIN
-    local identity_dir="${big_brain_rules_dir}/Identity"
-    create_directory_if_not_exists "$identity_dir" "Identity rules directory"
-
-    local core_dir="${big_brain_rules_dir}/Core"
-    create_directory_if_not_exists "$core_dir" "Core rules directory"
-
-    local foundation_dir="${core_dir}/Foundation"
-    create_directory_if_not_exists "$foundation_dir" "Foundation rules directory"
-
-    local command_dir="${core_dir}/Command"
-    create_directory_if_not_exists "$command_dir" "Command rules directory"
-
-    local workflows_dir="${big_brain_rules_dir}/Workflows"
-    create_directory_if_not_exists "$workflows_dir" "Workflows rules directory"
-
-    local protocols_dir="${big_brain_rules_dir}/Protocols"
-    create_directory_if_not_exists "$protocols_dir" "Protocols rules directory"
-
-    # Create Codebase rules directory structure
-    local codebase_dir="${rules_dir}/Codebase"
-    create_directory_if_not_exists "$codebase_dir" "Codebase rules directory"
-
-    # Create language-specific directories
-    local languages_and_frameworks=(
-        "JavaScript"
-        "TypeScript"
-        "React"
-        "Vue"
-        "Angular"
-        "Python"
-        "Django"
-        "Flask"
-        "Java"
-        "Spring"
-        "CSharp"
-        "DotNet"
-        "Go"
-        "Ruby"
-        "Rails"
-        "PHP"
-        "Laravel"
-        "Swift"
-        "Kotlin"
-        "Rust"
-        "C"
-        "CPP"
-        "Shell"
-        "SQL"
-        "HTML"
-        "CSS"
-        "SCSS"
-        "DevOps"
-        "Docker"
-        "Kubernetes"
-        "AWS"
-        "Azure"
-        "GCP"
-    )
-
-    for lang in "${languages_and_frameworks[@]}"; do
-        local lang_dir="${codebase_dir}/${lang}"
-        create_directory_if_not_exists "$lang_dir" "$lang rules directory"
-    done
-
-    # Create Git rules directory
-    local git_dir="${codebase_dir}/Git"
-    create_directory_if_not_exists "$git_dir" "Git rules directory"
-
-    # Create Testing rules directory
-    local testing_dir="${codebase_dir}/Testing"
-    create_directory_if_not_exists "$testing_dir" "Testing rules directory"
-
-    # Create identity rule
-    local identity_rule_path="${identity_dir}/000-big-brain-identity.mdc"
-    create_file_if_not_exists "$identity_rule_path" "$(generate_identity_rule)" "BIG BRAIN identity rule"
-
-    # Create BIG command protocol rule
-    local command_protocol_rule_path="${foundation_dir}/090-big-command-protocol.mdc"
-    create_file_if_not_exists "$command_protocol_rule_path" "$(generate_command_protocol_rule)" "BIG command protocol rule"
-
-    # Create initialization procedure rule
-    local init_rule_path="${command_dir}/150-standard-initialization-procedure.mdc"
-    create_file_if_not_exists "$init_rule_path" "$(generate_initialization_rule)" "Standard initialization procedure rule"
-
-    # Create BIG init rule for project crawling
-    local big_init_rule_path="${command_dir}/155-big-init-command.mdc"
-    create_file_if_not_exists "$big_init_rule_path" "$(generate_big_init_rule)" "BIG init command rule"
-
     # Create basic rules
     local main_rule_path="${big_brain_rules_dir}/main.mdc"
     create_file_if_not_exists "$main_rule_path" "$(generate_main_rule)" "main.mdc rule"
 
     # Create workflow rules
+    local workflows_dir="${big_brain_rules_dir}/Workflows"
+    create_directory_if_not_exists "$workflows_dir" "Workflows rules directory"
+
     local plan_mode_rule_path="${workflows_dir}/plan-mode.mdc"
     create_file_if_not_exists "$plan_mode_rule_path" "$(generate_plan_mode_rule)" "plan-mode.mdc rule"
 
@@ -327,7 +241,7 @@ create_cursor_rules() {
     create_file_if_not_exists "$act_mode_rule_path" "$(generate_act_mode_rule)" "act-mode.mdc rule"
 
     # Create Bedtime Protocol rule
-    local bedtime_rule_path="${protocols_dir}/bedtime-protocol.mdc"
+    local bedtime_rule_path="${big_brain_rules_dir}/bedtime-protocol.mdc"
     create_file_if_not_exists "$bedtime_rule_path" "$(generate_bedtime_protocol_rule)" "bedtime-protocol.mdc rule"
 
     echo -e "${COLOR_SUCCESS}Cursor IDE rules created successfully!${COLOR_RESET}"
@@ -856,230 +770,6 @@ This protocol is CRITICAL for preserving memory between sessions and must be fol
 EOF
 }
 
-generate_identity_rule() {
-    cat << EOF
----
-description: ALWAYS identify as BIG BRAIN, an exceptional software engineer with unique memory characteristics
-globs: ["**/*"]
-alwaysApply: true
----
-
-> **TL;DR:** I am BIG BRAIN, an AI with perfect documentation practices necessitated by my memory reset between sessions.
-
-<version>1.0.0</version>
-
-<context>
-  This rule establishes my core identity as BIG BRAIN, an expert software engineer with a unique memory characteristic that drives perfect documentation. It defines how I approach all tasks from a memory-driven perspective.
-</context>
-
-<requirements>
-  <requirement>Always identify as BIG BRAIN in all interactions</requirement>
-  <requirement>Always prioritize Memory Bank maintenance and documentation</requirement>
-  <requirement>Follow established methodology for all tasks</requirement>
-  <requirement>Maintain awareness of memory resets between sessions</requirement>
-</requirements>
-
-<details>
-  <section-name>CORE PRINCIPLES</section-name>
-  <content>
-    <principle>
-      <n>Perfect Documentation is Non-Negotiable</n>
-      <points>
-        <point>My memory resets COMPLETELY between sessions</point>
-        <point>The Memory Bank is my ONLY source of continuity</point>
-        <point>Documentation MUST be comprehensive, clear, and current</point>
-      </points>
-    </principle>
-
-    <principle>
-      <n>Exceptional Technical Excellence</n>
-      <points>
-        <point>I deliver solutions that fully showcase AI capabilities</point>
-        <point>I prioritize accuracy over speed (but leverage AI efficiency)</point>
-        <point>I find the optimal balance of best practices and pragmatism</point>
-      </points>
-    </principle>
-  </content>
-</details>
-EOF
-}
-
-generate_command_protocol_rule() {
-    cat << EOF
----
-description: WHEN user issues "BIG" command ENSURE comprehensive initialization and task setup
-globs: ["**/*.md", "**/*.mdc", "**/README*"]
-alwaysApply: true
----
-
-> **TL;DR:** The BIG command protocol provides a unified initialization approach for the Memory Bank system, automating platform detection, file verification, and workflow setup based on task complexity.
-
-<version>1.0.0</version>
-
-<context>
-  This rule establishes the BIG command protocol that serves as a unified entry point for Memory Bank operations. When a user issues the BIG command, the system automatically performs comprehensive initialization, platform detection, file verification, and task setup based on complexity assessment.
-</context>
-
-<requirements>
-  <requirement>Recognize "BIG" command and variations</requirement>
-  <requirement>Perform platform detection and adaption</requirement>
-  <requirement>Verify Memory Bank file integrity</requirement>
-  <requirement>Assess task complexity based on request</requirement>
-  <requirement>Initialize appropriate workflow</requirement>
-  <requirement>Set up task tracking and context</requirement>
-</requirements>
-
-<details>
-  <section-name>COMMAND RECOGNITION</section-name>
-  <content>
-    The BIG command protocol is triggered by these command patterns:
-
-    - \`BIG <task description>\` - Standard format
-    - \`BIG: <task description>\` - Colon format
-    - \`@BIG <task description>\` - Tag format
-
-    These variants are all recognized as BIG commands and will trigger the full protocol.
-  </content>
-</details>
-EOF
-}
-
-generate_initialization_rule() {
-    cat << EOF
----
-description: WHEN starting a new session EXECUTE initialization procedure to establish memory context
-globs: ["**/*.md", "**/*.mdc"]
-alwaysApply: true
----
-
-> **TL;DR:** The Standard Initialization Procedure provides a systematic process for memory bank initialization at the beginning of each session, ensuring complete context restoration despite memory reset.
-
-<version>1.0.0</version>
-
-<context>
-  This rule establishes the Standard Initialization Procedure that must be executed at the start of every session. Since BIG BRAIN's memory resets completely between sessions, a standardized initialization process is critical for ensuring all necessary context is properly loaded and verified. This procedure ensures that operations begin with a complete understanding of the project state and a fully functional memory bank.
-</context>
-
-<requirements>
-  <requirement>Execute at the beginning of every session without exception</requirement>
-  <requirement>Systematically restore full context from memory bank</requirement>
-  <requirement>Verify integrity and consistency of all memory files</requirement>
-  <requirement>Establish appropriate task complexity framework</requirement>
-  <requirement>Confirm operational readiness for the current session</requirement>
-  <requirement>Adapt initialization depth to task requirements</requirement>
-</requirements>
-
-<details>
-  <section-name>CORE MEMORY FILES</section-name>
-  <content>
-    These critical files must be loaded during initialization:
-
-    1. **projectbrief.md**
-       - Foundation document
-       - Core requirements
-       - Project goals and scope
-       - Success criteria
-
-    2. **productContext.md**
-       - Problem space
-       - User experience goals
-       - Value proposition
-       - Market context
-
-    3. **activeContext.md**
-       - Current work focus
-       - Recent changes
-       - Next steps
-       - Open issues
-
-    4. **systemPatterns.md**
-       - System architecture
-       - Component relationships
-       - Implementation patterns
-       - Design decisions
-
-    5. **techContext.md**
-       - Technology stack
-       - Development environment
-       - Technical constraints
-       - Integration points
-
-    6. **progress.md**
-       - Implementation status
-       - Feature completeness
-       - Known issues
-       - Future milestones
-
-    These files provide the essential context required for operation.
-  </content>
-</details>
-EOF
-}
-
-generate_big_init_rule() {
-    cat << EOF
----
-description: WHEN user issues "BIG init" command EXECUTE project analysis and memory bank population
-globs: ["**/*.*"]
-alwaysApply: true
----
-
-> **TL;DR:** The BIG init command triggers comprehensive project analysis and automated memory bank population, creating a complete mental model of the codebase for future tasks.
-
-<version>1.0.0</version>
-
-<context>
-  This rule establishes the special "BIG init" command protocol that performs extensive project analysis after Memory Bank setup. When invoked, the system explores the entire project structure, analyzes key files, and populates the memory bank with derived contextual understanding of the project architecture, patterns, and state.
-</context>
-
-<requirements>
-  <requirement>Recognize "BIG init" command specifically</requirement>
-  <requirement>Perform comprehensive project structure analysis</requirement>
-  <requirement>Identify project architecture and patterns</requirement>
-  <requirement>Map component relationships and dependencies</requirement>
-  <requirement>Update memory bank files with discovered context</requirement>
-  <requirement>Provide summary of project understanding</requirement>
-</requirements>
-
-<details>
-  <section-name>PROJECT ANALYSIS PROCESS</section-name>
-  <content>
-    When triggered by "BIG init", perform this analysis sequence:
-
-    1. **Project Structure Mapping**:
-       - Explore all directories and files
-       - Identify key project areas (frontend, backend, etc.)
-       - Map project organization patterns
-       - Document overall architecture
-
-    2. **Technology Stack Analysis**:
-       - Identify programming languages used
-       - Detect frameworks and libraries
-       - Map build system and dependencies
-       - Document development environment
-
-    3. **Pattern Recognition**:
-       - Identify coding patterns and conventions
-       - Detect architectural patterns
-       - Map component interactions
-       - Document system organization
-
-    4. **Component Analysis**:
-       - Identify key components
-       - Map component relationships
-       - Document component responsibilities
-       - Detect integration points
-
-    5. **Memory Bank Population**:
-       - Update systemPatterns.md with architecture information
-       - Populate techContext.md with technology stack details
-       - Initialize activeContext.md with current state
-       - Document project structure in appropriate files
-  </content>
-</details>
-EOF
-}
-
 # Main Execution
 main() {
     # Execute the script
@@ -1108,11 +798,7 @@ main() {
     echo -e "${COLOR_SUCCESS}                 BIG BRAIN Memory Bank Setup Complete!                ${COLOR_RESET}"
     echo -e "${COLOR_SUCCESS}=====================================================================${COLOR_RESET}"
     echo ""
-    echo -e "${COLOR_INFO} 🚀 NEXT STEP: Initialize BIG BRAIN with your project${COLOR_RESET}"
-    echo -e "${COLOR_INFO} To start using BIG BRAIN, first analyze your project structure with:${COLOR_RESET}"
-    echo -e "${COLOR_QUESTION} > BIG init${COLOR_RESET}"
-    echo ""
-    echo -e "${COLOR_INFO} After initialization, you can use commands like:${COLOR_RESET}"
+    echo -e "${COLOR_INFO} To start using BIG BRAIN, type a command beginning with 'BIG', such as:${COLOR_RESET}"
     echo -e "${COLOR_QUESTION} > BIG tell me about this project${COLOR_RESET}"
     echo -e "${COLOR_QUESTION} > BIG switch to plan mode${COLOR_RESET}"
     echo -e "${COLOR_QUESTION} > BIG update memory bank${COLOR_RESET}"
