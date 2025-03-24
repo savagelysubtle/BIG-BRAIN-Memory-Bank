@@ -31,6 +31,16 @@ scripts/**/*.tmp
 *.sln
 *.sw?
 
+# Jekyll/GitHub Pages
+docs/_site/
+docs/.sass-cache/
+docs/.jekyll-cache/
+docs/.jekyll-metadata
+docs/.bundle/
+docs/vendor/
+# Allow Gemfile.lock to be committed per GitHub Pages requirements
+# docs/Gemfile.lock
+
 # Logs
 logs
 *.log
@@ -104,3 +114,7 @@ tmp/
 # Additional backup files
 **/*.backup
 **/*.backupgit
+
+# Accidental file creations
+-clean-signed
+h origin*
