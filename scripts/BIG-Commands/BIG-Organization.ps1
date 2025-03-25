@@ -2,7 +2,10 @@
 # Implementation of the BIG organization commands for the Memory Bank system
 # Version 1.0.0
 # Created: 2025-03-27
+# Updated: 2025-03-29 - Fixed parameter handling for compatibility with BIG-Autonomous
+# Updated: 2025-03-30 - Added TestMode parameter for operations simulation
 
+[CmdletBinding()]
 param (
     [Parameter(Mandatory = $true, Position = 0)]
     [ValidateSet("reorganize", "categorize", "cleanup")]
@@ -21,8 +24,18 @@ param (
     [switch]$Force,
 
     [Parameter(Mandatory = $false)]
-    [switch]$WhatIf
+    [switch]$WhatIf,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$TestMode
 )
+
+# Write startup information
+Write-Host "BIG-Organization running with command: $Command" -ForegroundColor Cyan
+if ($TargetPath) { Write-Host "  Target Path: $TargetPath" -ForegroundColor Cyan }
+if ($DestinationPath) { Write-Host "  Destination Path: $DestinationPath" -ForegroundColor Cyan }
+if ($Category) { Write-Host "  Category: $Category" -ForegroundColor Cyan }
+if ($TestMode) { Write-Host "  RUNNING IN TEST MODE - No changes will be made" -ForegroundColor Magenta }
 
 # Set path to memory bank and organization scripts
 $projectRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
@@ -56,6 +69,32 @@ function Invoke-ScriptSafely {
     )
 
     try {
+        # If we're in test mode, add the WhatIf parameter to simulate execution
+        if ($TestMode -and -not $Parameters.ContainsKey("WhatIf")) {
+            Write-Host "  [TEST MODE] Adding -WhatIf to script parameters" -ForegroundColor Magenta
+            $Parameters.Add("WhatIf", $true)
+        }
+
+        if ($TestMode) {
+            Write-Host "  [TEST MODE] Would execute: $ScriptPath with parameters:" -ForegroundColor Magenta
+            foreach ($key in $Parameters.Keys) {
+                Write-Host "    $key = $($Parameters[$key])" -ForegroundColor Magenta
+            }
+
+            # For testing, we'll create a simulated result object
+            $simulatedResult = [PSCustomObject]@{
+                FilesProcessed      = 25
+                FilesMoved          = 10
+                FilesRemoved        = 0
+                FilesSkipped        = 15
+                CategoriesOrganized = 3
+                SpaceRecovered      = "1.2 MB"
+            }
+
+            return $simulatedResult
+        }
+
+        # Execute the script with the provided parameters
         & $ScriptPath @Parameters
     }
     catch {

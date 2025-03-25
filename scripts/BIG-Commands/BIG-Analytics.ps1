@@ -4,7 +4,9 @@
 # Created: 2025-03-25
 # Updated: 2025-03-26 - Improved error handling and compatibility with updated statistics script
 # Updated: 2025-03-27 - Changed default output location to reports directory
+# Updated: 2025-03-29 - Fixed parameter handling for compatibility with BIG-Autonomous
 
+[CmdletBinding()]
 param (
     [Parameter(Mandatory = $true, Position = 0)]
     [ValidateSet("stats", "report", "health")]
@@ -26,6 +28,11 @@ param (
     [Parameter(Mandatory = $false)]
     [int]$Threshold = 60
 )
+
+# Write startup information
+Write-Host "BIG-Analytics running with command: $Command" -ForegroundColor Cyan
+if ($OutputPath) { Write-Host "  Output path: $OutputPath" -ForegroundColor Cyan }
+if ($Format) { Write-Host "  Format: $Format" -ForegroundColor Cyan }
 
 # Set path to memory bank and analytics scripts
 $projectRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)

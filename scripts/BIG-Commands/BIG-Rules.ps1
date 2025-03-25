@@ -2,6 +2,7 @@
 # Implementation of the BIG BRAIN Memory Bank rule management system
 # Version 1.0.0
 # Created: 2025-03-28
+# Updated: 2025-03-29 - Fixed parameter handling for compatibility with BIG-Autonomous
 
 [CmdletBinding()]
 param (
@@ -36,6 +37,11 @@ param (
     [Parameter()]
     [switch]$Detailed
 )
+
+# Write startup information
+Write-Host "BIG-Rules running with command: $Command" -ForegroundColor Cyan
+if ($RuleId) { Write-Host "  Rule ID: $RuleId" -ForegroundColor Cyan }
+if ($TargetPath) { Write-Host "  Target Path: $TargetPath" -ForegroundColor Cyan }
 
 #-----------------------------------------------------------
 # Import logging utility
