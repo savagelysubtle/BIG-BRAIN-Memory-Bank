@@ -1,4 +1,9 @@
 ---
+description: 
+globs: 
+alwaysApply: false
+---
+---
 description: Primary rules for managing active memory files in the memory-bank
 globs:
   - "memory-bank/active/**/*.md"

@@ -1,46 +1,111 @@
 ---
 description: WHEN creating or updating rules ALWAYS follow these precise XML formatting and structure guidelines
-globs: 
-alwaysApply: false
----
----
-description: WHEN editing .cursor/rules/**.mdc files, ENSURE strict XML formatting and placement in .cursor/rules based on the folder structure and rule type.
 globs: ["**/*.mdc", ".cursor/rules/**/*"]
 alwaysApply: true
 ---
-> **TL;DR:** Use full-word, lowercase XML tags; include a <version> tag; indent nested tags by 2 spaces; and place all rule files under .cursor/rules.
+
+> **TL;DR:** Use consistent XML structure with proper tags, indentation, and a clear TL;DR summary to ensure rules are readable, maintainable, and effectively processed by BIG BRAIN.
+
 <version>1.0.0</version>
+
 <context>
-  This rule applies to all .mdc files that include XML content and must reside in the .cursor/rules directory.
+  This rule applies to all .mdc files that include XML content and must reside in the .cursor/rules directory. Consistent XML formatting ensures rules are easily readable by both humans and AI systems.
 </context>
+
 <requirements>
-  <requirement>Include ">**TL;DR:**" section above <version>X.X.x</version>
-  <requirement>Use full-word, lowercase XML tag names (e.g., &lt;version&gt;, &lt;context&gt;).</requirement>
-  <requirement>Indent nested tags by 2 spaces for readability.</requirement>
-  <requirement>Always include a <version> tag at the top to track rule versions.</requirement>
-  <requirement>All rule files must be located under .cursor/rules and use the .mdc extension.</requirement>
+  <requirement>Begin each rule with a concise "**TL;DR:**" section summarizing the rule in 1-2 high-quality sentences</requirement>
+  <requirement>Use full-word, lowercase XML tag names (e.g., &lt;version&gt;, &lt;context&gt;)</requirement>
+  <requirement>Indent nested tags by 2 spaces for readability</requirement>
+  <requirement>Always include a &lt;version&gt; tag immediately after the TL;DR to track rule versions</requirement>
+  <requirement>Structure rules with &lt;context&gt;, &lt;requirements&gt;, and &lt;examples&gt; sections</requirement>
+  <requirement>Include both good and bad practice examples when appropriate</requirement>
+  <requirement>All rule files must be located under .cursor/rules and use the .mdc extension</requirement>
 </requirements>
+
+<details>
+  <section-name>RECOMMENDED STRUCTURE</section-name>
+  <content>
+    The ideal structure for a rule includes:
+
+    1. **Frontmatter** - With description, globs, and alwaysApply setting
+    2. **TL;DR** - Concise summary of the rule (1-2 sentences)
+    3. **&lt;version&gt;** - Semantic version number (MAJOR.MINOR.PATCH)
+    4. **&lt;context&gt;** - When and why the rule applies
+    5. **&lt;requirements&gt;** - Specific mandates with nested &lt;requirement&gt; tags
+    6. **&lt;examples&gt;** - Demonstrations with &lt;good-practice&gt; and &lt;bad-practice&gt; tags
+    7. **&lt;details&gt;** (Optional) - Additional information in named sections
+  </content>
+</details>
 
 <examples>
   <good-practice>
-    ---
-    description: USE keywords to start if alwaysApply is false explain When IT makes sense to include the rule in there context. i.e. "USE WHEN @files linking", "USE IF", "BEST APPLIED" --some freedom if proper keywords keep description one maybe two really good sentences explaing when to use.
-    globs: [use 020-glob-pattern-system.mdc]
-    > **TL;DR:** ONE to TWO Important/key information on the rule
-    <description>Proper XML Formatting Example</description>
+    <description>Properly formatted rule with all recommended elements</description>
     <code>
+      ---
+      description: WHEN writing React components ENSURE functional components with proper typing
+      globs: ["src/**/*.tsx", "src/**/*.jsx"]
+      alwaysApply: false
+      ---
+
+      > **TL;DR:** Use functional components with TypeScript typing instead of class components for better readability, maintainability, and performance.
+
       &lt;version&gt;1.0.0&lt;/version&gt;
-      &lt;context&gt;Applies to React component rules&lt;/context&gt;
+
+      &lt;context&gt;
+        This rule applies when creating or modifying React components in the project.
+      &lt;/context&gt;
+
       &lt;requirements&gt;
-        &lt;requirement&gt;Use functional components&lt;/requirement&gt;
+        &lt;requirement&gt;Use functional components instead of class components&lt;/requirement&gt;
+        &lt;requirement&gt;Implement proper prop type validation using TypeScript&lt;/requirement&gt;
+        &lt;requirement&gt;Follow React hooks best practices&lt;/requirement&gt;
       &lt;/requirements&gt;
+
+      &lt;examples&gt;
+        &lt;good-practice&gt;
+          &lt;description&gt;Functional component with proper typing&lt;/description&gt;
+          &lt;code&gt;
+            const Button = ({ text, onClick }: ButtonProps) => (
+              &lt;button onClick={onClick}&gt;{text}&lt;/button&gt;
+            );
+          &lt;/code&gt;
+        &lt;/good-practice&gt;
+      &lt;/examples&gt;
     </code>
   </good-practice>
   <bad-practice>
-    <description>Poor Formatting Example</description>
+    <description>Poorly formatted rule missing essential elements</description>
     <code>
+      ---
+      description: React components should be functional
+      ---
+
       &lt;ver&gt;1.0&lt;/ver&gt;
       &lt;ctx&gt;React components&lt;/ctx&gt;
+      Use functional components instead of classes.
+      Example:
+      ```
+      function Button(props) {
+        return &lt;button&gt;{props.text}&lt;/button&gt;;
+      }
+      ```
     </code>
+    <explanation>This example lacks proper XML structure, is missing the TL;DR section, has abbreviated tag names, and does not properly structure examples.</explanation>
   </bad-practice>
 </examples>
+
+<details>
+  <section-name>XML TAG REFERENCE</section-name>
+  <content>
+    - **&lt;version&gt;** - Current version of the rule (semantic versioning)
+    - **&lt;context&gt;** - When and where the rule applies
+    - **&lt;requirements&gt;** - Container for individual requirements
+      - **&lt;requirement&gt;** - Single specific mandate
+    - **&lt;examples&gt;** - Container for code examples
+      - **&lt;good-practice&gt;** - Example of correct implementation
+      - **&lt;bad-practice&gt;** - Example of incorrect implementation
+    - **&lt;details&gt;** - Container for additional information sections
+      - **&lt;section-name&gt;** - Title of the information section
+      - **&lt;content&gt;** - Content of the information section
+  </content>
+</details>

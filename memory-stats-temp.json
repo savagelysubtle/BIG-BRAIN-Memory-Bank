@@ -1,0 +1,85 @@
+{
+  "GeneratedAt": "2025-03-25T01:08:11.3666789-07:00",
+  "MemoryBankPath": ".\\memory-bank",
+  "TotalFiles": 46,
+  "TotalSize": "375.33 KB",
+  "TotalSizeBytes": 384343.0,
+  "AverageFileSize": "8.16 KB",
+  "AverageFileSizeBytes": 8355.282608695652,
+  "LargestFile": {
+    "Name": "memoryCleanupCheckpoints.md",
+    "Path": "D:\\Coding\\Python_Projects\\TheMemoryBank\\memory-bank\\long-term\\procedural\\active\\checklists\\memoryCleanupCheckpoints.md",
+    "Size": "23.59 KB",
+    "SizeBytes": 24161
+  },
+  "NewestFile": {
+    "Name": "activeContext.md",
+    "Path": "D:\\Coding\\Python_Projects\\TheMemoryBank\\memory-bank\\active\\activeContext.md",
+    "LastModified": "2025-03-25T00:46:08.2389267-07:00"
+  },
+  "OldestFile": {
+    "Name": ".gitkeep",
+    "Path": "D:\\Coding\\Python_Projects\\TheMemoryBank\\memory-bank\\long-term\\semantic\\.gitkeep",
+    "LastModified": "2025-03-24T00:01:55.3762702-07:00"
+  },
+  "MemoryTypes": {
+    "Active": {
+      "FileCount": 12,
+      "TotalSize": "129.41 KB",
+      "TotalSizeBytes": 132515.0
+    },
+    "ShortTerm": {
+      "FileCount": 0,
+      "TotalSize": "0 bytes",
+      "TotalSizeBytes": null
+    },
+    "LongTerm": {
+      "FileCount": 34,
+      "TotalSize": "245.93 KB",
+      "TotalSizeBytes": 251828.0,
+      "Categories": {
+        "Episodic": {
+          "FileCount": 8,
+          "TotalSize": "44.84 KB",
+          "TotalSizeBytes": 45920.0
+        },
+        "Semantic": {
+          "FileCount": 8,
+          "TotalSize": "22.96 KB",
+          "TotalSizeBytes": 23507.0
+        },
+        "Procedural": {
+          "FileCount": 16,
+          "TotalSize": "169.28 KB",
+          "TotalSizeBytes": 173339.0
+        },
+        "Creative": {
+          "FileCount": 1,
+          "TotalSize": "5.14 KB",
+          "TotalSizeBytes": 5268.0
+        }
+      }
+    }
+  },
+  "Activity": {
+    "Last24Hours": {
+      "FileCount": 12,
+      "Percentage": 26.09
+    },
+    "Last7Days": {
+      "FileCount": 12,
+      "Percentage": 26.09
+    },
+    "Last30Days": {
+      "FileCount": 12,
+      "Percentage": 26.09
+    }
+  },
+  "ComplexityMetrics": {
+    "MemoryDiversity": 15.33,
+    "LongTermRatio": 0.74,
+    "CategoryBalance": 1.0,
+    "ActivityScore": 26.09,
+    "OverallScore": 433.27
+  }
+}

@@ -1,45 +1,122 @@
 ---
-description: glob patterns
+description: 
 globs: 
 alwaysApply: false
 ---
 ---
-description: WHEN creating rules use glob patterns in the yaml frontend , ENSURE they are explicit, efficient, and enforce correct rules for glob patterns when writing files under .cursor/rules/.
+description: WHEN creating glob patterns ENSURE they are explicit, efficient, and optimize performance for rule activation
 globs: ["**/*.mdc", ".cursor/rules/**/*"]
 alwaysApply: true
 ---
-<rule>
-  <tl;dr>Use specific glob patterns—do not use overly broad patterns like "**/*". Always target .mdc files and files within .cursor/rules using: ["**/*.mdc", ".cursor/rules/**/*"].</tl;dr>
-  <examples>
-    <example>src/**/*.ts targets all TypeScript files within the src directory.</example>
-    <example>!**/node_modules/** excludes all files in node_modules.</example>
-    <example>The enforced pattern for rule files: ["**/*.mdc", ".cursor/rules/**/*"].</example>
-  </examples>
-  <instructions>
-    <instruction>Glob patterns should be as specific as possible to reduce processing overhead.</instruction>
-    <instruction>Combine with exclusion patterns to avoid scanning irrelevant directories.</instruction>
-    <instruction>Write with explicit directory paths; for rule files, always use ["**/*.mdc", ".cursor/rules/**/*"].</instruction>
-  </instructions>
-</rule>
+
+> **TL;DR:** Use specific, targeted glob patterns to optimize rule performance and avoid unnecessary processing, with proper exclusion patterns and hierarchical targeting for complex scenarios.
+
+<version>1.0.0</version>
+
+<context>
+  This rule provides guidance for creating efficient glob patterns when defining rules. Proper glob patterns ensure rules are applied precisely to the intended files while minimizing processing overhead and avoiding unnecessary rule activation.
+</context>
+
+<requirements>
+  <requirement>Use specific glob patterns targeting only relevant file types and directories</requirement>
+  <requirement>Include exclusion patterns to avoid processing unnecessary files</requirement>
+  <requirement>Structure patterns hierarchically for complex file targeting</requirement>
+  <requirement>Use proper syntax with quotes and arrays for multiple patterns</requirement>
+  <requirement>Consider performance implications when designing glob patterns</requirement>
+  <requirement>For rule files, always use ["**/*.mdc", ".cursor/rules/**/*"]</requirement>
+</requirements>
 
 <details>
-  <section-name>EXCLUSION PATTERNS</section-name>
+  <section-name>GLOB PATTERN BASICS</section-name>
   <content>
-    <explanation>Use exclusion patterns to avoid processing unnecessary files:</explanation>
-    <example>
-```
-globs:
-  - "src/**/*.js"
-  - "!src/test/**/*.js"
-  - "!src/vendor/**/*.js"
-  - "!**/node_modules/**"
-```
-    </example>
-    <benefits>
-      <benefit>Improves performance by reducing file scanning</benefit>
-      <benefit>Prevents rules from applying to third-party code</benefit>
-      <benefit>Avoids conflicts with test files that may have different standards</benefit>
-    </benefits>
+    ### Core Pattern Syntax
+
+    - `*` - Match any number of characters within a single directory level
+    - `**` - Match any number of characters across multiple directory levels
+    - `?` - Match a single character
+    - `[abc]` - Match any character within brackets
+    - `{a,b,c}` - Match any of the comma-separated patterns
+
+    ### File Extensions
+
+    - `*.js` - All JavaScript files in current directory
+    - `*.{js,ts}` - All JavaScript and TypeScript files in current directory
+    - `src/**/*.tsx` - All TSX files in src/ and all subdirectories
+
+    ### Directory Targeting
+
+    - `src/components/**/*` - All files within src/components and subdirectories
+    - `lib/**/utils/*.js` - JavaScript files in any utils directory within lib/
+
+    ### Exclusion Patterns
+
+    - `!test/**/*` - Exclude all files in test/ directory and subdirectories
+    - `!**/*.test.js` - Exclude all JavaScript test files
+    - `!**/node_modules/**` - Exclude all files in node_modules directories
+  </content>
+</details>
+
+<details>
+  <section-name>PERFORMANCE OPTIMIZATION</section-name>
+  <content>
+    ### Performance Considerations
+
+    1. **Specificity**: More specific patterns reduce unnecessary scanning
+       - Good: `src/components/**/*.tsx`
+       - Avoid: `**/*.tsx`
+
+    2. **Limit Scope**: Target specific directories rather than entire codebase
+       - Good: `src/utils/**/*.js`, `src/components/**/*.js`
+       - Avoid: `**/*.js`
+
+    3. **Exclusions First**: Place exclusion patterns before inclusion patterns
+       - Good:
+         ```
+         - "!**/node_modules/**"
+         - "!**/dist/**"
+         - "src/**/*.js"
+         ```
+
+    4. **Pattern Order**: Process more specific patterns before broad ones
+       - Good:
+         ```
+         - "src/core/**/*.js"
+         - "src/**/*.js"
+         ```
+
+    5. **File Extension Groups**: Group related file extensions
+       - Good: `**/*.{js,jsx,ts,tsx}`
+       - Avoid: `**/*.js`, `**/*.jsx`, `**/*.ts`, `**/*.tsx`
+  </content>
+</details>
+
+<details>
+  <section-name>HIERARCHICAL TARGETING</section-name>
+  <content>
+    For complex projects, implement hierarchical targeting strategies:
+
+    ### Layer 1: Foundational Rules
+    ```
+    - "**/*.js"                   # Target all JavaScript files
+    - "!**/node_modules/**"       # Exclude node_modules
+    - "!**/dist/**"               # Exclude build outputs
+    - "!**/test/**"               # Exclude test files
+    ```
+
+    ### Layer 2: Domain-Specific Rules
+    ```
+    - "src/components/**/*.jsx"   # Target React components
+    - "src/api/**/*.js"           # Target API modules
+    - "src/utils/**/*.js"         # Target utility functions
+    ```
+
+    ### Layer 3: Feature-Specific Rules
+    ```
+    - "src/components/auth/**/*.jsx"  # Target authentication components
+    - "src/components/forms/**/*.jsx" # Target form components
+    ```
+
+    This hierarchical approach allows for different rules at different levels of specificity.
   </content>
 </details>
 
@@ -47,32 +124,94 @@ globs:
   <good-practice>
     <description>Well-structured glob definition for React components</description>
     <code>
-```
----
-description: Best practices for React component architecture
-globs:
-  - "src/components/**/*.tsx"
-  - "src/components/**/*.jsx"
-  - "!src/components/**/*.test.{tsx,jsx}"
-  - "!src/components/**/*.stories.{tsx,jsx}"
-alwaysApply: false
----
-```
+      ---
+      description: WHEN writing React components ENSURE following component architecture best practices
+      globs:
+        - "src/components/**/*.tsx"
+        - "src/components/**/*.jsx"
+        - "!src/components/**/*.test.{tsx,jsx}"
+        - "!src/components/**/*.stories.{tsx,jsx}"
+        - "!src/components/**/mocks/**"
+      alwaysApply: false
+      ---
     </code>
-    <explanation>This pattern targets React component files while excluding test and Storybook files</explanation>
+    <explanation>This pattern targets React component files while specifically excluding test files, Storybook files, and mock directories for efficient processing</explanation>
+  </good-practice>
+
+  <good-practice>
+    <description>Optimized file type groups</description>
+    <code>
+      ---
+      description: WHEN writing TypeScript code ENSURE following type safety guidelines
+      globs:
+        - "!**/node_modules/**"
+        - "!**/dist/**"
+        - "src/**/*.{ts,tsx}"
+        - "lib/**/*.{ts,tsx}"
+      alwaysApply: false
+      ---
+    </code>
+    <explanation>This pattern efficiently groups file extensions, places exclusions first, and targets specific directories</explanation>
   </good-practice>
 
   <bad-practice>
-    <description>Inefficient glob pattern</description>
+    <description>Inefficient overly broad pattern</description>
     <code>
-```
----
-description: JavaScript best practices
-globs: "**/*.js"
-alwaysApply: false
----
-```
+      ---
+      description: JavaScript best practices
+      globs: "**/*.js"
+      alwaysApply: false
+      ---
     </code>
-    <explanation>This pattern is too broad and will unnecessarily scan all directories, including node_modules and other irrelevant locations</explanation>
+    <explanation>This pattern is too broad and will unnecessarily scan all directories, including node_modules, test files, and built assets</explanation>
+  </bad-practice>
+
+  <bad-practice>
+    <description>Missing exclusions for common directories</description>
+    <code>
+      ---
+      description: TypeScript standards
+      globs: ["src/**/*.ts", "lib/**/*.ts"]
+      alwaysApply: false
+      ---
+    </code>
+    <explanation>This pattern fails to exclude node_modules, testing directories, and other common directories that should be excluded</explanation>
   </bad-practice>
 </examples>
+
+<details>
+  <section-name>MEMORY BANK SPECIFIC PATTERNS</section-name>
+  <content>
+    For Memory Bank related rules, follow these patterns:
+
+    ### Active Memory Files
+    ```
+    - "memory-bank/active/**/*.md"
+    ```
+
+    ### Short-term Memory Files
+    ```
+    - "memory-bank/short-term/**/*.md"
+    ```
+
+    ### Long-term Memory Files
+    ```
+    - "memory-bank/long-term/**/*.md"
+    - "memory-bank/long-term/episodic/**/*.md"
+    - "memory-bank/long-term/semantic/**/*.md"
+    - "memory-bank/long-term/procedural/**/*.md"
+    - "memory-bank/long-term/creative/**/*.md"
+    ```
+
+    ### Combined Memory Bank Pattern
+    ```
+    - "memory-bank/**/*.md"
+    ```
+
+    ### Excluding Hidden Files in Memory Bank
+    ```
+    - "memory-bank/**/*.md"
+    - "!memory-bank/**/.*"
+    ```
+  </content>
+</details>

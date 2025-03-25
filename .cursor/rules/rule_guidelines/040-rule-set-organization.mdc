@@ -1,0 +1,237 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN organizing rule sets ENSURE following hierarchical structure and naming conventions
+globs: [".cursor/rules/**/*"]
+alwaysApply: true
+---
+
+> **TL;DR:** Organize rules in a hierarchical directory structure with consistent naming conventions to enhance discoverability, maintainability, and coherence within the BIG BRAIN memory system.
+
+<version>1.0.0</version>
+
+<context>
+  This rule provides structural guidance for organizing rule sets within the `.cursor/rules` directory. Proper organization ensures rules are discoverable, maintainable, and coherently integrated with the BIG BRAIN memory system.
+</context>
+
+<requirements>
+  <requirement>Follow hierarchical directory structure for organizing rules by domain, function, and purpose</requirement>
+  <requirement>Use consistent numeric prefixes (000-999) for rule files to establish priority and sequence</requirement>
+  <requirement>Group related rules in dedicated subdirectories with clear, descriptive names</requirement>
+  <requirement>Include index files in directories to provide overviews of contained rules</requirement>
+  <requirement>Maintain separation of concerns between different rule categories</requirement>
+  <requirement>Follow memory bank structure patterns when organizing memory-related rules</requirement>
+</requirements>
+
+<details>
+  <section-name>DIRECTORY STRUCTURE</section-name>
+  <content>
+    ### Primary Organization Pattern
+
+    ```
+    .cursor/rules/
+    ├── BIG_BRAIN/          # Core memory system rules
+    │   ├── core/           # Fundamental system operations
+    │   ├── memory/         # Memory management operations
+    │   ├── retrieval/      # Memory retrieval and search
+    │   └── validation/     # Memory validation and verification
+    ├── codebases/          # Project-specific code rules
+    │   ├── javascript/     # JavaScript coding standards
+    │   ├── python/         # Python coding standards
+    │   └── ...             # Other language-specific rules
+    ├── documentation/      # Documentation standards
+    ├── rule_guidelines/    # Meta-rules for rule creation
+    └── workflows/          # Task execution workflows
+    ```
+
+    ### Numeric Prefixing System
+
+    - **000-099**: Core system and foundational rules
+    - **100-199**: Memory structure and organization rules
+    - **200-299**: Retrieval and search rules
+    - **300-399**: Processing and transformation rules
+    - **400-499**: Documentation and reference rules
+    - **500-599**: Workflow and process rules
+    - **600-699**: Validation and verification rules
+    - **700-799**: Integration and extension rules
+    - **800-899**: Project-specific rules
+    - **900-999**: Experimental and development rules
+  </content>
+</details>
+
+<details>
+  <section-name>RULE FILE NAMING</section-name>
+  <content>
+    ### File Naming Convention
+
+    ```
+    [numeric-prefix]-[descriptive-name].mdc
+    ```
+
+    ### Examples:
+
+    ```
+    000-system-initialization.mdc
+    100-memory-structure.mdc
+    210-semantic-search.mdc
+    400-documentation-standards.mdc
+    500-agile-workflow.mdc
+    ```
+
+    ### Descriptive Name Guidelines
+
+    - Use kebab-case for filenames
+    - Keep names concise but descriptive
+    - Focus on function rather than implementation
+    - Include action verbs when appropriate
+    - Avoid abbreviations unless widely understood
+  </content>
+</details>
+
+<examples>
+  <good-practice>
+    <description>Well-organized rule directory structure</description>
+    <code>
+      .cursor/rules/BIG_BRAIN/memory/
+      ├── README.md                            # Directory overview
+      ├── 100-memory-structure.mdc             # Core structure definition
+      ├── 110-active-memory-management.mdc     # Active memory rules
+      ├── 120-short-term-memory-operations.mdc # Short-term memory rules
+      ├── long-term/                           # Long-term memory subdirectory
+      │   ├── 130-episodic-memory.mdc          # Episodic memory rules
+      │   ├── 140-semantic-memory.mdc          # Semantic memory rules
+      │   ├── 150-procedural-memory.mdc        # Procedural memory rules
+      │   └── 160-creative-memory.mdc          # Creative memory rules
+      └── 190-memory-transfer-protocol.mdc     # Memory transfer between systems
+    </code>
+    <explanation>This structure follows the hierarchical organization pattern, uses consistent numeric prefixes, groups related rules in subdirectories, and maintains a clear separation of concerns</explanation>
+  </good-practice>
+
+  <good-practice>
+    <description>Consistent rule file formatting</description>
+    <code>
+      ---
+      description: WHEN organizing semantic memory ENSURE following taxonomy standards
+      globs: ["memory-bank/long-term/semantic/**/*"]
+      alwaysApply: true
+      ---
+
+      > **TL;DR:** Organize semantic memory using consistent taxonomy, hierarchical categories, and standardized metadata patterns.
+
+      <version>1.0.0</version>
+
+      <context>
+        This rule defines standards for organizing semantic memory within the BIG BRAIN memory system.
+      </context>
+
+      <requirements>
+        <requirement>Use hierarchical category structure for organizing semantic knowledge</requirement>
+        <requirement>Apply consistent tagging and metadata to semantic memory files</requirement>
+        <!-- Additional requirements -->
+      </requirements>
+
+      <!-- Additional sections -->
+    </code>
+    <explanation>This file follows the standard rule format with frontmatter, TL;DR, versioning, context, and structured requirements</explanation>
+  </good-practice>
+
+  <bad-practice>
+    <description>Poorly organized rule structure</description>
+    <code>
+      .cursor/rules/
+      ├── memory.mdc
+      ├── memory-active.mdc
+      ├── memory-organization.mdc
+      ├── semantic-rules.mdc
+      ├── episodic.mdc
+      └── memory-operations.mdc
+    </code>
+    <explanation>This structure lacks hierarchical organization, has inconsistent naming, doesn't use numeric prefixes, and fails to group related rules in subdirectories</explanation>
+  </bad-practice>
+
+  <bad-practice>
+    <description>Inconsistent rule file formatting</description>
+    <code>
+      # Memory Organization Rules
+
+      These rules define how to organize memory files.
+
+      ## Rule 1: Use directories
+
+      Always use directories to organize memory.
+
+      ## Rule 2: Use descriptive names
+
+      Always use descriptive names for memory files.
+    </code>
+    <explanation>This file doesn't follow the standard rule format, lacks frontmatter, TL;DR, versioning, and doesn't use XML structure for requirements and examples</explanation>
+  </bad-practice>
+</examples>
+
+<details>
+  <section-name>BEST PRACTICES</section-name>
+  <content>
+    ### Organization Guidelines
+
+    1. **Consistent Structure**: Apply the same organizational principles across all rule sets
+    2. **Progressive Disclosure**: Organize rules from general to specific, foundational to advanced
+    3. **Logical Grouping**: Group related rules together in dedicated directories
+    4. **Clear Naming**: Use descriptive names that indicate purpose and function
+    5. **Proper Indexing**: Include index files (README.md) in each directory explaining contained rules
+    6. **Version Control**: Include version information in all rule files
+    7. **Cross-Referencing**: Reference related rules using relative paths
+
+    ### Memory-Rule Integration
+
+    1. **Memory Bank Alignment**: Structure memory-related rules to align with memory bank organization
+    2. **Cognitive Model Mapping**: Map rule categories to cognitive memory model components
+    3. **Workflow Integration**: Connect rule sets to relevant workflow processes
+    4. **System Coherence**: Ensure rules create a coherent system that follows consistent principles
+    5. **Extensibility**: Design rule organization to allow for future expansion
+
+    ### Maintenance Patterns
+
+    1. **Rule Refactoring**: Periodically review and reorganize rules to maintain coherence
+    2. **Gap Analysis**: Identify and fill gaps in rule coverage across domains
+    3. **Obsolescence Management**: Archive or update outdated rules
+    4. **Documentation Updates**: Keep README.md files and indices updated
+    5. **Consistency Checks**: Regularly verify organization follows established patterns
+  </content>
+</details>
+
+<details>
+  <section-name>IMPLEMENTATION GUIDE</section-name>
+  <content>
+    ### Creating New Rule Sets
+
+    1. **Identify Domain**: Determine the functional domain for the new rule set
+    2. **Choose Location**: Select appropriate directory within the `.cursor/rules` structure
+    3. **Create Structure**: Establish directory structure if needed
+    4. **Assign Prefixes**: Assign numeric prefixes according to rule priority and category
+    5. **Create Index**: Add README.md file explaining the purpose of the rule set
+    6. **Add Rules**: Create individual rule files following naming conventions
+    7. **Cross-Reference**: Ensure rules reference related rules and memory structures
+
+    ### Integrating with Memory Bank
+
+    1. **Map Memory Structure**: Align rule organization with memory bank structure
+    2. **Reference Memory Files**: Reference relevant memory files in rule documentation
+    3. **Use Context Properly**: Include proper context sections relating rules to memory model
+    4. **Follow Memory Hierarchy**: Respect active/short-term/long-term memory distinctions
+    5. **Use Memory Categories**: Align rule sets with episodic, semantic, procedural, and creative memory categories
+
+    ### Command Integration
+
+    Use the BIG BRAIN command system to navigate and manage rule sets:
+
+    ```
+    BIG rules list                        # List all rule sets
+    BIG rules show [category]             # Show rules in a category
+    BIG rules create [name] --type [type] # Create a new rule
+    BIG rules validate                    # Validate rule structure
+    ```
+  </content>
+</details>

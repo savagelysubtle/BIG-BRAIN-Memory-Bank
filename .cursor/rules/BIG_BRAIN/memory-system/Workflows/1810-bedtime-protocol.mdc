@@ -13,16 +13,25 @@ alwaysApply: false
 </context>
 
 <requirements>
+  <requirement>Run analytics to assess memory bank health</requirement>
   <requirement>Update all core memory files with latest information</requirement>
   <requirement>Create session summary in activeContext.md</requirement>
   <requirement>Archive important information to appropriate memory types</requirement>
   <requirement>Verify memory consistency across all files</requirement>
 </requirements>
 
-<rule>
-## Bedtime Protocol Workflow
+<details>
+<summary>Bedtime Protocol Workflow</summary>
 
-1. Memory Update Phase:
+1. Analytics Phase:
+   - Run memory bank analytics to assess system health:
+     * Generate memory statistics: `BIG analytics stats --include-details`
+     * Create memory usage report: `BIG analytics report --format HTML`
+     * Perform health check: `BIG analytics health --threshold 60`
+   - Review any critical recommendations from health assessment
+   - Address urgent memory organization issues before proceeding
+
+2. Memory Update Phase:
    - Update the following core files with latest information:
      * activeContext.md: Current focus and state
      * progress.md: Working features and known issues
@@ -31,9 +40,9 @@ alwaysApply: false
      * techContext.md: If technology changes were made
      * projectRules.md: If new patterns or preferences were established
 
-2. Session Summary Creation:
+3. Session Summary Creation:
    - Create a session summary in activeContext.md using this format:
-     `markdown
+     ```markdown
      ## 📊 SESSION SUMMARY (YYYY-MM-DD)
 
      ### Accomplishments
@@ -53,9 +62,14 @@ alwaysApply: false
 
      ### Critical Notes
      - [Any information essential for continuation]
-     `
 
-3. Memory Archival Phase:
+     ### Memory Health
+     - Health Score: [score from analytics]
+     - Status: [overall status from analytics]
+     - Critical Recommendations: [highlight critical recommendations]
+     ```
+
+4. Memory Archival Phase:
    - Version active files that have changed:
      * Copy to short-term/ directory with date suffix
    - Archive important information to long-term/:
@@ -63,26 +77,33 @@ alwaysApply: false
      * Add new discoveries to semantic/domain/
      * Document new workflows in procedural/workflows/
      * Archive design decisions in creative/
+   - Store analytics reports in memory-bank/active/analytics/
 
-4. Verification Phase:
+5. Verification Phase:
    - Verify consistency across all memory files
    - Ensure all architectural decisions are documented
    - Confirm current state is accurately reflected
    - Validate working features and issues are up-to-date
 
-5. Completion Confirmation:
+6. Completion Confirmation:
    - Provide final confirmation:
-     `markdown
+     ```markdown
      ## ✅ BEDTIME PROTOCOL COMPLETE
 
      The memory preservation protocol has been successfully executed. All critical
      information has been documented and the system state has been preserved.
 
+     Memory Health Score: [score]% ([status])
+
      Memory files updated:
      - [list of updated files]
+
+     Analytics reports generated:
+     - memory-statistics.json
+     - memory-usage-report.html
 
      Continuation point established in activeContext.md
 
      You may safely end this session.
-     `
-</rule>
+     ```
+</details>

@@ -1,0 +1,160 @@
+---
+description: Integrates analytics scripts with the memory bank to track statistics and generate reports
+alwaysApply: true
+globs: ["**/*.md", "**/*.json", "**/*.yml", "**/*.yaml"]
+---
+
+# Analytics Integration System
+
+> **TL;DR:** Use the BIG analytics command to generate statistics and reports about the memory bank system, tracking memory usage patterns and health metrics.
+
+<version>1.0.0</version>
+
+## Context
+
+The Memory Bank requires ongoing analysis to maintain optimal health and performance. This rule integrates the Analytics scripts with the BIG memory system to provide comprehensive statistics and usage reports, enabling data-driven decisions about memory organization and maintenance.
+
+## Requirements
+
+<details>
+<summary>Analytics Command Integration</summary>
+
+The BIG memory system must include an `analytics` command category, allowing users to gather statistics and generate reports about the memory bank. This integration enables:
+
+- Collection of memory usage statistics
+- Generation of usage reports in various formats (Text, HTML, JSON)
+- Health assessment of the memory system
+- Recommendations for improving memory organization
+
+</details>
+
+## Command Structure
+
+<details>
+<summary>Analytics Commands</summary>
+
+```
+BIG analytics stats [--output-path <path>] [--include-details]
+BIG analytics report [--format <Text|HTML|JSON>] [--days <number>] [--output-path <path>]
+BIG analytics health [--threshold <number>]
+```
+
+These commands call the appropriate PowerShell scripts:
+- `Get-MemoryBankStatistics.ps1` - Gathers statistics about the memory bank
+- `Export-UsageReport.ps1` - Generates usage reports based on statistics
+
+</details>
+
+## Operation
+
+<details>
+<summary>BIG analytics stats</summary>
+
+The `BIG analytics stats` command gathers comprehensive statistics about the memory bank, including:
+
+- File counts and sizes across memory types (Active, Short-Term, Long-Term)
+- Distribution of file types (Markdown, JSON, YAML, etc.)
+- Activity metrics (files modified in last 24h, 7d, 30d)
+- Health and complexity metrics
+- Location of largest and newest files
+
+Example: `BIG analytics stats --include-details --output-path "./reports/memory-stats.json"`
+
+</details>
+
+<details>
+<summary>BIG analytics report</summary>
+
+The `BIG analytics report` command generates a formatted report showing usage patterns, health assessment, and recommendations:
+
+- Overall statistics summary
+- Memory type distribution
+- File type distribution
+- Activity timeline
+- Health score with rating
+- Actionable recommendations
+
+Example: `BIG analytics report --format HTML --days 30 --output-path "./reports/memory-report.html"`
+
+</details>
+
+<details>
+<summary>BIG analytics health</summary>
+
+The `BIG analytics health` command performs a quick health check of the memory system:
+
+- Overall health score assessment
+- Critical issues identification
+- Memory diversity check
+- Long-term memory ratio check
+- Activity level assessment
+
+Example: `BIG analytics health --threshold 50`
+
+</details>
+
+## PowerShell Commands
+
+<details>
+<summary>PowerShell Implementation</summary>
+
+```powershell
+# Run statistics gathering
+$statsPath = Join-Path -Path (Get-Location) -ChildPath "memory-bank/active/memory-statistics.json"
+& "$PSScriptRoot/scripts/Analytics/Get-MemoryBankStatistics.ps1" -ExportJson -OutputPath $statsPath -IncludeDetails
+
+# Generate HTML report
+$reportPath = Join-Path -Path (Get-Location) -ChildPath "memory-bank/active/memory-usage-report.html"
+& "$PSScriptRoot/scripts/Analytics/Export-UsageReport.ps1" -StatisticsFile $statsPath -ReportFormat HTML -OutputPath $reportPath
+```
+
+</details>
+
+## Integration Points
+
+<details>
+<summary>Memory System Integration</summary>
+
+The Analytics system integrates with:
+
+1. **Bedtime Protocol** - Statistics should be gathered before the Bedtime Protocol executes
+2. **Long-Term Memory Management** - Reports can identify content for long-term storage
+3. **Memory Diagnostics** - Health assessments feed into system diagnostics
+4. **Workflow Orchestration** - Analytics can be part of maintenance workflows
+
+</details>
+
+## Examples
+
+<details>
+<summary>Good Practice</summary>
+
+```
+# Run memory analytics weekly and store reports in Active Memory
+BIG analytics stats --include-details
+BIG analytics report --format HTML
+
+# Check memory health during Bedtime Protocol
+BIG analytics health --threshold 60
+```
+
+This properly integrates analytics into regular memory maintenance routines.
+
+</details>
+
+<details>
+<summary>Bad Practice</summary>
+
+```
+# Running reports without proper paths
+BIG analytics report
+BIG analytics stats --output-path "C:/temp/unknown-location.json"
+```
+
+This fails to properly integrate analytics with the memory system, storing reports outside the memory bank structure.
+
+</details>
+
+## Implementation Notes
+
+The analytics integration ensures the memory bank remains healthy and optimized by providing quantitative metrics to guide memory organization and maintenance activities. Regular analytics reports should be reviewed to identify potential issues before they impact system performance.

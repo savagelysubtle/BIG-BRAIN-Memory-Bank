@@ -4,39 +4,222 @@ globs:
 alwaysApply: false
 ---
 ---
-description: WHEN linking @file to a rule
-files: ["**/*.{js,ts,json,md}", ".cursor/rules/**/*"]
+description: WHEN attaching memory files to rules ENSURE using proper @file syntax and memory bank organization
+globs: ["**/*.{js,ts,json,md,mdc}", ".cursor/rules/**/*"]
 alwaysApply: true
 ---
-<rule>
-  > tl;dr Use @file to automatically attach related files. For example, attach config files with: @file(config/js-standards.md).</tl;dr>
-  <examples>
-    <good-practice>
-      <description>Single File Attachment</description>
-      <code><![CDATA[
-description: JavaScript rule with config context
-files: "**/*.js"
-rule: |
-  Follow the coding standards defined in @file(config/js-standards.md)
-  // Additional instructions...
-      ]]></code>
-    </good-practice>
-    <good-practice>
-      <description>Multiple Files Attachment</description>
-      <code><![CDATA[
-files: "**/*.{js,ts}"
-rule: |
-  Include configuration files: @file(config/*.json)
-  Include test files: @file(tests/**/*.test.js)
-  // Additional rule instructions...
-      ]]></code>
-    </good-practice>
-  </examples>
-  <instructions>
-    <instruction>Create a rule file (with a .mdc extension) in your .cursor/rules directory.</instruction>
-    <instruction>Use glob patterns in the "files" field to specify which files the rule applies to.</instruction>
-    <instruction>Within the rule block, reference additional files using the @file directive.</instruction>
-    <instruction>This setup automatically attaches the referenced file(s) as context for the prompt.</instruction>
-    <instruction>You can also use the "/" command in Chat or Composer to "Reference Open Editors" for including multiple related files at once.</instruction>
-  </instructions>
-</rule>
+
+> **TL;DR:** Use @file syntax to attach memory files to rules and conversations, following a consistent structure that respects memory bank organization and cognitive memory model hierarchy.
+
+<version>1.0.0</version>
+
+<context>
+  This rule provides guidance for properly attaching memory files to rules and AI conversations. Following these guidelines ensures memory files are correctly referenced, maintaining the integrity of the memory bank's cognitive model and enabling efficient information retrieval.
+</context>
+
+<requirements>
+  <requirement>Use @file syntax for referencing memory files in rules and conversations</requirement>
+  <requirement>Follow memory bank hierarchy when referencing files (active → short-term → long-term)</requirement>
+  <requirement>Respect memory type categories when referencing long-term memory files</requirement>
+  <requirement>Use specific paths when possible rather than glob patterns for file references</requirement>
+  <requirement>Include context when referencing memory files to indicate their purpose</requirement>
+  <requirement>Group related memory files when attaching multiple files</requirement>
+</requirements>
+
+<details>
+  <section-name>FILE ATTACHMENT SYNTAX</section-name>
+  <content>
+    ### Basic @file Syntax
+
+    ```
+    @file(path/to/file.md)
+    ```
+
+    ### Memory Bank Path Syntax
+
+    ```
+    @file(memory-bank/active/activeContext.md)
+    @file(memory-bank/short-term/previous_session.md)
+    @file(memory-bank/long-term/episodic/decisions/auth_approach.md)
+    ```
+
+    ### Multiple File Attachment
+
+    ```
+    @file(memory-bank/active/*.md)         # All files in active memory
+    @file(memory-bank/long-term/**/*.md)   # All files in long-term memory
+    ```
+
+    ### Explicit References with Context
+
+    ```
+    For project requirements, see: @file(memory-bank/active/projectbrief.md)
+    For technical context, see: @file(memory-bank/active/techContext.md)
+    For previous decisions, see: @file(memory-bank/long-term/episodic/decisions/authentication.md)
+    ```
+  </content>
+</details>
+
+<details>
+  <section-name>MEMORY BANK ATTACHMENT PATTERNS</section-name>
+  <content>
+    Follow these patterns when attaching memory files:
+
+    ### Working Memory Context
+
+    When starting a task, attach active memory for context:
+
+    ```
+    @file(memory-bank/active/projectbrief.md)
+    @file(memory-bank/active/activeContext.md)
+    @file(memory-bank/active/techContext.md)
+    ```
+
+    ### Historical Context
+
+    When referencing past decisions or experience:
+
+    ```
+    @file(memory-bank/long-term/episodic/decisions/auth_strategy.md)
+    @file(memory-bank/long-term/episodic/sessions/2023-03-15-authentication.md)
+    ```
+
+    ### Knowledge Context
+
+    When referencing domain knowledge or concepts:
+
+    ```
+    @file(memory-bank/long-term/semantic/domain/auth_concepts.md)
+    @file(memory-bank/long-term/semantic/apis/auth_api.md)
+    ```
+
+    ### Process Context
+
+    When referencing workflows or procedures:
+
+    ```
+    @file(memory-bank/long-term/procedural/workflows/deployment.md)
+    @file(memory-bank/long-term/procedural/guides/testing.md)
+    ```
+
+    ### Design Context
+
+    When referencing design patterns or architecture:
+
+    ```
+    @file(memory-bank/long-term/creative/architecture/system_design.md)
+    @file(memory-bank/long-term/creative/components/auth_components.md)
+    ```
+  </content>
+</details>
+
+<examples>
+  <good-practice>
+    <description>Properly structured memory file attachments with context</description>
+    <code>
+      I need to implement a new authentication feature. Let me review the relevant memory files:
+
+      Project requirements: @file(memory-bank/active/projectbrief.md)
+      Current development context: @file(memory-bank/active/activeContext.md)
+      Technical stack information: @file(memory-bank/active/techContext.md)
+      Previous authentication decisions: @file(memory-bank/long-term/episodic/decisions/auth_approach.md)
+      Authentication API documentation: @file(memory-bank/long-term/semantic/apis/auth_api.md)
+    </code>
+    <explanation>This example provides clear context for each attached file, follows the memory hierarchy, and focuses on specific relevant files</explanation>
+  </good-practice>
+
+  <good-practice>
+    <description>Task-specific memory organization</description>
+    <code>
+      ---
+      description: WHEN implementing authentication features ENSURE following security best practices
+      globs: ["src/auth/**/*.{js,ts}"]
+      alwaysApply: false
+      ---
+
+      > **TL;DR:** Follow security best practices for authentication as defined in our project documentation.
+
+      <context>
+        This rule applies when implementing authentication features. Reference the following memory files for context:
+
+        @file(memory-bank/active/techContext.md#Authentication)
+        @file(memory-bank/long-term/procedural/guides/security_standards.md)
+        @file(memory-bank/long-term/creative/components/auth_flow.md)
+      </context>
+
+      <requirements>
+        <!-- Requirements here -->
+      </requirements>
+    </code>
+    <explanation>This example integrates memory file references directly into a rule file, focusing on relevant sections and following memory organization</explanation>
+  </good-practice>
+
+  <bad-practice>
+    <description>Poorly organized memory file attachments</description>
+    <code>
+      I'm working on the project and need files:
+
+      @file(memory-bank/**/*.md)
+    </code>
+    <explanation>This example uses an overly broad glob pattern that will attach too many files, lacks context for why they're needed, and doesn't respect memory organization</explanation>
+  </bad-practice>
+
+  <bad-practice>
+    <description>Inconsistent memory path references</description>
+    <code>
+      Let's check these files:
+
+      @file(memory-bank/activeContext.md)
+      @file(memory-bank/long_term/episodic/decisions.md)
+      @file(memory/technical-stack.md)
+    </code>
+    <explanation>This example uses incorrect paths that don't match the memory bank structure, has inconsistent formatting, and lacks context for why files are needed</explanation>
+  </bad-practice>
+</examples>
+
+<details>
+  <section-name>BEST PRACTICES</section-name>
+  <content>
+    ### Memory Attachment Guidelines
+
+    1. **Be Specific**: Attach only the files relevant to the current task
+    2. **Provide Context**: Explain why each memory file is being attached
+    3. **Follow Hierarchy**: Start with active memory, then short-term, then long-term
+    4. **Respect Categories**: Use the appropriate memory type (episodic, semantic, procedural, creative)
+    5. **Consider Scope**: For larger tasks, start with high-level memory then add details as needed
+    6. **Update References**: Ensure attached files are current versions
+    7. **Section References**: Use `#Section` syntax to reference specific sections of larger files
+
+    ### Common Usage Patterns
+
+    1. **Task Initialization**:
+       ```
+       @file(memory-bank/active/projectbrief.md)
+       @file(memory-bank/active/activeContext.md)
+       ```
+
+    2. **Technical Implementation**:
+       ```
+       @file(memory-bank/active/techContext.md)
+       @file(memory-bank/active/systemPatterns.md)
+       ```
+
+    3. **Feature Development**:
+       ```
+       @file(memory-bank/active/tasks.md#CurrentFeature)
+       @file(memory-bank/long-term/semantic/features/feature_spec.md)
+       ```
+
+    4. **Problem Solving**:
+       ```
+       @file(memory-bank/active/activeContext.md#CurrentIssue)
+       @file(memory-bank/long-term/procedural/guides/troubleshooting.md)
+       ```
+
+    5. **Design Discussions**:
+       ```
+       @file(memory-bank/long-term/creative/architecture/system_design.md)
+       @file(memory-bank/long-term/episodic/decisions/design_decisions.md)
+       ```
+  </content>
+</details>

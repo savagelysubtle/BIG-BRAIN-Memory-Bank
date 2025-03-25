@@ -1,4 +1,9 @@
 ---
+description: 
+globs: 
+alwaysApply: false
+---
+---
 description: Guidelines for managing long-term memory in the memory-bank
 globs:
   - "memory-bank/long-term/**/*.md"

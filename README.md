@@ -49,6 +49,7 @@ explanations.
   activities
 - **Enhanced Creative Phase**: Structured approach to complex design decisions
 - **Bedtime Protocol**: End-of-session maintenance for persistent memory
+- **Memory Analytics**: Comprehensive statistics and health monitoring of the memory system
 
 ## Directory Structure
 
@@ -62,7 +63,8 @@ memory-bank/
 │   ├── techContext.md           # Technology stack and constraints
 │   ├── progress.md              # Project status and roadmap
 │   ├── tasks.md                 # Single source of truth for task tracking
-│   └── projectRules.md          # Project intelligence and learned patterns
+│   ├── projectRules.md          # Project intelligence and learned patterns
+│   └── analytics/               # Memory bank statistics and usage reports
 │
 ├── short-term/                  # Recent versioned files (1-2 sessions old)
 │
@@ -155,6 +157,12 @@ BIG create a user authentication system
 - `creative phase: [type]` - Begin a structured creative phase
 - `verification checkpoint` - Perform memory verification
 
+### Analytics Commands
+
+- `BIG analytics stats [--include-details] [--output-path <path>]` - Generate memory bank statistics
+- `BIG analytics report [--format <Text|HTML|JSON>] [--days <number>] [--output-path <path>]` - Create usage report
+- `BIG analytics health [--threshold <number>]` - Perform health check with recommendations
+
 ## Best Practices
 
 1. **Always use the Bedtime Protocol** at the end of your sessions to ensure
@@ -219,3 +227,44 @@ management protocols.
 
 We gratefully acknowledge these original creators whose work provided valuable
 inspiration.
+
+## Memory Analytics
+
+The BIG BRAIN Memory Bank System includes a comprehensive analytics suite to monitor memory health and provide insights into memory usage patterns:
+
+### Features
+
+- **Memory Statistics**: Track file counts, sizes, and distribution across memory types
+- **Health Metrics**: Calculate memory diversity, long-term memory ratio, category balance, and activity scores
+- **Usage Reports**: Generate detailed HTML, Text, or JSON reports with visualizations
+- **Actionable Recommendations**: Receive suggestions to optimize memory organization
+- **Bedtime Integration**: Automatically run analytics during the Bedtime Protocol
+
+### Using Analytics
+
+1. **Generate Statistics**:
+   ```
+   BIG analytics stats --include-details
+   ```
+
+2. **Create Usage Report**:
+   ```
+   BIG analytics report --format HTML
+   ```
+   This creates a report at `memory-bank/active/analytics/memory-usage-report.html`
+
+3. **Check Memory Health**:
+   ```
+   BIG analytics health --threshold 60
+   ```
+
+4. **View Latest Report**:
+   Open the HTML report in your browser to view detailed memory analysis, health metrics, and recommendations.
+
+### Health Metrics Explained
+
+- **Memory Diversity**: Balance between Active, Short-Term, and Long-Term memory
+- **Long-Term Ratio**: Proportion of content in long-term memory
+- **Category Balance**: Distribution across episodic, semantic, procedural, and creative categories
+- **Activity Score**: Percentage of files modified in the last 7 days
+- **Overall Score**: Combined health rating with status (Excellent, Good, Adequate, Needs Improvement, Critical)

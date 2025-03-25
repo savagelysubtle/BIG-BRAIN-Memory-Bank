@@ -1,0 +1,589 @@
+{
+  "GeneratedAt": "2025-03-25T00:23:13.6420836-07:00",
+  "MemoryBankPath": "D:\\Coding\\Python_Projects\\TheMemoryBank\\memory-bank",
+  "TotalFiles": 60,
+  "TotalSize": "590.14 KB",
+  "TotalSizeBytes": 604302.0,
+  "AverageFileSize": "9.84 KB",
+  "AverageFileSizeBytes": 10071.7,
+  "LargestFile": {
+    "Name": "memory_manager.py",
+    "Path": "memory-bank\\Bedtime Protocol\\memory-tools\\memory_manager.py",
+    "Size": "85.11 KB",
+    "SizeBytes": 87148
+  },
+  "NewestFile": {
+    "Name": "memory-statistics.json",
+    "Path": "memory-bank\\active\\analytics\\memory-statistics.json",
+    "LastModified": "2025-03-25T00:23:08.7571014-07:00"
+  },
+  "OldestFile": {
+    "Name": "memory_config_template.json",
+    "Path": "memory-bank\\Bedtime Protocol\\memory-tools\\config_templates\\memory_config_template.json",
+    "LastModified": "2025-03-22T12:04:35.2749456-07:00"
+  },
+  "MemoryTypes": {
+    "Active": {
+      "FileCount": 0,
+      "TotalSize": "0 bytes",
+      "TotalSizeBytes": null
+    },
+    "ShortTerm": {
+      "FileCount": 0,
+      "TotalSize": "0 bytes",
+      "TotalSizeBytes": null
+    },
+    "LongTerm": {
+      "FileCount": 0,
+      "TotalSize": "0 bytes",
+      "TotalSizeBytes": null,
+      "Categories": {
+        "Episodic": {
+          "FileCount": 0,
+          "TotalSize": "0 bytes",
+          "TotalSizeBytes": null
+        },
+        "Semantic": {
+          "FileCount": 0,
+          "TotalSize": "0 bytes",
+          "TotalSizeBytes": null
+        },
+        "Procedural": {
+          "FileCount": 0,
+          "TotalSize": "0 bytes",
+          "TotalSizeBytes": null
+        },
+        "Creative": {
+          "FileCount": 0,
+          "TotalSize": "0 bytes",
+          "TotalSizeBytes": null
+        }
+      }
+    }
+  },
+  "FileTypes": {
+    "Markdown": {
+      "FileCount": 43,
+      "TotalSize": "465.95 KB",
+      "TotalSizeBytes": 477135.0
+    },
+    "JSON": {
+      "FileCount": 4,
+      "TotalSize": "34.87 KB",
+      "TotalSizeBytes": 35707.0
+    },
+    "YAML": {
+      "FileCount": 0,
+      "TotalSize": "0 bytes",
+      "TotalSizeBytes": null
+    },
+    "Other": {
+      "FileCount": 13,
+      "TotalSize": "89.32 KB",
+      "TotalSizeBytes": 91460.0
+    }
+  },
+  "Activity": {
+    "Last24Hours": {
+      "FileCount": 46,
+      "Percentage": 76.67
+    },
+    "Last7Days": {
+      "FileCount": 60,
+      "Percentage": 100.0
+    },
+    "Last30Days": {
+      "FileCount": 60,
+      "Percentage": 100.0
+    }
+  },
+  "ComplexityMetrics": {
+    "MemoryDiversity": 0.0,
+    "LongTermRatio": 0.0,
+    "CategoryBalance": 0,
+    "ActivityScore": 100.0,
+    "OverallScore": 25.00
+  },
+  "DetailedFileList": [
+    {
+      "Name": ".gitkeep",
+      "Path": "memory-bank\\.gitkeep",
+      "Size": "0 bytes",
+      "SizeBytes": 0,
+      "LastModified": "2025-03-24T00:01:55.375272-07:00",
+      "Extension": ".gitkeep"
+    },
+    {
+      "Name": "activeContext.md",
+      "Path": "memory-bank\\activeContext.md",
+      "Size": "14.35 KB",
+      "SizeBytes": 14693,
+      "LastModified": "2025-03-24T11:42:16.225038-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "progress.md",
+      "Path": "memory-bank\\progress.md",
+      "Size": "4.24 KB",
+      "SizeBytes": 4345,
+      "LastModified": "2025-03-24T10:06:41.8498826-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "systemPatterns.md",
+      "Path": "memory-bank\\systemPatterns.md",
+      "Size": "7.85 KB",
+      "SizeBytes": 8038,
+      "LastModified": "2025-03-24T08:28:20.0269913-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "techContext.md",
+      "Path": "memory-bank\\techContext.md",
+      "Size": "6.20 KB",
+      "SizeBytes": 6351,
+      "LastModified": "2025-03-24T08:28:00.7623435-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "activeContext.md",
+      "Path": "memory-bank\\active\\activeContext.md",
+      "Size": "17.17 KB",
+      "SizeBytes": 17577,
+      "LastModified": "2025-03-24T09:20:45.635801-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "phaseTracker.md",
+      "Path": "memory-bank\\active\\phaseTracker.md",
+      "Size": "5.99 KB",
+      "SizeBytes": 6137,
+      "LastModified": "2025-03-24T09:41:21.9898425-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "productContext.md",
+      "Path": "memory-bank\\active\\productContext.md",
+      "Size": "6.24 KB",
+      "SizeBytes": 6392,
+      "LastModified": "2025-03-24T08:26:40.9544506-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "progress.md",
+      "Path": "memory-bank\\active\\progress.md",
+      "Size": "15.55 KB",
+      "SizeBytes": 15925,
+      "LastModified": "2025-03-24T08:26:40.9544506-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "projectbrief.md",
+      "Path": "memory-bank\\active\\projectbrief.md",
+      "Size": "5.08 KB",
+      "SizeBytes": 5204,
+      "LastModified": "2025-03-24T08:26:40.9554484-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "projectRules.md",
+      "Path": "memory-bank\\active\\projectRules.md",
+      "Size": "12.15 KB",
+      "SizeBytes": 12439,
+      "LastModified": "2025-03-24T08:26:40.9554484-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "systemPatterns.md",
+      "Path": "memory-bank\\active\\systemPatterns.md",
+      "Size": "11.55 KB",
+      "SizeBytes": 11825,
+      "LastModified": "2025-03-24T08:26:40.956448-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "techContext.md",
+      "Path": "memory-bank\\active\\techContext.md",
+      "Size": "8.46 KB",
+      "SizeBytes": 8668,
+      "LastModified": "2025-03-24T08:26:40.956448-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "memory-statistics.json",
+      "Path": "memory-bank\\active\\analytics\\memory-statistics.json",
+      "Size": "18.34 KB",
+      "SizeBytes": 18781,
+      "LastModified": "2025-03-25T00:23:08.7571014-07:00",
+      "Extension": ".json"
+    },
+    {
+      "Name": ".gitkeep",
+      "Path": "memory-bank\\Bedtime Protocol\\.gitkeep",
+      "Size": "0 bytes",
+      "SizeBytes": 0,
+      "LastModified": "2025-03-24T00:01:59.1761942-07:00",
+      "Extension": ".gitkeep"
+    },
+    {
+      "Name": "README.md",
+      "Path": "memory-bank\\Bedtime Protocol\\README.md",
+      "Size": "4.73 KB",
+      "SizeBytes": 4847,
+      "LastModified": "2025-03-23T20:01:54.7834085-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": ".gitkeep",
+      "Path": "memory-bank\\Bedtime Protocol\\memory-tools\\.gitkeep",
+      "Size": "0 bytes",
+      "SizeBytes": 0,
+      "LastModified": "2025-03-24T00:01:59.1761942-07:00",
+      "Extension": ".gitkeep"
+    },
+    {
+      "Name": "memory_config.json",
+      "Path": "memory-bank\\Bedtime Protocol\\memory-tools\\memory_config.json",
+      "Size": "15.45 KB",
+      "SizeBytes": 15818,
+      "LastModified": "2025-03-24T11:47:39.540413-07:00",
+      "Extension": ".json"
+    },
+    {
+      "Name": "memory_manager.py",
+      "Path": "memory-bank\\Bedtime Protocol\\memory-tools\\memory_manager.py",
+      "Size": "85.11 KB",
+      "SizeBytes": 87148,
+      "LastModified": "2025-03-23T20:41:05.909569-07:00",
+      "Extension": ".py"
+    },
+    {
+      "Name": "README.md",
+      "Path": "memory-bank\\Bedtime Protocol\\memory-tools\\README.md",
+      "Size": "4.72 KB",
+      "SizeBytes": 4831,
+      "LastModified": "2025-03-23T20:01:26.1944263-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "memory_config_template.json",
+      "Path": "memory-bank\\Bedtime Protocol\\memory-tools\\config_templates\\memory_config_template.json",
+      "Size": "339 bytes",
+      "SizeBytes": 339,
+      "LastModified": "2025-03-22T12:04:35.2749456-07:00",
+      "Extension": ".json"
+    },
+    {
+      "Name": "memory_manager_20250324_114859.log",
+      "Path": "memory-bank\\Bedtime Protocol\\memory-tools\\logs\\memory_manager_20250324_114859.log",
+      "Size": "1.24 KB",
+      "SizeBytes": 1274,
+      "LastModified": "2025-03-24T11:48:59.1031869-07:00",
+      "Extension": ".log"
+    },
+    {
+      "Name": "memory_manager_20250324_114908.log",
+      "Path": "memory-bank\\Bedtime Protocol\\memory-tools\\logs\\memory_manager_20250324_114908.log",
+      "Size": "1.48 KB",
+      "SizeBytes": 1519,
+      "LastModified": "2025-03-24T11:49:08.4745445-07:00",
+      "Extension": ".log"
+    },
+    {
+      "Name": "memory_manager_20250324_114914.log",
+      "Path": "memory-bank\\Bedtime Protocol\\memory-tools\\logs\\memory_manager_20250324_114914.log",
+      "Size": "1.48 KB",
+      "SizeBytes": 1519,
+      "LastModified": "2025-03-24T11:49:14.1318897-07:00",
+      "Extension": ".log"
+    },
+    {
+      "Name": "memory_config_template.json",
+      "Path": "memory-bank\\Bedtime Protocol\\memory-tools\\templates\\memory_config_template.json",
+      "Size": "769 bytes",
+      "SizeBytes": 769,
+      "LastModified": "2025-03-22T12:37:01.8366255-07:00",
+      "Extension": ".json"
+    },
+    {
+      "Name": ".gitkeep",
+      "Path": "memory-bank\\long_term\\episodic\\.gitkeep",
+      "Size": "0 bytes",
+      "SizeBytes": 0,
+      "LastModified": "2025-03-24T00:01:55.3767801-07:00",
+      "Extension": ".gitkeep"
+    },
+    {
+      "Name": ".gitkeep",
+      "Path": "memory-bank\\long_term\\episodic\\active\\.gitkeep",
+      "Size": "0 bytes",
+      "SizeBytes": 0,
+      "LastModified": "2025-03-24T00:01:55.3767801-07:00",
+      "Extension": ".gitkeep"
+    },
+    {
+      "Name": "authImplementation.md",
+      "Path": "memory-bank\\long_term\\episodic\\active\\authImplementation.md",
+      "Size": "5.28 KB",
+      "SizeBytes": 5407,
+      "LastModified": "2025-03-24T08:26:40.9574486-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "memoryBankStructureMap.md",
+      "Path": "memory-bank\\long_term\\episodic\\active\\sessions\\memoryBankStructureMap.md",
+      "Size": "12.24 KB",
+      "SizeBytes": 12534,
+      "LastModified": "2025-03-24T10:13:58.4285604-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "memoryCleanupAnalysis.md",
+      "Path": "memory-bank\\long_term\\episodic\\active\\sessions\\memoryCleanupAnalysis.md",
+      "Size": "11.17 KB",
+      "SizeBytes": 11437,
+      "LastModified": "2025-03-24T10:04:59.8766517-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "rulesSystemInventory.md",
+      "Path": "memory-bank\\long_term\\episodic\\active\\sessions\\rulesSystemInventory.md",
+      "Size": "10.71 KB",
+      "SizeBytes": 10962,
+      "LastModified": "2025-03-24T10:20:31.7834339-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "summary-2025-03-24.md",
+      "Path": "memory-bank\\long_term\\episodic\\active\\sessions\\summary-2025-03-24.md",
+      "Size": "1.64 KB",
+      "SizeBytes": 1678,
+      "LastModified": "2025-03-24T08:54:25.8787702-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": ".gitkeep",
+      "Path": "memory-bank\\long_term\\procedural\\.gitkeep",
+      "Size": "0 bytes",
+      "SizeBytes": 0,
+      "LastModified": "2025-03-24T00:01:55.3767801-07:00",
+      "Extension": ".gitkeep"
+    },
+    {
+      "Name": ".gitkeep",
+      "Path": "memory-bank\\long_term\\procedural\\active\\.gitkeep",
+      "Size": "0 bytes",
+      "SizeBytes": 0,
+      "LastModified": "2025-03-24T00:01:55.3767801-07:00",
+      "Extension": ".gitkeep"
+    },
+    {
+      "Name": "deploymentProcess.md",
+      "Path": "memory-bank\\long_term\\procedural\\active\\deploymentProcess.md",
+      "Size": "5.50 KB",
+      "SizeBytes": 5628,
+      "LastModified": "2025-03-24T08:26:40.9574486-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "memoryCleanupPlan.md",
+      "Path": "memory-bank\\long_term\\procedural\\active\\memoryCleanupPlan.md",
+      "Size": "10.40 KB",
+      "SizeBytes": 10654,
+      "LastModified": "2025-03-24T10:02:14.156167-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "workflow_rule_integration_map.md",
+      "Path": "memory-bank\\long_term\\procedural\\active\\analyses\\workflow_rule_integration_map.md",
+      "Size": "13.79 KB",
+      "SizeBytes": 14124,
+      "LastModified": "2025-03-24T11:20:08.3557861-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "memoryCleanupCheckpoints.md",
+      "Path": "memory-bank\\long_term\\procedural\\active\\checklists\\memoryCleanupCheckpoints.md",
+      "Size": "23.59 KB",
+      "SizeBytes": 24161,
+      "LastModified": "2025-03-24T11:41:09.919732-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "directory_purpose_definitions.md",
+      "Path": "memory-bank\\long_term\\procedural\\active\\guidelines\\directory_purpose_definitions.md",
+      "Size": "13.85 KB",
+      "SizeBytes": 14181,
+      "LastModified": "2025-03-24T11:14:19.1262474-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "metadata_standards.md",
+      "Path": "memory-bank\\long_term\\procedural\\active\\guidelines\\metadata_standards.md",
+      "Size": "15.46 KB",
+      "SizeBytes": 15831,
+      "LastModified": "2025-03-24T10:48:22.1380348-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "naming_conventions.md",
+      "Path": "memory-bank\\long_term\\procedural\\active\\guidelines\\naming_conventions.md",
+      "Size": "9.74 KB",
+      "SizeBytes": 9971,
+      "LastModified": "2025-03-24T10:39:50.2997666-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "directory_restructuring_plan.md",
+      "Path": "memory-bank\\long_term\\procedural\\active\\plans\\directory_restructuring_plan.md",
+      "Size": "18.50 KB",
+      "SizeBytes": 18940,
+      "LastModified": "2025-03-24T11:40:44.2708791-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "file_rule_linking_implementation_plan.md",
+      "Path": "memory-bank\\long_term\\procedural\\active\\plans\\file_rule_linking_implementation_plan.md",
+      "Size": "16.71 KB",
+      "SizeBytes": 17112,
+      "LastModified": "2025-03-24T10:49:32.8309995-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "phase1_completion_report.md",
+      "Path": "memory-bank\\long_term\\procedural\\active\\reports\\phase1_completion_report.md",
+      "Size": "14.39 KB",
+      "SizeBytes": 14734,
+      "LastModified": "2025-03-24T11:39:52.2201442-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "development-workflow.md",
+      "Path": "memory-bank\\long_term\\procedural\\active\\workflows\\development-workflow.md",
+      "Size": "3.76 KB",
+      "SizeBytes": 3847,
+      "LastModified": "2025-03-24T08:55:08.008328-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "memoryCleanupWorkflow.md",
+      "Path": "memory-bank\\long_term\\procedural\\active\\workflows\\memoryCleanupWorkflow.md",
+      "Size": "13.74 KB",
+      "SizeBytes": 14070,
+      "LastModified": "2025-03-24T10:10:45.1669379-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": ".gitkeep",
+      "Path": "memory-bank\\long_term\\semantic\\.gitkeep",
+      "Size": "0 bytes",
+      "SizeBytes": 0,
+      "LastModified": "2025-03-24T00:01:55.3762702-07:00",
+      "Extension": ".gitkeep"
+    },
+    {
+      "Name": ".gitkeep",
+      "Path": "memory-bank\\long_term\\semantic\\active\\.gitkeep",
+      "Size": "0 bytes",
+      "SizeBytes": 0,
+      "LastModified": "2025-03-24T00:01:55.3762702-07:00",
+      "Extension": ".gitkeep"
+    },
+    {
+      "Name": "designPatterns.md",
+      "Path": "memory-bank\\long_term\\semantic\\active\\designPatterns.md",
+      "Size": "4.10 KB",
+      "SizeBytes": 4201,
+      "LastModified": "2025-03-24T08:26:40.9584489-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "rule-system-architecture.md",
+      "Path": "memory-bank\\long_term\\semantic\\active\\architecture\\rule-system-architecture.md",
+      "Size": "4.45 KB",
+      "SizeBytes": 4552,
+      "LastModified": "2025-03-24T08:54:48.7062359-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "architecture-exploration.md",
+      "Path": "memory-bank\\long_term\\semantic\\active\\templates\\creative-phase\\exploration\\architecture-exploration.md",
+      "Size": "2.63 KB",
+      "SizeBytes": 2693,
+      "LastModified": "2025-03-24T09:20:16.0796626-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "memory-system-enhancement-plan.md",
+      "Path": "memory-bank\\plans\\memory-system-enhancement-plan.md",
+      "Size": "18.33 KB",
+      "SizeBytes": 18766,
+      "LastModified": "2025-03-24T08:45:08.3601851-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "phase3-advanced-features-plan.md",
+      "Path": "memory-bank\\plans\\phase3-advanced-features-plan.md",
+      "Size": "21.72 KB",
+      "SizeBytes": 22239,
+      "LastModified": "2025-03-24T09:18:48.5918208-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "adaptiveMemoryProfiles.md",
+      "Path": "memory-bank\\plans\\memory\\adaptiveMemoryProfiles.md",
+      "Size": "12.37 KB",
+      "SizeBytes": 12671,
+      "LastModified": "2025-03-24T09:33:23.8547868-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "memoryPaths.md",
+      "Path": "memory-bank\\plans\\memory\\memoryPaths.md",
+      "Size": "5.92 KB",
+      "SizeBytes": 6066,
+      "LastModified": "2025-03-24T08:46:27.6215531-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "bigCommandSystem.md",
+      "Path": "memory-bank\\plans\\rules\\bigCommandSystem.md",
+      "Size": "14.05 KB",
+      "SizeBytes": 14390,
+      "LastModified": "2025-03-24T09:19:55.6363447-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "memoryReadingProtocol.md",
+      "Path": "memory-bank\\plans\\rules\\memoryReadingProtocol.md",
+      "Size": "8.97 KB",
+      "SizeBytes": 9187,
+      "LastModified": "2025-03-24T08:47:07.8073172-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "memoryTypeOrganization.md",
+      "Path": "memory-bank\\plans\\rules\\memoryTypeOrganization.md",
+      "Size": "9.97 KB",
+      "SizeBytes": 10211,
+      "LastModified": "2025-03-24T08:51:12.4248563-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "ruleSystemIntegration.md",
+      "Path": "memory-bank\\plans\\rules\\ruleSystemIntegration.md",
+      "Size": "22.77 KB",
+      "SizeBytes": 23321,
+      "LastModified": "2025-03-24T08:53:40.2796743-07:00",
+      "Extension": ".md"
+    },
+    {
+      "Name": "workflowImplementation.md",
+      "Path": "memory-bank\\plans\\rules\\workflowImplementation.md",
+      "Size": "15.91 KB",
+      "SizeBytes": 16295,
+      "LastModified": "2025-03-24T08:52:13.5771468-07:00",
+      "Extension": ".md"
+    }
+  ]
+}

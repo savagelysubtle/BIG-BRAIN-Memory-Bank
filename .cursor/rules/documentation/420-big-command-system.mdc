@@ -1,0 +1,324 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN needing to use BIG commands CONSULT this documentation for proper syntax and operation
+globs: ["**/*.md", "**/*.mdc"]
+alwaysApply: false
+---
+
+> **TL;DR:** The BIG command system provides a standardized interface for interacting with all aspects of the memory bank through a consistent command structure: `BIG [category] [command] [parameters] [--options]`
+
+<version>1.0.0</version>
+
+<context>
+  This documentation covers the BIG BRAIN command system, which provides a unified interface for all memory bank operations. The command system ensures consistent interaction patterns across different contexts and features standardized parameter formats, feedback mechanisms, and organized categories.
+</context>
+
+# BIG BRAIN Command System
+
+## Command Structure
+
+All BIG BRAIN commands follow this standardized structure:
+
+```
+BIG [category] [command] [parameters] [--options]
+```
+
+Where:
+- **BIG**: Universal command prefix indicating a Memory Bank operation
+- **category**: Functional area (memory, workflow, verification, etc.)
+- **command**: Specific operation within the category
+- **parameters**: Required command inputs in fixed order
+- **options**: Optional flags modifying command behavior
+
+## Command Categories
+
+The command system is organized into these functional categories:
+
+### 1. Memory Operations
+
+Memory commands manage the core memory files.
+
+```
+BIG memory read [file] [--section] [--format]
+BIG memory write [file] [content] [--append]
+BIG memory update [file] [--section] [content]
+BIG memory search [query] [--files] [--context]
+BIG memory list [--type] [--status]
+```
+
+**Examples:**
+```
+BIG memory read activeContext.md --section "Current Focus"
+BIG memory update progress.md --section "Completed Tasks" "Added user authentication"
+BIG memory search "API implementation" --context 2
+```
+
+### 2. Workflow Operations
+
+Workflow commands manage task processes and modes.
+
+```
+BIG workflow start [mode] [--complexity]
+BIG workflow switch [mode]
+BIG workflow status
+BIG workflow track [section] [--status]
+BIG workflow checkpoint [description]
+```
+
+**Examples:**
+```
+BIG workflow start plan --complexity 3
+BIG workflow switch act
+BIG workflow checkpoint "Completed database schema design"
+```
+
+### 3. Verification Operations
+
+Verification commands check system health and consistency.
+
+```
+BIG verify files [--focus]
+BIG verify consistency [--scope]
+BIG verify references [--file]
+BIG verify structure [--files]
+BIG verify health [--detail]
+```
+
+**Examples:**
+```
+BIG verify files --focus active
+BIG verify consistency --scope all
+BIG verify references --file systemPatterns.md
+```
+
+### 4. System Operations
+
+System commands manage configuration and status.
+
+```
+BIG system status
+BIG system config [setting] [value]
+BIG system reset [--scope]
+BIG system rules [--active]
+BIG system version
+```
+
+**Examples:**
+```
+BIG system status
+BIG system config default_complexity 2
+BIG system rules --active
+```
+
+### 5. Bedtime Operations
+
+Bedtime commands manage the session preservation protocol.
+
+```
+BIG bedtime prepare
+BIG bedtime verify
+BIG bedtime summary [--format]
+BIG bedtime complete [--notes]
+```
+
+**Examples:**
+```
+BIG bedtime prepare
+BIG bedtime complete --notes "Completed user authentication implementation"
+```
+
+### 6. Creative Operations
+
+Creative commands manage design and creation processes.
+
+```
+BIG creative start [design-type]
+BIG creative evaluate [artifact] [--criteria]
+BIG creative verify [artifact] [--standards]
+BIG creative finalize [artifact] [--store]
+```
+
+**Examples:**
+```
+BIG creative start architecture
+BIG creative evaluate component-design.md --criteria "maintainability,scalability"
+```
+
+### 7. Help Operations
+
+Help commands provide documentation and assistance.
+
+```
+BIG help [topic]
+BIG help commands [category]
+BIG help workflow [mode]
+BIG help examples [context]
+```
+
+**Examples:**
+```
+BIG help memory
+BIG help commands workflow
+BIG help examples bedtime
+```
+
+## Task Complexity Levels
+
+Commands adapt based on the complexity level of the current task:
+
+| Level | Description | Example Use Cases |
+|-------|-------------|------------------|
+| **1** | Simple tasks with minimal setup | Bug fixes, minor updates, documentation changes |
+| **2** | Standard tasks with basic workflow | Feature implementation, component modifications |
+| **3** | Complex tasks with enhanced verification | New subsystems, integration of multiple components |
+| **4** | Advanced tasks with formal workflow | Architecture redesign, system-wide changes |
+
+Set the complexity level when starting a task:
+```
+BIG workflow start plan --complexity 3
+```
+
+## Parameter Conventions
+
+Parameters follow these conventions:
+
+### 1. Positional Parameters
+- Required parameters appear in fixed order
+- File parameters come first when present
+- Action parameters follow file parameters
+- Content parameters come last
+
+### 2. Named Options
+- All options use double-dash prefix (--option)
+- Boolean options need no value (--verbose)
+- Value options use equals or space (--format=json or --format json)
+- Shorthand forms use single dash (-v for --verbose)
+
+### 3. Parameter Types
+- Files: Valid relative or absolute paths
+- Identifiers: Alphanumeric strings with hyphens/underscores
+- Content: Quoted text strings or file references
+- Lists: Comma-separated values without spaces
+
+## Command Feedback
+
+Commands provide feedback in standardized formats:
+
+### Success Format
+```
+✅ [Operation] completed successfully
+└─ [Details about the operation]
+   [Additional context]
+   [Next steps if applicable]
+```
+
+### Warning Format
+```
+⚠️ [Operation] completed with warnings
+├─ Warning: [Warning description]
+│  └─ [Suggestion to address warning]
+└─ [Operation details]
+```
+
+### Error Format
+```
+❌ [Operation] failed
+├─ Error: [Error description]
+├─ Location: [Where the error occurred]
+└─ Resolution: [How to fix the issue]
+```
+
+## Simplified Command Usage
+
+For quicker access to common operations, the following shortcuts are available:
+
+### Direct BIG Command
+Simply using `BIG` with a task description initiates a complete protocol:
+
+```
+BIG Fix the login validation bug
+```
+
+This automatically:
+1. Assesses task complexity
+2. Sets up appropriate workflow
+3. Initializes task tracking
+4. Prepares the memory bank
+
+### Mode Switching
+Quick mode switching is available with:
+```
+BIG PLAN
+BIG ACT
+```
+
+### Quick Help
+Get quick command help with:
+```
+BIG HELP
+```
+
+## Common Usage Patterns
+
+### Starting a New Task
+```
+BIG Implement user authentication system
+```
+
+### Viewing Current Status
+```
+BIG workflow status
+```
+
+### Switching Between Planning and Implementation
+```
+BIG workflow switch act
+BIG workflow switch plan
+```
+
+### Completing a Session
+```
+BIG bedtime prepare
+# Review session summary
+BIG bedtime complete
+```
+
+## Best Practices
+
+1. **Start with Clarity**: Always begin with clear task descriptions in BIG commands
+2. **Set Appropriate Complexity**: Choose the right complexity level for your task
+3. **Follow the Workflow**: Use PLAN mode before moving to ACT mode
+4. **Keep Memory Updated**: Regularly update memory files during long sessions
+5. **Use Checkpoints**: Create checkpoints at major milestones
+6. **Always Run Bedtime Protocol**: Complete the bedtime protocol before ending sessions
+7. **Verify When Uncertain**: Use verification commands to check system health
+
+## Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 1.0.0 | March 25, 2023 | Initial documentation of command system |
+
+<examples>
+  <good-practice>
+    <description>Starting a task with clear complexity</description>
+    <code>
+      BIG workflow start plan --complexity 3
+      # Detailed planning follows
+      BIG workflow switch act
+      # Implementation follows
+    </code>
+  </good-practice>
+  <bad-practice>
+    <description>Starting implementation without planning</description>
+    <code>
+      BIG workflow start act
+      # Directly implementing without planning
+    </code>
+    <explanation>Always start complex tasks in PLAN mode to ensure proper preparation</explanation>
+  </bad-practice>
+</examples>
