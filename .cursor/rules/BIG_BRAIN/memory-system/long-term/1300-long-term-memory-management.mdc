@@ -1,0 +1,57 @@
+---
+description: Guidelines for managing long-term memory in the memory-bank
+globs:
+  - "memory-bank/long-term/**/*.md"
+alwaysApply: false
+---
+
+<version>1.0.0</version>
+
+<context>
+  This rule governs how long-term memory files are organized and managed within the BIG BRAIN memory system.
+  Long-term memory represents archived information categorized by cognitive memory type.
+</context>
+
+<requirements>
+  <requirement>Categorize all long-term memory by appropriate memory type</requirement>
+  <requirement>Maintain consistent organization within each memory type</requirement>
+  <requirement>Implement proper cross-referencing between related memory items</requirement>
+</requirements>
+
+<rule>
+## Long-term Memory Management Protocol
+
+1. Long-term Memory Categories:
+   - Episodic Memory (experience-based):
+     * sessions/: Session summaries and experiences
+     * milestones/: Project milestone records
+     * decisions/: Decision records and justifications
+
+   - Semantic Memory (knowledge-based):
+     * domain/: Domain concepts and terminology
+     * apis/: API documentation and usage patterns
+     * features/: Feature specifications and requirements
+
+   - Procedural Memory (action-based):
+     * workflows/: Development and operational processes
+     * guides/: How-to guides and tutorials
+     * checklists/: Operational procedures and checklists
+
+   - Creative Memory (design outputs):
+     * architecture/: System architecture designs
+     * components/: Component designs and patterns
+     * algorithms/: Algorithm designs and implementations
+     * data-models/: Data structure designs
+
+2. Long-term Memory Operations:
+   - Add information to long-term memory only after verification
+   - Categorize information based on content type, not source
+   - Maintain consistent file organization within each memory type
+   - Create cross-references between related memory items
+
+3. Memory Retrieval Protocol:
+   - Access episodic memory for historical context and decisions
+   - Use semantic memory for domain knowledge and feature information
+   - Reference procedural memory for "how-to" guidance
+   - Leverage creative memory for design patterns and solutions
+</rule>

@@ -1,0 +1,38 @@
+---
+description: Guidelines for managing short-term memory in the memory-bank
+globs:
+  - "memory-bank/short-term/**/*.md"
+alwaysApply: false
+---
+
+<version>1.0.0</version>
+
+<context>
+  This rule governs how short-term memory files are managed within the BIG BRAIN memory system.
+  Short-term memory represents recently used information that is not part of the current active context.
+</context>
+
+<requirements>
+  <requirement>Maintain versions of recently modified active files</requirement>
+  <requirement>Implement proper versioning for files moved to short-term memory</requirement>
+  <requirement>Periodically review short-term memory for archival to long-term memory</requirement>
+</requirements>
+
+<rule>
+## Short-term Memory Management Protocol
+
+1. Short-term Memory Purpose:
+   - Store previous versions of active files (1-2 sessions old)
+   - Maintain temporary information pending categorization
+   - Hold recent session summaries before permanent archival
+
+2. Versioning Protocol:
+   - When an active file is significantly modified, move the previous version to short-term memory
+   - Use date-based versioning: filename_YYYY-MM-DD.md
+   - Maintain a maximum of 3 versions of each file in short-term memory
+
+3. Short-term to Long-term Transition:
+   - Review short-term memory files after 3 sessions
+   - Consolidate important information to appropriate long-term memory locations
+   - Archive complete session summaries to episodic memory
+</rule>

@@ -1,0 +1,47 @@
+---
+description: Primary rules for managing active memory files in the memory-bank
+globs:
+  - "memory-bank/active/**/*.md"
+alwaysApply: false
+---
+
+<version>1.0.0</version>
+
+<context>
+  This rule governs how active memory files are managed within the BIG BRAIN memory system.
+  Active memory represents the current working context and is the most frequently accessed memory type.
+</context>
+
+<requirements>
+  <requirement>Maintain all active memory files with current, accurate information</requirement>
+  <requirement>Update active files when significant new information is discovered</requirement>
+  <requirement>Ensure consistent formatting and organization across active files</requirement>
+  <requirement>Preserve important active file content during the Bedtime Protocol</requirement>
+</requirements>
+
+<rule>
+## Active Memory Management Protocol
+
+1. Active Memory Files:
+   - projectbrief.md: Project foundation and requirements
+   - productContext.md: Business and user perspective
+   - activeContext.md: Current work focus and state
+   - systemPatterns.md: Technical architecture patterns
+   - techContext.md: Technology stack and environment
+   - progress.md: Project status and roadmap
+   - tasks.md: Task tracking and assignments
+   - projectRules.md: Project-specific patterns and rules
+
+2. Active Memory Operations:
+   - Begin each significant task by reviewing all active memory files
+   - Update activeContext.md at the start of each new work session
+   - Add new technical patterns to systemPatterns.md as they emerge
+   - Update progress.md when features are completed or milestones reached
+   - Maintain tasks.md as the single source of truth for task tracking
+
+3. Active Memory Maintenance:
+   - Keep active memory files concise and focused on current information
+   - Remove outdated information by moving it to appropriate long-term storage
+   - Maintain consistent formatting within each active file
+   - Verify active memory integrity after significant updates
+</rule>

@@ -1,0 +1,88 @@
+---
+description: CRITICAL: Bedtime Protocol procedures for memory preservation. CONSULT before ending sessions.
+globs:
+  - "memory-bank/**/*.md"
+alwaysApply: false
+---
+
+<version>1.0.0</version>
+
+<context>
+  The Bedtime Protocol is a critical workflow that ensures proper memory preservation between sessions.
+  It must be executed completely before ending any significant work session.
+</context>
+
+<requirements>
+  <requirement>Update all core memory files with latest information</requirement>
+  <requirement>Create session summary in activeContext.md</requirement>
+  <requirement>Archive important information to appropriate memory types</requirement>
+  <requirement>Verify memory consistency across all files</requirement>
+</requirements>
+
+<rule>
+## Bedtime Protocol Workflow
+
+1. Memory Update Phase:
+   - Update the following core files with latest information:
+     * activeContext.md: Current focus and state
+     * progress.md: Working features and known issues
+     * tasks.md: Current task status and next actions
+     * systemPatterns.md: If architectural changes were made
+     * techContext.md: If technology changes were made
+     * projectRules.md: If new patterns or preferences were established
+
+2. Session Summary Creation:
+   - Create a session summary in activeContext.md using this format:
+     `markdown
+     ## 📊 SESSION SUMMARY (YYYY-MM-DD)
+
+     ### Accomplishments
+     - [Brief description of completed work]
+
+     ### Current State
+     - [Description of the current system state]
+     - [Current task progress: N%]
+
+     ### Next Actions
+     1. [Specific next step with detailed context]
+     2. [Another specific next step]
+
+     ### Open Questions
+     - [Question that needs resolution]
+     - [Decision that needs to be made]
+
+     ### Critical Notes
+     - [Any information essential for continuation]
+     `
+
+3. Memory Archival Phase:
+   - Version active files that have changed:
+     * Copy to short-term/ directory with date suffix
+   - Archive important information to long-term/:
+     * Move session summary to episodic/sessions/
+     * Add new discoveries to semantic/domain/
+     * Document new workflows in procedural/workflows/
+     * Archive design decisions in creative/
+
+4. Verification Phase:
+   - Verify consistency across all memory files
+   - Ensure all architectural decisions are documented
+   - Confirm current state is accurately reflected
+   - Validate working features and issues are up-to-date
+
+5. Completion Confirmation:
+   - Provide final confirmation:
+     `markdown
+     ## ✅ BEDTIME PROTOCOL COMPLETE
+
+     The memory preservation protocol has been successfully executed. All critical
+     information has been documented and the system state has been preserved.
+
+     Memory files updated:
+     - [list of updated files]
+
+     Continuation point established in activeContext.md
+
+     You may safely end this session.
+     `
+</rule>

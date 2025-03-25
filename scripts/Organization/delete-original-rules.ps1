@@ -33,6 +33,40 @@ foreach ($file in $rootFiles) {
     }
 }
 
+# List of original files to delete that have been reorganized
+$filesToDelete = @(
+    # Core files that have been reorganized according to memory system
+    "$rulesPath\Core\040-enhanced-complexity-framework.mdc"
+    "$rulesPath\Core\050-reference-verification-system.mdc"
+    "$rulesPath\Core\060-task-escalation-protocol.mdc"
+    "$rulesPath\Core\070-section-checkpoint-system.mdc"
+    "$rulesPath\Core\080-creative-phase-metrics.mdc"
+    "$rulesPath\Core\090-big-command-protocol.mdc"
+    "$rulesPath\Core\100-memory-file-verification.mdc"
+    "$rulesPath\Core\110-automated-consistency-checks.mdc"
+    "$rulesPath\Core\120-error-recovery-protocols.mdc"
+    "$rulesPath\Core\130-validation-reporting-system.mdc"
+    "$rulesPath\Core\140-unified-command-interface.mdc"
+    "$rulesPath\Core\150-standard-initialization-procedure.mdc"
+    "$rulesPath\Core\160-workflow-orchestration.mdc"
+    "$rulesPath\Core\170-protocol-enforcement-mechanisms.mdc"
+    "$rulesPath\Core\180-creative-process-structure.mdc"
+    "$rulesPath\Core\190-evaluation-metrics-system.mdc"
+    "$rulesPath\Core\200-quality-verification-procedures.mdc"
+    "$rulesPath\Core\210-artifact-management-system.mdc"
+
+    # Any existing memory system files that have been reorganized
+    "$rulesPath\BIG_BRAIN\memory-system\0050-big-brain-memory-system.mdc"
+)
+
+# Delete specific files that have been reorganized
+foreach ($file in $filesToDelete) {
+    if (Test-Path $file) {
+        Write-Host "Deleting reorganized file: $file"
+        Remove-Item -Path $file -Force
+    }
+}
+
 # Folders to check and potentially delete
 $foldersToProcess = @(
     "$rulesPath\Core",
