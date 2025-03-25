@@ -201,5 +201,7 @@ $separator
     Add-Content -Path $LogFile -Value $endMessage
 }
 
-# Export functions
-Export-ModuleMember -Function Write-BIGLog, Write-BIGHeader, Start-BIGLogging, Stop-BIGLogging
+# Export functions - only export if we're actually inside a module
+if ($MyInvocation.MyCommand.ScriptBlock.Module) {
+    Export-ModuleMember -Function Write-BIGLog, Write-BIGHeader, Start-BIGLogging, Stop-BIGLogging
+}

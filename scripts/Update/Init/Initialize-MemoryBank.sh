@@ -2,7 +2,7 @@
 
 # BIG BRAIN Memory Bank 2.0 Initialization Script
 # This script initializes the complete BIG BRAIN Memory Bank structure with all required directories and files.
-# Auto-generated on 2025-03-24 07:28:28
+# Auto-generated on 2025-03-25 02:11:06
 
 echo "🧠 BIG BRAIN Memory Bank 2.0 Initialization" 
 echo "=================================================" 
@@ -56,10 +56,6 @@ Create-Directory -Path $core_activeDir
 
 
 # Create rules structure
-$BIG_BRAINDir = /"BIG_BRAIN"
-Create-Directory -Path $BIG_BRAINDir
-$CodebaseDir = /"Codebase"
-Create-Directory -Path $CodebaseDir
 
 
 # Create file function

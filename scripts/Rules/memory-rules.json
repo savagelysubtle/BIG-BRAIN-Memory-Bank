@@ -1,0 +1,35 @@
+{
+  "rules": [
+    {
+      "enabled": true,
+      "category": "organization",
+      "description": "Stable knowledge should be moved to long-term memory",
+      "id": "core-001",
+      "action": "move-to-long-term",
+      "priority": 100,
+      "pattern": "*.md"
+    },
+    {
+      "enabled": true,
+      "category": "categorization",
+      "description": "Session records should be categorized as episodic memory",
+      "id": "core-002",
+      "action": "categorize-as-episodic",
+      "priority": 90,
+      "pattern": "*session*.md"
+    },
+    {
+      "enabled": true,
+      "category": "naming",
+      "description": "All files should use kebab-case naming convention",
+      "id": "core-003",
+      "action": "enforce-kebab-case",
+      "priority": 80,
+      "pattern": "*"
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "2025-03-25",
+    "version": "1.0"
+  }
+}

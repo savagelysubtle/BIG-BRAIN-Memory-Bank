@@ -1,0 +1,48 @@
+{
+  "GeneratedAt": "2025-03-25T02:17:45.252854-07:00",
+  "MemoryBankPath": "D:\\Coding\\Python_Projects\\TheMemoryBank\\memory-bank",
+  "ReportPeriod": "30 days (03/25/2025 02:17:45.AddDays(-30) to 03/25/2025 02:17:45)",
+  "OverallStatistics": {
+    "TotalFiles": 46,
+    "TotalSize": "375.33 KB",
+    "AverageFileSize": "8.16 KB",
+    "NewestFile": "memory-bank\\active\\activeContext.md",
+    "OldestFile": "memory-bank\\long-term\\semantic\\.gitkeep"
+  },
+  "UsagePatterns": {
+    "ActivityTrends": {
+      "Last7Days": 12,
+      "Last24Hours": 12,
+      "Last30Days": 12
+    },
+    "FileTypeDistribution": {
+      "JSON": null,
+      "Other": null,
+      "Markdown": null,
+      "YAML": null
+    },
+    "MemoryTypeUsage": {
+      "Active": 12,
+      "LongTerm": 34,
+      "ShortTerm": 0
+    },
+    "HealthMetrics": {
+      "ActivityScore": 26.09,
+      "OverallScore": 433.27,
+      "LongTermRatio": 0.74,
+      "MemoryDiversity": 15.33,
+      "CategoryBalance": 1.0
+    }
+  },
+  "ActivityTimeline": [],
+  "Recommendations": [],
+  "HealthScore": {
+    "Score": 433.27,
+    "Rating": [
+      "Excellent",
+      "Good",
+      "Adequate",
+      "Needs Improvement"
+    ]
+  }
+}

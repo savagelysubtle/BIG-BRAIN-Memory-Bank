@@ -1,6 +1,6 @@
 # BIG BRAIN Memory Bank 2.0 Initialization Script
 # This script initializes the complete BIG BRAIN Memory Bank structure with all required directories and files.
-# Auto-generated on 2025-03-24 07:28:28
+# Auto-generated on 2025-03-25 02:11:06
 
 Write-Host "🧠 BIG BRAIN Memory Bank 2.0 Initialization" -ForegroundColor Cyan
 Write-Host "=================================================" -ForegroundColor Cyan
@@ -21,17 +21,17 @@ $coreActiveDir = Join-Path -Path $coreDir -ChildPath "active"
 
 # Create directory structure function
 function Create-Directory {
-    param (
-        [string]$Path
-    )
+  param (
+    [string]$Path
+  )
 
-    if (-not (Test-Path -Path $Path)) {
-        New-Item -ItemType Directory -Force -Path $Path | Out-Null
-        Write-Host "  Created directory: $Path" -ForegroundColor Green
-    }
-    else {
-        Write-Host "  Directory already exists: $Path" -ForegroundColor Yellow
-    }
+  if (-not (Test-Path -Path $Path)) {
+    New-Item -ItemType Directory -Force -Path $Path | Out-Null
+    Write-Host "  Created directory: $Path" -ForegroundColor Green
+  }
+  else {
+    Write-Host "  Directory already exists: $Path" -ForegroundColor Yellow
+  }
 }
 
 # Create all directories
@@ -47,33 +47,29 @@ Create-Directory -Path $coreDir
 Create-Directory -Path $coreActiveDir
 
 # Create memory-bank structure
-$coreDir = Join-Path -Path  -ChildPath "core"
+$coreDir = Join-Path -Path $memoryBankDir -ChildPath "core"
 Create-Directory -Path $coreDir
 $core_activeDir = Join-Path -Path $coreDir -ChildPath "active"
 Create-Directory -Path $core_activeDir
 
 
 # Create rules structure
-$BIG_BRAINDir = Join-Path -Path  -ChildPath "BIG_BRAIN"
-Create-Directory -Path $BIG_BRAINDir
-$CodebaseDir = Join-Path -Path  -ChildPath "Codebase"
-Create-Directory -Path $CodebaseDir
 
 
 # Create file function
 function Create-FileIfNotExists {
-    param (
-        [string]$Path,
-        [string]$Content
-    )
+  param (
+    [string]$Path,
+    [string]$Content
+  )
 
-    if (-not (Test-Path -Path $Path)) {
-        Set-Content -Path $Path -Value $Content
-        Write-Host "  Created file: $Path" -ForegroundColor Green
-    }
-    else {
-        Write-Host "  File already exists: $Path" -ForegroundColor Yellow
-    }
+  if (-not (Test-Path -Path $Path)) {
+    Set-Content -Path $Path -Value $Content
+    Write-Host "  Created file: $Path" -ForegroundColor Green
+  }
+  else {
+    Write-Host "  File already exists: $Path" -ForegroundColor Yellow
+  }
 }
 
 # Create memory file templates
