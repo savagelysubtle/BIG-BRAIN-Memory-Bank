@@ -4,9 +4,9 @@ globs:
 alwaysApply: false
 ---
 ---
-description: WHEN editing Cursor rules in .mdc files, ENSURE strict XML formatting and placement in .cursor/rules based on the folder structure and rule type.
+description: WHEN editing .cursor/rules/**.mdc files, ENSURE strict XML formatting and placement in .cursor/rules based on the folder structure and rule type.
 globs: ["**/*.mdc", ".cursor/rules/**/*"]
-alwaysApply: false
+alwaysApply: true
 ---
 > **TL;DR:** Use full-word, lowercase XML tags; include a <version> tag; indent nested tags by 2 spaces; and place all rule files under .cursor/rules.
 <version>1.0.0</version>
@@ -14,13 +14,19 @@ alwaysApply: false
   This rule applies to all .mdc files that include XML content and must reside in the .cursor/rules directory.
 </context>
 <requirements>
+  <requirement>Include ">**TL;DR:**" section above <version>X.X.x</version>
   <requirement>Use full-word, lowercase XML tag names (e.g., &lt;version&gt;, &lt;context&gt;).</requirement>
   <requirement>Indent nested tags by 2 spaces for readability.</requirement>
   <requirement>Always include a <version> tag at the top to track rule versions.</requirement>
   <requirement>All rule files must be located under .cursor/rules and use the .mdc extension.</requirement>
 </requirements>
+
 <examples>
   <good-practice>
+    ---
+    description: USE keywords to start if alwaysApply is false explain When IT makes sense to include the rule in there context. i.e. "USE WHEN @files linking", "USE IF", "BEST APPLIED" --some freedom if proper keywords keep description one maybe two really good sentences explaing when to use.
+    globs: [use 020-glob-pattern-system.mdc]
+    > **TL;DR:** ONE to TWO Important/key information on the rule
     <description>Proper XML Formatting Example</description>
     <code>
       &lt;version&gt;1.0.0&lt;/version&gt;

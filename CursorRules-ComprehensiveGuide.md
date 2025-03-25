@@ -32,8 +32,7 @@ rules for maximum effectiveness.
     - [Content Optimization Strategies](#content-optimization-strategies)
     - [Optimizing Glob Patterns](#optimizing-glob-patterns)
     - [XML Content Structure](#xml-content-structure)
-  - [Organizing Rules for Maximum Efficiency](#organizing-rules-for-maximum-efficiency)
-    - [Naming Conventions](#naming-conventions)
+  - [Naming Conventions](#naming-conventions)
     - [Core Standards (0XX)](#core-standards-0xx)
     - [Tool Configs (1XX)](#tool-configs-1xx)
     - [Testing Standards (3XX)](#testing-standards-3xx)
@@ -323,6 +322,8 @@ For rule content, using a structured XML format improves clarity and helps the
 AI parse instructions:
 
 ```xml
+> **TL;DR:**: ONE OR TWO HIGH Quality Sentences explaining the rule.
+
 <version>1.0.0</version>
 
 <context>
@@ -359,6 +360,8 @@ AI parse instructions:
 
 Key sections to include:
 
+> **TL;DR:**: ONE OR TWO HIGH Quality Sentences explaining the rule.
+
 - `<version>`: For tracking rule updates
 - `<context>`: When the rule applies
 - `<requirements>`: What must be done
@@ -367,17 +370,23 @@ Key sections to include:
 
 ---
 
-## Organizing Rules for Maximum Efficiency
+## Naming Conventions
 
-### Naming Conventions
+Use a consistent
+PREFIX-rule-name-that-clearly-defines-relation-to-system.mdc(**preferably
+shorter**) format for all rule files.
 
-Use a consistent PREFIX-name.mdc pattern for all rule files:
+> **BIG BRAIN prefixes:** Only add the 5 OR 50 suffix when the rule is nearly
+> identical to a primary rule but marked as not "always applied" (i.e., a
+> booster rule). For example, use `X15.mdc` for a conditional variation of
+> `X10.mdc` OR `X150` FOR `X100` Prefrence is to have `XXX0` as the ending
+> number and go up in 10 in `XXX` and 100 in `XXXX`
 
-Common prefixes:
-
-- `0XX`: Core standards
-- `1XX`: Tool configs
-- `3XX`: Testing standards
+- `0XX`: Rule style guide/best practices for @file linking
+- `0XXX`: BIG BRAIN Core standards - No Conditional Logic these are the the main
+  logic for system
+- `1XXX`: memory-system
+- `2XX`: Testing standards
 - `4XX`: Documentation standards
 - `1XXX`: Language rules
 - `2XXX`: Framework rules

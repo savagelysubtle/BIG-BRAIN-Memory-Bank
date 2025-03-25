@@ -1,0 +1,42 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: WHEN linking @file to a rule
+files: ["**/*.{js,ts,json,md}", ".cursor/rules/**/*"]
+alwaysApply: true
+---
+<rule>
+  > tl;dr Use @file to automatically attach related files. For example, attach config files with: @file(config/js-standards.md).</tl;dr>
+  <examples>
+    <good-practice>
+      <description>Single File Attachment</description>
+      <code><![CDATA[
+description: JavaScript rule with config context
+files: "**/*.js"
+rule: |
+  Follow the coding standards defined in @file(config/js-standards.md)
+  // Additional instructions...
+      ]]></code>
+    </good-practice>
+    <good-practice>
+      <description>Multiple Files Attachment</description>
+      <code><![CDATA[
+files: "**/*.{js,ts}"
+rule: |
+  Include configuration files: @file(config/*.json)
+  Include test files: @file(tests/**/*.test.js)
+  // Additional rule instructions...
+      ]]></code>
+    </good-practice>
+  </examples>
+  <instructions>
+    <instruction>Create a rule file (with a .mdc extension) in your .cursor/rules directory.</instruction>
+    <instruction>Use glob patterns in the "files" field to specify which files the rule applies to.</instruction>
+    <instruction>Within the rule block, reference additional files using the @file directive.</instruction>
+    <instruction>This setup automatically attaches the referenced file(s) as context for the prompt.</instruction>
+    <instruction>You can also use the "/" command in Chat or Composer to "Reference Open Editors" for including multiple related files at once.</instruction>
+  </instructions>
+</rule>

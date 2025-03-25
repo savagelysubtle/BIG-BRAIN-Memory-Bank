@@ -1,4 +1,9 @@
 ---
+description: 
+globs: 
+alwaysApply: false
+---
+---
 description: WHEN starting a new session EXECUTE initialization procedure to establish memory context
 globs: ["**/*.md", "**/*.mdc"]
 alwaysApply: true

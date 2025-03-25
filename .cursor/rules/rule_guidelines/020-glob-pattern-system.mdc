@@ -1,12 +1,12 @@
 ---
-description: 
+description: glob patterns
 globs: 
 alwaysApply: false
 ---
 ---
-description: WHEN creating glob patterns, ENSURE they are explicit, efficient, and enforce placement of rule files under .cursor/rules.
+description: WHEN creating rules use glob patterns in the yaml frontend , ENSURE they are explicit, efficient, and enforce correct rules for glob patterns when writing files under .cursor/rules/.
 globs: ["**/*.mdc", ".cursor/rules/**/*"]
-alwaysApply: false
+alwaysApply: true
 ---
 <rule>
   <tl;dr>Use specific glob patterns—do not use overly broad patterns like "**/*". Always target .mdc files and files within .cursor/rules using: ["**/*.mdc", ".cursor/rules/**/*"].</tl;dr>
