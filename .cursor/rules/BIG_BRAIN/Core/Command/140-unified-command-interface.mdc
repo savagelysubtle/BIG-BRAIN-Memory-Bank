@@ -1,9 +1,4 @@
 ---
-description: 
-globs: 
-alwaysApply: false
----
----
 description: WHEN processing commands APPLY unified interface patterns for consistent memory bank operations
 globs: ["**/*.md", "**/*.mdc"]
 alwaysApply: true
